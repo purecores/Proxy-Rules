@@ -13,7 +13,7 @@ git add .
 
 修改分支名称
 ```bash
-git branch -m ""
+git branch -m "main"
 ```
 
 使用 rebase 策略合并代码
@@ -23,7 +23,7 @@ git pull --rebase origin main
 
 提交 commit 信息
 ```bash
-git commit -m ""
+git commit -m "Update"
 ```
 
 推送至远程仓库
