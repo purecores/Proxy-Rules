@@ -2,56 +2,57 @@ import subprocess
 from pathlib import Path
 
 # 固定配置
-SINGBOX_EXE = Path(r"D:\APP\Sing-box\sing-box.exe")
+MIHOMO_EXE = Path(r"D:\APP\mihomo\mihomo.exe")
 PERSONALUSE_DIR = Path(r"D:\Code\Momo\personaluse")
+RULE_TYPE = "domain"
 
-# 需要编译的 json 文件名
-TARGET_JSON_FILES = [
-    "personaluse-d.json",
-    "personaluse-p.json",
+# 需要编译的 yaml 文件
+TARGET_YAML_FILES = [
+    "personaluse-d.yaml",
+    "personaluse-p.yaml",
 ]
 
 
 def main():
-    if not SINGBOX_EXE.exists():
-        raise FileNotFoundError(f"sing-box.exe 不存在: {SINGBOX_EXE}")
+    if not MIHOMO_EXE.exists():
+        raise FileNotFoundError(f"mihomo.exe 不存在: {MIHOMO_EXE}")
 
     if not PERSONALUSE_DIR.exists():
         raise FileNotFoundError(f"personaluse 目录不存在: {PERSONALUSE_DIR}")
 
-    for json_name in TARGET_JSON_FILES:
-        json_file = PERSONALUSE_DIR / json_name
+    for yaml_name in TARGET_YAML_FILES:
+        yaml_file = PERSONALUSE_DIR / yaml_name
 
-        if not json_file.exists():
-            print(f"✘ 未找到文件: {json_file}")
+        if not yaml_file.exists():
+            print(f"✘ 未找到文件: {yaml_file}")
             continue
 
-        output_file = json_file.with_suffix(".srs")
+        output_file = yaml_file.with_suffix(".mrs")
 
         cmd = [
-            str(SINGBOX_EXE),
-            "rule-set",
-            "compile",
-            str(json_file),
-            "-o",
-            str(output_file),
+            str(MIHOMO_EXE),
+            "convert-ruleset",
+            RULE_TYPE,
+            "yaml",
+            str(yaml_file),
+            str(output_file)
         ]
 
-        print(f"正在编译: {json_file.name}")
+        print(f"正在编译: {yaml_file.name}")
         try:
             result = subprocess.run(
                 cmd,
                 check=True,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
-                text=True,
+                text=True
             )
             print(f"✔ 编译成功: {output_file.name}")
             if result.stdout:
                 print(result.stdout)
 
         except subprocess.CalledProcessError as e:
-            print(f"✘ 编译失败: {json_file.name}")
+            print(f"✘ 编译失败: {yaml_file.name}")
             if e.stderr:
                 print(e.stderr)
 
