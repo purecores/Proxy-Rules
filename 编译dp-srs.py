@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 固定配置
 SINGBOX_EXE = Path(r"D:\APP\Sing-box\sing-box.exe")
-PERSONALUSE_DIR = Path(r"D:\Code\Momo\personaluse")
+PERSONALUSE_DIR = Path("./personaluse")
 
 # 需要编译的 json 文件名
 TARGET_JSON_FILES = [

@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 固定配置
 SINGBOX_EXE = Path(r"D:\APP\Sing-box\sing-box.exe")
-JSON_DIR = Path(r"D:\Code\Momo\singbox")
+JSON_DIR = Path("./singbox")
 
 
 def main():

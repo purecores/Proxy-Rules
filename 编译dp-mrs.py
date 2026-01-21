@@ -3,7 +3,7 @@ from pathlib import Path
 
 # 固定配置
 MIHOMO_EXE = Path(r"D:\APP\mihomo\mihomo.exe")
-PERSONALUSE_DIR = Path(r"D:\Code\Momo\personaluse")
+PERSONALUSE_DIR = Path("./personaluse")
 RULE_TYPE = "domain"
 
 # 需要编译的 yaml 文件
