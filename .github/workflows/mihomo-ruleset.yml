@@ -111,7 +111,13 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update mihomo rulesets (yaml + mrs)"
+          export TZ=Asia/Shanghai
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
+          
+          GIT_AUTHOR_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
+          GIT_COMMITTER_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
+          git commit -m "$COMMIT_TIME"
+
           git push origin HEAD:${GITHUB_REF_NAME}
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
