@@ -94,6 +94,7 @@ jobs:
           MIHOMO_BIN="${MIHOMO_BIN}" .github/scripts/mihomo-ruleset.sh
 
       - name: Commit outputs to repo
+        id: commit
         if: github.ref == 'refs/heads/main'
         run: |
           set -euo pipefail
@@ -105,18 +106,19 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git commit -m "Update mihomo rulesets (yaml + mrs)"
           git push origin HEAD:${GITHUB_REF_NAME}
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Upload artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: mihomo-rulesets
-          path: |
-            compilation/mihomo/*.yaml
-            compilation/mihomo/*.mrs
-          if-no-files-found: warn
+      - name: Purge jsDelivr CDN cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          set -e
+          URL="https://purge.jsdelivr.net/gh/yourname/yourrepo@main/compilation/mihomo/"
+          echo "Purging: $URL"
+          curl -s "$URL"
+
