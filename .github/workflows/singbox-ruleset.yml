@@ -64,23 +64,26 @@ jobs:
           .github/scripts/singbox-ruleset.sh
 
       - name: Commit generated files
+        id: commit
         shell: bash
         run: |
           set -euo pipefail
           if [[ -n "$(git status --porcelain compilation/singbox)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add compilation/singbox
             git commit -m "chore: update sing-box rulesets (json+srs)"
             git push
           else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes to commit."
           fi
+
       - name: Purge jsDelivr CDN cache
+        if: steps.commit.outputs.changed == 'true'
         run: |
           set -e
           URL="https://purge.jsdelivr.net/gh/yourname/yourrepo@main/compilation/singbox/"
           echo "Purging: $URL"
           curl -s "$URL"
-
-
