@@ -1,7 +1,7 @@
 name: mihomo-ruleset
 
 concurrency:
-  group: mihomo-ruleset-${{ github.ref }}
+  group: ruleset-${{ github.ref }}
   cancel-in-progress: false
 
 on:
