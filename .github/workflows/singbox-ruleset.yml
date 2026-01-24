@@ -78,5 +78,9 @@ jobs:
           fi
       - name: Purge jsDelivr CDN cache
         run: |
-          curl -fsSL https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/singbox/
+          set -e
+          URL="https://purge.jsdelivr.net/gh/yourname/yourrepo@main/compilation/singbox/"
+          echo "Purging: $URL"
+          curl -s "$URL"
+
 
