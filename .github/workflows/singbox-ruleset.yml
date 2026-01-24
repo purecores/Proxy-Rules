@@ -3,7 +3,8 @@ name: singbox-ruleset
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "40 22 * * *"
+      # Runs at 06:40 CST (UTC+8)
   push:
     paths:
       - "txt/singbox/**"
@@ -75,3 +76,7 @@ jobs:
           else
             echo "No changes to commit."
           fi
+      - name: Purge jsDelivr CDN cache
+        run: |
+          curl -fsSL https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/singbox/
+
