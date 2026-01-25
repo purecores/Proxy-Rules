@@ -115,7 +115,8 @@ header = [
     "# Source: mihomo rule-set (domain) yaml -> Shadowrocket .list",
 ]
 outp.write_text("\n".join(header + lines) + "\n", encoding="utf-8")
-
+PY
+}
 # 下载远程 yaml 后解析为 IP-CIDR / IP-CIDR6（Shadowrocket 格式）
 convert_geoip_yaml_url_to_shadowrocket_list() {
   local url="$1"
@@ -199,7 +200,8 @@ header = [
     "# Source: mihomo rule-set (geoip/ip) yaml -> Shadowrocket .list",
 ]
 outp.write_text("\n".join(header + lines) + "\n", encoding="utf-8")
-
+PY
+}
 
 echo "[1/2] Convert local domain rule-sets..."
 convert_domain_yaml_to_shadowrocket_list "$IN_AIGC"   "$OUT_AIGC"
