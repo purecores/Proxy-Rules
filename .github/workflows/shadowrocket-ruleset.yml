@@ -1,0 +1,87 @@
+name: Build Shadowrocket Ruleset
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "compilation/mihomo/**.yaml"
+      - ".github/scripts/shadowrocket-ruleset.sh"
+      - ".github/workflows/shadowrocket-ruleset.yml"
+  workflow_dispatch:
+  schedule:
+    # 每天 03:30 UTC（日本时间 12:30）
+    - cron: "30 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shadowrocket-ruleset-main
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Generate Shadowrocket lists
+        run: |
+          chmod +x .github/scripts/shadowrocket-ruleset.sh
+          .github/scripts/shadowrocket-ruleset.sh
+
+      - name: Commit and push if changed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+          git commit -m "chore: update Shadowrocket ruleset lists"
+
+          # 推送到 main
+          git push origin HEAD:main
+
+      - name: Purge jsDelivr cache
+        if: success()
+        run: |
+          set -euo pipefail
+
+          REPO="${GITHUB_REPOSITORY}" # owner/repo
+          BRANCH="main"
+
+          purge() {
+            local path="$1"
+            # jsDelivr purge endpoint
+            curl -fsSL "https://purge.jsdelivr.net/gh/${REPO}@${BRANCH}/${path}" >/dev/null || true
+          }
+
+          purge "compilation/shadowrocket/AIGC.list"
+          purge "compilation/shadowrocket/Direct.list"
+          purge "compilation/shadowrocket/Proxy.list"
+          purge "compilation/shadowrocket/geoip-telegram.list"
+          purge "compilation/shadowrocket/geoip-google.list"
+          purge "compilation/shadowrocket/geoip-cn.list"
+
+          echo "Purge requests sent."
