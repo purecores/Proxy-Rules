@@ -96,6 +96,6 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         run: |
           set -e
-          URL="https://purge.jsdelivr.net/gh/yourname/yourrepo@main/compilation/singbox/"
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/singbox/"
           echo "Purging: $URL"
           curl -s "$URL"
