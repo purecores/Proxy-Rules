@@ -75,22 +75,26 @@ jobs:
       - name: Purge jsDelivr cache
         if: success()
         run: |
-          set -euo pipefail
+          set -e
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/shadowrocket/"
+          echo "Purging: $URL"
+          curl -s "$URL"
+          # set -euo pipefail
 
-          REPO="${GITHUB_REPOSITORY}" # owner/repo
-          BRANCH="main"
+          # REPO="${GITHUB_REPOSITORY}" # owner/repo
+          # BRANCH="main"
 
-          purge() {
-            local path="$1"
-            # jsDelivr purge endpoint
-            curl -fsSL "https://purge.jsdelivr.net/gh/${REPO}@${BRANCH}/${path}" >/dev/null || true
-          }
+          # purge() {
+          #   local path="$1"
+          #   # jsDelivr purge endpoint
+          #   curl -fsSL "https://purge.jsdelivr.net/gh/${REPO}@${BRANCH}/${path}" >/dev/null || true
+          # }
 
-          purge "compilation/shadowrocket/AIGC.list"
-          purge "compilation/shadowrocket/Direct.list"
-          purge "compilation/shadowrocket/Proxy.list"
-          purge "compilation/shadowrocket/geoip-telegram.list"
-          purge "compilation/shadowrocket/geoip-google.list"
-          purge "compilation/shadowrocket/geoip-cn.list"
+          # purge "compilation/shadowrocket/AIGC.list"
+          # purge "compilation/shadowrocket/Direct.list"
+          # purge "compilation/shadowrocket/Proxy.list"
+          # purge "compilation/shadowrocket/geoip-telegram.list"
+          # purge "compilation/shadowrocket/geoip-google.list"
+          # purge "compilation/shadowrocket/geoip-cn.list"
 
-          echo "Purge requests sent."
+          # echo "Purge requests sent."
