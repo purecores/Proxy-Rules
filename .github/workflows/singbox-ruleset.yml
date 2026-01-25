@@ -1,7 +1,7 @@
 name: singbox-ruleset
 
 concurrency:
-  group: ruleset-serial
+  group: ruleset-chain
   cancel-in-progress: false
 
 on:
