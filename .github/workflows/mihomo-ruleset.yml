@@ -131,7 +131,7 @@ jobs:
         if: steps.commit.outputs.changed == 'true'
         run: |
           set -e
-          URL="https://purge.jsdelivr.net/gh/yourname/yourrepo@main/compilation/mihomo/"
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/mihomo/"
           echo "Purging: $URL"
           curl -s "$URL"
 
