@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+TMP_FILES=()
+cleanup() {
+  for f in "${TMP_FILES[@]}"; do
+    [ -f "$f" ] && rm -f "$f"
+  done
+}
+trap cleanup EXIT
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT_DIR"
 
@@ -24,7 +32,7 @@ OUT_GEO_TELEGRAM="compilation/shadowrocket/geoip-telegram.list"
 OUT_GEO_GOOGLE="compilation/shadowrocket/geoip-google.list"
 OUT_GEO_CN="compilation/shadowrocket/geoip-cn.list"
 
-mkdir -p "compilation/shadowrocket" ".github/.tmp"
+mkdir -p "compilation/shadowrocket"
 
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
@@ -112,7 +120,9 @@ outp.write_text("\n".join(header + lines) + "\n", encoding="utf-8")
 convert_geoip_yaml_url_to_shadowrocket_list() {
   local url="$1"
   local out_file="$2"
-  local tmp_yaml=".github/.tmp/$(basename "$out_file").yaml"
+  local tmp_yaml
+  tmp_yaml="$(mktemp)"
+  TMP_FILES+=("$tmp_yaml")
 
   curl -fsSL "$url" -o "$tmp_yaml"
 
