@@ -38,9 +38,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml
 
+      - name: Normalize line endings
+        run: |
+          sed -i 's/\r$//' .github/scripts/shadowrocket-ruleset.sh
+          chmod +x .github/scripts/shadowrocket-ruleset.sh
+
       - name: Generate Shadowrocket lists
         run: |
-          chmod +x .github/scripts/shadowrocket-ruleset.sh
           .github/scripts/shadowrocket-ruleset.sh
 
       - name: Commit and push if changed
