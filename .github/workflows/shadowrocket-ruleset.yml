@@ -19,10 +19,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Conditional Delay
-        if: github.event_name == 'push'
-        run: sleep 120s
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -68,8 +64,8 @@ jobs:
 
           git add -A
           git commit -m "$COMMIT_TIME"
-
-          # 推送到 main
+          echo "Changes detected and committed. Waiting for 60 seconds before pushing..."
+          sleep 60s
           git push origin HEAD:main
 
       - name: Purge jsDelivr cache
