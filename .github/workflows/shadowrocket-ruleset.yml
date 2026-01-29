@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Conditional Delay
         if: github.event_name == 'push'
-        run: sleep 60s
+        run: sleep 120s
 
       - name: Checkout
         uses: actions/checkout@v4
