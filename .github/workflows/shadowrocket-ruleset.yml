@@ -1,9 +1,5 @@
 name: shadowrocket-ruleset
 
-concurrency:
-  group: ruleset-chain
-  cancel-in-progress: false
-
 on:
   workflow_dispatch:
   schedule:
@@ -23,6 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Conditional Delay
+        if: github.event_name == 'push'
+        run: sleep 60s
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
