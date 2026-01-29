@@ -21,10 +21,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Conditional Delay
-        if: github.event_name == 'push'
-        run: sleep 60s
-
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -124,7 +120,8 @@ jobs:
           fi
 
           git commit -m "$COMMIT_TIME"
-
+          echo "Changes detected and committed. Waiting for 30 seconds before pushing..."
+          sleep 30s
           git push origin HEAD:${GITHUB_REF_NAME}
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
