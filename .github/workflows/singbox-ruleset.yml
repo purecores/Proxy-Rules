@@ -1,9 +1,5 @@
 name: singbox-ruleset
 
-concurrency:
-  group: ruleset-chain
-  cancel-in-progress: false
-
 on:
   workflow_dispatch:
   schedule:
