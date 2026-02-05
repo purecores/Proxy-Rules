@@ -120,7 +120,8 @@ jobs:
           fi
 
           git commit -m "$COMMIT_TIME"
-          git pull origin main --rebase
+          git checkout . || true 
+          git pull origin main --rebase -Xours
           git push origin HEAD:${GITHUB_REF_NAME}
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
