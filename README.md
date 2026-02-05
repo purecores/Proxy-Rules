@@ -18,7 +18,7 @@ git branch -m "main"
 
 使用 rebase 策略合并代码
 ```bash
-git pull --rebase origin main
+git pull origin main --rebase
 ```
 
 提交 commit 信息

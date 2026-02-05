@@ -120,8 +120,7 @@ jobs:
           fi
 
           git commit -m "$COMMIT_TIME"
-          echo "Changes detected and committed. Waiting for 45 seconds before pushing..."
-          sleep 45s
+          git pull origin main --rebase
           git push origin HEAD:${GITHUB_REF_NAME}
           echo "changed=true" >> "$GITHUB_OUTPUT"
 

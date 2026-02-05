@@ -64,8 +64,7 @@ jobs:
 
           git add -A
           git commit -m "$COMMIT_TIME"
-          echo "Changes detected and committed. Waiting for 60 seconds before pushing..."
-          sleep 60s
+          git pull origin main --rebase
           git push origin HEAD:main
 
       - name: Purge jsDelivr cache
