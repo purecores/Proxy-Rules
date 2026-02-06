@@ -53,6 +53,28 @@ payload:
   - +.jsdelivr.com
   - +.jsdelivr.net
   - +.esm.run
+  - d29vzk4ow07wi7.cloudfront.net
+  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
+  - firebase.google.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaselogging-pa.googleapis.com
+  - firebaselogging.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
+  - notary-submissions-prod.s3-accelerate.amazonaws.com
+  - notary-submissions-prod.s3.us-west-2.amazonaws.com
+  - appleworldwidedeveloper.hb-api.omtrdc.net
+  - appleworldwidedeveloper.sc.omtrdc.net
+  - p-events-delivery.akamaized.net
+  - homebrew.bintray.com
+  - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
+  - docker-pinata-support.s3.amazonaws.com
   - az764295.vo.msecnd.net
   - bingsettingssearch.trafficmanager.net
   - default.exp-tas.com
@@ -69,35 +91,13 @@ payload:
   - vscode.blob.core.windows.net
   - vscode.search.windows.net
   - vsmarketplacebadge.apphb.com
-  - amp.akamaized.net
-  - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
-  - docker-pinata-support.s3.amazonaws.com
-  - homebrew.bintray.com
-  - developers.facebook.com
-  - firebase.google.com
-  - firebase.googleapis.com
-  - firebaseappcheck.googleapis.com
-  - firebasedynamiclinks-ipv4.googleapis.com
-  - firebasedynamiclinks-ipv6.googleapis.com
-  - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
-  - firebaseinstallations.googleapis.com
-  - firebaselogging-pa.googleapis.com
-  - firebaselogging.googleapis.com
-  - firebaseperusertopics-pa.googleapis.com
-  - firebaseremoteconfig.googleapis.com
-  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
-  - d29vzk4ow07wi7.cloudfront.net
   - android.googlesource.com
-  - notary-submissions-prod.s3-accelerate.amazonaws.com
-  - notary-submissions-prod.s3.us-west-2.amazonaws.com
-  - appleworldwidedeveloper.hb-api.omtrdc.net
-  - appleworldwidedeveloper.sc.omtrdc.net
-  - p-events-delivery.akamaized.net
-  - +.android
+  - amp.akamaized.net
+  - developers.facebook.com
   - +.java
-  - +.buckbuild.com
-  - +.serverfault.com
+  - +.android
+  - +.go.dev
+  - +.quay.io
   - +.badgen.net
   - +.bitvise.com
   - +.cdnjs.com
@@ -121,6 +121,7 @@ payload:
   - +.git-scm.com
   - +.gnu.org
   - +.godbolt.org
+  - +.piwheels.org
   - +.hex.pm
   - +.hexdocs.pm
   - +.imageglass.org
@@ -180,24 +181,96 @@ payload:
   - +.yarnpkg.com
   - +.zsh.org
   - +.zed.dev
+  - +.rust-lang.org
+  - +.rustup.rs
+  - +.crates.io
+  - +.docs.rs
+  - +.dart.dev
+  - +.dartlang.org
+  - +.dartpad.dev
+  - +.ruby-lang.org
+  - +.rubygems.org
+  - +.openwrt.org
+  - +.lede-project.org
+  - +.azurecr.io
+  - +.docker.io
+  - +.ecr.aws
+  - +.gcr.io
+  - +.godoc.org
+  - +.codeberg.page
+  - +.codeberg.org
+  - +.launchpadlibrarian.org
+  - +.jfrog.com
+  - +.jfrog.org
+  - +.bintray.com
+  - +.scala-lang.org
+  - +.scala-sbt.org
+  - +.debian.org
+  - +.dotdeb.org
+  - +.qt.io
+  - +.qt-project.org
+  - +.gitbook.com
+  - +.gitbook.io
+  - +.gitlab.com
+  - +.gitlab.io
+  - +.gitlab.net
+  - +.gitlab-static.net
+  - +.fastlane.ci
+  - +.fastlane.tools
+  - +.consul.io
+  - +.hashicorp.com
+  - +.nomadproject.io
+  - +.packer.io
+  - +.terraform.io
+  - +.vagrantcloud.com
+  - +.vagrantup.com
+  - +.vaultproject.io
+  - +.01.org
+  - +.hyperscan.io
+  - +.intellinuxgraphics.com
+  - +.intellinuxgraphics.net
+  - +.oneapi.com
+  - +.oneapi.io
+  - +.opencas.io
+  - +.opendroneid.org
+  - +.openvino.ai
+  - +.openvinotoolkit.org
+  - +.renderingtoolkit.org
+  - +.snap-telemetry.io
+  - +.universalscalablefirmware.org
+  - +.acpica.com
+  - +.clearlinux.org
+  - +.ospray.net
+  - +.ospray.org
+  - +.perl.org
+  - +.cpan.org
+  - +.metacpan.org
+  - +.modperl.pl
+  - +.launchpadlibrarian.net
+  - +.redhat.com
+  - +.redhat.org
+  - +.bootstrapcdn.com
+  - +.getbootstrap.com
   - +.embed.ly
   - +.embedly.com
   - +.playerjs.io
+  - +.sourcehut.org
+  - +.sr.ht
+  - +.haskell.org
+  - +.haskellstack.org
+  - +.stackage.org
+  - +.sentry.io
+  - +.sentry-cdn.com
   - +.framer.com
   - +.framer.website
   - +.framercanvas.com
   - +.framerstatic.com
   - +.framerusercontent.com
-  - +.scala-lang.org
-  - +.scala-sbt.org
-  - +.piwheels.org
-  - +.sentry.io
-  - +.sentry-cdn.com
   - +.askubuntu.com
   - +.blogoverflow.com
   - +.codeforaliving.io
   - +.mathoverflow.net
-  - +.componentkit.org
+  - +.serverfault.com
   - +.sstatic.net
   - +.stackapps.com
   - +.stackauth.com
@@ -218,14 +291,81 @@ payload:
   - +.superuser.com
   - +.tex-talk.net
   - +.thesffblog.com
-  - +.archlinux.org
-  - +.archlinuxarm.org
-  - +.archlinuxcn.org
-  - +.azurecr.io
-  - +.docker.io
-  - +.ecr.aws
-  - +.gcr.io
-  - +.quay.io
+  - +.getfedora.org
+  - +.fedoraforum.org
+  - +.fedorapeople.org
+  - +.fedoraproject.org
+  - +.fedoramagazine.org
+  - +.firebase.com
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
+  - +.macruby.com
+  - +.cups.org
+  - +.macruby.net
+  - +.swift.org
+  - +.appleswift.com
+  - +.webobjects.com
+  - +.wpewebkit.org
+  - +.calendarserver.org
+  - +.macruby.org
+  - +.macosforge.org
+  - +.servicetalk.io
+  - +.apple-cloudkit.com
+  - +.foundationdb.org
+  - +.apple-mapkit.com
+  - +.webkitgtk.org
+  - +.carekit.org
+  - +.researchandcare.org
+  - +.researchkit.hk
+  - +.researchkit.net
+  - +.researchkit.org
+  - +.researchkit.tv
+  - +.webkit.org
+  - +.launchpadlibrarian.com
+  - +.launchpadcontent.net
+  - +.launchpad.net
+  - +.ubuntu-touch.io
+  - +.ubuntuforums.org
+  - +.ubuntu.net
+  - +.apache.org
+  - +.java.com
+  - +.java.net
+  - +.github1s.com
+  - +.sourcegraph.com
+  - +.go-lang.com
+  - +.go-lang.net
+  - +.go-lang.org
+  - +.v8project.org
+  - +.artixlinux.org
+  - +.snapcraft.io
+  - +.golang.net
+  - +.golang.org
+  - +.brew.sh
+  - +.v8.dev
+  - +.adventofcode.com
+  - +.vim.org
+  - +.compose-spec.io
+  - +.docker.com
+  - +.dockerstatic.com
+  - +.ubuntu.com
+  - +.readthedocs-hosted.com
+  - +.readthedocs.com
+  - +.readthedocs.io
+  - +.readthedocs.org
+  - +.mystrikingly.com
+  - +.strikingly.com
+  - +.strikinglycdn.com
+  - +.termux.com
+  - +.termux.dev
+  - +.termux.org
+  - +.topcoder.com
+  - +.anaconda.cloud
+  - +.anaconda.com
+  - +.anaconda.org
+  - +.conda.io
+  - +.kubernetes.io
+  - +.k8s.io
   - +.adaptivecards.io
   - +.api-extractor.com
   - +.apisof.net
@@ -277,18 +417,29 @@ payload:
   - +.vscode-cdn.net
   - +.vscode-unpkg.net
   - +.xamarin.com
-  - +.rubygems.org
-  - +.ruby-lang.org
-  - +.fastlane.tools
-  - +.fastlane.ci
-  - +.conda.io
+  - +.snapstore.io
+  - +.polymer-project.org
+  - +.polymerproject.org
+  - +.remirepo.net
+  - +.flutter.dev
+  - +.flutterapp.com
+  - +.pub.dev
+  - +.grazie.ai
+  - +.jetbrains.ai
+  - +.golang.com
+  - +.alpinelinux.org
+  - +.android.com
+  - +.androidify.com
+  - +.archlinux.org
+  - +.archlinuxarm.org
+  - +.archlinuxcn.org
+  - +.redis.io
+  - +.redislabs.com
   - +.lfai.foundation
   - +.linuxfoundation.org
   - +.kernel.org
   - +.linux.org
   - +.openjsf.org
-  - +.mochajs.org
-  - +.nodejs.org
   - +.amp.dev
   - +.ampproject.com
   - +.ampproject.net
@@ -297,52 +448,39 @@ payload:
   - +.jquery.com
   - +.jquerymobile.com
   - +.jqueryui.com
-  - +.vim.org
-  - +.codeberg.org
-  - +.codeberg.page
-  - +.compose-spec.io
-  - +.docker.com
-  - +.dockerstatic.com
-  - +.fontawesome.com
-  - +.fortawesome.com
-  - +.fury.blog
-  - +.fury.co
-  - +.fury.dev
-  - +.fury.help
-  - +.fury.io
-  - +.gemfury.com
-  - +.polymer-project.org
-  - +.polymerproject.org
-  - +.sourcehut.org
-  - +.sr.ht
+  - +.mochajs.org
+  - +.nodejs.org
+  - +.unity.com
+  - +.unity3d.com
   - +.braventures.com
   - +.braveux.com
   - +.compass.is
   - +.fightforux.com
   - +.forthebadge.com
   - +.stockagainstphotography.com
-  - +.flathub.org
-  - +.flatpak.org
-  - +.github1s.com
-  - +.sourcegraph.com
-  - +.haskell.org
-  - +.haskellstack.org
-  - +.stackage.org
-  - +.brew.sh
+  - +.fontawesome.com
+  - +.fortawesome.com
   - +.nginx.com
   - +.nginx.org
+  - +.osdn.net
+  - +.pycon.org
+  - +.pypa.io
+  - +.pypi.io
+  - +.pypi.org
+  - +.python.org
+  - +.pythonhosted.org
   - +.accountkit.com
   - +.atscaleconference.com
   - +.botorch.org
   - +.buck.build
-  - +.facebookconnect.com
-  - +.artixlinux.org
-  - +.flutterapp.com
+  - +.buckbuild.com
+  - +.componentkit.org
+  - +.draftjs.org
   - +.f8.com
   - +.facebookappcenter.info
   - +.facebookappcenter.net
   - +.facebookappcenter.org
-  - +.adventofcode.com
+  - +.facebookconnect.com
   - +.facebookdevelopergarage.com
   - +.faciometrics.com
   - +.fasttext.cc
@@ -374,35 +512,14 @@ payload:
   - +.rocksdb.net
   - +.rocksdb.org
   - +.yogalayout.com
-  - +.firebase.com
-  - +.firebase.io
-  - +.firebaseapp.com
-  - +.firebaseio.com
-  - +.anaconda.org
-  - +.gitlab.com
-  - +.gitlab.io
-  - +.gitlab.net
-  - +.gitlab-static.net
-  - +.perl.org
-  - +.cpan.org
-  - +.metacpan.org
-  - +.modperl.pl
-  - +.anaconda.com
-  - +.pycon.org
-  - +.pypa.io
-  - +.pypi.io
-  - +.pypi.org
-  - +.python.org
-  - +.pythonhosted.org
-  - +.topcoder.com
-  - +.consul.io
-  - +.hashicorp.com
-  - +.nomadproject.io
-  - +.packer.io
-  - +.terraform.io
-  - +.vagrantcloud.com
-  - +.vagrantup.com
-  - +.vaultproject.io
+  - +.flathub.org
+  - +.flatpak.org
+  - +.fury.blog
+  - +.fury.co
+  - +.fury.dev
+  - +.fury.help
+  - +.fury.io
+  - +.gemfury.com
   - +.intellij.com
   - +.intellij.net
   - +.intellij.org
@@ -414,158 +531,34 @@ payload:
   - +.kotlinlang.org
   - +.jb.gg
   - +.youtrack.cloud
-  - +.jfrog.com
-  - +.jfrog.org
-  - +.bintray.com
-  - +.remirepo.net
-  - +.unity.com
-  - +.unity3d.com
-  - +.v8.dev
-  - +.v8project.org
-  - +.getfedora.org
-  - +.fedoraforum.org
-  - +.fedorapeople.org
-  - +.fedoraproject.org
-  - +.fedoramagazine.org
-  - +.go-lang.com
-  - +.go-lang.net
-  - +.go-lang.org
-  - +.go.dev
-  - +.godoc.org
-  - +.golang.com
-  - +.golang.net
-  - +.golang.org
-  - +.01.org
-  - +.hyperscan.io
-  - +.intellinuxgraphics.com
-  - +.intellinuxgraphics.net
-  - +.oneapi.com
-  - +.oneapi.io
-  - +.opencas.io
-  - +.opendroneid.org
-  - +.openvino.ai
-  - +.openvinotoolkit.org
-  - +.renderingtoolkit.org
-  - +.snap-telemetry.io
-  - +.universalscalablefirmware.org
-  - +.acpica.com
-  - +.clearlinux.org
-  - +.ospray.net
-  - +.ospray.org
-  - +.gitbook.com
-  - +.gitbook.io
-  - +.osdn.net
-  - +.rust-lang.org
-  - +.rustup.rs
-  - +.crates.io
-  - +.docs.rs
-  - +.bootstrapcdn.com
-  - +.getbootstrap.com
-  - +.dart.dev
-  - +.dartlang.org
-  - +.dartpad.dev
   - +.mongodb.com
   - +.mongodb.org
-  - +.openwrt.org
-  - +.lede-project.org
-  - +.redhat.com
-  - +.redhat.org
-  - +.mystrikingly.com
-  - +.strikingly.com
-  - +.strikinglycdn.com
-  - +.debian.org
-  - +.dotdeb.org
-  - +.kubernetes.io
-  - +.k8s.io
-  - +.qt.io
-  - +.qt-project.org
-  - +.termux.com
-  - +.termux.dev
-  - +.termux.org
-  - +.apache.org
-  - +.android.com
-  - +.androidify.com
-  - +.macruby.com
-  - +.cups.org
-  - +.macruby.net
-  - +.swift.org
-  - +.appleswift.com
-  - +.webobjects.com
-  - +.wpewebkit.org
-  - +.calendarserver.org
-  - +.macruby.org
-  - +.macosforge.org
-  - +.servicetalk.io
-  - +.apple-cloudkit.com
-  - +.foundationdb.org
-  - +.apple-mapkit.com
-  - +.webkitgtk.org
-  - +.carekit.org
-  - +.researchandcare.org
-  - +.researchkit.hk
-  - +.researchkit.net
-  - +.researchkit.org
-  - +.researchkit.tv
-  - +.webkit.org
-  - +.anaconda.cloud
-  - +.readthedocs.org
-  - +.readthedocs.io
-  - +.readthedocs.com
-  - +.readthedocs-hosted.com
-  - +.pub.dev
-  - +.alpinelinux.org
-  - +.java.com
-  - +.java.net
-  - +.grazie.ai
-  - +.jetbrains.ai
-  - +.draftjs.org
-  - +.redis.io
-  - +.redislabs.com
   - +.canonical.com
-  - +.launchpad.net
-  - +.launchpadcontent.net
-  - +.launchpadlibrarian.com
-  - +.launchpadlibrarian.net
-  - +.launchpadlibrarian.org
-  - +.snapcraft.io
-  - +.snapstore.io
-  - +.ubuntu.com
-  - +.ubuntu.net
-  - +.ubuntuforums.org
-  - +.ubuntu-touch.io
-  - +.flutter.dev
-  - +.timestamp.apple.com
-  - +.devimages-cdn.apple.com
-  - +.devstreaming-cdn.apple.com
+  - +.playgrounds-cdn.apple.com
   - +.developerservices2.apple.com
   - +.greenend.org.uk
   - +.developer.apple.com
-  - +.playgrounds-cdn.apple.com
-  - +.visualstudio.co.uk
+  - +.devimages-cdn.apple.com
   - +.mcr.microsoft.com
-  - +.microsoftreactor.cn
-  - +.microsoftreactor.com.cn
-  - +.reactorms.com.cn
-  - cdn.ampproject.org
+  - +.visualstudio.co.uk
+  - +.devstreaming-cdn.apple.com
+  - +.timestamp.apple.com
   - firebase-settings.crashlytics.com
-  - +.cdn.jetbrains.com
-  - +.download-cdn.jetbrains.com.cn
-  - +.iads.unity3d.com
-  - +.unityads.unity3d.com
   - +.researchkit.cn
   - +.researchkit.com.cn
   - +.swiftui.cn
   - +.swiftui.com.cn
+  - +.microsoftreactor.cn
+  - +.microsoftreactor.com.cn
+  - +.reactorms.com.cn
+  - cdn.ampproject.org
+  - +.iads.unity3d.com
+  - +.unityads.unity3d.com
+  - +.cdn.jetbrains.com
+  - +.download-cdn.jetbrains.com.cn
   - +.b-cdn.net
   - +.bunny.net
   - +.bunnycdn.com
-  - +.pagecdn.com
-  - +.pagecdn.io
-  - +.stackpath.com
-  - +.stackpath.dev
-  - +.vrcdn.cloud
-  - +.vrcdn.live
-  - +.vrcdn.video
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -635,18 +628,6 @@ payload:
   - +.iamakamai.net
   - +.soasta-dswb.com
   - +.srtcdn.net
-  - +.cdn77.com
-  - +.cdn77.org
-  - +.imgix.com
-  - +.imgix.net
-  - +.delvenetworks.com
-  - +.limelight.com
-  - +.lldns.net
-  - +.llnw-trials.com
-  - +.llnw.com
-  - +.llnw.net
-  - +.llnwd.net
-  - +.llnwi.net
   - +.argotunnel.com
   - +.browser.run
   - +.cfargotunnel.com
@@ -701,6 +682,23 @@ payload:
   - +.workers.dev
   - +.cf-ipfs.com
   - +.cloudflare-ipfs.com
+  - +.imgix.com
+  - +.imgix.net
+  - +.delvenetworks.com
+  - +.limelight.com
+  - +.lldns.net
+  - +.llnw-trials.com
+  - +.llnw.com
+  - +.llnw.net
+  - +.llnwd.net
+  - +.llnwi.net
+  - +.pagecdn.com
+  - +.pagecdn.io
+  - +.vrcdn.cloud
+  - +.vrcdn.live
+  - +.vrcdn.video
+  - +.cdn77.com
+  - +.cdn77.org
   - +.fastly-edge.com
   - +.fastly-terrarium.com
   - +.fastly.com
@@ -710,6 +708,8 @@ payload:
   - +.fastlylb.net
   - +.zencdn.net
   - +.quantil.com
+  - +.stackpath.com
+  - +.stackpath.dev
   - +.akamai.co.kr
   - +.one.one.one
   - +.accdn.com.cn
@@ -849,7 +849,6 @@ payload:
   - scholar.google.sk
   - scholar.googleusercontent.com
   - scholar.l.google.com
-  - yt3.googleusercontent.com
   - publicca.googleapis.com
   - preprod-publicca.googleapis.com
   - clients1.google.com
@@ -859,6 +858,7 @@ payload:
   - mtalk-dev.google.com
   - mtalk-staging.google.com
   - mtalk4.google.com
+  - yt3.googleusercontent.com
   - +.chrome
   - +.dclk
   - +.gbiz
@@ -874,7 +874,7 @@ payload:
   - +.xn--qcka1pmc
   - +.youtube
   - +.snapseed.com
-  - +.google.lu
+  - +.google.mg
   - +.google.as
   - +.google.at
   - +.google.az
@@ -897,10 +897,15 @@ payload:
   - +.google.cl
   - +.google.cm
   - +.google.co
-  - +.kaggleusercontent.com
-  - +.kaggle.net
-  - +.kaggle.io
-  - +.kaggle.com
+  - +.google.com
+  - +.google.cv
+  - +.google.cz
+  - +.google.de
+  - +.google.dj
+  - +.opensourceinsights.dev
+  - +.opensourceinsight.dev
+  - +.deps.info
+  - +.deps.dev
   - +.xn--p8j9a0d9c9a.xn--q9jyb4c
   - +.new.day
   - +.iam.soy
@@ -913,18 +918,23 @@ payload:
   - +.get.app
   - +.crr.com
   - +.charlestonroadregistry.com
+  - +.xn--ngstr-lra8j.com
+  - +.googleplay.com
+  - +.kaggleusercontent.com
+  - +.kaggle.net
+  - +.kaggle.io
+  - +.stxmosquitoproject.net
+  - +.kaggle.com
   - +.youtube.dk
   - +.youtube.de
   - +.youtube.cz
   - +.youtube.cr
   - +.youtube.es
   - +.youtube.fi
-  - +.google.com
   - +.youtube.fr
   - +.youtube.ge
   - +.youtube.gr
   - +.youtube.gt
-  - +.stxmosquitoproject.net
   - +.youtube.hk
   - +.youtube.hr
   - +.youtube.hu
@@ -964,23 +974,6 @@ payload:
   - +.youtube.cl
   - +.googlevideo.com
   - +.youtube.sn
-  - +.youtube.ee
-  - +.youtube.sa
-  - +.youtube.se
-  - +.youtube.sg
-  - +.youtube.si
-  - +.youtube.com
-  - +.ggpht.com
-  - +.youtube.sk
-  - +.youtube.rs
-  - +.youtube.soy
-  - +.youtube.sv
-  - +.youtube.tn
-  - +.youtube.tv
-  - +.google.cv
-  - +.google.cz
-  - +.google.de
-  - +.google.dj
   - +.google.dk
   - +.google.dm
   - +.google.dz
@@ -1014,11 +1007,11 @@ payload:
   - +.google.li
   - +.google.lk
   - +.google.lt
-  - +.stxmosquitoproject.com
+  - +.google.lu
   - +.google.lv
   - +.google.md
   - +.google.me
-  - +.google.mg
+  - +.stxmosquitoproject.com
   - +.google.mk
   - +.google.ml
   - +.google.mn
@@ -1051,11 +1044,11 @@ payload:
   - +.google.st
   - +.google.td
   - +.google.tg
-  - +.stxmosquito.com
+  - +.google.tl
   - +.google.tm
   - +.google.tn
   - +.google.to
-  - +.google.tt
+  - +.stxmosquito.com
   - +.google.vg
   - +.google.vu
   - +.google.ws
@@ -1168,7 +1161,11 @@ payload:
   - +.googlecert.net
   - +.googlecode.com
   - +.googlecommerce.com
-  - +.youtube.ua
+  - +.youtube.ee
+  - +.youtube.sa
+  - +.youtube.se
+  - +.youtube.sg
+  - +.youtube.si
   - +.googledanmark.com
   - +.googledomains.com
   - +.googledrive.com
@@ -1207,7 +1204,7 @@ payload:
   - +.haplorrhini.com
   - +.hdrplusdata.org
   - +.hindiweb.com
-  - +.youtube.ug
+  - +.youtube.com
   - +.html5rocks.com
   - +.hwgo.com
   - +.iamremarkable.org
@@ -1280,16 +1277,16 @@ payload:
   - +.stcroixmosquitoproject.com
   - +.studywatchbyverily.com
   - +.studywatchbyverily.org
-  - +.google.tl
+  - +.google.tt
   - +.google.am
-  - +.youtube.uy
+  - +.ggpht.com
   - +.stxmosquitoproject.org
   - +.synergyse.com
   - +.tensorflow.org
   - +.tfhub.dev
   - +.thecleversense.com
   - +.thegooglestore.com
-  - +.youtube.vn
+  - +.youtube.sk
   - +.thinkquarterly.com
   - +.thinkwithgoogle.com
   - +.tiltbrush.com
@@ -1320,7 +1317,7 @@ payload:
   - +.widevine.com
   - +.withgoogle.com
   - +.womenwill.com
-  - +.youtubeeducation.com
+  - +.youtube.rs
   - +.womenwill.id
   - +.womenwill.in
   - +.womenwill.mx
@@ -1336,34 +1333,20 @@ payload:
   - +.zukunftswerkstatt.de
   - +.ai.studio
   - +.deepmind.com
+  - +.youtube.soy
+  - +.youtube.sv
+  - +.youtube.tn
+  - +.youtube.tv
+  - +.youtube.ua
+  - +.youtube.ug
+  - +.youtube.uy
+  - +.youtube.vn
+  - +.youtubeeducation.com
   - +.youtubefanfest.com
   - +.youtubegaming.com
   - +.youtubego.com
   - +.youtubego.id
   - +.youtubego.in
-  - +.youtubekids.com
-  - +.youtubemobilesupport.com
-  - +.youtube.co
-  - +.youtube.qa
-  - +.youtube.ch
-  - +.youtube.cat
-  - +.youtube.ca
-  - +.youtube.by
-  - +.youtube.bo
-  - +.youtube.bh
-  - +.youtube.bg
-  - +.youtube.be
-  - +.youtube.ba
-  - +.youtube.ro
-  - +.youtube.at
-  - +.youtube.am
-  - +.youtube.al
-  - +.youtube.ae
-  - +.yt.be
-  - +.youtube-nocookie.com
-  - +.youtu.be
-  - +.withyoutube.com
-  - +.ytimg.com
   - +.google.ae
   - +.blogspot.nl
   - +.blogspot.mx
@@ -1420,24 +1403,43 @@ payload:
   - +.blogspot.lu
   - +.blogspot.md
   - +.blogspot.mk
+  - +.youtubekids.com
+  - +.youtubemobilesupport.com
+  - +.youtube.co
+  - +.youtube.qa
+  - +.youtube.ch
+  - +.youtube.cat
+  - +.youtube.ca
+  - +.youtube.by
+  - +.youtube.bo
+  - +.youtube.bh
+  - +.youtube.bg
+  - +.youtube.be
+  - +.youtube.ba
+  - +.youtube.ro
+  - +.youtube.at
+  - +.youtube.am
+  - +.youtube.al
+  - +.youtube.ae
+  - +.yt.be
+  - +.youtube-nocookie.com
+  - +.youtu.be
+  - +.withyoutube.com
+  - +.ytimg.com
   - +.youtube.az
   - +.youtube.ru
   - +.google.ad
-  - +.opensourceinsights.dev
-  - +.opensourceinsight.dev
-  - +.deps.info
-  - +.deps.dev
-  - +.xn--ngstr-lra8j.com
-  - +.googleplay.com
+  - +.youtube.com.gr
   - +.youtube.com.my
-  - +.youtube.com.sv
-  - +.blogspot.co.nz
-  - +.blogspot.co.ke
-  - +.blogspot.co.il
-  - +.blogspot.co.id
-  - +.blogspot.co.at
   - +.blogspot.com.by
-  - +.blogspot.com.mt
+  - +.blogspot.co.at
+  - +.blogspot.co.id
+  - +.blogspot.co.il
+  - +.blogspot.co.ke
+  - +.blogspot.co.nz
+  - +.blogspot.co.uk
+  - +.blogspot.co.za
+  - +.youtube.com.uy
   - +.blogspot.com.br
   - +.blogspot.com.ng
   - +.blogspot.com.co
@@ -1445,13 +1447,13 @@ payload:
   - +.blogspot.com.ee
   - +.blogspot.com.eg
   - +.blogspot.com.cy
-  - +.google.com.bh
+  - +.blogspot.com.ar
   - +.blogspot.com.uy
   - +.blogspot.com.es
   - +.blogspot.com.tr
   - +.womenwill.com.br
   - +.thinkquarterly.co.uk
-  - +.google.com.au
+  - +.google.com.af
   - +.howtogetmo.co.uk
   - +.googlecompare.co.uk
   - +.google.com.vn
@@ -1497,35 +1499,24 @@ payload:
   - +.google.com.eg
   - +.google.com.ec
   - +.google.com.do
-  - +.blogspot.co.za
+  - +.google.com.cy
   - +.google.com.cu
   - +.google.com.co
   - +.google.com.bz
-  - +.youtube.com.hk
-  - +.blogspot.co.uk
-  - +.google.com.cy
-  - +.blogspot.com.ar
+  - +.google.com.br
+  - +.google.com.bn
+  - +.google.com.bh
   - +.google.com.bd
-  - +.google.com.ar
-  - +.google.com.ai
-  - +.google.com.ag
-  - +.google.com.af
-  - +.google.co.zw
-  - +.google.co.zm
+  - +.youtube.com.bd
   - +.google.com.bo
-  - +.google.co.vi
-  - +.google.co.ve
-  - +.google.co.uz
-  - +.youtube.co.zw
-  - +.youtube.com.ve
-  - +.youtube.com.uy
+  - +.blogspot.com.mt
   - +.youtube.com.ua
   - +.youtube.com.tw
   - +.youtube.com.tr
   - +.youtube.com.tn
-  - +.google.co.za
+  - +.youtube.com.sv
   - +.youtube.com.sg
-  - +.youtube.com.sa
+  - +.youtube.co.zw
   - +.youtube.com.ro
   - +.youtube.com.qa
   - +.youtube.com.py
@@ -1537,7 +1528,7 @@ payload:
   - +.youtube.com.om
   - +.youtube.com.ni
   - +.youtube.com.ng
-  - +.google.com.bn
+  - +.youtube.com.sa
   - +.youtube.com.mx
   - +.youtube.com.mt
   - +.youtube.com.mk
@@ -1549,9 +1540,9 @@ payload:
   - +.youtube.com.jm
   - +.youtube.com.hr
   - +.youtube.com.hn
-  - +.google.com.br
+  - +.youtube.com.hk
   - +.youtube.com.gt
-  - +.youtube.com.gr
+  - +.youtube.com.ve
   - +.youtube.com.gh
   - +.youtube.com.es
   - +.youtube.com.eg
@@ -1563,7 +1554,7 @@ payload:
   - +.youtube.com.br
   - +.youtube.com.bo
   - +.youtube.com.bh
-  - +.youtube.com.bd
+  - +.google.com.au
   - +.youtube.com.az
   - +.youtube.com.au
   - +.youtube.com.ar
@@ -1590,6 +1581,15 @@ payload:
   - +.youtube.co.ae
   - +.google.co.ao
   - +.google.co.bw
+  - +.google.com.ar
+  - +.google.com.ai
+  - +.google.com.ag
+  - +.google.co.zw
+  - +.google.co.zm
+  - +.google.co.za
+  - +.google.co.vi
+  - +.google.co.ve
+  - +.google.co.uz
   - +.google.co.uk
   - +.google.co.ug
   - +.google.co.tz
@@ -1750,6 +1750,21 @@ payload:
   - www.gstatic.com
   - www.pxcc.com
   - xn--flw351e.com
+  - pki-goog.l.google.com
+  - c.pki.goog
+  - i.pki.goog
+  - o.pki.goog
+  - crl.pki.goog
+  - crls.pki.goog
+  - ocsp.pki.goog
+  - alt1-mtalk.google.com
+  - alt2-mtalk.google.com
+  - alt3-mtalk.google.com
+  - alt4-mtalk.google.com
+  - alt5-mtalk.google.com
+  - alt6-mtalk.google.com
+  - mtalk.google.com
+  - +.ggpht.cn
   - +.2mdn-cn.net
   - +.2mdn.net
   - +.admob-cn.com
@@ -1804,21 +1819,6 @@ payload:
   - +.urchin.com
   - analytics.google.com
   - redirector.c.play.google.com
-  - +.ggpht.cn
-  - pki-goog.l.google.com
-  - c.pki.goog
-  - i.pki.goog
-  - o.pki.goog
-  - crl.pki.goog
-  - crls.pki.goog
-  - ocsp.pki.goog
-  - alt1-mtalk.google.com
-  - alt2-mtalk.google.com
-  - alt3-mtalk.google.com
-  - alt4-mtalk.google.com
-  - alt5-mtalk.google.com
-  - alt6-mtalk.google.com
-  - mtalk.google.com
   - steamcommunity-a.akamaihd.net.edgesuite.net
   - a4e8s8k3.map2.ssl.hwcdn.net
   - f3b7q2p3.ssl.hwcdn.net
@@ -1880,34 +1880,30 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
-  - flightsimulator.azureedge.net
-  - prodforza.blob.core.windows.net
-  - azure.microsoft.com
-  - azuremarketplace.microsoft.com
-  - location.microsoft.com
   - crl.microsoft.com
   - mscrl.microsoft.com
   - ocsp.microsoft.com
   - oneocsp.microsoft.com
+  - prodforza.blob.core.windows.net
+  - flightsimulator.azureedge.net
+  - azure.microsoft.com
+  - azuremarketplace.microsoft.com
+  - location.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
   - +.skype
   - +.windows
-  - +.onedrive
-  - +.onedriveupdater
   - +.bing
   - +.azure
   - +.xbox
-  - +.winhec.net
-  - +.mshome.net
-  - +.microsoft.ch
-  - +.microsoft.cl
+  - +.onedriveupdater
+  - +.onedrive
+  - +.msocdn.com
   - +.microsoft.com
   - +.microsoft.cz
-  - +.onedrive.com
+  - +.microsoft.de
   - +.microsoft.dk
-  - +.microsoft.ee
   - +.microsoft.es
   - +.microsoft.eu
   - +.microsoft.fi
@@ -2054,9 +2050,8 @@ payload:
   - +.msftnet.org
   - +.msgamesresearch.com
   - +.msgamestudios.com
-  - +.sharepoint.cn
+  - +.mshome.net
   - +.msidentity.com
-  - +.msocdn.com
   - +.msturing.org
   - +.msudalosti.com
   - +.mymicrosoft.com
@@ -2131,29 +2126,41 @@ payload:
   - +.windowssearch.com
   - +.windowsupdate.com
   - +.winhec.com
-  - +.microsoft.ca
+  - +.winhec.net
   - +.yammer.com
+  - +.microsoft.ch
+  - +.microsoft.ee
+  - +.microsoft.cl
   - +.msocsp.com
-  - +.renovacionoffice.com
-  - +.microsoft.de
+  - +.microsoftnews.cc
+  - +.microsoftnews.com
+  - +.microsoftnews.net
+  - +.microsoftnews.org
+  - +.microsoftnewsforkids.com
+  - +.microsoftnewsforkids.net
+  - +.microsoftnewsforkids.org
+  - +.microsoftnewskids.com
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.org
+  - +.msn.com
+  - +.msnewskids.com
+  - +.msnewskids.net
+  - +.msnewskids.org
+  - +.msnkids.com
+  - +.microsoftstart.com
+  - +.start.com
   - +.microsoft.cat
-  - +.xbox.co
+  - +.microsoft.ca
+  - +.onedrive.com
+  - +.sharepoint.cn
+  - +.livefilestore.com
   - +.1drv.com
-  - +.office365tw.com
-  - +.office365love.com
-  - +.msunlimitedcloudsummit.com
-  - +.microsoftpartnersolutions.com
-  - +.microsoftmxfilantropia.com
-  - +.microsoftlatamholiday.com
-  - +.bing.com
-  - +.microsoftcloudsummit.com
-  - +.microsoft-give.com
   - +.microsoft.by
   - +.gamepass.com
   - +.orithegame.com
   - +.renovacionxboxlive.com
   - +.tellmewhygame.com
-  - +.livefilestore.com
+  - +.xbox.co
   - +.xbox.com
   - +.xbox.eu
   - +.xbox.org
@@ -2172,8 +2179,6 @@ payload:
   - +.xboxservices.com
   - +.xboxstudios.com
   - +.xbx.lv
-  - +.asobostudio.com
-  - +.flightsimulator.com
   - +.beth.games
   - +.bethesda.net
   - +.bethesdagamestudios.com
@@ -2190,25 +2195,8 @@ payload:
   - +.minecraftservices.com
   - +.minecraftshop.com
   - +.mojang.com
-  - +.bingagencyawards.com
-  - +.bing.net
-  - +.microsoftnews.cc
-  - +.microsoftnews.com
-  - +.microsoftnews.net
-  - +.microsoftnews.org
-  - +.microsoftnewsforkids.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.org
-  - +.microsoftnewskids.com
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.org
-  - +.msn.com
-  - +.msnewskids.com
-  - +.msnewskids.net
-  - +.msnewskids.org
-  - +.msnkids.com
-  - +.microsoftstart.com
-  - +.start.com
+  - +.asobostudio.com
+  - +.flightsimulator.com
   - +.microsoft.be
   - +.aadrm.com
   - +.azure-devices-int.net
@@ -2279,6 +2267,18 @@ payload:
   - +.bluehatnights.com
   - +.dictate.ms
   - +.sprinklesapp.com
+  - +.bing.net
+  - +.bingagencyawards.com
+  - +.microsoft-give.com
+  - +.microsoftcloudsummit.com
+  - +.bing.com
+  - +.microsoftlatamholiday.com
+  - +.microsoftmxfilantropia.com
+  - +.microsoftpartnersolutions.com
+  - +.msunlimitedcloudsummit.com
+  - +.office365love.com
+  - +.office365tw.com
+  - +.renovacionoffice.com
   - +.spoprod-a.akamaihd.net
   - +.live.com.au
   - +.skype-edf.akadns.net
@@ -2348,15 +2348,10 @@ payload:
   - vz.download.prss.microsoft.com
   - wscont1.apps.microsoft.com
   - wscont2.apps.microsoft.com
-  - +.xboxlive.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
-  - +.clarity.ms
-  - +.microsoftads.com
-  - +.msads.net
-  - +.nelreports.net
+  - www.microsoft.com
   - +.microsoftnews.cn
   - +.msn.cn
+  - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
   - +.21vbluecloud.net
@@ -2452,7 +2447,12 @@ payload:
   - +.th.bing.com
   - bj1.api.bing.com
   - emoi-cncdn.bing.com
-  - www.microsoft.com
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
+  - +.clarity.ms
+  - +.microsoftads.com
+  - +.msads.net
+  - +.nelreports.net
   - 1password.drift.click
   - 3dns-1.adobe.com
   - 3dns-2.adobe.com
@@ -2951,8 +2951,8 @@ payload:
   - +.aws
   - +.apple
   - +.amazon
-  - +.javhihi.com
-  - +.soundofhope.org
+  - +.javhub.me
+  - +.paypalnetwork.org
   - +.12diasderegalosdeitunes.hn
   - +.12diasderegalosdeitunes.pe
   - +.12joursdecadeauxdeitunes.com
@@ -5519,7 +5519,7 @@ payload:
   - +.bank-maskan.ir
   - +.bankmellat.ir
   - +.bankmobilevibe.com
-  - +.javqd.com
+  - +.banksepah.ir
   - +.banned.video
   - +.bannedbook.net
   - +.bannedbook.org
@@ -6229,6 +6229,7 @@ payload:
   - +.bitstamp.net
   - +.bitstream.com
   - +.bitterwinter.org
+  - +.bittorrent.com
   - +.bittrex.com
   - +.bitwarden.com
   - +.bitwarden.eu
@@ -7584,7 +7585,7 @@ payload:
   - +.cfake.com
   - +.cfblob.com
   - +.cfd-tv.com
-  - +.cfdesign.com
+  - +.javqd.com
   - +.yastat.net
   - +.cfna.com
   - +.cfos.de
@@ -8248,7 +8249,7 @@ payload:
   - +.coursera-for-business.org
   - +.coursera.community
   - +.coursera.help
-  - +.coursera.org
+  - +.javpub.me
   - +.yale.edu
   - +.coverartarchive.org
   - +.covid19-rx.org
@@ -12711,6 +12712,7 @@ payload:
   - +.helpeachpeople.com
   - +.helpster.de
   - +.helpzhuling.org
+  - +.hembed.com
   - +.hentai-ani.me
   - +.hentai-archive.com
   - +.hentai-books.com
@@ -14820,9 +14822,9 @@ payload:
   - +.javhdporn.net
   - +.javher.com
   - +.javheroine.com
-  - +.000webhost.com
+  - +.javhihi.com
   - +.javhip.com
-  - +.javhub.me
+  - +.000webhost.com
   - +.javhub.net
   - +.javhuge.com
   - +.javidol.org
@@ -14856,9 +14858,9 @@ payload:
   - +.javpost.net
   - +.javprice.com
   - +.javprime.net
-  - +.mofos.com
+  - +.coursera.org
   - +.12diasderegalosdeitunes.gt
-  - +.banksepah.ir
+  - +.cfdesign.com
   - +.javrank.com
   - +.javrave.club
   - +.javroot.com
@@ -16195,6 +16197,8 @@ payload:
   - +.mantan-web.jp
   - +.mantochichi.com
   - +.manurefetish.com
+  - +.manus.im
+  - +.manuscdn.com
   - +.manytoon.com
   - +.manyvids.com
   - +.manyvoices.news
@@ -17073,7 +17077,7 @@ payload:
   - +.moeshare.cc
   - +.moez-m.com
   - +.wholekidsfoundation.org
-  - +.javpub.me
+  - +.mofos.com
   - +.mofosex.com
   - +.mofosnetwork.com
   - +.mog.com
@@ -19150,7 +19154,7 @@ payload:
   - +.paypalnet.org
   - +.paypalnetwork.info
   - +.paypalnetwork.net
-  - +.paypalnetwork.org
+  - +.javpush.com
   - +.paypalobjects.com
   - +.paypalonline.net
   - +.paypalonline.org
@@ -21760,6 +21764,7 @@ payload:
   - +.sketchbooknews.com
   - +.sketchbookpro.com
   - +.sketchfab.com
+  - +.skills.sh
   - +.skillshare.com
   - +.skimtube.com
   - +.skinstrip.net
@@ -22082,7 +22087,7 @@ payload:
   - +.soundcloud.com
   - +.soundofhope.eu
   - +.soundofhope.kr
-  - +.javpush.com
+  - +.soundofhope.org
   - +.soundon.fm
   - +.soup.io
   - +.sourceforge.com
@@ -24122,6 +24127,7 @@ payload:
   - +.v-has.com
   - +.v.gd
   - +.v2.help
+  - +.visiontimesjp.com
   - +.v2ex.com
   - +.v2fly.org
   - +.v2ph.com
@@ -24146,7 +24152,6 @@ payload:
   - +.vanish.be
   - +.vanish.ch
   - +.vanish.cl
-  - +.visiontimesjp.com
   - +.visiontimes.net
   - +.visiontimes.it
   - +.visiontimes.fr
@@ -24161,6 +24166,7 @@ payload:
   - +.visaplus.com
   - +.visapcsdirect.com
   - +.visanet.net
+  - +.visamiddleeast.com
   - +.vanish.de
   - +.vanish.dk
   - +.vanish.es
@@ -24179,11 +24185,11 @@ payload:
   - +.vanish.si
   - +.vanish.sk
   - +.vanisharabia.com
-  - +.visamiddleeast.com
+  - +.visaluxuryhotels.com
   - +.vanishcentroamerica.com
   - +.vanishinfo.cz
   - +.vanishstains.com
-  - +.visaluxuryhotels.com
+  - +.visaluxuryhotelcollection.com
   - +.vanitaonline.com
   - +.vanitha.in
   - +.vanithaveedu.com
@@ -24213,14 +24219,13 @@ payload:
   - +.veet.ca
   - +.veet.ch
   - +.veet.cl
-  - +.visaluxuryhotelcollection.com
   - +.visakorea.com
   - +.visaitalia.com
   - +.visainfiniteluxuryhotels.ca
   - +.visainfinite.ca
   - +.visaicsdirect.com
-  - +.veet.com
   - +.visaglobalfinance.com
+  - +.veet.com
   - +.visagiftcard.us
   - +.visafulfillment.com
   - +.visafintechfasttrack.com
@@ -24232,6 +24237,7 @@ payload:
   - +.visadpsonline.us
   - +.visadns.com
   - +.visadigitalconcierge.com
+  - +.visadigital.com
   - +.veet.de
   - +.veet.dk
   - +.veet.es
@@ -24291,16 +24297,16 @@ payload:
   - +.verisign.asia
   - +.verisign.biz
   - +.verisign.ch
-  - +.visadigital.com
   - +.visaconciergelac.com
-  - +.verisign.com
   - +.visacheckout.org
+  - +.verisign.com
   - +.visacheckout.net
   - +.visacards.com
   - +.visacarddesignlab.com
   - +.visaca.com
   - +.visabusinessinsights.com
   - +.visabg.com
+  - +.visabank.org
   - +.verisign.de
   - +.verisign.dk
   - +.verisign.es
@@ -24346,12 +24352,12 @@ payload:
   - +.vfsco.ca
   - +.vfsco.ch
   - +.vfsco.cl
-  - +.visabank.org
   - +.visa.tc
-  - +.vfsco.com
   - +.visa.sx
+  - +.vfsco.com
   - +.visa.so
   - +.visa.sk
+  - +.visa.se
   - +.vfsco.cz
   - +.vfsco.de
   - +.vfsco.dk
@@ -24377,7 +24383,7 @@ payload:
   - +.vfsco.se
   - +.vfsco.sk
   - +.vfsco.us
-  - +.visa.se
+  - +.visa.ro
   - +.vgcareers.net
   - +.vgg8.com
   - +.vhx.tv
@@ -24400,9 +24406,9 @@ payload:
   - +.vidble.com
   - +.video-jav.net
   - +.video-one.com
-  - +.visa.ro
   - +.visa.pt
   - +.visa.pl
+  - +.visa.no
   - +.video01.org
   - +.videobam.com
   - +.videochampion.com
@@ -24416,14 +24422,14 @@ payload:
   - +.videos4sale.com
   - +.videosamadoresreais.com
   - +.videosdemadurasx.com
-  - +.visa.no
   - +.visa.nl
   - +.visa.mq
+  - +.visa.mn
   - +.videosection.com
   - +.videoshorny.com
   - +.videoskaseros.com
   - +.videosmadeathome.com
-  - +.visa.mn
+  - +.visa.lv
   - +.videosporno.life
   - +.videostravestis.xxx
   - +.videoxxxporn.biz
@@ -24500,7 +24506,6 @@ payload:
   - +.visa.be
   - +.visa.ca
   - +.visa.cl
-  - +.visa.lv
   - +.visa.lt
   - +.visa.ky
   - +.visa.is
@@ -24513,12 +24518,13 @@ payload:
   - +.visa.fr
   - +.visa.fi
   - +.visa.es
-  - +.visa.com
   - +.visa.dk
+  - +.visa.com
   - +.visa.de
   - +.visa.cz
+  - +.shopee.com.co
   - +.ibkr.com.hk
-  - +.next11.co.jp
+  - +.visa.com.az
   - +.visa.com.bo
   - +.visa.com.br
   - +.visa.com.bs
@@ -24560,7 +24566,6 @@ payload:
   - +.visa.com.vc
   - +.visa.com.vi
   - +.visa.com.vn
-  - +.visa.com.ar
   - +.visa.com.ai
   - +.visa.com.ag
   - +.visa.co.za
@@ -24616,17 +24621,17 @@ payload:
   - +.veet.co.kr
   - +.veet.co.in
   - +.veet.co.id
+  - +.vanishstains.com.au
   - +.visaluxuryhotelcollection.com.br
   - +.visaluxuryhotelcollection.com.mx
-  - +.vanishstains.com.au
-  - +.visaluxuryhotels.com.ar
   - +.vanishbancaseulook.com.br
+  - +.visaluxuryhotels.com.ar
   - +.vanish.com.tr
   - +.vanish.com.sg
   - +.vanish.com.pe
   - +.vanish.com.my
-  - +.visasignature.co.kr
   - +.vanish.com.mx
+  - +.visasignature.co.kr
   - +.vanish.com.hr
   - +.vanish.com.co
   - +.vanish.com.br
@@ -24637,6 +24642,7 @@ payload:
   - +.vanish.co.in
   - +.vanish.co.il
   - +.vanish.co.id
+  - +.v2.hysteria.network
   - +.uygur.fc2web.com
   - +.visualarts.gr.jp
   - +.uyghur.co.uk
@@ -24947,7 +24953,7 @@ payload:
   - +.sina.com.hk
   - +.shopee.com.my
   - +.shopee.com.mx
-  - +.shopee.com.co
+  - +.hsbc.com.uy
   - +.shopee.com.br
   - +.shopee.co.th
   - +.shopee.co.id
@@ -25209,8 +25215,8 @@ payload:
   - +.ntp.fiord.ru
   - +.adidas.co.th
   - +.adidas.co.uk
+  - +.hsbc.com.vn
   - +.adidas.co.za
-  - +.adidas.com.ar
   - +.ntnews.com.au
   - +.ntdtv.com.tw
   - +.ntdtv.co.kr
@@ -25256,7 +25262,7 @@ payload:
   - +.nextfilm.com.hk
   - +.nextdigital.com.tw
   - +.nextdigital.com.hk
-  - +.hsbc.com.bh
+  - +.next11.co.jp
   - +.nexoncdn.co.kr
   - +.nexon.co.jp
   - +.newtaiwan.com.tw
@@ -25274,8 +25280,8 @@ payload:
   - +.news.singtao.ca
   - +.news.seehua.com
   - +.news.net.au
+  - +.adidas.com.ar
   - +.adidas.com.au
-  - +.adidas.com.br
   - +.news.com.au
   - +.news.co.uk
   - +.newlandmagazine.com.au
@@ -25300,7 +25306,7 @@ payload:
   - +.myvodafone.com.ws
   - +.myvodafone.com.au
   - +.mytimesplus.co.uk
-  - +.adidas.com.co
+  - +.adidas.com.br
   - +.myradio.com.hk
   - +.mypearsonshop.com.mx
   - +.myav.com.tw
@@ -25338,7 +25344,7 @@ payload:
   - +.mmbbank.com.mm
   - +.mk.yopo.work
   - +.mk.shrimpia.network
-  - +.adidas.com.eg
+  - +.adidas.com.co
   - +.mizuhobank.co.jp
   - +.miyazakibank.co.jp
   - +.misskey.yukineko.me
@@ -25417,7 +25423,7 @@ payload:
   - +.meb.gov.mm
   - +.meadjohnson.com.tw
   - +.meadjohnson.com.hk
-  - +.adidas.com.hk
+  - +.adidas.com.eg
   - +.me.ns.ci
   - +.mdn.mozit.cloud
   - +.mdn.allizom.net
@@ -25493,7 +25499,7 @@ payload:
   - +.macbookair.com.au
   - +.macbookair.co.uk
   - +.macbookair.co.kr
-  - +.hsbc.com.uy
+  - +.wlcnew.jigsy.com
   - +.mac.com.au
   - +.ma.hao123.com
   - +.m.moegirl.org
@@ -25517,7 +25523,7 @@ payload:
   - +.linux.org.hk
   - +.linefriends.com.tw
   - +.lighten.org.tw
-  - +.adidas.com.my
+  - +.adidas.com.hk
   - +.libertytimes.com.tw
   - +.liberal.org.hk
   - +.lge.co.kr
@@ -25573,7 +25579,7 @@ payload:
   - +.jwide.co.kr
   - +.juroku.co.jp
   - +.juhachibank.co.jp
-  - +.adidas.com.pe
+  - +.adidas.com.my
   - +.jpl.nasa.gov
   - +.jp.hao123.com
   - +.jp-bank.japanpost.jp
@@ -25594,7 +25600,7 @@ payload:
   - +.iwatebank.co.jp
   - +.itunes.co.th
   - +.itmedia.co.jp
-  - +.adidas.com.ph
+  - +.adidas.com.pe
   - +.istent.co.kr
   - +.istars.co.nz
   - +.islam.org.hk
@@ -25632,9 +25638,9 @@ payload:
   - +.www.gmiddle.net
   - +.www.idlcoyote.com
   - +.www.klip.me
+  - +.adidas.com.ph
   - +.adidas.com.qa
   - +.adidas.com.sa
-  - +.adidas.com.sg
   - +.www.monlamit.org
   - +.www.moztw.org
   - +.www.owind.com
@@ -25649,9 +25655,9 @@ payload:
   - +.www.wan-press.org
   - +.www.websnapr.com
   - +.www.xicons.org
-  - +.adidas.com.tr
+  - +.adidas.com.sg
   - +.www1.american.edu
-  - +.adidas.com.tw
+  - +.adidas.com.tr
   - +.www2.ohchr.org
   - +.www2.rocketbbs.com
   - +.ipfs.eternum.io
@@ -25677,7 +25683,7 @@ payload:
   - +.intel.com.uy
   - +.intel.com.tw
   - +.intel.com.tr
-  - +.intel.com.py
+  - +.hsbcamanah.com.my
   - +.intel.com.pr
   - +.intel.com.ph
   - +.intel.com.pe
@@ -25763,7 +25769,7 @@ payload:
   - +.icashpassport.com.mx
   - +.ibook.co.nz
   - +.ibkr.com.sg
-  - +.hsbcamanah.com.my
+  - +.intel.com.py
   - +.ibkr.com.au
   - +.ibkr.co.uk
   - +.ibkr.co.in
@@ -25781,9 +25787,9 @@ payload:
   - +.hudatoriq.web.id
   - +.htanime.epizy.com
   - +.cw.com.tw
-  - +.cnivogue.com.au
-  - +.visa.com.az
-  - +.wlcnew.jigsy.com
+  - +.visa.com.au
+  - +.hsbc.com.bh
+  - +.visa.com.ar
   - +.hsbc.com.tw
   - +.hsbc.com.tr
   - +.hsbc.com.sg
@@ -25795,7 +25801,7 @@ payload:
   - +.hsbc.com.hk
   - +.hsbc.com.eg
   - +.hsbc.com.br
-  - +.hsbc.com.vn
+  - +.adidas.com.tw
   - +.hsbc.com.bd
   - +.hsbc.com.au
   - +.hsbc.com.ar
@@ -26332,7 +26338,7 @@ payload:
   - +.co.ng.mil
   - +.cnnews.chosun.com
   - +.yandex.co.il
-  - +.visa.com.au
+  - +.cnivogue.com.au
   - +.yandex.com.am
   - +.yandex.com.ge
   - +.yandex.com.ru
@@ -26822,6 +26828,7 @@ payload:
   - +.greatfire.us7.list-manage.com
   - +.tv.jtbc.joins.com
   - +.hkcoc.weather.com.hk
+  - +.ntp-tk01.ocn.ad.jp
   - +.ipfs.eth.aragon.network
   - +.www.zensur.freerk.com
   - +.www.m-sport.co.uk
@@ -26836,7 +26843,6 @@ payload:
   - +.news.msn.com.tw
   - +.news.mt.co.kr
   - +.ntp-os01.ocn.ad.jp
-  - +.ntp-tk01.ocn.ad.jp
   - +.ntp-tk02.ocn.ad.jp
   - +.test-ipv6.csclub.uwaterloo.ca
   - +.test-ipv6.cs.umd.edu
