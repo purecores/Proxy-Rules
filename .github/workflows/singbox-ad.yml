@@ -3,8 +3,13 @@ name: singbox-ad
 on:
   workflow_dispatch:
   schedule:
-    # 每天 03:20 UTC（日本时间 12:20）
-    - cron: "20 3 * * *"
+    # Runs at 06:40 CST (UTC+8)
+    - cron: "30 22 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/scripts/singbox-ad.sh"
+      - ".github/workflows/singbox-ad.yml"
 
 permissions:
   contents: write
@@ -48,6 +53,12 @@ jobs:
       - name: Commit & push if changed
         run: |
           set -euo pipefail
+
+          export TZ=Asia/Shanghai
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
+          GIT_AUTHOR_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
+          GIT_COMMITTER_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -58,5 +69,6 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update sing-box ad ruleset"
+          git commit -m "$COMMIT_TIME"
+          git pull origin main --rebase
           git push origin main
