@@ -2,8 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-OUT_JSON="${ROOT_DIR}/compilation/ad/ad-singbox.json"
-OUT_SRS="${ROOT_DIR}/compilation/ad/ad-singbox.srs"
+OUT_JSON="${ROOT_DIR}/compilation/ad/singbox-ad.json"
+OUT_SRS="${ROOT_DIR}/compilation/ad/singbox-ad.srs"
 
 WORKDIR="$(mktemp -d)"
 trap 'rm -rf "$WORKDIR"' EXIT
