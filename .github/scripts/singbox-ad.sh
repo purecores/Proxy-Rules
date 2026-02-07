@@ -177,45 +177,30 @@ LC_ALL=C sort -u "$IP6" -o "$IP6"
 # ASN 数字去重
 LC_ALL=C sort -n -u "$ASN" -o "$ASN"
 
-# Convert lists to JSON arrays
-arr_from_file() {
-  local f="$1"
-  jq -R -s 'split("\n") | map(select(length>0))' "$f"
-}
-
-arr_asn_from_file() {
-  local f="$1"
-  jq -R -s 'split("\n") | map(select(length>0)) | map(tonumber)' "$f"
-}
-
-DOM_JSON="$(arr_from_file "$DOM")"
-DOMSFX_JSON="$(arr_from_file "$DOMSFX")"
-DOMKW_JSON="$(arr_from_file "$DOMKW")"
-IP4_JSON="$(arr_from_file "$IP4")"
-IP6_JSON="$(arr_from_file "$IP6")"
-ASN_JSON="$(arr_asn_from_file "$ASN")"
-
 echo "[4/4] Writing sing-box ruleset v2 JSON & compiling SRS..."
 
-# sing-box rule-set (version 2)
-# 这里用单个 rules 对象承载所有数组，便于管理与去重后输出稳定
+# 直接从文件读取，避免命令行参数过长
 jq -n \
-  --argjson domain "$DOM_JSON" \
-  --argjson domain_suffix "$DOMSFX_JSON" \
-  --argjson domain_keyword "$DOMKW_JSON" \
-  --argjson ip_cidr "$IP4_JSON" \
-  --argjson ip_cidr6 "$IP6_JSON" \
-  --argjson ip_asn "$ASN_JSON" \
-  '{
+  --rawfile domain_txt "$DOM" \
+  --rawfile domain_suffix_txt "$DOMSFX" \
+  --rawfile domain_keyword_txt "$DOMKW" \
+  --rawfile ip_cidr_txt "$IP4" \
+  --rawfile ip_cidr6_txt "$IP6" \
+  --rawfile ip_asn_txt "$ASN" \
+  '
+  def lines($s): ($s | split("\n") | map(select(length>0)));
+  def asn_lines($s): (lines($s) | map(tonumber));
+
+  {
     "version": 2,
     "rules": [
       {
-        "domain": $domain,
-        "domain_suffix": $domain_suffix,
-        "domain_keyword": $domain_keyword,
-        "ip_cidr": $ip_cidr,
-        "ip_cidr6": $ip_cidr6,
-        "ip_asn": $ip_asn
+        "domain":        lines($domain_txt),
+        "domain_suffix": lines($domain_suffix_txt),
+        "domain_keyword":lines($domain_keyword_txt),
+        "ip_cidr":       lines($ip_cidr_txt),
+        "ip_cidr6":      lines($ip_cidr6_txt),
+        "ip_asn":        asn_lines($ip_asn_txt)
       }
     ]
   }' > "$OUT_JSON"
