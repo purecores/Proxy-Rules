@@ -74,8 +74,6 @@ jobs:
 
           export TZ=Asia/Shanghai
           COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
-          GIT_AUTHOR_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
-          GIT_COMMITTER_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
 
           if [[ -n "$(git status --porcelain compilation/singbox)" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"

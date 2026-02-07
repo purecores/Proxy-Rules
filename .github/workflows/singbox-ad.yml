@@ -55,24 +55,30 @@ jobs:
         run: |
           set -euo pipefail
 
-          export TZ=Asia/Shanghai
-          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
-          GIT_AUTHOR_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
-          GIT_COMMITTER_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          export TZ=Asia/Shanghai
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
+
+          # 只 add 生成物（确保与脚本输出一致）
           git add compilation/ad/singbox-ad.json compilation/ad/singbox-ad.srs
 
           if git diff --cached --quiet; then
             echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git commit -m "$COMMIT_TIME"
-          git pull origin main --rebase
-          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+          # 直接 push；如果因为远端更新导致失败，再 fetch+rebase 重试
+          if ! git push origin HEAD:main; then
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
 
       - name: Purge jsDelivr CDN cache
         if: steps.commit.outputs.changed == 'true'

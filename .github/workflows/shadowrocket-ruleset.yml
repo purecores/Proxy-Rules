@@ -51,9 +51,6 @@ jobs:
           export TZ=Asia/Shanghai
           COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
 
-          GIT_AUTHOR_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
-          GIT_COMMITTER_DATE="$(date '+%Y-%m-%d %H:%M:%S %z')" \
-
           if git diff --quiet; then
             echo "No changes."
             exit 0
