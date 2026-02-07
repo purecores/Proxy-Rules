@@ -185,10 +185,8 @@ jq -n \
   --rawfile domain_keyword_txt "$DOMKW" \
   --rawfile ip_cidr_txt "$IP4" \
   --rawfile ip_cidr6_txt "$IP6" \
-  --rawfile ip_asn_txt "$ASN" \
   '
   def lines($s): ($s | split("\n") | map(select(length>0)));
-  def asn_lines($s): (lines($s) | map(tonumber));
 
   {
     "version": 2,
@@ -197,8 +195,7 @@ jq -n \
         "domain":         lines($domain_txt),
         "domain_suffix":  lines($domain_suffix_txt),
         "domain_keyword": lines($domain_keyword_txt),
-        "ip_cidr":        (lines($ip_cidr_txt) + lines($ip_cidr6_txt)),
-        "ip_asn":         asn_lines($ip_asn_txt)
+        "ip_cidr":        (lines($ip_cidr_txt) + lines($ip_cidr6_txt))
       }
     ]
   }' > "$OUT_JSON"
