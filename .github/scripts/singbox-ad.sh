@@ -179,7 +179,6 @@ LC_ALL=C sort -n -u "$ASN" -o "$ASN"
 
 echo "[4/4] Writing sing-box ruleset v2 JSON & compiling SRS..."
 
-# 直接从文件读取，避免命令行参数过长
 jq -n \
   --rawfile domain_txt "$DOM" \
   --rawfile domain_suffix_txt "$DOMSFX" \
@@ -195,18 +194,17 @@ jq -n \
     "version": 2,
     "rules": [
       {
-        "domain":        lines($domain_txt),
-        "domain_suffix": lines($domain_suffix_txt),
-        "domain_keyword":lines($domain_keyword_txt),
-        "ip_cidr":       lines($ip_cidr_txt),
-        "ip_cidr6":      lines($ip_cidr6_txt),
-        "ip_asn":        asn_lines($ip_asn_txt)
+        "domain":         lines($domain_txt),
+        "domain_suffix":  lines($domain_suffix_txt),
+        "domain_keyword": lines($domain_keyword_txt),
+        "ip_cidr":        (lines($ip_cidr_txt) + lines($ip_cidr6_txt)),
+        "ip_asn":         asn_lines($ip_asn_txt)
       }
     ]
   }' > "$OUT_JSON"
 
-# Compile to .srs (sing-box must exist in PATH)
 sing-box rule-set compile --output "$OUT_SRS" "$OUT_JSON"
+
 
 echo "Done:"
 echo "  - $OUT_JSON"
