@@ -77,17 +77,42 @@ build_one() {
     tmp="${out_json}.tmp"
 
     jq --arg s "micu.hk" '
-      .rules |= [
-        .rules[]
-        | if (has("domain_suffix") and (.domain_suffix|type)=="string" and .domain_suffix==$s) then
+      # Recursively walk any json value and remove $s from domain_suffix
+      def prune_domain_suffix($s):
+        if type == "object" then
+          ( . as $o
+            | (if ($o | has("domain_suffix")) then
+                if ($o.domain_suffix|type) == "string" then
+                  if $o.domain_suffix == $s then ($o | del(.domain_suffix)) else $o end
+                elif ($o.domain_suffix|type) == "array" then
+                  ($o | .domain_suffix |= map(select(. != $s))
+                      | if (.domain_suffix|length)==0 then del(.domain_suffix) else . end)
+                else
+                  $o
+                end
+              else
+                $o
+              end)
+            | with_entries(.value |= prune_domain_suffix($s))
+          )
+        elif type == "array" then
+          map(prune_domain_suffix($s))
+        else
+          .
+        end;
+
+      # Decide whether to drop a rule:
+      # - If the top-level domain_suffix becomes missing after pruning (meaning it was only micu.hk / all micu.hk), drop it.
+      def sanitize_rule($s):
+        . as $orig
+        | (prune_domain_suffix($s)) as $p
+        | if ($orig | has("domain_suffix")) and ( $p | has("domain_suffix") | not ) then
             empty
-          elif (has("domain_suffix") and (.domain_suffix|type)=="array" and (.domain_suffix|index($s) != null)) then
-            .domain_suffix |= (map(select(. != $s)))
-            | if (.domain_suffix|length)==0 then empty else . end
           else
-            .
-          end
-      ]
+            $p
+          end;
+
+      .rules |= [ .rules[] | sanitize_rule($s) ]
     ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
   fi
 
