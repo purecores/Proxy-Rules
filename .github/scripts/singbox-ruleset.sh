@@ -59,38 +59,36 @@ build_one() {
 
   # 顺序稳定去重：首次出现保留，后续重复丢弃
   # 以对象 tostring 作为去重 key（不会打乱顺序）
-  jq -s --argjson ver "${ver}" --arg name "${name}" '
-    # 只对 Direct 生效；只删除 domain 的“精确等于 micu.hk”
-    def sanitize:
-      if $name != "Direct" then .
-      else
-        if has("domain") then
-          if (.domain|type) == "string" then
-            # 精确匹配：只删 "micu.hk"，不会删 "tv.micu.hk"
-            if .domain == "micu.hk" then empty else . end
-          elif (.domain|type) == "array" then
-            # 数组中只移除精确元素 "micu.hk"，不会影响 "tv.micu.hk"
-            (.domain - ["micu.hk"]) as $d
-            | if ($d|length) == 0 then empty else . + {domain: $d} end
+  jq -s --argjson ver "${ver}" '
+    reduce .[] as $r (
+      { seen: {}, rules: [] };
+      ($r | tostring) as $k
+      | if .seen[$k]
+        then .
+        else .seen[$k] = true
+             | .rules += [$r]
+        end
+    )
+    | { version: $ver, rules: .rules }
+  ' "${rules_ndjson}" > "${out_json}"
+
+  # post-process: only for Direct.json, remove exact "micu.hk" (do not match "tv.micu.hk")
+  if [[ "${name}" == "Direct" ]]; then
+    tmp="${out_json}.tmp"
+    jq --arg d "micu.hk" '
+      .rules |= [
+        .rules[]
+        | if (has("domain") and (.domain|type)=="string" and .domain==$d) then
+            empty
+          elif (has("domain") and (.domain|type)=="array" and (.domain|index($d) != null)) then
+            .domain |= (map(select(. != $d)))
+            | if (.domain|length)==0 then empty else . end
           else
             .
           end
-        else
-          .
-        end
-      end;
-
-    [ .[] | sanitize ] as $rules
-    | reduce $rules[] as $r (
-        { seen: {}, rules: [] };
-        ($r | tostring) as $k
-        | if .seen[$k]
-          then .
-          else .seen[$k] = true | .rules += [$r]
-          end
-      )
-    | { version: $ver, rules: .rules }
-  ' "${rules_ndjson}" > "${out_json}"
+      ]
+    ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
+  fi
 
   # 基础校验
   jq -e '.version and (.rules|type=="array")' "${out_json}" >/dev/null
