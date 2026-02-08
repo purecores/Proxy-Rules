@@ -118,16 +118,7 @@ merge_one_group() {
   # remove exact micu.hk in DOMAIN-SUFFIX rules (do NOT match tv.micu.hk)
   if [[ "${name}" == "Direct" ]]; then
     yq -i '
-      .payload |= map(
-        select(
-          # keep rule if it is NOT a DOMAIN-SUFFIX,micu.hk,...
-          (
-            ((split(",")[0] | ascii_upcase) != "DOMAIN-SUFFIX")
-            or
-            (split(",")[1] != "micu.hk")
-          )
-        )
-      )
+      .payload |= map(select((.|tostring|sub("^\\s+";"")|sub("\\s+$";"")) != "+.micu.hk"))
     ' "${out_yaml}"
   fi
 
