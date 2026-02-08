@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Runs at 06:40 CST (UTC+8)
-    - cron: "45 22 * * *"
+    - cron: "50 22 * * *"
   push:
     branches: ["main"]
     paths:
