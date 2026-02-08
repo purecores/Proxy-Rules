@@ -66,7 +66,7 @@ build_one() {
       else
         if has("domain") then
           if (.domain|type) == "string" then
-            if .domain == "micu.hk" then empty else . end
+            if .domain == "+.micu.hk" then empty else . end
           elif (.domain|type) == "array" then
             (.domain - ["micu.hk"]) as $d
             | if ($d|length) == 0 then empty else . + {domain: $d} end
