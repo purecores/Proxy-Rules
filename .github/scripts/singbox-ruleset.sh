@@ -60,14 +60,16 @@ build_one() {
   # 顺序稳定去重：首次出现保留，后续重复丢弃
   # 以对象 tostring 作为去重 key（不会打乱顺序）
   jq -s --argjson ver "${ver}" --arg name "${name}" '
-    # 仅对 Direct 做规则清洗：删除 domain 全字匹配 micu.hk
+    # 只对 Direct 生效；只删除 domain 的“精确等于 micu.hk”
     def sanitize:
       if $name != "Direct" then .
       else
         if has("domain") then
           if (.domain|type) == "string" then
-            if .domain == "+.micu.hk" then empty else . end
+            # 精确匹配：只删 "micu.hk"，不会删 "tv.micu.hk"
+            if .domain == "micu.hk" then empty else . end
           elif (.domain|type) == "array" then
+            # 数组中只移除精确元素 "micu.hk"，不会影响 "tv.micu.hk"
             (.domain - ["micu.hk"]) as $d
             | if ($d|length) == 0 then empty else . + {domain: $d} end
           else
@@ -78,15 +80,13 @@ build_one() {
         end
       end;
 
-    # 先清洗，再做顺序稳定去重
     [ .[] | sanitize ] as $rules
     | reduce $rules[] as $r (
         { seen: {}, rules: [] };
         ($r | tostring) as $k
         | if .seen[$k]
           then .
-          else .seen[$k] = true
-              | .rules += [$r]
+          else .seen[$k] = true | .rules += [$r]
           end
       )
     | { version: $ver, rules: .rules }
