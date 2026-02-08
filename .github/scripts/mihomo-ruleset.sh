@@ -114,6 +114,23 @@ merge_one_group() {
     | jq -Rn '{payload: [inputs]}' \
     | yq -P -o=yaml '.' - > "${out_yaml}"
 
+  # post-process: only for Direct.yaml
+  # remove exact micu.hk in DOMAIN-SUFFIX rules (do NOT match tv.micu.hk)
+  if [[ "${name}" == "Direct" ]]; then
+    yq -i '
+      .payload |= map(
+        select(
+          # keep rule if it is NOT a DOMAIN-SUFFIX,micu.hk,...
+          (
+            ((split(",")[0] | ascii_upcase) != "DOMAIN-SUFFIX")
+            or
+            (split(",")[1] != "micu.hk")
+          )
+        )
+      )
+    ' "${out_yaml}"
+  fi
+
   echo "==> Compile ${name}"
   local behavior
   behavior="$(detect_behavior "${out_yaml}")"
