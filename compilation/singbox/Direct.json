@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "rules": [
     {
       "domain_suffix": [
@@ -19,7 +20,6 @@
       ]
     },
     {
-      "domain_regex": "^.+-mihayo\\.akamaized\\.net$",
       "domain_suffix": [
         "mhystatic.com",
         "mhyurl.cn",
@@ -36,10 +36,10 @@
         "themisweeps.com",
         "yuanshen.com",
         "juequling.com"
-      ]
+      ],
+      "domain_regex": "^.+-mihayo\\.akamaized\\.net$"
     },
     {
-      "domain_regex": "^.+-mihayo\\.akamaized\\.net$",
       "domain_suffix": [
         "mszdld.com",
         "dobest.com",
@@ -256,7 +256,8 @@
         "roblox.qq.com",
         "goto-game.net.cn",
         "roco.qq.com"
-      ]
+      ],
+      "domain_regex": "^.+-mihayo\\.akamaized\\.net$"
     },
     {
       "domain_suffix": [
@@ -126186,6 +126187,5 @@
         "2c0f:f7a8:9220::/48"
       ]
     }
-  ],
-  "version": 2
+  ]
 }
