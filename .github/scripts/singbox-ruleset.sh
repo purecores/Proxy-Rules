@@ -77,42 +77,44 @@ build_one() {
     tmp="${out_json}.tmp"
 
     jq --arg s "micu.hk" '
-      # Recursively walk any json value and remove $s from domain_suffix
-      def prune_domain_suffix($s):
+      # jq 1.6-compatible walk implementation
+      def walk(f):
+        . as $in
+        | if type == "object" then
+            reduce keys[] as $k ({}; . + {($k): ($in[$k] | walk(f))}) | f
+          elif type == "array" then
+            map(walk(f)) | f
+          else
+            f
+          end;
+
+      # sanitize function applied at every node
+      def sanitize:
         if type == "object" then
-          ( . as $o
-            | (if ($o | has("domain_suffix")) then
-                if ($o.domain_suffix|type) == "string" then
-                  if $o.domain_suffix == $s then ($o | del(.domain_suffix)) else $o end
-                elif ($o.domain_suffix|type) == "array" then
-                  ($o | .domain_suffix |= map(select(. != $s))
-                      | if (.domain_suffix|length)==0 then del(.domain_suffix) else . end)
-                else
-                  $o
-                end
-              else
-                $o
-              end)
-            | with_entries(.value |= prune_domain_suffix($s))
-          )
+          # If an object has domain_suffix exactly "micu.hk", drop the whole object
+          if (.domain_suffix? | type) == "string" and .domain_suffix == $s then
+            null
+          else
+            # If domain_suffix is an array, remove exact "micu.hk" element(s)
+            (if (.domain_suffix? | type) == "array" then
+                .domain_suffix |= map(select(. != $s))
+                | if (.domain_suffix | length) == 0 then del(.domain_suffix) else . end
+            else
+                .
+            end)
+            # Drop any keys whose values became null (from nested deletions)
+            | with_entries(select(.value != null))
+          end
+
         elif type == "array" then
-          map(prune_domain_suffix($s))
+          # Remove null elements produced by deletions
+          map(select(. != null))
+
         else
           .
         end;
 
-      # Decide whether to drop a rule:
-      # - If the top-level domain_suffix becomes missing after pruning (meaning it was only micu.hk / all micu.hk), drop it.
-      def sanitize_rule($s):
-        . as $orig
-        | (prune_domain_suffix($s)) as $p
-        | if ($orig | has("domain_suffix")) and ( $p | has("domain_suffix") | not ) then
-            empty
-          else
-            $p
-          end;
-
-      .rules |= [ .rules[] | sanitize_rule($s) ]
+      walk(sanitize)
     ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
   fi
 
