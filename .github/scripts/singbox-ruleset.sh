@@ -75,14 +75,15 @@ build_one() {
   # post-process: only for Direct.json, remove exact "micu.hk" (do not match "tv.micu.hk")
   if [[ "${name}" == "Direct" ]]; then
     tmp="${out_json}.tmp"
-    jq --arg d "micu.hk" '
+
+    jq --arg s "micu.hk" '
       .rules |= [
         .rules[]
-        | if (has("domain") and (.domain|type)=="string" and .domain==$d) then
+        | if (has("domain_suffix") and (.domain_suffix|type)=="string" and .domain_suffix==$s) then
             empty
-          elif (has("domain") and (.domain|type)=="array" and (.domain|index($d) != null)) then
-            .domain |= (map(select(. != $d)))
-            | if (.domain|length)==0 then empty else . end
+          elif (has("domain_suffix") and (.domain_suffix|type)=="array" and (.domain_suffix|index($s) != null)) then
+            .domain_suffix |= (map(select(. != $s)))
+            | if (.domain_suffix|length)==0 then empty else . end
           else
             .
           end
