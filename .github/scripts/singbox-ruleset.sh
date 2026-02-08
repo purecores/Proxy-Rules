@@ -77,44 +77,36 @@ build_one() {
     tmp="${out_json}.tmp"
 
     jq --arg s "micu.hk" '
-      # jq 1.6-compatible walk implementation
-      def walk(f):
-        . as $in
-        | if type == "object" then
-            reduce keys[] as $k ({}; . + {($k): ($in[$k] | walk(f))}) | f
+      .rules |= (
+        # 对 rules 内部递归处理，但不重建根对象
+        def walk_rules(f):
+          if type == "object" then
+            f | with_entries(.value |= walk_rules(f))
           elif type == "array" then
-            map(walk(f)) | f
+            map(walk_rules(f)) | map(select(. != null))
           else
-            f
+            .
           end;
 
-      # sanitize function applied at every node
-      def sanitize:
-        if type == "object" then
-          # If an object has domain_suffix exactly "micu.hk", drop the whole object
-          if (.domain_suffix? | type) == "string" and .domain_suffix == $s then
-            null
-          else
-            # If domain_suffix is an array, remove exact "micu.hk" element(s)
-            (if (.domain_suffix? | type) == "array" then
+        walk_rules(
+          if type == "object" then
+            # 精确删除 domain_suffix == "micu.hk"
+            if (.domain_suffix? | type) == "string" and .domain_suffix == $s then
+              null
+            else
+              # domain_suffix 为数组时，仅移除精确等于 micu.hk 的元素
+              (if (.domain_suffix? | type) == "array" then
                 .domain_suffix |= map(select(. != $s))
                 | if (.domain_suffix | length) == 0 then del(.domain_suffix) else . end
-            else
+              else
                 .
-            end)
-            # Drop any keys whose values became null (from nested deletions)
-            | with_entries(select(.value != null))
+              end)
+            end
+          else
+            .
           end
-
-        elif type == "array" then
-          # Remove null elements produced by deletions
-          map(select(. != null))
-
-        else
-          .
-        end;
-
-      walk(sanitize)
+        )
+      )
     ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
   fi
 
