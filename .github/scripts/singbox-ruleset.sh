@@ -73,42 +73,42 @@ build_one() {
   ' "${rules_ndjson}" > "${out_json}"
 
   # post-process: only for Direct.json, remove exact "micu.hk" (do not match "tv.micu.hk")
-  # if [[ "${name}" == "Direct" ]]; then
-  #   tmp="${out_json}.tmp"
+  if [[ "${name}" == "Direct" ]]; then
+    tmp="${out_json}.tmp"
 
-  #   jq --arg s "micu.hk" '
-  #     .rules |= (
-  #       # 对 rules 内部递归处理，但不重建根对象
-  #       def walk_rules(f):
-  #         if type == "object" then
-  #           f | with_entries(.value |= walk_rules(f))
-  #         elif type == "array" then
-  #           map(walk_rules(f)) | map(select(. != null))
-  #         else
-  #           .
-  #         end;
+    jq --arg s "micu.hk" '
+      .rules |= (
+        # 对 rules 内部递归处理，但不重建根对象
+        def walk_rules(f):
+          if type == "object" then
+            f | with_entries(.value |= walk_rules(f))
+          elif type == "array" then
+            map(walk_rules(f)) | map(select(. != null))
+          else
+            .
+          end;
 
-  #       walk_rules(
-  #         if type == "object" then
-  #           # 精确删除 domain_suffix == "micu.hk"
-  #           if (.domain_suffix? | type) == "string" and .domain_suffix == $s then
-  #             null
-  #           else
-  #             # domain_suffix 为数组时，仅移除精确等于 micu.hk 的元素
-  #             (if (.domain_suffix? | type) == "array" then
-  #               .domain_suffix |= map(select(. != $s))
-  #               | if (.domain_suffix | length) == 0 then del(.domain_suffix) else . end
-  #             else
-  #               .
-  #             end)
-  #           end
-  #         else
-  #           .
-  #         end
-  #       )
-  #     )
-  #   ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
-  # fi
+        walk_rules(
+          if type == "object" then
+            # 精确删除 domain_suffix == "micu.hk"
+            if (.domain_suffix? | type) == "string" and .domain_suffix == $s then
+              null
+            else
+              # domain_suffix 为数组时，仅移除精确等于 micu.hk 的元素
+              (if (.domain_suffix? | type) == "array" then
+                .domain_suffix |= map(select(. != $s))
+                | if (.domain_suffix | length) == 0 then del(.domain_suffix) else . end
+              else
+                .
+              end)
+            end
+          else
+            .
+          end
+        )
+      )
+    ' "${out_json}" > "${tmp}" && mv "${tmp}" "${out_json}"
+  fi
 
   # 基础校验
   jq -e '.version and (.rules|type=="array")' "${out_json}" >/dev/null
