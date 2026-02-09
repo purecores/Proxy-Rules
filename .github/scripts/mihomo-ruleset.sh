@@ -116,11 +116,11 @@ merge_one_group() {
 
   # post-process: only for Direct.yaml
   # remove exact micu.hk in DOMAIN-SUFFIX rules (do NOT match tv.micu.hk)
-  if [[ "${name}" == "Direct" ]]; then
-    yq -i '
-      .payload |= map(select((.|tostring|sub("^\\s+";"")|sub("\\s+$";"")) != "+.micu.hk"))
-    ' "${out_yaml}"
-  fi
+  # if [[ "${name}" == "Direct" ]]; then
+  #   yq -i '
+  #     .payload |= map(select((.|tostring|sub("^\\s+";"")|sub("\\s+$";"")) != "+.micu.hk"))
+  #   ' "${out_yaml}"
+  # fi
 
   echo "==> Compile ${name}"
   local behavior
