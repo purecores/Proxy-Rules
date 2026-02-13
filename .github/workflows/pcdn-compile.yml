@@ -88,6 +88,7 @@ jobs:
           .github/scripts/pcdn-compile.sh
 
       - name: Commit generated files
+        id: commit
         shell: bash
         run: |
           set -euo pipefail
@@ -107,3 +108,11 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes to commit."
           fi
+
+      - name: Purge jsDelivr CDN cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          set -e
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/pcdn/"
+          echo "Purging: $URL"
+          curl -s "$URL"
