@@ -91,18 +91,19 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          export TZ=Asia/Tokyo
+
+          export TZ=Asia/Shanghai
           COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
 
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git pull origin main --rebase
-
           if [[ -n "$(git status --porcelain compilation/pcdn)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
             git add compilation/pcdn
             git commit -m "$COMMIT_TIME"
+            git pull origin main --rebase
             git push origin HEAD:main
           else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes to commit."
           fi
