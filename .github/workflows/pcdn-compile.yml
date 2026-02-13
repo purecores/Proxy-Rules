@@ -41,85 +41,69 @@ jobs:
           import json
           from pathlib import Path
 
-          src = Path(".tmp/pcdn/pcdn.list").read_text(encoding="utf-8", errors="ignore")
-
-          # pcdn.list 可能是一行，用空白切分后只保留形如 TYPE,value 的 token
-          tokens = src.split()
+          text = Path(".tmp/pcdn/pcdn.list").read_text(encoding="utf-8", errors="ignore")
+          tokens = text.split()
 
           domains = []
           suffixes = []
           regexes = []
 
-          def add_unique(lst, v):
+          def add(lst, v):
             if v not in lst:
               lst.append(v)
 
           for t in tokens:
-            # 忽略注释/中文说明等非规则 token
-            if "," not in t:
+            if "," not in t or t.startswith("#"):
               continue
-            if t.startswith("#"):
+            k, v = t.split(",", 1)
+            v = v.strip()
+            if not v:
               continue
+            if k == "DOMAIN":
+              add(domains, v)
+            elif k == "DOMAIN-SUFFIX":
+              add(suffixes, v)
+            elif k == "DOMAIN-REGEX":
+              add(regexes, v)
 
-            # 允许形如 "DOMAIN-SUFFIX,example.com"
-            if t.startswith("DOMAIN-SUFFIX,"):
-              val = t.split(",", 1)[1].strip()
-              if val:
-                add_unique(suffixes, val)
-            elif t.startswith("DOMAIN,"):
-              val = t.split(",", 1)[1].strip()
-              if val:
-                add_unique(domains, val)
-            elif t.startswith("DOMAIN-REGEX,"):
-              val = t.split(",", 1)[1].strip()
-              if val:
-                add_unique(regexes, val)
-
-          # --- mihomo yaml (domain behavior source) ---
-          # 采用 payload:
-          #  - "+.example.com"   (suffix)
-          #  - "a.example.com"  (full)
-          # 注意：mihomo mrs（domain）不支持 regex，因此不写入 payload，仅做注释提示。
-          mihomo_payload = []
+          # ---------- mihomo yaml ----------
+          # 仅 payload，无任何注释
+          payload = []
           for s in suffixes:
-            mihomo_payload.append(f"+.{s}")
+            payload.append(f"+.{s}")
           for d in domains:
-            mihomo_payload.append(d)
+            payload.append(d)
 
-          mihomo_lines = []
-          mihomo_lines.append("# Generated from: https://raw.githubusercontent.com/uselibrary/PCDN/main/pcdn.list")
-          mihomo_lines.append("# For mihomo .mrs: only DOMAIN / DOMAIN-SUFFIX are included (DOMAIN-REGEX is not supported in domain ruleset).")
-          mihomo_lines.append(f"# Ignored DOMAIN-REGEX entries: {len(regexes)}")
-          mihomo_lines.append("payload:")
-          for item in mihomo_payload:
-            # 简单转义：用双引号包裹，避免特殊字符影响 YAML
-            mihomo_lines.append(f'  - "{item}"')
+          mihomo_yaml = ["payload:"]
+          for item in payload:
+            mihomo_yaml.append(f'  - "{item}"')
 
-          Path(".tmp/pcdn/mihomo-pcdn.yaml").write_text("\n".join(mihomo_lines) + "\n", encoding="utf-8")
+          Path(".tmp/pcdn/mihomo-pcdn.yaml").write_text(
+            "\n".join(mihomo_yaml) + "\n",
+            encoding="utf-8"
+          )
 
-          # --- sing-box json (source ruleset) ---
-          # 将 DOMAIN-SUFFIX -> domain_suffix，并加前导 "."，保持稳定语义
-          sing = {
-            "version": 2,
+          # ---------- sing-box json ----------
+          singbox = {
+            "version": 1,
             "rules": [
               {
                 "domain": domains,
-                "domain_suffix": [f".{s}" for s in suffixes],
-                "domain_regex": regexes,
+                "domain_suffix": suffixes,
+                "domain_regex": regexes
               }
-            ],
+            ]
           }
-          Path(".tmp/pcdn/singbox-pcdn.json").write_text(
-            json.dumps(sing, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-          )
 
-          print(f"domains={len(domains)} suffixes={len(suffixes)} regexes={len(regexes)}")
+          Path(".tmp/pcdn/singbox-pcdn.json").write_text(
+            json.dumps(singbox, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8"
+          )
           PY
 
-          # 覆盖更新目标源文件（不保留中间产物在仓库路径）
           mv -f .tmp/pcdn/mihomo-pcdn.yaml  compilation/pcdn/mihomo-pcdn.yaml
           mv -f .tmp/pcdn/singbox-pcdn.json compilation/pcdn/singbox-pcdn.json
+
 
       - name: Install sing-box (linux amd64)
         shell: bash
