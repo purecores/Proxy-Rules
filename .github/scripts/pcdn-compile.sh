@@ -73,10 +73,27 @@ Path(".tmp/pcdn/singbox-pcdn.json").write_text(
   json.dumps(singbox, ensure_ascii=False, indent=2) + "\n",
   encoding="utf-8"
 )
+
+lines = []
+
+for s in suffixes:
+    lines.append(f"DOMAIN-SUFFIX,{s}")
+
+for d in domains:
+    lines.append(f"DOMAIN,{d}")
+
+for r in regexes:
+    lines.append(f"DOMAIN-REGEX,{r}")
+
+Path(".tmp/pcdn/shadowrocket-pcdn.list").write_text(
+    "\n".join(lines) + "\n",
+    encoding="utf-8"
+)
 PY
 
 mv -f .tmp/pcdn/mihomo-pcdn.yaml  compilation/pcdn/mihomo-pcdn.yaml
 mv -f .tmp/pcdn/singbox-pcdn.json compilation/pcdn/singbox-pcdn.json
+mv -f .tmp/pcdn/shadowrocket-pcdn.list compilation/pcdn/shadowrocket-pcdn.list
 
 # mihomo: convert source yaml -> mrs (domain)
 mihomo convert-ruleset domain yaml \
