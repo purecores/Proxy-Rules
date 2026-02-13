@@ -3,187 +3,108 @@ name: pcdn-compile
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 3 * * *" # 每天 UTC 03:17（按需改）
+    - cron: "40 21 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/scripts/pcdn-compile.sh"
+      - ".github/workflows/pcdn-compile.yml"
 
 permissions:
   contents: write
-
-concurrency:
-  group: pcdn-ruleset-build
-  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
 
-      - name: Prepare dirs
+      - name: Install jq + curl
         run: |
-          set -euo pipefail
-          mkdir -p compilation/pcdn
-          mkdir -p .tmp/pcdn
+          sudo apt-get update
+          sudo apt-get install -y jq curl tar gzip
 
-      - name: Generate mihomo YAML & sing-box JSON from pcdn.list
+      - name: Install sing-box (latest)
         shell: bash
         run: |
           set -euo pipefail
 
-          SRC_URL="https://raw.githubusercontent.com/uselibrary/PCDN/main/pcdn.list"
-          SRC_FILE=".tmp/pcdn/pcdn.list"
-          curl -fsSL "$SRC_URL" -o "$SRC_FILE"
+          TAG="$(curl -fsSL https://api.github.com/repos/SagerNet/sing-box/releases/latest | jq -r .tag_name)"
+          VER="${TAG#v}"
+          echo "Latest sing-box tag: ${TAG}"
 
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
+          ASSET="sing-box-${VER}-linux-amd64.tar.gz"
+          URL="https://github.com/SagerNet/sing-box/releases/download/${TAG}/${ASSET}"
+          echo "Download: ${URL}"
 
-          text = Path(".tmp/pcdn/pcdn.list").read_text(encoding="utf-8", errors="ignore")
-          tokens = text.split()
+          curl -fsSL -o /tmp/sing-box.tar.gz "${URL}"
 
-          domains = []
-          suffixes = []
-          regexes = []
+          rm -rf /tmp/sing-box-extract
+          mkdir -p /tmp/sing-box-extract
+          tar -xzf /tmp/sing-box.tar.gz -C /tmp/sing-box-extract
 
-          def add(lst, v):
-            if v not in lst:
-              lst.append(v)
-
-          for t in tokens:
-            if "," not in t or t.startswith("#"):
-              continue
-            k, v = t.split(",", 1)
-            v = v.strip()
-            if not v:
-              continue
-            if k == "DOMAIN":
-              add(domains, v)
-            elif k == "DOMAIN-SUFFIX":
-              add(suffixes, v)
-            elif k == "DOMAIN-REGEX":
-              add(regexes, v)
-
-          # ---------- mihomo yaml ----------
-          # 仅 payload，无任何注释
-          payload = []
-          for s in suffixes:
-            payload.append(f"+.{s}")
-          for d in domains:
-            payload.append(d)
-
-          mihomo_yaml = ["payload:"]
-          for item in payload:
-            mihomo_yaml.append(f'  - "{item}"')
-
-          Path(".tmp/pcdn/mihomo-pcdn.yaml").write_text(
-            "\n".join(mihomo_yaml) + "\n",
-            encoding="utf-8"
-          )
-
-          # ---------- sing-box json ----------
-          singbox = {
-            "version": 1,
-            "rules": [
-              {
-                "domain": domains,
-                "domain_suffix": suffixes,
-                "domain_regex": regexes
-              }
-            ]
-          }
-
-          Path(".tmp/pcdn/singbox-pcdn.json").write_text(
-            json.dumps(singbox, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8"
-          )
-          PY
-
-          mv -f .tmp/pcdn/mihomo-pcdn.yaml  compilation/pcdn/mihomo-pcdn.yaml
-          mv -f .tmp/pcdn/singbox-pcdn.json compilation/pcdn/singbox-pcdn.json
-
-
-      - name: Install sing-box (linux amd64)
-        shell: bash
-        run: |
-          set -euo pipefail
-          api="https://api.github.com/repos/SagerNet/sing-box/releases/latest"
-          url="$(curl -fsSL "$api" \
-            | jq -r '.assets[].browser_download_url | select(test("sing-box-[0-9].*-linux-amd64\\.tar\\.gz$"))' \
-            | head -n 1)"
-          if [ -z "$url" ] || [ "$url" = "null" ]; then
-            echo "Failed to find sing-box linux-amd64 tar.gz asset from latest release."
+          BIN_PATH="$(find /tmp/sing-box-extract -type f -name sing-box -perm -111 | head -n 1)"
+          if [[ -z "${BIN_PATH}" ]]; then
+            echo "ERROR: sing-box binary not found after extracting tarball." >&2
+            echo "Extracted files:" >&2
+            ls -R /tmp/sing-box-extract >&2 || true
             exit 1
           fi
-          echo "Downloading: $url"
-          curl -fsSL "$url" -o .tmp/pcdn/sing-box.tar.gz
-          tar -xzf .tmp/pcdn/sing-box.tar.gz -C .tmp/pcdn
-          # 通常解压后目录名形如 sing-box-1.xx.x-linux-amd64
-          SB="$(find .tmp/pcdn -maxdepth 2 -type f -name sing-box | head -n 1)"
-          if [ -z "$SB" ]; then
-            echo "sing-box binary not found after extract."
-            exit 1
-          fi
-          chmod +x "$SB"
-          sudo mv "$SB" /usr/local/bin/sing-box
+
+          sudo install -m 0755 "${BIN_PATH}" /usr/local/bin/sing-box
+          which sing-box
           sing-box version
 
-      - name: Install mihomo (linux amd64 compatible)
+      - name: Install mihomo (latest)
         shell: bash
         run: |
           set -euo pipefail
+
           api="https://api.github.com/repos/MetaCubeX/mihomo/releases/latest"
           url="$(curl -fsSL "$api" \
             | jq -r '.assets[].browser_download_url | select(test("mihomo-linux-amd64-compatible-.*\\.gz$"))' \
             | head -n 1)"
-          if [ -z "$url" ] || [ "$url" = "null" ]; then
-            echo "Failed to find mihomo linux-amd64-compatible .gz asset from latest release."
+
+          if [[ -z "$url" || "$url" == "null" ]]; then
+            echo "ERROR: failed to find mihomo linux-amd64-compatible .gz asset from latest release." >&2
             exit 1
           fi
+
           echo "Downloading: $url"
-          curl -fsSL "$url" -o .tmp/pcdn/mihomo.gz
-          gzip -d -f .tmp/pcdn/mihomo.gz
-          chmod +x .tmp/pcdn/mihomo
-          sudo mv .tmp/pcdn/mihomo /usr/local/bin/mihomo
+          curl -fsSL "$url" -o /tmp/mihomo.gz
+          gzip -d -f /tmp/mihomo.gz
+
+          chmod +x /tmp/mihomo
+          sudo install -m 0755 /tmp/mihomo /usr/local/bin/mihomo
+
+          which mihomo
           mihomo -v || true
 
-      - name: Compile to .mrs / .srs
+      - name: Build rulesets
+        shell: bash
+        run: |
+          chmod +x .github/scripts/pcdn-compile.sh
+          .github/scripts/pcdn-compile.sh
+
+      - name: Commit generated files
+        id: commit
         shell: bash
         run: |
           set -euo pipefail
 
-          # mihomo: convert source yaml -> mrs (domain)
-          mihomo convert-ruleset domain yaml \
-            compilation/pcdn/mihomo-pcdn.yaml \
-            compilation/pcdn/mihomo-pcdn.mrs
+          export TZ=Asia/Tokyo
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
 
-          # sing-box: compile source json -> srs
-          sing-box rule-set compile \
-            --output compilation/pcdn/singbox-pcdn.srs \
-            compilation/pcdn/singbox-pcdn.json
-
-          ls -lah compilation/pcdn
-
-      - name: Commit & push (only final targets)
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          git add \
-            compilation/pcdn/mihomo-pcdn.yaml \
-            compilation/pcdn/mihomo-pcdn.mrs \
-            compilation/pcdn/singbox-pcdn.json \
-            compilation/pcdn/singbox-pcdn.srs
-
-          if git diff --cached --quiet; then
-            echo "No changes."
-            exit 0
+          if [[ -n "$(git status --porcelain compilation/pcdn)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add compilation/pcdn
+            git commit -m "$COMMIT_TIME"
+            git pull origin main --rebase
+            git push origin HEAD:main
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to commit."
           fi
-
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git commit -m "chore: update PCDN rulesets"
-          git push origin main
