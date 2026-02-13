@@ -100,7 +100,7 @@ jobs:
           # --- sing-box json (source ruleset) ---
           # 将 DOMAIN-SUFFIX -> domain_suffix，并加前导 "."，保持稳定语义
           sing = {
-            "version": 4,
+            "version": 2,
             "rules": [
               {
                 "domain": domains,
