@@ -44,6 +44,7 @@ jobs:
           .github/scripts/shadowrocket-ruleset.sh
 
       - name: Commit and push if changed
+        id: commit
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -67,7 +68,7 @@ jobs:
           git push origin HEAD:main
 
       - name: Purge jsDelivr cache
-        if: success()
+        if: steps.commit.outputs.changed == 'true'
         run: |
           set -e
           URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/shadowrocket"
