@@ -1,0 +1,87 @@
+name: singbox-ad
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs at 06:40 CST (UTC+8)
+    - cron: "30 22 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/scripts/singbox-ad.sh"
+      - ".github/workflows/singbox-ad.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl ca-certificates
+
+      - name: Install sing-box (latest)
+        run: |
+          set -euo pipefail
+          API="https://api.github.com/repos/SagerNet/sing-box/releases/latest"
+          TAG="$(curl -fsSL "$API" | jq -r '.tag_name')"
+          VER="${TAG#v}"
+          TARBALL="sing-box-${VER}-linux-amd64.tar.gz"
+          URL="https://github.com/SagerNet/sing-box/releases/download/${TAG}/${TARBALL}"
+
+          echo "Downloading: $URL"
+          curl -fsSL "$URL" -o /tmp/sing-box.tar.gz
+          tar -xzf /tmp/sing-box.tar.gz -C /tmp
+          sudo install -m 0755 "/tmp/sing-box-${VER}-linux-amd64/sing-box" /usr/local/bin/sing-box
+          sing-box version
+
+      - name: Run generator
+        run: |
+          chmod +x .github/scripts/singbox-ad.sh
+          .github/scripts/singbox-ad.sh
+
+      - name: Commit & push if changed
+        id: commit
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          export TZ=Asia/Shanghai
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
+
+          git add compilation/ad
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "$COMMIT_TIME"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+          if ! git push origin HEAD:main; then
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
+
+      - name: Purge jsDelivr CDN cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          set -e
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/ad/singbox-ad.srs"
+          echo "Purging: $URL"
+          curl -s "$URL"

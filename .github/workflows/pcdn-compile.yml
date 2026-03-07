@@ -1,0 +1,118 @@
+name: pcdn-compile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 21 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/scripts/pcdn-compile.sh"
+      - ".github/workflows/pcdn-compile.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install jq + curl
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq curl tar gzip
+
+      - name: Install sing-box (latest)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TAG="$(curl -fsSL https://api.github.com/repos/SagerNet/sing-box/releases/latest | jq -r .tag_name)"
+          VER="${TAG#v}"
+          echo "Latest sing-box tag: ${TAG}"
+
+          ASSET="sing-box-${VER}-linux-amd64.tar.gz"
+          URL="https://github.com/SagerNet/sing-box/releases/download/${TAG}/${ASSET}"
+          echo "Download: ${URL}"
+
+          curl -fsSL -o /tmp/sing-box.tar.gz "${URL}"
+
+          rm -rf /tmp/sing-box-extract
+          mkdir -p /tmp/sing-box-extract
+          tar -xzf /tmp/sing-box.tar.gz -C /tmp/sing-box-extract
+
+          BIN_PATH="$(find /tmp/sing-box-extract -type f -name sing-box -perm -111 | head -n 1)"
+          if [[ -z "${BIN_PATH}" ]]; then
+            echo "ERROR: sing-box binary not found after extracting tarball." >&2
+            echo "Extracted files:" >&2
+            ls -R /tmp/sing-box-extract >&2 || true
+            exit 1
+          fi
+
+          sudo install -m 0755 "${BIN_PATH}" /usr/local/bin/sing-box
+          which sing-box
+          sing-box version
+
+      - name: Install mihomo (latest)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          api="https://api.github.com/repos/MetaCubeX/mihomo/releases/latest"
+          url="$(curl -fsSL "$api" \
+            | jq -r '.assets[].browser_download_url | select(test("mihomo-linux-amd64-compatible-.*\\.gz$"))' \
+            | head -n 1)"
+
+          if [[ -z "$url" || "$url" == "null" ]]; then
+            echo "ERROR: failed to find mihomo linux-amd64-compatible .gz asset from latest release." >&2
+            exit 1
+          fi
+
+          echo "Downloading: $url"
+          curl -fsSL "$url" -o /tmp/mihomo.gz
+          gzip -d -f /tmp/mihomo.gz
+
+          chmod +x /tmp/mihomo
+          sudo install -m 0755 /tmp/mihomo /usr/local/bin/mihomo
+
+          which mihomo
+          mihomo -v || true
+
+      - name: Build rulesets
+        shell: bash
+        run: |
+          chmod +x .github/scripts/pcdn-compile.sh
+          .github/scripts/pcdn-compile.sh
+
+      - name: Commit generated files
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          export TZ=Asia/Shanghai
+          COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
+
+          if [[ -n "$(git status --porcelain compilation/pcdn)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add compilation/pcdn
+            git commit -m "$COMMIT_TIME"
+            git pull origin main --rebase
+            git push origin HEAD:main
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes to commit."
+          fi
+
+      - name: Purge jsDelivr CDN cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          set -e
+          URL="https://purge.jsdelivr.net/gh/purecores/Proxy-Rules@main/compilation/pcdn/"
+          echo "Purging: $URL"
+          curl -s "$URL"
