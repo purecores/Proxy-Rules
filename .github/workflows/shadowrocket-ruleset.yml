@@ -51,8 +51,9 @@ jobs:
           export TZ=Asia/Shanghai
           COMMIT_TIME="$(date '+%Y-%m-%d %H:%M:%S')"
 
-          if git diff --quiet; then
-            echo "No changes."
+          # 只检查目标输出目录是否有变化
+          if git diff --quiet compilation/shadowrocket; then
+            echo "Output files have not changed. Skipping commit."
             exit 0
           fi
 
