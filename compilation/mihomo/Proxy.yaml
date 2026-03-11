@@ -56,8 +56,14 @@ payload:
   - +.esm.run
   - +.jsdelivr.com
   - +.jsdelivr.net
-  - android.googlesource.com
   - homebrew.bintray.com
+  - notary-submissions-prod.s3-accelerate.amazonaws.com
+  - notary-submissions-prod.s3.us-west-2.amazonaws.com
+  - appleworldwidedeveloper.hb-api.omtrdc.net
+  - appleworldwidedeveloper.sc.omtrdc.net
+  - p-events-delivery.akamaized.net
+  - developers.facebook.com
+  - amp.akamaized.net
   - firebase.google.com
   - firebase.googleapis.com
   - firebaseappcheck.googleapis.com
@@ -70,13 +76,7 @@ payload:
   - firebaselogging.googleapis.com
   - firebaseperusertopics-pa.googleapis.com
   - firebaseremoteconfig.googleapis.com
-  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
-  - notary-submissions-prod.s3-accelerate.amazonaws.com
-  - notary-submissions-prod.s3.us-west-2.amazonaws.com
-  - appleworldwidedeveloper.hb-api.omtrdc.net
-  - appleworldwidedeveloper.sc.omtrdc.net
-  - p-events-delivery.akamaized.net
-  - d29vzk4ow07wi7.cloudfront.net
+  - android.googlesource.com
   - az764295.vo.msecnd.net
   - bingsettingssearch.trafficmanager.net
   - default.exp-tas.com
@@ -95,12 +95,12 @@ payload:
   - vsmarketplacebadge.apphb.com
   - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
   - docker-pinata-support.s3.amazonaws.com
-  - amp.akamaized.net
-  - developers.facebook.com
+  - d29vzk4ow07wi7.cloudfront.net
+  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
   - +.java
   - +.android
-  - +.fedorapeople.org
-  - +.codeforaliving.io
+  - +.apple-mapkit.com
+  - +.unity.com
   - +.artixlinux.org
   - +.badgen.net
   - +.bitvise.com
@@ -181,7 +181,7 @@ payload:
   - +.videolan.org
   - +.vim.org
   - +.wapm.io
-  - +.hashicorp.com
+  - +.researchkit.hk
   - +.webflow.com
   - +.weblate.org
   - +.wireshark.org
@@ -190,19 +190,32 @@ payload:
   - +.yarnpkg.com
   - +.zsh.org
   - +.zed.dev
-  - +.android.com
-  - +.androidify.com
-  - +.bootstrapcdn.com
-  - +.getbootstrap.com
   - +.fontawesome.com
   - +.fortawesome.com
-  - +.rust-lang.org
-  - +.rustup.rs
-  - +.crates.io
-  - +.docs.rs
+  - +.go-lang.com
+  - +.go-lang.net
+  - +.go-lang.org
+  - +.go.dev
+  - +.godoc.org
+  - +.golang.com
+  - +.golang.net
+  - +.golang.org
+  - +.openwrt.org
+  - +.lede-project.org
+  - +.researchandcare.org
+  - +.unity3d.com
+  - +.codeberg.org
+  - +.codeberg.page
+  - +.github1s.com
+  - +.sourcegraph.com
+  - +.kubernetes.io
+  - +.k8s.io
+  - +.qt.io
+  - +.qt-project.org
+  - +.brew.sh
   - +.askubuntu.com
   - +.blogoverflow.com
-  - +.consul.io
+  - +.codeforaliving.io
   - +.mathoverflow.net
   - +.serverfault.com
   - +.sstatic.net
@@ -225,57 +238,65 @@ payload:
   - +.superuser.com
   - +.tex-talk.net
   - +.thesffblog.com
-  - +.go-lang.com
-  - +.go-lang.net
-  - +.go-lang.org
-  - +.go.dev
-  - +.godoc.org
-  - +.golang.com
-  - +.golang.net
-  - +.golang.org
-  - +.perl.org
-  - +.cpan.org
-  - +.metacpan.org
-  - +.modperl.pl
+  - +.archlinux.org
+  - +.archlinuxarm.org
+  - +.archlinuxcn.org
+  - +.fastlane.ci
+  - +.fastlane.tools
+  - +.fury.blog
+  - +.fury.co
+  - +.fury.dev
+  - +.fury.help
+  - +.fury.io
+  - +.gemfury.com
+  - +.java.com
+  - +.java.net
+  - +.redis.io
+  - +.redislabs.com
+  - +.termux.com
+  - +.termux.dev
+  - +.termux.org
+  - +.nginx.com
+  - +.carekit.org
+  - +.scala-lang.org
+  - +.scala-sbt.org
+  - +.sentry.io
+  - +.sentry-cdn.com
+  - +.anaconda.cloud
+  - +.anaconda.com
+  - +.anaconda.org
+  - +.conda.io
+  - +.getfedora.org
+  - +.fedoraforum.org
+  - +.fedorapeople.org
+  - +.fedoraproject.org
+  - +.fedoramagazine.org
+  - +.bootstrapcdn.com
+  - +.getbootstrap.com
   - +.braventures.com
   - +.braveux.com
   - +.compass.is
   - +.fightforux.com
   - +.forthebadge.com
   - +.stockagainstphotography.com
+  - +.debian.org
+  - +.dotdeb.org
+  - +.flathub.org
+  - +.flatpak.org
+  - +.consul.io
+  - +.hashicorp.com
+  - +.nomadproject.io
+  - +.packer.io
+  - +.terraform.io
+  - +.vagrantcloud.com
+  - +.vagrantup.com
+  - +.vaultproject.io
+  - +.polymer-project.org
+  - +.polymerproject.org
   - +.gitbook.com
   - +.gitbook.io
-  - +.brew.sh
-  - +.redis.io
-  - +.redislabs.com
-  - +.firebase.com
-  - +.firebase.io
-  - +.firebaseapp.com
-  - +.firebaseio.com
-  - +.gitlab.com
-  - +.gitlab.io
-  - +.gitlab.net
-  - +.gitlab-static.net
-  - +.unity.com
-  - +.unity3d.com
-  - +.azurecr.io
-  - +.docker.io
-  - +.ecr.aws
-  - +.gcr.io
-  - +.quay.io
-  - +.dart.dev
-  - +.polymerproject.org
-  - +.polymer-project.org
-  - +.youtrack.cloud
-  - +.kotlinlang.org
-  - +.dartlang.org
-  - +.dartpad.dev
-  - +.github1s.com
-  - +.sourcegraph.com
-  - +.qt.io
-  - +.qt-project.org
-  - +.ruby-lang.org
-  - +.rubygems.org
+  - +.redhat.com
+  - +.redhat.org
   - +.macruby.com
   - +.cups.org
   - +.macruby.net
@@ -284,30 +305,31 @@ payload:
   - +.webobjects.com
   - +.wpewebkit.org
   - +.calendarserver.org
-  - +.fedoramagazine.org
+  - +.macruby.org
   - +.macosforge.org
   - +.servicetalk.io
   - +.apple-cloudkit.com
   - +.foundationdb.org
-  - +.apple-mapkit.com
+  - +.alpinelinux.org
   - +.webkitgtk.org
-  - +.carekit.org
-  - +.researchandcare.org
-  - +.researchkit.hk
+  - +.nginx.org
+  - +.apache.org
+  - +.wasmer.io
   - +.researchkit.net
   - +.researchkit.org
   - +.researchkit.tv
   - +.webkit.org
-  - +.jetbrains.team
-  - +.jetbrains.space
-  - +.jetbrains.net
-  - +.jetbrains.com
-  - +.jetbrains.cloud
-  - +.jb.gg
-  - +.intellij.org
-  - +.mongodb.com
-  - +.mongodb.org
   - +.canonical.com
+  - +.v8project.org
+  - +.v8.dev
+  - +.stackage.org
+  - +.haskellstack.org
+  - +.haskell.org
+  - +.gitlab-static.net
+  - +.ubuntu.com
+  - +.ubuntu.net
+  - +.ubuntuforums.org
+  - +.ubuntu-touch.io
   - +.launchpad.net
   - +.launchpadcontent.net
   - +.launchpadlibrarian.com
@@ -315,42 +337,111 @@ payload:
   - +.launchpadlibrarian.org
   - +.snapcraft.io
   - +.snapstore.io
-  - +.ubuntu.com
-  - +.ubuntu.net
-  - +.ubuntuforums.org
-  - +.ubuntu-touch.io
-  - +.haskell.org
-  - +.haskellstack.org
-  - +.stackage.org
-  - +.alpinelinux.org
-  - +.java.com
-  - +.java.net
+  - +.dart.dev
+  - +.dartlang.org
+  - +.dartpad.dev
+  - +.accountkit.com
+  - +.atscaleconference.com
+  - +.botorch.org
+  - +.buck.build
+  - +.buckbuild.com
+  - +.componentkit.org
+  - +.draftjs.org
+  - +.f8.com
+  - +.facebookappcenter.info
+  - +.facebookappcenter.net
+  - +.facebookappcenter.org
+  - +.facebookconnect.com
+  - +.facebookdevelopergarage.com
+  - +.faciometrics.com
+  - +.fasttext.cc
+  - +.fbf8.com
+  - +.fbinfer.com
+  - +.fblitho.com
+  - +.fbredex.com
+  - +.fbrell.com
+  - +.flow.dev
+  - +.flow.org
+  - +.flowtype.org
+  - +.frescolib.org
+  - +.hacklang.org
+  - +.hhvm.com
+  - +.makeitopen.com
+  - +.mcrouter.net
+  - +.mcrouter.org
+  - +.messengerdevelopers.com
+  - +.ogp.me
+  - +.opengraphprotocol.com
+  - +.opengraphprotocol.org
+  - +.parse.com
+  - +.pyrobot.org
+  - +.react.com
+  - +.reactjs.com
+  - +.reactjs.org
+  - +.recoiljs.org
+  - +.rocksdb.com
+  - +.rocksdb.net
+  - +.rocksdb.org
+  - +.yogalayout.com
+  - +.lfai.foundation
+  - +.linuxfoundation.org
+  - +.kernel.org
+  - +.linux.org
+  - +.openjsf.org
+  - +.jquery.com
+  - +.jquerymobile.com
+  - +.jqueryui.com
+  - +.mochajs.org
+  - +.nodejs.org
+  - +.amp.dev
+  - +.ampproject.com
+  - +.ampproject.net
+  - +.ampproject.org
+  - +.electronjs.org
+  - +.firebase.com
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
+  - +.flutter.dev
+  - +.flutterapp.com
+  - +.pub.dev
+  - +.datalore.io
+  - +.intellij.com
+  - +.intellij.net
+  - +.intellij.org
+  - +.jb.gg
+  - +.jetbrains.cloud
+  - +.jetbrains.com
+  - +.jetbrains.net
+  - +.jetbrains.space
+  - +.jetbrains.team
+  - +.kotlinlang.org
+  - +.youtrack.cloud
+  - +.mongodb.com
+  - +.mongodb.org
+  - +.perl.org
+  - +.cpan.org
+  - +.metacpan.org
+  - +.modperl.pl
+  - +.gitlab.net
+  - +.gitlab.io
+  - +.rust-lang.org
+  - +.rustup.rs
+  - +.crates.io
+  - +.docs.rs
+  - +.adventofcode.com
+  - +.android.com
+  - +.androidify.com
   - +.grazie.ai
   - +.jetbrains.ai
-  - +.intellij.net
-  - +.nginx.com
-  - +.nginx.org
-  - +.archlinux.org
-  - +.archlinuxarm.org
-  - +.archlinuxcn.org
-  - +.debian.org
-  - +.dotdeb.org
-  - +.getfedora.org
-  - +.fedoraforum.org
-  - +.adventofcode.com
-  - +.fedoraproject.org
-  - +.macruby.org
-  - +.apache.org
-  - +.wasmer.io
-  - +.nomadproject.io
-  - +.packer.io
-  - +.terraform.io
-  - +.vagrantcloud.com
-  - +.vagrantup.com
-  - +.vaultproject.io
-  - +.jfrog.com
-  - +.jfrog.org
-  - +.bintray.com
+  - +.gitlab.com
+  - +.sr.ht
+  - +.readthedocs-hosted.com
+  - +.readthedocs.com
+  - +.readthedocs.io
+  - +.readthedocs.org
+  - +.ruby-lang.org
+  - +.rubygems.org
   - +.adaptivecards.io
   - +.api-extractor.com
   - +.apisof.net
@@ -402,64 +493,35 @@ payload:
   - +.vscode-cdn.net
   - +.vscode-unpkg.net
   - +.xamarin.com
-  - +.intellij.com
+  - +.sourcehut.org
   - +.embed.ly
   - +.embedly.com
   - +.playerjs.io
-  - +.anaconda.cloud
-  - +.anaconda.com
-  - +.anaconda.org
-  - +.conda.io
-  - +.redhat.com
-  - +.redhat.org
-  - +.scala-lang.org
-  - +.scala-sbt.org
-  - +.v8.dev
-  - +.v8project.org
-  - +.flutter.dev
-  - +.flutterapp.com
-  - +.pub.dev
-  - +.datalore.io
-  - +.sourcehut.org
-  - +.sr.ht
-  - +.mystrikingly.com
-  - +.strikingly.com
-  - +.strikinglycdn.com
-  - +.readthedocs-hosted.com
-  - +.readthedocs.com
-  - +.readthedocs.io
-  - +.readthedocs.org
-  - +.sentry.io
-  - +.sentry-cdn.com
-  - +.termux.com
-  - +.termux.dev
-  - +.termux.org
-  - +.framer.com
-  - +.framer.website
-  - +.framercanvas.com
-  - +.framerstatic.com
-  - +.framerusercontent.com
-  - +.fury.blog
-  - +.fury.co
-  - +.fury.dev
-  - +.fury.help
-  - +.fury.io
-  - +.gemfury.com
-  - +.kubernetes.io
-  - +.k8s.io
-  - +.openwrt.org
-  - +.lede-project.org
   - +.pycon.org
   - +.pypa.io
   - +.pypi.io
   - +.pypi.org
   - +.python.org
   - +.pythonhosted.org
-  - +.codeberg.org
-  - +.codeberg.page
+  - +.mystrikingly.com
+  - +.strikingly.com
+  - +.strikinglycdn.com
+  - +.azurecr.io
+  - +.docker.io
+  - +.ecr.aws
+  - +.gcr.io
+  - +.quay.io
+  - +.bintray.com
+  - +.jfrog.org
+  - +.jfrog.com
   - +.compose-spec.io
   - +.docker.com
   - +.dockerstatic.com
+  - +.framer.com
+  - +.framer.website
+  - +.framercanvas.com
+  - +.framerstatic.com
+  - +.framerusercontent.com
   - +.01.org
   - +.hyperscan.io
   - +.intellinuxgraphics.com
@@ -477,110 +539,104 @@ payload:
   - +.clearlinux.org
   - +.ospray.net
   - +.ospray.org
-  - +.lfai.foundation
-  - +.linuxfoundation.org
-  - +.kernel.org
-  - +.linux.org
-  - +.openjsf.org
-  - +.electronjs.org
-  - +.jquery.com
-  - +.jquerymobile.com
-  - +.jqueryui.com
-  - +.mochajs.org
-  - +.nodejs.org
-  - +.amp.dev
-  - +.ampproject.com
-  - +.ampproject.net
-  - +.ampproject.org
-  - +.accountkit.com
-  - +.atscaleconference.com
-  - +.botorch.org
-  - +.buck.build
-  - +.buckbuild.com
-  - +.componentkit.org
-  - +.draftjs.org
-  - +.f8.com
-  - +.facebookappcenter.info
-  - +.facebookappcenter.net
-  - +.facebookappcenter.org
-  - +.facebookconnect.com
-  - +.facebookdevelopergarage.com
-  - +.faciometrics.com
-  - +.fasttext.cc
-  - +.fbf8.com
-  - +.fbinfer.com
-  - +.fblitho.com
-  - +.fbredex.com
-  - +.fbrell.com
-  - +.flow.dev
-  - +.flow.org
-  - +.flowtype.org
-  - +.frescolib.org
-  - +.hacklang.org
-  - +.hhvm.com
-  - +.makeitopen.com
-  - +.mcrouter.net
-  - +.mcrouter.org
-  - +.messengerdevelopers.com
-  - +.ogp.me
-  - +.opengraphprotocol.com
-  - +.opengraphprotocol.org
-  - +.parse.com
-  - +.pyrobot.org
-  - +.react.com
-  - +.reactjs.com
-  - +.reactjs.org
-  - +.recoiljs.org
-  - +.rocksdb.com
-  - +.rocksdb.net
-  - +.rocksdb.org
-  - +.yogalayout.com
-  - +.fastlane.ci
-  - +.fastlane.tools
-  - +.flathub.org
-  - +.flatpak.org
-  - +.playgrounds-cdn.apple.com
-  - +.developerservices2.apple.com
-  - +.greenend.org.uk
   - +.developer.apple.com
   - +.devimages-cdn.apple.com
+  - +.mcr.microsoft.com
   - +.visualstudio.co.uk
+  - +.greenend.org.uk
+  - +.developerservices2.apple.com
   - +.devstreaming-cdn.apple.com
   - +.timestamp.apple.com
-  - +.mcr.microsoft.com
-  - firebase-settings.crashlytics.com
+  - +.playgrounds-cdn.apple.com
   - +.iads.unity3d.com
   - +.unityads.unity3d.com
   - +.researchkit.cn
   - +.researchkit.com.cn
   - +.swiftui.cn
   - +.swiftui.com.cn
+  - cdn.ampproject.org
+  - firebase-settings.crashlytics.com
+  - +.cdn.jetbrains.com
+  - +.download-cdn.jetbrains.com.cn
   - +.microsoftreactor.cn
   - +.microsoftreactor.com.cn
   - +.reactorms.com.cn
-  - cdn.ampproject.org
-  - +.cdn.jetbrains.com
-  - +.download-cdn.jetbrains.com.cn
   - +.b-cdn.net
   - +.bunny.net
   - +.bunnycdn.com
   - +.cdnjs.com
   - +.cdn77.com
   - +.cdn77.org
-  - +.fastly-edge.com
-  - +.fastly-terrarium.com
-  - +.fastly.com
-  - +.fastly.io
-  - +.fastly.net
-  - +.fastlylabs.com
-  - +.fastlylb.net
-  - +.zencdn.net
-  - +.quantil.com
+  - +.argotunnel.com
+  - +.browser.run
+  - +.cfargotunnel.com
+  - +.cfdata.org
+  - +.cfl.re
+  - +.cloudflare-dns.com
+  - +.cloudflare-ech.com
+  - +.cloudflare-esni.com
+  - +.cloudflare-gateway.com
+  - +.cloudflare-quic.com
+  - +.cloudflare-terms-of-service-abuse.com
+  - +.cloudflare.com
+  - +.cloudflare.dev
+  - +.cloudflare.net
+  - +.cloudflare.tv
+  - +.cloudflareaccess.com
+  - +.cloudflareapps.com
+  - +.cloudflarebolt.com
+  - +.cloudflarebrowser.com
+  - +.cloudflarechallenge.com
+  - +.cloudflareclient.com
+  - +.cloudflarecp.com
+  - +.cloudflareinsights.com
+  - +.cloudflareok.com
+  - +.cloudflarepartners.com
+  - +.cloudflareportal.com
+  - +.cloudflarepreview.com
+  - +.cloudflareregistrar.com
+  - +.cloudflareresearch.com
+  - +.cloudflareresolve.com
+  - +.cloudflaressl.com
+  - +.cloudflarestatus.com
+  - +.cloudflarestorage.com
+  - +.cloudflarestream.com
+  - +.cloudflaresupport.com
+  - +.cloudflaretest.com
+  - +.cloudflarewarp.com
+  - +.cloudflareworkers.com
+  - +.encryptedsni.com
+  - +.every1dns.net
+  - +.foundationdns.com
+  - +.foundationdns.net
+  - +.foundationdns.org
+  - +.imagedelivery.net
+  - +.isbgpsafeyet.com
+  - +.pacloudflare.com
+  - +.pages.dev
+  - +.r2.dev
+  - +.trycloudflare.com
+  - +.videodelivery.net
+  - +.warp.plus
+  - +.workers.dev
+  - +.cf-ipfs.com
+  - +.cloudflare-ipfs.com
   - +.stackpath.com
   - +.stackpath.dev
   - +.vrcdn.cloud
   - +.vrcdn.live
   - +.vrcdn.video
+  - +.delvenetworks.com
+  - +.limelight.com
+  - +.lldns.net
+  - +.llnw-trials.com
+  - +.llnw.com
+  - +.llnw.net
+  - +.llnwd.net
+  - +.llnwi.net
+  - +.pagecdn.com
+  - +.pagecdn.io
+  - +.quantil.com
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -650,85 +706,18 @@ payload:
   - +.iamakamai.net
   - +.soasta-dswb.com
   - +.srtcdn.net
+  - +.fastly-edge.com
+  - +.fastly-terrarium.com
+  - +.fastly.com
+  - +.fastly.io
+  - +.fastly.net
+  - +.fastlylabs.com
+  - +.fastlylb.net
+  - +.zencdn.net
   - +.imgix.com
   - +.imgix.net
-  - +.delvenetworks.com
-  - +.limelight.com
-  - +.lldns.net
-  - +.llnw-trials.com
-  - +.llnw.com
-  - +.llnw.net
-  - +.llnwd.net
-  - +.llnwi.net
-  - +.pagecdn.com
-  - +.pagecdn.io
-  - +.argotunnel.com
-  - +.browser.run
-  - +.cfargotunnel.com
-  - +.cfdata.org
-  - +.cfl.re
-  - +.cloudflare-dns.com
-  - +.cloudflare-ech.com
-  - +.cloudflare-esni.com
-  - +.cloudflare-gateway.com
-  - +.cloudflare-quic.com
-  - +.cloudflare-terms-of-service-abuse.com
-  - +.cloudflare.com
-  - +.cloudflare.dev
-  - +.cloudflare.net
-  - +.cloudflare.tv
-  - +.cloudflareaccess.com
-  - +.cloudflareapps.com
-  - +.cloudflarebolt.com
-  - +.cloudflarebrowser.com
-  - +.cloudflarechallenge.com
-  - +.cloudflareclient.com
-  - +.cloudflarecp.com
-  - +.cloudflareinsights.com
-  - +.cloudflareok.com
-  - +.cloudflarepartners.com
-  - +.cloudflareportal.com
-  - +.cloudflarepreview.com
-  - +.cloudflareregistrar.com
-  - +.cloudflareresearch.com
-  - +.cloudflareresolve.com
-  - +.cloudflaressl.com
-  - +.cloudflarestatus.com
-  - +.cloudflarestorage.com
-  - +.cloudflarestream.com
-  - +.cloudflaresupport.com
-  - +.cloudflaretest.com
-  - +.cloudflarewarp.com
-  - +.cloudflareworkers.com
-  - +.encryptedsni.com
-  - +.every1dns.net
-  - +.foundationdns.com
-  - +.foundationdns.net
-  - +.foundationdns.org
-  - +.imagedelivery.net
-  - +.isbgpsafeyet.com
-  - +.pacloudflare.com
-  - +.pages.dev
-  - +.r2.dev
-  - +.trycloudflare.com
-  - +.videodelivery.net
-  - +.warp.plus
-  - +.workers.dev
-  - +.cf-ipfs.com
-  - +.cloudflare-ipfs.com
-  - +.akamai.co.kr
   - +.one.one.one
-  - +.accdn.com.cn
-  - +.akadns88.net
-  - +.akadns99.net
-  - +.akamai.com
-  - +.akcdn.com.cn
-  - +.aptdn.net
-  - +.edgekey88.net
-  - +.janrain.biz
-  - +.janrainservices.com
-  - +.skycdn.com.cn
-  - +.tl88.net
+  - +.akamai.co.kr
   - +.cf-china.info
   - +.cf-ns.com
   - +.cf-ns.net
@@ -748,6 +737,17 @@ payload:
   - +.cloudflareprod.com
   - +.cloudflarestaging.com
   - +.cloudflarestoragegw.com
+  - +.accdn.com.cn
+  - +.akadns88.net
+  - +.akadns99.net
+  - +.akamai.com
+  - +.akcdn.com.cn
+  - +.aptdn.net
+  - +.edgekey88.net
+  - +.janrain.biz
+  - +.janrainservices.com
+  - +.skycdn.com.cn
+  - +.tl88.net
   - +.bilibili.tv
   - +.biliintl.com
   - +.dreamcast.hk
@@ -833,32 +833,33 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
+  - prodforza.blob.core.windows.net
+  - flightsimulator.azureedge.net
+  - azure.microsoft.com
+  - azuremarketplace.microsoft.com
   - location.microsoft.com
   - crl.microsoft.com
   - mscrl.microsoft.com
   - ocsp.microsoft.com
   - oneocsp.microsoft.com
-  - prodforza.blob.core.windows.net
-  - flightsimulator.azureedge.net
-  - azure.microsoft.com
-  - azuremarketplace.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
   - +.skype
   - +.windows
+  - +.onedrive
+  - +.onedriveupdater
   - +.bing
   - +.azure
   - +.xbox
-  - +.onedriveupdater
-  - +.onedrive
-  - +.yammer.com
-  - +.msidentity.com
+  - +.winhec.net
+  - +.mshome.net
+  - +.microsoft.ch
   - +.microsoft.cl
   - +.microsoft.com
   - +.microsoft.cz
-  - +.microsoft.de
-  - +.masalladeloslimites.com
+  - +.onedrive.com
+  - +.microsoft.dk
   - +.microsoft.ee
   - +.microsoft.es
   - +.microsoft.eu
@@ -1006,8 +1007,8 @@ payload:
   - +.msftnet.org
   - +.msgamesresearch.com
   - +.msgamestudios.com
-  - +.mshome.net
-  - +.bingapis.com
+  - +.sharepoint.cn
+  - +.msidentity.com
   - +.msocdn.com
   - +.msturing.org
   - +.msudalosti.com
@@ -1083,77 +1084,29 @@ payload:
   - +.windowssearch.com
   - +.windowsupdate.com
   - +.winhec.com
-  - +.winhec.net
-  - +.microsoft.cat
-  - +.microsoftdiplomados.com
-  - +.azure-dns.org
-  - +.azure-dns.net
-  - +.bing123.com
-  - +.flipwithsurface.com
-  - +.microsoft.dk
-  - +.microsoft.ch
-  - +.office365love.com
-  - +.bingparachute.com
-  - +.bingsandbox.com
-  - +.bingvisualsearch.com
-  - +.bingworld.com
-  - +.bluehatnights.com
-  - +.dictate.ms
-  - +.sprinklesapp.com
-  - +.bing.net
-  - +.bingagencyawards.com
-  - +.microsoft-give.com
-  - +.microsoftcloudsummit.com
-  - +.bing.com
-  - +.microsoftlatamholiday.com
-  - +.microsoftmxfilantropia.com
-  - +.microsoftpartnersolutions.com
-  - +.msunlimitedcloudsummit.com
-  - +.bingapistatistics.com
-  - +.office365tw.com
-  - +.renovacionoffice.com
-  - +.azure-dns.info
-  - +.azure-dns.com
-  - +.windowsazure.com
-  - +.tryfunctions.com
-  - +.trafficmanager.net
-  - +.msocsp.com
-  - +.microsoftnews.cc
-  - +.microsoftnews.com
-  - +.microsoftnews.net
-  - +.microsoftnews.org
-  - +.microsoftnewsforkids.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.org
-  - +.microsoftnewskids.com
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.org
-  - +.msn.com
-  - +.msnewskids.com
-  - +.msnewskids.net
-  - +.msnewskids.org
-  - +.msnkids.com
-  - +.microsoftstart.com
-  - +.start.com
   - +.microsoft.ca
-  - +.microsoft.by
-  - +.onedrive.com
-  - +.sharepoint.cn
-  - +.livefilestore.com
+  - +.yammer.com
+  - +.start.com
+  - +.microsoftstart.com
+  - +.microsoft.de
+  - +.microsoft.cat
+  - +.xbox.co
   - +.1drv.com
-  - +.serverlesslibrary.net
-  - +.playfabapi.com
-  - +.playfab.com
-  - +.msn.net
-  - +.microsoftiotcentral.com
-  - +.microsofteca.com
-  - +.microsoftazuresponsorships.com
-  - +.microsoft.be
+  - +.msnkids.com
+  - +.msnewskids.org
+  - +.msnewskids.net
+  - +.msnewskids.com
+  - +.msn.com
+  - +.microsoftnewskids.org
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.com
+  - +.microsoftnewsforkids.org
+  - +.microsoft.by
   - +.gamepass.com
   - +.orithegame.com
   - +.renovacionxboxlive.com
   - +.tellmewhygame.com
-  - +.xbox.co
+  - +.livefilestore.com
   - +.xbox.com
   - +.xbox.eu
   - +.xbox.org
@@ -1172,12 +1125,6 @@ payload:
   - +.xboxservices.com
   - +.xboxstudios.com
   - +.xbx.lv
-  - +.beth.games
-  - +.bethesda.net
-  - +.bethesdagamestudios.com
-  - +.bethsoft.com
-  - +.doom.com
-  - +.elderscrolls.com
   - +.forza.net
   - +.forzamotorsport.net
   - +.forzaracingchampionship.com
@@ -1190,7 +1137,13 @@ payload:
   - +.mojang.com
   - +.asobostudio.com
   - +.flightsimulator.com
-  - +.microsoft.az
+  - +.beth.games
+  - +.bethesda.net
+  - +.bethesdagamestudios.com
+  - +.bethsoft.com
+  - +.doom.com
+  - +.elderscrolls.com
+  - +.microsoft.be
   - +.aadrm.com
   - +.azure-devices-int.net
   - +.azure-devices.net
@@ -1232,10 +1185,57 @@ payload:
   - +.management-azure-devices-int.net
   - +.management-azure-devices.net
   - +.microsoftazuread-sso.com
+  - +.microsoftazuresponsorships.com
+  - +.microsofteca.com
+  - +.microsoftiotcentral.com
+  - +.msn.net
+  - +.playfab.com
+  - +.playfabapi.com
+  - +.serverlesslibrary.net
+  - +.trafficmanager.net
+  - +.tryfunctions.com
+  - +.windowsazure.com
+  - +.azure-dns.com
+  - +.azure-dns.info
+  - +.azure-dns.net
+  - +.azure-dns.org
+  - +.microsoft.az
+  - +.microsoftdiplomados.com
+  - +.bing123.com
+  - +.flipwithsurface.com
+  - +.masalladeloslimites.com
+  - +.bingapis.com
+  - +.bingapistatistics.com
+  - +.bingparachute.com
+  - +.bingsandbox.com
+  - +.bingvisualsearch.com
+  - +.bingworld.com
+  - +.bluehatnights.com
+  - +.dictate.ms
+  - +.sprinklesapp.com
+  - +.bing.net
+  - +.bingagencyawards.com
+  - +.microsoft-give.com
+  - +.microsoftcloudsummit.com
+  - +.bing.com
+  - +.microsoftlatamholiday.com
+  - +.microsoftmxfilantropia.com
+  - +.microsoftpartnersolutions.com
+  - +.msunlimitedcloudsummit.com
+  - +.office365love.com
+  - +.office365tw.com
+  - +.renovacionoffice.com
+  - +.microsoftnewsforkids.net
+  - +.microsoftnewsforkids.com
+  - +.microsoftnews.org
+  - +.msocsp.com
+  - +.microsoftnews.cc
+  - +.microsoftnews.com
+  - +.microsoftnews.net
   - +.live.com.au
-  - +.spoprod-a.akamaihd.net
-  - +.skypedata.akadns.net
   - +.microsoftstore.com.hk
+  - +.skypedata.akadns.net
+  - +.spoprod-a.akamaihd.net
   - +.skype-edf.akadns.net
   - +.dcg.microsoft.com
   - +.dynamics.cn
@@ -1305,21 +1305,6 @@ payload:
   - vz.download.prss.microsoft.com
   - wscont1.apps.microsoft.com
   - wscont2.apps.microsoft.com
-  - +.bing.com.cn
-  - +.bingads.com
-  - +.cn.bing.com
-  - +.cn.bing.net
-  - +.cn.mm.bing.net
-  - +.ditu.live.com
-  - +.r.bing.com
-  - +.th.bing.com
-  - bj1.api.bing.com
-  - emoi-cncdn.bing.com
-  - www.microsoft.com
-  - +.microsoftnews.cn
-  - +.msn.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
   - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
@@ -1406,27 +1391,22 @@ payload:
   - +.azure-dns-8.cn
   - +.azure-dns-9.cn
   - +.azure-dns-10.cn
+  - +.bing.com.cn
+  - +.bingads.com
+  - +.cn.bing.com
+  - +.cn.bing.net
+  - +.cn.mm.bing.net
+  - +.ditu.live.com
+  - +.r.bing.com
+  - +.th.bing.com
+  - bj1.api.bing.com
+  - emoi-cncdn.bing.com
+  - www.microsoft.com
+  - +.microsoftnews.cn
+  - +.msn.cn
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
   - google-ohttp-relay-safebrowsing.fastly-edge.com
-  - ai.google.dev
-  - alkalicore-pa.clients6.google.com
-  - alkalimakersuite-pa.clients6.google.com
-  - webchannel-alkalimakersuite-pa.clients6.google.com
-  - cloudaicompanion.googleapis.com
-  - cloudcode-pa.googleapis.com
-  - daily-cloudcode-pa.googleapis.com
-  - notebooklm-pa.googleapis.com
-  - notebooklm.googleapis.com
-  - antigravity-pa.googleapis.com
-  - antigravity.googleapis.com
-  - alt7-mtalk.google.com
-  - alt8-mtalk.google.com
-  - mtalk-dev.google.com
-  - mtalk-staging.google.com
-  - mtalk4.google.com
-  - publicca.googleapis.com
-  - preprod-publicca.googleapis.com
-  - clients1.google.com
-  - pki.google.com
   - scholar.google.ae
   - scholar.google.at
   - scholar.google.be
@@ -1503,6 +1483,26 @@ payload:
   - scholar.google.sk
   - scholar.googleusercontent.com
   - scholar.l.google.com
+  - alt7-mtalk.google.com
+  - alt8-mtalk.google.com
+  - mtalk-dev.google.com
+  - mtalk-staging.google.com
+  - mtalk4.google.com
+  - ai.google.dev
+  - alkalicore-pa.clients6.google.com
+  - alkalimakersuite-pa.clients6.google.com
+  - webchannel-alkalimakersuite-pa.clients6.google.com
+  - cloudaicompanion.googleapis.com
+  - cloudcode-pa.googleapis.com
+  - daily-cloudcode-pa.googleapis.com
+  - notebooklm-pa.googleapis.com
+  - notebooklm.googleapis.com
+  - antigravity-pa.googleapis.com
+  - antigravity.googleapis.com
+  - publicca.googleapis.com
+  - preprod-publicca.googleapis.com
+  - clients1.google.com
+  - pki.google.com
   - yt3.googleusercontent.com
   - +.chrome
   - +.dclk
@@ -1548,6 +1548,21 @@ payload:
   - +.google.de
   - +.google.dj
   - +.google.ad
+  - +.xn--p8j9a0d9c9a.xn--q9jyb4c
+  - +.new.day
+  - +.iam.soy
+  - +.hey.boo
+  - +.get.rsvp
+  - +.get.page
+  - +.get.new
+  - +.get.how
+  - +.get.dev
+  - +.get.app
+  - +.crr.com
+  - +.charlestonroadregistry.com
+  - +.deepmind.com
+  - +.ai.studio
+  - +.stxmosquitoproject.net
   - +.youtube.dk
   - +.youtube.de
   - +.youtube.cz
@@ -1559,7 +1574,6 @@ payload:
   - +.youtube.gr
   - +.youtube.gt
   - +.youtube.hk
-  - +.stxmosquitoproject.net
   - +.youtube.hr
   - +.youtube.hu
   - +.youtube.ie
@@ -1585,33 +1599,6 @@ payload:
   - +.youtube.mx
   - +.youtube.my
   - +.youtube.ng
-  - +.youtube.ni
-  - +.youtube.nl
-  - +.youtube.no
-  - +.youtube.pa
-  - +.youtube.pe
-  - +.youtube.ph
-  - +.youtube.pk
-  - +.youtube.pl
-  - +.youtube.pr
-  - +.youtube.pt
-  - +.youtube.cl
-  - +.googlevideo.com
-  - +.youtube.sn
-  - +.youtube.ee
-  - +.youtube.sa
-  - +.youtube.se
-  - +.youtube.sg
-  - +.youtube.si
-  - +.youtube.com
-  - +.ggpht.com
-  - +.youtube.sk
-  - +.youtube.rs
-  - +.youtube.soy
-  - +.youtube.sv
-  - +.youtube.tn
-  - +.youtube.tv
-  - +.youtube.ua
   - +.google.dk
   - +.google.dm
   - +.google.dz
@@ -1799,11 +1786,11 @@ payload:
   - +.googlecert.net
   - +.googlecode.com
   - +.googlecommerce.com
-  - +.youtube.ug
-  - +.youtube.uy
-  - +.youtube.vn
-  - +.youtubeeducation.com
-  - +.youtubefanfest.com
+  - +.youtube.ni
+  - +.youtube.nl
+  - +.youtube.no
+  - +.youtube.pa
+  - +.youtube.pe
   - +.googledanmark.com
   - +.googledomains.com
   - +.googledrive.com
@@ -1842,7 +1829,7 @@ payload:
   - +.haplorrhini.com
   - +.hdrplusdata.org
   - +.hindiweb.com
-  - +.youtubegaming.com
+  - +.youtube.ph
   - +.html5rocks.com
   - +.hwgo.com
   - +.iamremarkable.org
@@ -1917,14 +1904,14 @@ payload:
   - +.studywatchbyverily.org
   - +.google.tt
   - +.google.am
-  - +.youtubego.com
+  - +.youtube.pk
   - +.stxmosquitoproject.org
   - +.synergyse.com
   - +.tensorflow.org
   - +.tfhub.dev
   - +.thecleversense.com
   - +.thegooglestore.com
-  - +.youtubego.id
+  - +.youtube.pl
   - +.thinkquarterly.com
   - +.thinkwithgoogle.com
   - +.tiltbrush.com
@@ -1955,7 +1942,7 @@ payload:
   - +.widevine.com
   - +.withgoogle.com
   - +.womenwill.com
-  - +.youtubego.in
+  - +.youtube.pr
   - +.womenwill.id
   - +.womenwill.in
   - +.womenwill.mx
@@ -1969,18 +1956,6 @@ payload:
   - +.xn--gogl-1nd42e.com
   - +.xplr.co
   - +.zukunftswerkstatt.de
-  - +.charlestonroadregistry.com
-  - +.crr.com
-  - +.get.app
-  - +.get.dev
-  - +.get.how
-  - +.get.new
-  - +.get.page
-  - +.get.rsvp
-  - +.hey.boo
-  - +.iam.soy
-  - +.new.day
-  - +.xn--p8j9a0d9c9a.xn--q9jyb4c
   - +.kaggle.com
   - +.kaggle.io
   - +.kaggle.net
@@ -2040,6 +2015,33 @@ payload:
   - +.blogspot.lu
   - +.blogspot.md
   - +.blogspot.mk
+  - +.youtube.pt
+  - +.youtube.cl
+  - +.googlevideo.com
+  - +.youtube.sn
+  - +.youtube.ee
+  - +.youtube.sa
+  - +.youtube.se
+  - +.youtube.sg
+  - +.youtube.si
+  - +.youtube.com
+  - +.ggpht.com
+  - +.youtube.sk
+  - +.youtube.rs
+  - +.youtube.soy
+  - +.youtube.sv
+  - +.youtube.tn
+  - +.youtube.tv
+  - +.youtube.ua
+  - +.youtube.ug
+  - +.youtube.uy
+  - +.youtube.vn
+  - +.youtubeeducation.com
+  - +.youtubefanfest.com
+  - +.youtubegaming.com
+  - +.youtubego.com
+  - +.youtubego.id
+  - +.youtubego.in
   - +.youtubekids.com
   - +.youtubemobilesupport.com
   - +.youtube.co
@@ -2048,39 +2050,36 @@ payload:
   - +.youtube.cat
   - +.youtube.ca
   - +.youtube.by
+  - +.googleplay.com
+  - +.xn--ngstr-lra8j.com
   - +.youtube.bo
   - +.youtube.bh
   - +.youtube.bg
   - +.youtube.be
   - +.youtube.ba
-  - +.youtube.ro
-  - +.youtube.at
-  - +.youtube.am
-  - +.youtube.al
-  - +.youtube.ae
-  - +.yt.be
-  - +.youtube-nocookie.com
-  - +.youtu.be
   - +.deps.dev
   - +.deps.info
   - +.opensourceinsight.dev
   - +.opensourceinsights.dev
-  - +.ai.studio
-  - +.deepmind.com
-  - +.withyoutube.com
-  - +.ytimg.com
-  - +.youtube.az
-  - +.youtube.ru
   - +.google.ae
-  - +.xn--ngstr-lra8j.com
-  - +.googleplay.com
-  - +.youtube.com.pe
-  - +.youtube.com.ua
-  - +.google.com.bh
+  - +.youtube.ru
+  - +.youtube.az
+  - +.ytimg.com
+  - +.withyoutube.com
+  - +.youtu.be
+  - +.youtube-nocookie.com
+  - +.yt.be
+  - +.youtube.ae
+  - +.youtube.al
+  - +.youtube.am
+  - +.youtube.at
+  - +.youtube.ro
+  - +.youtube.co.nz
+  - +.youtube.com.by
   - +.blogspot.com.by
   - +.blogspot.co.at
   - +.blogspot.co.id
-  - +.blogspot.co.il
+  - +.youtube.com.mt
   - +.blogspot.co.ke
   - +.blogspot.co.nz
   - +.blogspot.co.uk
@@ -2142,34 +2141,10 @@ payload:
   - +.google.com.gh
   - +.google.com.fj
   - +.google.com.et
-  - +.google.com.eg
-  - +.google.com.ec
-  - +.google.com.do
-  - +.google.com.cu
-  - +.google.com.co
-  - +.google.com.bz
-  - +.youtube.com.kw
-  - +.google.com.cy
-  - +.google.com.bd
-  - +.google.com.au
-  - +.google.com.ar
-  - +.google.com.ai
-  - +.google.com.ag
-  - +.google.co.zw
-  - +.google.co.zm
-  - +.google.com.bo
-  - +.google.co.vi
-  - +.google.co.ve
-  - +.google.co.uz
-  - +.google.co.uk
-  - +.google.co.ug
-  - +.google.co.tz
-  - +.google.co.th
-  - +.google.co.nz
   - +.youtube.co.zw
   - +.youtube.com.ve
   - +.youtube.com.uy
-  - +.google.co.za
+  - +.youtube.com.ua
   - +.youtube.com.tw
   - +.youtube.com.tr
   - +.youtube.com.tn
@@ -2182,22 +2157,20 @@ payload:
   - +.youtube.com.pt
   - +.youtube.com.pk
   - +.youtube.com.ph
-  - +.google.com.bn
   - +.youtube.com.pa
   - +.youtube.com.om
   - +.youtube.com.ni
-  - +.youtube.com.ng
-  - +.youtube.com.my
-  - +.youtube.com.mx
-  - +.youtube.com.mt
+  - +.youtube.co.hu
+  - +.youtube.com.pe
+  - +.blogspot.co.il
   - +.youtube.com.mk
   - +.youtube.com.ly
   - +.youtube.com.lv
   - +.youtube.com.lb
-  - +.google.com.br
+  - +.youtube.com.kw
   - +.youtube.com.jo
   - +.youtube.com.jm
-  - +.youtube.com.hr
+  - +.youtube.com.my
   - +.youtube.com.hn
   - +.youtube.com.hk
   - +.youtube.com.gt
@@ -2209,7 +2182,7 @@ payload:
   - +.youtube.com.ec
   - +.youtube.com.do
   - +.youtube.com.co
-  - +.youtube.com.by
+  - +.youtube.com.hr
   - +.youtube.com.br
   - +.youtube.com.bo
   - +.youtube.com.bh
@@ -2223,7 +2196,7 @@ payload:
   - +.youtube.co.ug
   - +.youtube.co.tz
   - +.youtube.co.th
-  - +.youtube.co.nz
+  - +.youtube.com.mx
   - +.youtube.co.ma
   - +.youtube.co.kr
   - +.youtube.co.ke
@@ -2234,12 +2207,39 @@ payload:
   - +.youtubego.co.in
   - +.youtube.co.id
   - +.youtubego.com.br
-  - +.youtube.co.hu
+  - +.youtube.com.ng
   - +.youtube.co.cr
   - +.youtube.co.at
   - +.youtube.co.ae
   - +.google.co.ao
   - +.google.co.bw
+  - +.google.com.eg
+  - +.google.com.ec
+  - +.google.com.do
+  - +.google.com.cy
+  - +.google.com.cu
+  - +.google.com.co
+  - +.google.com.bz
+  - +.google.com.br
+  - +.google.com.bo
+  - +.google.com.bn
+  - +.google.com.bh
+  - +.google.com.bd
+  - +.google.com.au
+  - +.google.com.ar
+  - +.google.com.ai
+  - +.google.com.ag
+  - +.google.co.zw
+  - +.google.co.zm
+  - +.google.co.za
+  - +.google.co.vi
+  - +.google.co.ve
+  - +.google.co.uz
+  - +.google.co.uk
+  - +.google.co.ug
+  - +.google.co.tz
+  - +.google.co.th
+  - +.google.co.nz
   - +.google.co.mz
   - +.google.co.ma
   - +.google.co.ls
@@ -2454,6 +2454,7 @@ payload:
   - alt5-mtalk.google.com
   - alt6-mtalk.google.com
   - mtalk.google.com
+  - redirector.c.play.google.com
   - pki-goog.l.google.com
   - c.pki.goog
   - i.pki.goog
@@ -2461,7 +2462,6 @@ payload:
   - crl.pki.goog
   - crls.pki.goog
   - ocsp.pki.goog
-  - redirector.c.play.google.com
   - +.ggpht.cn
   - +.ads.youtube.com
   - 1password.drift.click
@@ -2993,7 +2993,7 @@ payload:
   - +.apple
   - +.amazon
   - +.rigums.xyz
-  - +.hairy-beauty.com
+  - +.fnac.com
   - +.12vpn.com
   - +.12vpn.net
   - +.1337x.gd
@@ -5108,7 +5108,7 @@ payload:
   - +.att-idns.net
   - +.att-japan.com
   - +.att-mail.com
-  - +.jav.dog
+  - +.att-promotions.com
   - +.att-rsvp.com
   - +.att.com
   - +.att.jobs
@@ -6620,7 +6620,7 @@ payload:
   - +.bmw.pl
   - +.bmw.ps
   - +.bmw.pt
-  - +.bmw.re
+  - +.jav.app
   - +.bmw.ro
   - +.bmw.rs
   - +.bmw.se
@@ -10877,7 +10877,7 @@ payload:
   - +.fmcebook.com
   - +.fmdesktop.com
   - +.fnac.be
-  - +.fnac.com
+  - +.xv1.monster
   - +.fnacebook.com
   - +.fnlondon.com
   - +.fnmt.es
@@ -10918,7 +10918,7 @@ payload:
   - +.forthethrone.com
   - +.fortnite.com
   - +.fortuneinsight.com
-  - +.xv1.monster
+  - +.xv-ru.com
   - +.fosebook.com
   - +.fotiolia.com
   - +.fotoiia.com
@@ -11062,9 +11062,8 @@ payload:
   - +.foxsports-world.com
   - +.foxsports.cl
   - +.foxsports.co
-  - +.xv-ru.com
-  - +.foxsports.com
   - +.xujan.com
+  - +.foxsports.com
   - +.xuite.net
   - +.xuehua.us
   - +.xuchao.org
@@ -11075,10 +11074,11 @@ payload:
   - +.xtube.com
   - +.xtracloud.net
   - +.xtegvk.xyz
+  - +.xtapes.to
   - +.foxsports.gt
   - +.foxsports.info
   - +.foxsports.net
-  - +.xtapes.to
+  - +.xt.pub
   - +.foxsports.pe
   - +.foxsports.sv
   - +.foxsports.uy
@@ -11096,7 +11096,7 @@ payload:
   - +.foxsub.com
   - +.foxsuper6.com
   - +.foxtel.com
-  - +.xt.pub
+  - +.xt.com
   - +.foxtelevisionstations.com
   - +.foxtube.com
   - +.foxtv.com
@@ -11129,7 +11129,7 @@ payload:
   - +.free-wap-tube.com
   - +.free-xxx-porn.org
   - +.free.bg
-  - +.xt.com
+  - +.xsz-av.com
   - +.free00.com
   - +.free18.net
   - +.free64all.com
@@ -11205,7 +11205,7 @@ payload:
   - +.freetibetanheroes.org
   - +.freetribe.me
   - +.freeuseporn.com
-  - +.xsz-av.com
+  - +.xsvod.xyz
   - +.freevpn.me
   - +.freewallpaper4.me
   - +.freewechat.com
@@ -11250,8 +11250,8 @@ payload:
   - +.fsdn.com
   - +.fse.tv
   - +.fsmone.com
-  - +.xsvod.xyz
   - +.xstas.biz
+  - +.xslist.org
   - +.fssta.com
   - +.fstopimages.com
   - +.ft.com
@@ -11262,10 +11262,10 @@ payload:
   - +.ftiecla.com
   - +.ftop.ru
   - +.ftopx.com
-  - +.xslist.org
+  - +.xskywalker.com
   - +.ftvgirls.com
   - +.ftvmilfs.com
-  - +.xskywalker.com
+  - +.xsijishe.net
   - +.ftx.com
   - +.fu62.vip
   - +.fuck-xxx-movies.com
@@ -11297,8 +11297,8 @@ payload:
   - +.fuhouse.club
   - +.fujinkoron.jp
   - +.fujossy.jp
-  - +.xsijishe.net
   - +.xsijishe.com
+  - +.xshr.online
   - +.fukzr1.cc
   - +.fulanax.com
   - +.fuli-wangzhan.com
@@ -11392,17 +11392,17 @@ payload:
   - +.game-repack.site
   - +.game735.com
   - +.gameapps.hk
-  - +.xshr.online
+  - +.xshaker.net
   - +.gamebeforethegame.com
   - +.gamebiz.jp
   - +.gamebusiness.jp
-  - +.xshaker.net
+  - +.xsela.cc
   - +.gamemeca.com
   - +.gameon-masters.com
-  - +.xsela.cc
-  - +.gamepedia.com
   - +.xsden.info
+  - +.gamepedia.com
   - +.xscale.com
+  - +.xsava.xyz
   - +.gameroom.com
   - +.gamerotic.com
   - +.gamesathletes.com
@@ -11410,7 +11410,7 @@ payload:
   - +.gamesfuckgirls.com
   - +.gamesofdesire.com
   - +.gamespark.jp
-  - +.xsava.xyz
+  - +.xqwherb.sbs
   - +.gaming-notebooks.com
   - +.gandhara.ru
   - +.gandi.net
@@ -11425,7 +11425,6 @@ payload:
   - +.gaoming.net
   - +.gaopi.net
   - +.gaozs18.buzz
-  - +.xqwherb.sbs
   - +.xpud.org
   - +.garena.com
   - +.garena.live
@@ -11447,6 +11446,7 @@ payload:
   - +.gateimg.com
   - +.gateio.live
   - +.gateio.services
+  - +.xpornplease.com
   - +.gather.com
   - +.gauleporno.xxx
   - +.gay.bingo
@@ -11496,11 +11496,11 @@ payload:
   - +.gazotube.com
   - +.gazounabi.com
   - +.gazprombank.ru
-  - +.xpornplease.com
+  - +.xpornblog.com
   - +.123sex.top
   - +.gbnews.uk
   - +.gbxml.net
-  - +.xpornblog.com
+  - +.xpoleuno.com
   - +.gcld-line.com
   - +.gclubs.com
   - +.gcmasia.com
@@ -11529,10 +11529,10 @@ payload:
   - +.geeksquadprotectionplan.org
   - +.geeksquadservices.org
   - +.geeksquadwebroot.org
-  - +.xpoleuno.com
   - +.xpee.com
-  - +.geforce.com
   - +.xpaja.net
+  - +.geforce.com
+  - +.xozilla.com
   - +.geilegratisporno.com
   - +.geileomas.com
   - +.geinoueroch.com
@@ -11540,10 +11540,10 @@ payload:
   - +.gekkan-bushi.com
   - +.gelbooru.com
   - +.gelbooru.me
-  - +.xozilla.com
+  - +.xoxoteiras.com
   - +.gemfire.net
   - +.gemini.com
-  - +.xoxoteiras.com
+  - +.xoteens.com
   - +.gendai.net
   - +.generated.photos
   - +.geneticconstructor.com
@@ -11597,13 +11597,13 @@ payload:
   - +.gettyimages.be
   - +.gettyimages.ca
   - +.gettyimages.ch
-  - +.xoteens.com
   - +.xoomcom.com
   - +.xoom.us
-  - +.gettyimages.com
   - +.xoom.io
+  - +.gettyimages.com
   - +.xoom.com
   - +.xoom-experience.com
+  - +.xomfsp.xyz
   - +.gettyimages.de
   - +.gettyimages.dk
   - +.gettyimages.es
@@ -11720,11 +11720,11 @@ payload:
   - +.globalsign.be
   - +.globalsign.ch
   - +.globalsign.cloud
-  - +.xomfsp.xyz
   - +.xogogo.com
   - +.xo104.com
   - +.xo.com
   - +.xnxxx.cc
+  - +.xnxxvideos.rest
   - +.globalsign.es
   - +.globalsign.eu
   - +.globalsign.fr
@@ -11748,7 +11748,7 @@ payload:
   - +.gmp4.com
   - +.gnai-dh.sbs
   - +.gnailapp.sbs
-  - +.xnxxvideos.rest
+  - +.xnxxtime.com
   - +.gnews.org
   - +.gnom-cham.com
   - +.gnzi.xyz
@@ -11784,12 +11784,12 @@ payload:
   - +.gogoanime3.co
   - +.gogocdn.net
   - +.gogotaku.info
-  - +.xnxxtime.com
-  - +.gohentai.net
   - +.xnxxsexmovies.com
+  - +.gohentai.net
+  - +.xnxxsexclips.com
   - +.gold-gay.com
   - +.goldbetsports.com
-  - +.xnxxsexclips.com
+  - +.xnxxpornvid.com
   - +.golden-ages.org
   - +.goldeneyevault.com
   - +.goldenfrog.com
@@ -11810,7 +11810,7 @@ payload:
   - +.gonzo-movies.com
   - +.gonzo.com
   - +.123dpro.com
-  - +.xnxxpornvid.com
+  - +.xnxxporn.fun
   - +.gooblox.com
   - +.good-gay.com
   - +.gooday.xyz
@@ -11830,7 +11830,6 @@ payload:
   - +.google.ac
   - +.google.af
   - +.google.ai
-  - +.xnxxporn.fun
   - +.xnxxporn.de
   - +.xnxxmovies.com
   - +.xnxxhd.tv
@@ -11906,10 +11905,11 @@ payload:
   - +.xn--d4ty0ojsqzfd.com
   - +.xn--d1acpjx3f.xn--p1ai
   - +.xn--czq75pvv1aj5c.org
+  - +.0xxx.ws
   - +.google.eu
   - +.google.gp
   - +.google.hk
-  - +.0xxx.ws
+  - +.xn--cck4d8b3009a.com
   - +.google.mx
   - +.google.tk
   - +.google.us
@@ -11919,7 +11919,7 @@ payload:
   - +.googleartproject.com
   - +.googlecensorship.org
   - +.googlechinawebmaster.com
-  - +.xn--cck4d8b3009a.com
+  - +.xn--av-o44ep1d.com
   - +.googleflights-cn.net
   - +.googlegroups.com
   - +.googlehosted.com
@@ -11966,7 +11966,6 @@ payload:
   - +.govforce.com
   - +.gpb.ru
   - +.gpstheseries.com
-  - +.xn--av-o44ep1d.com
   - +.gputechconf.com
   - +.xn--9pr62r24a.com
   - +.gputechconf.eu
@@ -11983,6 +11982,7 @@ payload:
   - +.grammaly.com
   - +.grandepornogratis.com
   - +.grandfuckauto.xxx
+  - +.xn--9iqy04a7fi01l.com
   - +.grannygetsafacial.com
   - +.grannylister.com
   - +.grannylovesbbc.com
@@ -12002,20 +12002,20 @@ payload:
   - +.grapheneos.ovh
   - +.grapheneos.page
   - +.grapheneos.social
-  - +.xn--9iqy04a7fi01l.com
+  - +.xn--90wwvt03e.com
   - +.graphql.org
   - +.gravatar.com
   - +.gravitytank.com
   - +.greasyfork.org
   - +.greatergothammini.com
   - +.greatfire.org
-  - +.xn--90wwvt03e.com
+  - +.xn--8uq428d76d.tokyo
   - +.greatfirevpn.com
   - +.greatfirewallofchina.org
   - +.greatgame.asia
   - +.greatretroporn.com
   - +.greenbuildingstudio.com
-  - +.xn--8uq428d76d.tokyo
+  - +.xn--7hv594h.com
   - +.greenlakeaas.com
   - +.greenlakehybridcloud.com
   - +.greenpeace.org
@@ -12038,7 +12038,7 @@ payload:
   - +.gslink.us
   - +.gstatic-cn.com
   - +.gt536.top
-  - +.xn--7hv594h.com
+  - +.xn--74q434dwff.net
   - +.gtricks.com
   - +.gtv.org
   - +.gtv1.org
@@ -12047,12 +12047,12 @@ payload:
   - +.gu-web.net
   - +.guaguass.com
   - +.guambmw.com
-  - +.xn--74q434dwff.net
+  - +.xn--74q434dwff.com
   - +.guangming.org
   - +.guaranitermal.com
   - +.guardarian.com
   - +.guardianapis.com
-  - +.xn--74q434dwff.com
+  - +.xn--74q035i.xn--hxt814e
   - +.guardianproject.info
   - +.123ddoodler.com
   - +.gucci.com
@@ -12060,12 +12060,12 @@ payload:
   - +.guccitimeless.com
   - +.123ddesign.com
   - +.guifw.xyz
-  - +.xn--74q035i.xn--hxt814e
   - +.xn--6eup7j.net
+  - +.xn--6eup7j.com
   - +.guishan.org
   - +.gumroad.com
   - +.gumtree.sg
-  - +.xn--6eup7j.com
+  - +.xn--4vq477m.com
   - +.gunsamerica.com
   - +.guo.media
   - +.guochantube.com
@@ -12074,7 +12074,7 @@ payload:
   - +.gutteruncensored.com
   - +.guysnightlife.com
   - +.gvlib.com
-  - +.xn--4vq477m.com
+  - +.xn--4vq475g.com
   - +.gwiki.net
   - +.gwins.org
   - +.gwktravelex.nl
@@ -12089,7 +12089,7 @@ payload:
   - +.h-doujinshi.xyz
   - +.h-flash.com
   - +.h-moe.com
-  - +.xn--4vq475g.com
+  - +.xn--4gq171p.com
   - +.h-webtoon.com
   - +.h0930.com
   - +.h18ani1.vip
@@ -12097,7 +12097,7 @@ payload:
   - +.h528.com
   - +.habr.com
   - +.habrastorage.org
-  - +.xn--4gq171p.com
+  - +.xn--3et96bj49ahpq.com
   - +.hackerfacebook.com
   - +.hackerguardian.com
   - +.hackfacebook.com
@@ -12113,7 +12113,7 @@ payload:
   - +.haho.moe
   - +.haijiao.com
   - +.hairy-amateurs.com
-  - +.xn--3et96bj49ahpq.com
+  - +.hairy-beauty.com
   - +.hairy-women-pussy.net
   - +.hairyclassic.com
   - +.hairycoochies.com
@@ -14236,9 +14236,9 @@ payload:
   - +.jav-angel.net
   - +.jav-subtitles.com
   - +.jav-vr.net
-  - +.swingersexorgy.com
+  - +.bmw.re
   - +.12joursdecadeauxdeitunes.com
-  - +.att-promotions.com
+  - +.paypal-mobilemoney.com
   - +.jav.gallery
   - +.jav.guru
   - +.jav.la
@@ -18278,7 +18278,7 @@ payload:
   - +.paypal-marketing.com
   - +.paypal-media.com
   - +.paypal-merchantloyalty.com
-  - +.paypal-mobilemoney.com
+  - +.jav.dog
   - +.paypal-network.org
   - +.paypal-notice.com
   - +.paypal-notify.com
@@ -20782,6 +20782,7 @@ payload:
   - +.sinoca.com
   - +.sinocast.com
   - +.sinoinsider.com
+  - +.sinyalee.com
   - +.sipml5.org
   - +.siport.com
   - +.sipriyearbook.org
@@ -21620,7 +21621,7 @@ payload:
   - +.swingerporntube.com
   - +.swingers-homemade-videos.com
   - +.volvobuses.ru
-  - +.jav.app
+  - +.swingersexorgy.com
   - +.swingexpert.nl
   - +.swiss-machining.com
   - +.swiss-turn.com
@@ -24571,7 +24572,7 @@ payload:
   - +.tochigibank.co.jp
   - +.vodafone.co.uk
   - +.visa.com.vi
-  - +.gnci.org.hk
+  - +.globalsign.com.sg
   - +.host.livekit.cloud
   - +.hongkongpost.gov.hk
   - +.hometrack.com.au
@@ -24613,7 +24614,6 @@ payload:
   - +.hanzhen.xmulib.org
   - +.halktv.com.tr
   - +.hakkatv.org.tw
-  - +.jav.com.co
   - +.hackday.com.au
   - +.h-top.supertop-100.com
   - +.gvm.com.tw
@@ -24629,15 +24629,15 @@ payload:
   - +.gputechconf.com.tw
   - +.gputechconf.com.au
   - +.gputechconf.co.kr
-  - +.1-apple.com.tw
   - +.google.it.ao
+  - +.1-apple.com.tw
   - +.google.com.nf
   - +.goo.ne.jp
   - +.goldcoastbulletin.com.au
   - +.adidasspecialtysports.co.uk
   - +.gohappy.com.tw
+  - +.gnci.org.hk
   - +.hsbc.co.id
-  - +.globalsign.com.sg
   - +.globalsign.com.hk
   - +.globalsign.com.br
   - +.globalsign.com.au
@@ -24688,6 +24688,7 @@ payload:
   - +.foxsports.com.ar
   - +.foxsports.co.ve
   - +.forum.cyberctm.com
+  - +.jav.com.co
   - +.flatmates.com.au
   - +.firstprivatebank.com.mm
   - +.firestonecomercial.com.mx
