@@ -44,14 +44,57 @@ read_urls() {
   ' "${file}"
 }
 
-extract_rules_json_array() {
+detect_rule_type() {
+  local url="$1"
+
+  if [[ "$url" == *"/geosite/"* ]]; then
+    echo "DOMAIN-SUFFIX"
+  elif [[ "$url" == *"/geoip/"* ]]; then
+    echo "IP-CIDR"
+  else
+    echo ""
+  fi
+}
+
+extract_payload_items() {
   local yaml_file="$1"
   yq -o=json '.payload // .rules // []' "${yaml_file}" 2>/dev/null || echo "[]"
 }
 
+normalize_rule_line() {
+  local rule_type="$1"
+  local value="$2"
+
+  # 去掉首尾空白
+  value="$(printf '%s' "$value" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
+
+  # 空值直接跳过
+  [[ -z "$value" ]] && return 1
+
+  # 如果上游已经带规则类型，则直接使用，避免重复前缀
+  case "$value" in
+    DOMAIN,*|DOMAIN-SUFFIX,*|DOMAIN-KEYWORD,*|IP-CIDR,*|IP-CIDR6,*|URL-REGEX,*|USER-AGENT,*)
+      printf '%s\n' "$value"
+      return 0
+      ;;
+  esac
+
+  # 根据来源 URL 补规则类型
+  if [[ "$rule_type" == "DOMAIN-SUFFIX" ]]; then
+    printf 'DOMAIN-SUFFIX,%s\n' "$value"
+    return 0
+  elif [[ "$rule_type" == "IP-CIDR" ]]; then
+    printf 'IP-CIDR,%s\n' "$value"
+    return 0
+  fi
+
+  return 1
+}
+
 process_one_txt() {
   local txt_file="$1"
-  local base_name out_file tmp_dir jsonl_file count url dl_file
+  local base_name out_file tmp_dir merged_file final_file
+  local count url dl_file rule_type
 
   base_name="$(basename "${txt_file}" .txt)"
   out_file="${OUT_DIR}/${base_name}.list"
@@ -60,18 +103,28 @@ process_one_txt() {
   echo "    Output    : ${out_file}"
 
   tmp_dir="$(mktemp -d)"
-  jsonl_file="${tmp_dir}/rules.jsonl"
-  : > "${jsonl_file}"
+  merged_file="${tmp_dir}/merged.txt"
+  final_file="${tmp_dir}/final.txt"
+  : > "${merged_file}"
+  : > "${final_file}"
 
   count=0
   while IFS= read -r url || [[ -n "${url}" ]]; do
     count=$((count + 1))
     dl_file="${tmp_dir}/${base_name}_${count}.yaml"
+    rule_type="$(detect_rule_type "${url}")"
 
-    echo "  - Download[${count}]: ${url}"
+    if [[ -z "${rule_type}" ]]; then
+      echo "WARN: skip unsupported url type: ${url}"
+      continue
+    fi
+
+    echo "  - Download[${count}]: ${url} (${rule_type})"
     curl "${CURL_COMMON_ARGS[@]}" "${url}" -o "${dl_file}"
 
-    extract_rules_json_array "${dl_file}" >> "${jsonl_file}"
+    while IFS= read -r item; do
+      normalize_rule_line "${rule_type}" "${item}" >> "${merged_file}" || true
+    done < <(extract_payload_items "${dl_file}" | jq -r '.[]')
   done < <(read_urls "${txt_file}")
 
   if [[ "${count}" -eq 0 ]]; then
@@ -83,12 +136,12 @@ process_one_txt() {
 
   echo "==> Merge & stable dedup"
 
-  jq -r '.[]' "${jsonl_file}" \
-    | awk '
-        NF == 0 { next }
-        $0 == "null" { next }
-        !seen[$0]++
-      ' > "${out_file}"
+  awk '
+    NF == 0 { next }
+    !seen[$0]++
+  ' "${merged_file}" > "${final_file}"
+
+  mv "${final_file}" "${out_file}"
 
   echo "==> Done: ${out_file}"
   wc -l "${out_file}" || true
