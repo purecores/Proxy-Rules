@@ -21,10 +21,11 @@ require_cmd() {
 }
 
 require_cmd curl
-require_cmd jq
 require_cmd yq
 require_cmd awk
 require_cmd find
+require_cmd sha256sum
+require_cmd sed
 
 CURL_COMMON_ARGS=(
   -fsSL
@@ -39,131 +40,139 @@ read_urls() {
   local file="$1"
   awk '
     NF == 0 { next }
-    $1 ~ /^#/ { next }
-    { print $0 }
-  ' "${file}"
+    /^[[:space:]]*#/ { next }
+    { gsub(/\r$/, "", $0); print $0 }
+  ' "$file"
 }
 
 detect_rule_type() {
   local url="$1"
 
-  if [[ "$url" == *"/geosite/"* ]]; then
-    echo "DOMAIN-SUFFIX"
-  elif [[ "$url" == *"/geoip/"* ]]; then
+  if [[ "$url" == *"/geoip/"* ]]; then
     echo "IP-CIDR"
+  elif [[ "$url" == *"/geosite/"* ]]; then
+    echo "DOMAIN-SUFFIX"
   else
-    echo ""
+    # 无法识别时默认按 DOMAIN-SUFFIX
+    echo "DOMAIN-SUFFIX"
   fi
 }
 
-extract_payload_items() {
+download_with_cache() {
+  local url="$1"
+  local cache_dir="$2"
+  local key out_file
+
+  key="$(printf '%s' "$url" | sha256sum | awk '{print $1}')"
+  out_file="${cache_dir}/${key}.yaml"
+
+  if [[ ! -s "$out_file" ]]; then
+    curl "${CURL_COMMON_ARGS[@]}" "$url" -o "$out_file"
+  fi
+
+  printf '%s\n' "$out_file"
+}
+
+# 高性能批量转换：
+# - payload/rules 一次性提取
+# - awk 批量补前缀
+# - 已经带前缀的规则直接保留
+append_rules_from_yaml() {
   local yaml_file="$1"
-  yq -o=json '.payload // .rules // []' "${yaml_file}" 2>/dev/null || echo "[]"
-}
+  local rule_type="$2"
+  local merged_file="$3"
 
-normalize_rule_line() {
-  local rule_type="$1"
-  local value="$2"
+  yq -r '.payload // .rules // [] | .[]' "$yaml_file" 2>/dev/null \
+    | sed '/^[[:space:]]*$/d' \
+    | awk -v default_type="$rule_type" '
+        BEGIN { FS=OFS="," }
+        {
+          gsub(/\r$/, "", $0)
+          sub(/^[[:space:]]+/, "", $0)
+          sub(/[[:space:]]+$/, "", $0)
+          if ($0 == "") next
 
-  # 去掉首尾空白
-  value="$(printf '%s' "$value" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
-
-  # 空值直接跳过
-  [[ -z "$value" ]] && return 1
-
-  # 如果上游已经带规则类型，则直接使用，避免重复前缀
-  case "$value" in
-    DOMAIN,*|DOMAIN-SUFFIX,*|DOMAIN-KEYWORD,*|IP-CIDR,*|IP-CIDR6,*|URL-REGEX,*|USER-AGENT,*)
-      printf '%s\n' "$value"
-      return 0
-      ;;
-  esac
-
-  # 根据来源 URL 补规则类型
-  if [[ "$rule_type" == "DOMAIN-SUFFIX" ]]; then
-    printf 'DOMAIN-SUFFIX,%s\n' "$value"
-    return 0
-  elif [[ "$rule_type" == "IP-CIDR" ]]; then
-    printf 'IP-CIDR,%s\n' "$value"
-    return 0
-  fi
-
-  return 1
+          # 已带 Shadowrocket/Mihomo 风格前缀则直接保留
+          if ($0 ~ /^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|IP-CIDR|IP-CIDR6|URL-REGEX|USER-AGENT),/) {
+            print $0
+          } else {
+            print default_type "," $0
+          }
+        }
+      ' >> "$merged_file"
 }
 
 process_one_txt() {
   local txt_file="$1"
-  local base_name out_file tmp_dir merged_file final_file
-  local count url dl_file rule_type
+  local base_name out_file tmp_dir cache_dir merged_file final_file
+  local count valid_count url yaml_file rule_type
 
-  base_name="$(basename "${txt_file}" .txt)"
+  base_name="$(basename "$txt_file" .txt)"
   out_file="${OUT_DIR}/${base_name}.list"
 
   echo "==> Processing: ${txt_file}"
   echo "    Output    : ${out_file}"
 
   tmp_dir="$(mktemp -d)"
+  cache_dir="${tmp_dir}/cache"
   merged_file="${tmp_dir}/merged.txt"
   final_file="${tmp_dir}/final.txt"
-  : > "${merged_file}"
-  : > "${final_file}"
+  mkdir -p "$cache_dir"
+  : > "$merged_file"
+  : > "$final_file"
 
   count=0
-  while IFS= read -r url || [[ -n "${url}" ]]; do
-    count=$((count + 1))
-    dl_file="${tmp_dir}/${base_name}_${count}.yaml"
-    rule_type="$(detect_rule_type "${url}")"
+  valid_count=0
 
-    if [[ -z "${rule_type}" ]]; then
-      echo "WARN: skip unsupported url type: ${url}"
-      continue
-    fi
+  while IFS= read -r url || [[ -n "$url" ]]; do
+    count=$((count + 1))
+    rule_type="$(detect_rule_type "$url")"
 
     echo "  - Download[${count}]: ${url} (${rule_type})"
-    curl "${CURL_COMMON_ARGS[@]}" "${url}" -o "${dl_file}"
+    yaml_file="$(download_with_cache "$url" "$cache_dir")"
 
-    while IFS= read -r item; do
-      normalize_rule_line "${rule_type}" "${item}" >> "${merged_file}" || true
-    done < <(extract_payload_items "${dl_file}" | jq -r '.[]')
-  done < <(read_urls "${txt_file}")
+    append_rules_from_yaml "$yaml_file" "$rule_type" "$merged_file"
+    valid_count=$((valid_count + 1))
+  done < <(read_urls "$txt_file")
 
-  if [[ "${count}" -eq 0 ]]; then
+  if [[ "$valid_count" -eq 0 ]]; then
     echo "WARN: no valid URLs found in ${txt_file}"
-    : > "${out_file}"
-    rm -rf "${tmp_dir}"
+    : > "$out_file"
+    rm -rf "$tmp_dir"
     return 0
   fi
 
-  echo "==> Merge & stable dedup"
+  echo "==> Stable dedup"
 
+  # 保留首次出现顺序去重
   awk '
     NF == 0 { next }
     !seen[$0]++
-  ' "${merged_file}" > "${final_file}"
+  ' "$merged_file" > "$final_file"
 
-  mv "${final_file}" "${out_file}"
+  mv "$final_file" "$out_file"
 
   echo "==> Done: ${out_file}"
-  wc -l "${out_file}" || true
+  wc -l "$out_file" || true
 
-  rm -rf "${tmp_dir}"
+  rm -rf "$tmp_dir"
 }
 
 main() {
   local found=0
   local txt_file
 
-  if [[ ! -d "${TXT_DIR}" ]]; then
+  if [[ ! -d "$TXT_DIR" ]]; then
     echo "ERROR: input directory not found: ${TXT_DIR}" >&2
     exit 1
   fi
 
   while IFS= read -r txt_file; do
     found=1
-    process_one_txt "${txt_file}"
-  done < <(find "${TXT_DIR}" -maxdepth 1 -type f -name '*.txt' | sort)
+    process_one_txt "$txt_file"
+  done < <(find "$TXT_DIR" -maxdepth 1 -type f -name '*.txt' | sort)
 
-  if [[ "${found}" -eq 0 ]]; then
+  if [[ "$found" -eq 0 ]]; then
     echo "WARN: no txt files found under ${TXT_DIR}"
   fi
 
