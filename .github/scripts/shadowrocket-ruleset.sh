@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Resolve repo root
 if [[ -n "${GITHUB_WORKSPACE:-}" && -d "${GITHUB_WORKSPACE}" ]]; then
   ROOT_DIR="${GITHUB_WORKSPACE}"
 elif command -v git >/dev/null 2>&1 && git rev-parse --show-toplevel >/dev/null 2>&1; then
@@ -36,7 +35,6 @@ CURL_COMMON_ARGS=(
   --max-time 180
 )
 
-# Read URLs from txt (ignore empty lines and comment lines starting with #)
 read_urls() {
   local file="$1"
   awk '
@@ -46,12 +44,6 @@ read_urls() {
   ' "${file}"
 }
 
-# Extract payload/rules to JSON array
-# Supports common Mihomo rule-set structures:
-# 1) payload:
-#      - DOMAIN-SUFFIX,example.com
-# 2) rules:
-#      - DOMAIN-SUFFIX,example.com
 extract_rules_json_array() {
   local yaml_file="$1"
   yq -o=json '.payload // .rules // []' "${yaml_file}" 2>/dev/null || echo "[]"
@@ -59,25 +51,22 @@ extract_rules_json_array() {
 
 process_one_txt() {
   local txt_file="$1"
-  local base_name
+  local base_name out_file tmp_dir jsonl_file count url dl_file
+
   base_name="$(basename "${txt_file}" .txt)"
-  local out_file="${OUT_DIR}/${base_name}.list"
+  out_file="${OUT_DIR}/${base_name}.list"
 
   echo "==> Processing: ${txt_file}"
   echo "    Output    : ${out_file}"
 
-  local tmp_dir
   tmp_dir="$(mktemp -d)"
-  cleanup() { rm -rf "${tmp_dir}" || true; }
-  trap cleanup RETURN
-
-  local jsonl_file="${tmp_dir}/rules.jsonl"
+  jsonl_file="${tmp_dir}/rules.jsonl"
   : > "${jsonl_file}"
 
-  local count=0
+  count=0
   while IFS= read -r url || [[ -n "${url}" ]]; do
     count=$((count + 1))
-    local dl_file="${tmp_dir}/${base_name}_${count}.yaml"
+    dl_file="${tmp_dir}/${base_name}_${count}.yaml"
 
     echo "  - Download[${count}]: ${url}"
     curl "${CURL_COMMON_ARGS[@]}" "${url}" -o "${dl_file}"
@@ -88,14 +77,12 @@ process_one_txt() {
   if [[ "${count}" -eq 0 ]]; then
     echo "WARN: no valid URLs found in ${txt_file}"
     : > "${out_file}"
+    rm -rf "${tmp_dir}"
     return 0
   fi
 
   echo "==> Merge & stable dedup"
 
-  # 1) flatten all arrays to one rule per line
-  # 2) remove null / empty
-  # 3) stable dedup with awk, preserving first appearance order
   jq -r '.[]' "${jsonl_file}" \
     | awk '
         NF == 0 { next }
@@ -105,15 +92,19 @@ process_one_txt() {
 
   echo "==> Done: ${out_file}"
   wc -l "${out_file}" || true
+
+  rm -rf "${tmp_dir}"
 }
 
 main() {
+  local found=0
+  local txt_file
+
   if [[ ! -d "${TXT_DIR}" ]]; then
     echo "ERROR: input directory not found: ${TXT_DIR}" >&2
     exit 1
   fi
 
-  local found=0
   while IFS= read -r txt_file; do
     found=1
     process_one_txt "${txt_file}"
