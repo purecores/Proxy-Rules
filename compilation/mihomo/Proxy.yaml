@@ -85,10 +85,24 @@ payload:
   - +.esm.run
   - +.jsdelivr.com
   - +.jsdelivr.net
-  - d29vzk4ow07wi7.cloudfront.net
-  - amp.akamaized.net
-  - homebrew.bintray.com
   - gitlab-assets.oss-cn-hongkong.aliyuncs.com
+  - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
+  - docker-pinata-support.s3.amazonaws.com
+  - developers.facebook.com
+  - android.googlesource.com
+  - d29vzk4ow07wi7.cloudfront.net
+  - firebase.google.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaselogging-pa.googleapis.com
+  - firebaselogging.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
   - az764295.vo.msecnd.net
   - bingsettingssearch.trafficmanager.net
   - default.exp-tas.com
@@ -105,31 +119,18 @@ payload:
   - vscode.blob.core.windows.net
   - vscode.search.windows.net
   - vsmarketplacebadge.apphb.com
-  - developers.facebook.com
-  - firebase.google.com
-  - firebase.googleapis.com
-  - firebaseappcheck.googleapis.com
-  - firebasedynamiclinks-ipv4.googleapis.com
-  - firebasedynamiclinks-ipv6.googleapis.com
-  - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
-  - firebaseinstallations.googleapis.com
-  - firebaselogging-pa.googleapis.com
-  - firebaselogging.googleapis.com
-  - firebaseperusertopics-pa.googleapis.com
-  - firebaseremoteconfig.googleapis.com
+  - homebrew.bintray.com
   - notary-submissions-prod.s3-accelerate.amazonaws.com
   - notary-submissions-prod.s3.us-west-2.amazonaws.com
   - appleworldwidedeveloper.hb-api.omtrdc.net
   - appleworldwidedeveloper.sc.omtrdc.net
   - p-events-delivery.akamaized.net
-  - android.googlesource.com
-  - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
-  - docker-pinata-support.s3.amazonaws.com
-  - +.java
+  - amp.akamaized.net
   - +.android
-  - +.vscode-unpkg.net
+  - +.java
+  - +.api-extractor.com
   - +.nodesource.com
+  - +.artixlinux.org
   - +.badgen.net
   - +.bitvise.com
   - +.centos.org
@@ -155,7 +156,6 @@ payload:
   - +.gnome.org
   - +.gnu.org
   - +.godbolt.org
-  - +.modperl.pl
   - +.hex.pm
   - +.hexdocs.pm
   - +.imageglass.org
@@ -181,7 +181,7 @@ payload:
   - +.newpipe.net
   - +.nftables.org
   - +.nixos.org
-  - +.xamarin.com
+  - +.apisof.net
   - +.notepad-plus-plus.org
   - +.openresty.org
   - +.openssl.org
@@ -193,7 +193,7 @@ payload:
   - +.phantomjs.org
   - +.php.net
   - +.piwheels.org
-  - +.metacpan.org
+  - +.appcenter.ms
   - +.postgresql.org
   - +.putty.org
   - +.r-project.org
@@ -228,109 +228,156 @@ payload:
   - +.ziglang.org
   - +.zsh.org
   - +.zed.dev
-  - +.braventures.com
-  - +.braveux.com
-  - +.compass.is
-  - +.fightforux.com
-  - +.forthebadge.com
-  - +.stockagainstphotography.com
-  - +.readthedocs-hosted.com
-  - +.readthedocs.com
-  - +.readthedocs.io
-  - +.readthedocs.org
-  - +.v8.dev
-  - +.v8project.org
-  - +.archlinux.de
-  - +.archlinux.org
-  - +.archlinux.page
-  - +.archlinuxarm.org
-  - +.pkgbuild.com
-  - +.archlinuxcn.org
-  - +.debian.org
-  - +.dotdeb.org
-  - +.rust-lang.org
-  - +.rustup.rs
-  - +.crates.io
-  - +.docs.rs
-  - +.sourcehut.org
-  - +.sr.ht
-  - +.unity.com
-  - +.unity3d.com
-  - +.anaconda.cloud
-  - +.anaconda.com
-  - +.anaconda.org
-  - +.conda.io
+  - +.kubernetes.io
+  - +.k8s.io
+  - +.redis.io
+  - +.redislabs.com
+  - +.gitlab.com
+  - +.gitlab.io
+  - +.gitlab.net
+  - +.gitlab-static.net
+  - +.fastlane.ci
+  - +.fastlane.tools
   - +.bootstrapcdn.com
   - +.getbootstrap.com
-  - +.flathub.org
-  - +.flatpak.org
-  - +.jfrog.com
-  - +.jfrog.org
-  - +.bintray.com
+  - +.canonical.com
+  - +.launchpad.net
+  - +.launchpadcontent.net
+  - +.launchpadlibrarian.com
+  - +.launchpadlibrarian.net
+  - +.launchpadlibrarian.org
+  - +.snapcraft.io
+  - +.snapstore.io
+  - +.ubuntu.com
+  - +.ubuntu.net
+  - +.ubuntuforums.org
+  - +.ubuntu-touch.io
+  - +.compose-spec.io
+  - +.docker.com
+  - +.docker.io
+  - +.dockerstatic.com
+  - +.accountkit.com
+  - +.atscaleconference.com
+  - +.botorch.org
+  - +.buck.build
+  - +.buckbuild.com
+  - +.componentkit.org
+  - +.draftjs.org
+  - +.f8.com
+  - +.facebookappcenter.info
+  - +.facebookappcenter.net
+  - +.facebookappcenter.org
+  - +.facebookconnect.com
+  - +.facebookdevelopergarage.com
+  - +.faciometrics.com
+  - +.fasttext.cc
+  - +.fbf8.com
+  - +.fbinfer.com
+  - +.fblitho.com
+  - +.fbredex.com
+  - +.fbrell.com
+  - +.flow.dev
+  - +.flow.org
+  - +.flowtype.org
+  - +.frescolib.org
+  - +.hacklang.org
+  - +.hhvm.com
+  - +.makeitopen.com
+  - +.mcrouter.net
+  - +.mcrouter.org
+  - +.messengerdevelopers.com
+  - +.ogp.me
+  - +.opengraphprotocol.com
+  - +.opengraphprotocol.org
+  - +.parse.com
+  - +.pyrobot.org
+  - +.react.com
+  - +.reactjs.com
+  - +.reactjs.org
+  - +.recoiljs.org
+  - +.rocksdb.com
+  - +.rocksdb.net
+  - +.rocksdb.org
+  - +.alpinelinux.org
+  - +.grazie.ai
+  - +.jetbrains.ai
   - +.tilda.cc
   - +.tilda.ru
   - +.tilda.ws
   - +.tildaapi.com
   - +.tildacdn.com
-  - +.fastlane.ci
-  - +.fastlane.tools
-  - +.mystrikingly.com
-  - +.strikingly.com
-  - +.strikinglycdn.com
-  - +.haskell.org
-  - +.haskellstack.org
-  - +.stackage.org
-  - +.grazie.ai
-  - +.jetbrains.ai
+  - +.android.com
+  - +.androidify.com
+  - +.datalore.io
+  - +.intellij.com
+  - +.intellij.net
+  - +.intellij.org
+  - +.jb.gg
+  - +.jetbrains.cloud
+  - +.jetbrains.com
+  - +.jetbrains.net
+  - +.jetbrains.space
+  - +.jetbrains.team
+  - +.kotlinlang.org
+  - +.youtrack.cloud
+  - +.perl.org
   - +.cpan.org
-  - +.sentry.io
-  - +.sentry-cdn.com
-  - +.lfai.foundation
-  - +.linuxfoundation.org
-  - +.kernel.org
-  - +.linux.org
-  - +.openjsf.org
-  - +.amp.dev
-  - +.ampproject.com
-  - +.ampproject.net
-  - +.ampproject.org
-  - +.electronjs.org
-  - +.jquery.com
-  - +.jquerymobile.com
-  - +.jqueryui.com
-  - +.adventofcode.com
-  - +.nodejs.org
+  - +.metacpan.org
+  - +.modperl.pl
+  - +.codeberg.org
+  - +.stockagainstphotography.com
+  - +.codeberg.page
+  - +.gitbook.com
+  - +.gitbook.io
   - +.azurecr.io
-  - +.docker.io
   - +.ecr.aws
   - +.gcr.io
   - +.quay.io
-  - +.perl.org
-  - +.k8s.io
-  - +.kubernetes.io
-  - +.brew.sh
+  - +.forthebadge.com
+  - +.fightforux.com
+  - +.compass.is
+  - +.braveux.com
+  - +.go-lang.com
+  - +.go-lang.net
+  - +.go-lang.org
+  - +.go.dev
+  - +.godoc.org
+  - +.golang.com
+  - +.golang.net
+  - +.golang.org
+  - +.jfrog.com
+  - +.jfrog.org
+  - +.bintray.com
   - +.openwrt.org
   - +.lede-project.org
-  - +.qt.io
-  - +.qt-project.org
-  - +.ruby-lang.org
-  - +.rubygems.org
-  - +.redis.io
-  - +.redislabs.com
-  - +.embed.ly
-  - +.embedly.com
-  - +.playerjs.io
-  - +.gitlab.com
-  - +.gitlab.io
-  - +.gitlab.net
-  - +.gitlab-static.net
-  - +.apache.org
-  - +.java.com
-  - +.java.net
+  - +.redhat.com
+  - +.redhat.org
+  - +.github1s.com
+  - +.sourcegraph.com
+  - +.firebase.com
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
+  - +.fontawesome.com
+  - +.fortawesome.com
+  - +.fury.blog
+  - +.fury.co
+  - +.fury.dev
+  - +.fury.help
+  - +.fury.io
+  - +.gemfury.com
+  - +.rust-lang.org
+  - +.rustup.rs
+  - +.crates.io
+  - +.docs.rs
+  - +.anaconda.cloud
+  - +.anaconda.com
+  - +.anaconda.org
+  - +.conda.io
   - +.adaptivecards.io
-  - +.api-extractor.com
-  - +.apisof.net
-  - +.appcenter.ms
+  - +.yogalayout.com
+  - +.apache.org
+  - +.plasma-mobile.org
   - +.blazor.net
   - +.botframework.com
   - +.codethemicrobit.com
@@ -376,135 +423,17 @@ payload:
   - +.vsassets.io
   - +.vscode.dev
   - +.vscode-cdn.net
-  - +.mochajs.org
-  - +.artixlinux.org
-  - +.plasma-mobile.org
-  - +.mongodb.com
-  - +.mongodb.org
-  - +.accountkit.com
-  - +.atscaleconference.com
-  - +.botorch.org
-  - +.buck.build
-  - +.buckbuild.com
-  - +.componentkit.org
-  - +.draftjs.org
-  - +.f8.com
-  - +.facebookappcenter.info
-  - +.facebookappcenter.net
-  - +.facebookappcenter.org
-  - +.facebookconnect.com
-  - +.facebookdevelopergarage.com
-  - +.faciometrics.com
-  - +.fasttext.cc
-  - +.fbf8.com
-  - +.fbinfer.com
-  - +.fblitho.com
-  - +.fbredex.com
-  - +.fbrell.com
-  - +.flow.dev
-  - +.flow.org
-  - +.flowtype.org
-  - +.frescolib.org
-  - +.hacklang.org
-  - +.hhvm.com
-  - +.makeitopen.com
-  - +.mcrouter.net
-  - +.mcrouter.org
-  - +.messengerdevelopers.com
-  - +.ogp.me
-  - +.opengraphprotocol.com
-  - +.opengraphprotocol.org
-  - +.parse.com
-  - +.pyrobot.org
-  - +.react.com
-  - +.reactjs.com
-  - +.reactjs.org
-  - +.recoiljs.org
-  - +.rocksdb.com
-  - +.rocksdb.net
-  - +.rocksdb.org
-  - +.yogalayout.com
-  - +.gitbook.com
-  - +.gitbook.io
-  - +.termux.com
-  - +.termux.dev
-  - +.termux.org
-  - +.fury.blog
-  - +.fury.co
-  - +.fury.dev
-  - +.fury.help
-  - +.fury.io
-  - +.gemfury.com
-  - +.fontawesome.com
-  - +.fortawesome.com
-  - +.framer.com
-  - +.framer.website
-  - +.framercanvas.com
-  - +.framerstatic.com
-  - +.framerusercontent.com
-  - +.github1s.com
-  - +.sourcegraph.com
-  - +.datalore.io
-  - +.intellij.com
-  - +.intellij.net
-  - +.intellij.org
-  - +.jb.gg
-  - +.jetbrains.cloud
-  - +.jetbrains.com
-  - +.jetbrains.net
-  - +.jetbrains.space
-  - +.jetbrains.team
-  - +.kotlinlang.org
-  - +.youtrack.cloud
-  - +.redhat.com
-  - +.redhat.org
-  - +.nginx.com
-  - +.nginx.org
-  - +.pycon.org
-  - +.pypa.io
-  - +.pypi.io
-  - +.pypi.org
-  - +.python.org
-  - +.pythonhosted.org
-  - +.codeberg.org
-  - +.codeberg.page
-  - +.firebase.com
-  - +.firebase.io
-  - +.firebaseapp.com
-  - +.firebaseio.com
-  - +.polymer-project.org
-  - +.polymerproject.org
-  - +.macruby.com
-  - +.cups.org
-  - +.macruby.net
-  - +.swift.org
-  - +.appleswift.com
-  - +.webobjects.com
-  - +.wpewebkit.org
-  - +.calendarserver.org
-  - +.macruby.org
-  - +.macosforge.org
-  - +.servicetalk.io
-  - +.apple-cloudkit.com
-  - +.foundationdb.org
-  - +.apple-mapkit.com
-  - +.webkitgtk.org
-  - +.carekit.org
-  - +.researchandcare.org
-  - +.researchkit.hk
-  - +.researchkit.net
-  - +.researchkit.org
-  - +.researchkit.tv
-  - +.webkit.org
-  - +.vaultproject.io
-  - +.vagrantup.com
-  - +.vagrantcloud.com
-  - +.terraform.io
-  - +.packer.io
-  - +.nomadproject.io
-  - +.flutter.dev
-  - +.flutterapp.com
-  - +.pub.dev
+  - +.vscode-unpkg.net
+  - +.xamarin.com
+  - +.braventures.com
+  - +.sourcehut.org
+  - +.sr.ht
+  - +.archlinux.de
+  - +.archlinux.org
+  - +.archlinux.page
+  - +.archlinuxarm.org
+  - +.pkgbuild.com
+  - +.archlinuxcn.org
   - +.01.org
   - +.hyperscan.io
   - +.intellinuxgraphics.com
@@ -522,8 +451,14 @@ payload:
   - +.clearlinux.org
   - +.ospray.net
   - +.ospray.org
-  - +.scala-lang.org
-  - +.scala-sbt.org
+  - +.pycon.org
+  - +.pypa.io
+  - +.pypi.io
+  - +.pypi.org
+  - +.python.org
+  - +.pythonhosted.org
+  - +.qt.io
+  - +.qt-project.org
   - +.askubuntu.com
   - +.blogoverflow.com
   - +.codeforaliving.io
@@ -549,65 +484,130 @@ payload:
   - +.superuser.com
   - +.tex-talk.net
   - +.thesffblog.com
-  - +.alpinelinux.org
-  - +.android.com
-  - +.androidify.com
-  - +.canonical.com
-  - +.launchpad.net
-  - +.launchpadcontent.net
-  - +.launchpadlibrarian.com
-  - +.launchpadlibrarian.net
-  - +.launchpadlibrarian.org
-  - +.snapcraft.io
-  - +.snapstore.io
-  - +.ubuntu.com
-  - +.ubuntu.net
-  - +.ubuntuforums.org
-  - +.ubuntu-touch.io
-  - +.dart.dev
-  - +.dartlang.org
-  - +.dartpad.dev
-  - +.compose-spec.io
-  - +.docker.com
-  - +.dockerstatic.com
+  - +.brew.sh
+  - +.polymer-project.org
+  - +.polymerproject.org
+  - +.ruby-lang.org
+  - +.rubygems.org
+  - +.mystrikingly.com
+  - +.strikingly.com
+  - +.strikinglycdn.com
   - +.fedoraforum.org
   - +.fedorainfracloud.org
   - +.fedoramagazine.org
   - +.fedorapeople.org
   - +.fedoraproject.org
   - +.getfedora.org
-  - +.go-lang.com
-  - +.go-lang.net
-  - +.go-lang.org
-  - +.go.dev
-  - +.godoc.org
-  - +.golang.com
-  - +.golang.net
-  - +.golang.org
+  - +.haskell.org
+  - +.haskellstack.org
+  - +.stackage.org
+  - +.termux.com
+  - +.termux.dev
+  - +.termux.org
+  - +.unity.com
+  - +.unity3d.com
+  - +.framer.com
+  - +.framer.website
+  - +.framercanvas.com
+  - +.framerstatic.com
+  - +.framerusercontent.com
+  - +.adventofcode.com
+  - +.java.com
+  - +.java.net
+  - +.embed.ly
+  - +.embedly.com
+  - +.playerjs.io
+  - +.dart.dev
+  - +.dartlang.org
+  - +.dartpad.dev
+  - +.flutter.dev
+  - +.flutterapp.com
+  - +.pub.dev
   - +.consul.io
   - +.hashicorp.com
+  - +.nomadproject.io
+  - +.packer.io
+  - +.terraform.io
+  - +.vagrantcloud.com
+  - +.vagrantup.com
+  - +.vaultproject.io
+  - +.scala-lang.org
+  - +.scala-sbt.org
+  - +.sentry.io
+  - +.sentry-cdn.com
+  - +.macruby.com
+  - +.cups.org
+  - +.macruby.net
+  - +.swift.org
+  - +.appleswift.com
+  - +.webobjects.com
+  - +.wpewebkit.org
+  - +.calendarserver.org
+  - +.macruby.org
+  - +.macosforge.org
+  - +.servicetalk.io
+  - +.apple-cloudkit.com
+  - +.foundationdb.org
+  - +.apple-mapkit.com
+  - +.webkitgtk.org
+  - +.carekit.org
+  - +.researchandcare.org
+  - +.researchkit.hk
+  - +.researchkit.net
+  - +.researchkit.org
+  - +.researchkit.tv
+  - +.webkit.org
+  - +.v8project.org
+  - +.v8.dev
+  - +.linux.org
+  - +.kernel.org
+  - +.nodejs.org
+  - +.mochajs.org
+  - +.readthedocs-hosted.com
+  - +.readthedocs.com
+  - +.readthedocs.io
+  - +.readthedocs.org
+  - +.flathub.org
+  - +.flatpak.org
+  - +.debian.org
+  - +.dotdeb.org
+  - +.mongodb.com
+  - +.mongodb.org
+  - +.nginx.com
+  - +.nginx.org
+  - +.lfai.foundation
+  - +.linuxfoundation.org
+  - +.openjsf.org
+  - +.amp.dev
+  - +.ampproject.com
+  - +.ampproject.net
+  - +.ampproject.org
+  - +.electronjs.org
+  - +.jquery.com
+  - +.jquerymobile.com
+  - +.jqueryui.com
   - +.timestamp.apple.com
   - +.devimages-cdn.apple.com
   - +.devstreaming-cdn.apple.com
   - +.developerservices2.apple.com
   - +.playgrounds-cdn.apple.com
   - +.developer.apple.com
-  - +.mcr.microsoft.com
   - +.visualstudio.co.uk
+  - +.mcr.microsoft.com
   - +.greenend.org.uk
-  - +.iads.unity3d.com
-  - +.unityads.unity3d.com
-  - cdn.ampproject.org
-  - +.microsoftreactor.cn
-  - +.microsoftreactor.com.cn
-  - +.reactorms.com.cn
   - +.cdn.jetbrains.com
   - +.download-cdn.jetbrains.com.cn
   - firebase-settings.crashlytics.com
+  - +.microsoftreactor.cn
+  - +.microsoftreactor.com.cn
+  - +.reactorms.com.cn
+  - +.iads.unity3d.com
+  - +.unityads.unity3d.com
   - +.researchkit.cn
   - +.researchkit.com.cn
   - +.swiftui.cn
   - +.swiftui.com.cn
+  - cdn.ampproject.org
   - +.b-cdn.net
   - +.bunny.net
   - +.bunnycdn.com
@@ -616,7 +616,6 @@ payload:
   - +.gcdn.co
   - +.gcore.com
   - +.gcore.pro
-  - +.quantil.com
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -688,6 +687,18 @@ payload:
   - +.srtcdn.net
   - +.cdn77.com
   - +.cdn77.org
+  - +.fastly-edge.com
+  - +.fastly-terrarium.com
+  - +.fastly.com
+  - +.fastly.io
+  - +.fastly.net
+  - +.fastlylabs.com
+  - +.fastlylb.net
+  - +.zencdn.net
+  - +.imgix.com
+  - +.imgix.net
+  - +.stackpath.com
+  - +.stackpath.dev
   - +.argotunnel.com
   - +.browser.run
   - +.cfargotunnel.com
@@ -750,23 +761,12 @@ payload:
   - +.llnw.net
   - +.llnwd.net
   - +.llnwi.net
-  - +.stackpath.com
-  - +.stackpath.dev
+  - +.pagecdn.com
+  - +.pagecdn.io
+  - +.quantil.com
   - +.vrcdn.cloud
   - +.vrcdn.live
   - +.vrcdn.video
-  - +.fastly-edge.com
-  - +.fastly-terrarium.com
-  - +.fastly.com
-  - +.fastly.io
-  - +.fastly.net
-  - +.fastlylabs.com
-  - +.fastlylb.net
-  - +.zencdn.net
-  - +.imgix.com
-  - +.imgix.net
-  - +.pagecdn.com
-  - +.pagecdn.io
   - +.akamai.co.kr
   - +.one.one.one
   - +.accdn.com.cn
@@ -1062,28 +1062,27 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
-  - flightsimulator.azureedge.net
-  - prodforza.blob.core.windows.net
-  - azure.microsoft.com
-  - azuremarketplace.microsoft.com
   - location.microsoft.com
   - crl.microsoft.com
   - mscrl.microsoft.com
   - ocsp.microsoft.com
   - oneocsp.microsoft.com
+  - flightsimulator.azureedge.net
+  - prodforza.blob.core.windows.net
+  - azure.microsoft.com
+  - azuremarketplace.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
   - +.skype
   - +.windows
-  - +.onedrive
-  - +.onedriveupdater
   - +.bing
   - +.azure
   - +.xbox
-  - +.winhec.net
-  - +.msturing.org
-  - +.microsoft.ch
+  - +.onedriveupdater
+  - +.onedrive
+  - +.yammer.com
+  - +.msudalosti.com
   - +.microsoft.cl
   - +.microsoft.com
   - +.microsoft.cz
@@ -1239,7 +1238,8 @@ payload:
   - +.mshome.net
   - +.msidentity.com
   - +.msocdn.com
-  - +.msudalosti.com
+  - +.msturing.org
+  - +.flipwithsurface.com
   - +.mymicrosoft.com
   - +.nextechafrica.net
   - +.nxta.org
@@ -1312,26 +1312,71 @@ payload:
   - +.windowssearch.com
   - +.windowsupdate.com
   - +.winhec.com
-  - +.microsoft.ca
-  - +.yammer.com
-  - +.start.com
-  - +.microsoftstart.com
-  - +.xbox360.eu
+  - +.winhec.net
   - +.microsoft.cat
+  - +.microsoftdiplomados.com
+  - +.azure-dns.org
+  - +.azure-dns.net
+  - +.microsoft.ch
+  - +.microsoftnewsforkids.com
+  - +.bingapis.com
+  - +.bingapistatistics.com
+  - +.bingparachute.com
+  - +.bingsandbox.com
+  - +.bingvisualsearch.com
+  - +.bingworld.com
+  - +.bluehatnights.com
+  - +.dictate.ms
+  - +.sprinklesapp.com
+  - +.bing.net
+  - +.bingagencyawards.com
+  - +.microsoft-give.com
+  - +.microsoftcloudsummit.com
+  - +.bing.com
+  - +.microsoftlatamholiday.com
+  - +.microsoftmxfilantropia.com
+  - +.microsoftpartnersolutions.com
+  - +.msunlimitedcloudsummit.com
+  - +.office365love.com
+  - +.office365tw.com
+  - +.renovacionoffice.com
   - +.azure-dns.info
+  - +.azure-dns.com
+  - +.windowsazure.com
+  - +.bing123.com
+  - +.tryfunctions.com
+  - +.msocsp.com
+  - +.microsoftnews.cc
+  - +.microsoftnews.com
+  - +.microsoftnews.net
+  - +.microsoftnews.org
+  - +.masalladeloslimites.com
+  - +.microsoftnewsforkids.net
+  - +.microsoftnewsforkids.org
+  - +.microsoftnewskids.com
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.org
+  - +.msn.com
+  - +.msnewskids.com
+  - +.msnewskids.net
+  - +.msnewskids.org
+  - +.msnkids.com
+  - +.microsoftstart.com
+  - +.start.com
+  - +.microsoft.ca
+  - +.microsoft.by
+  - +.onedrive.com
   - +.sharepoint.cn
   - +.livefilestore.com
   - +.1drv.com
-  - +.msnkids.com
-  - +.msnewskids.org
-  - +.msnewskids.net
-  - +.msnewskids.com
-  - +.msn.com
-  - +.microsoftnewskids.org
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.com
-  - +.microsoftnewsforkids.org
-  - +.microsoft.by
+  - +.trafficmanager.net
+  - +.serverlesslibrary.net
+  - +.playfabapi.com
+  - +.playfab.com
+  - +.msn.net
+  - +.microsoftiotcentral.com
+  - +.microsofteca.com
+  - +.microsoft.be
   - +.gamepass.com
   - +.orithegame.com
   - +.renovacionxboxlive.com
@@ -1342,6 +1387,7 @@ payload:
   - +.xbox.org
   - +.xbox360.co
   - +.xbox360.com
+  - +.xbox360.eu
   - +.xbox360.org
   - +.xboxab.com
   - +.xboxgamepass.com
@@ -1354,6 +1400,12 @@ payload:
   - +.xboxservices.com
   - +.xboxstudios.com
   - +.xbx.lv
+  - +.callersbane.com
+  - +.minecraft-services.net
+  - +.minecraft.net
+  - +.minecraftservices.com
+  - +.minecraftshop.com
+  - +.mojang.com
   - +.asobostudio.com
   - +.flightsimulator.com
   - +.beth.games
@@ -1366,13 +1418,7 @@ payload:
   - +.forzamotorsport.net
   - +.forzaracingchampionship.com
   - +.forzarc.com
-  - +.callersbane.com
-  - +.minecraft-services.net
-  - +.minecraft.net
-  - +.minecraftservices.com
-  - +.minecraftshop.com
-  - +.mojang.com
-  - +.microsoft.be
+  - +.microsoft.az
   - +.aadrm.com
   - +.azure-devices-int.net
   - +.azure-devices.net
@@ -1415,54 +1461,8 @@ payload:
   - +.management-azure-devices.net
   - +.microsoftazuread-sso.com
   - +.microsoftazuresponsorships.com
-  - +.microsofteca.com
-  - +.microsoftiotcentral.com
-  - +.msn.net
-  - +.playfab.com
-  - +.playfabapi.com
-  - +.serverlesslibrary.net
-  - +.trafficmanager.net
-  - +.tryfunctions.com
-  - +.windowsazure.com
-  - +.azure-dns.com
-  - +.onedrive.com
-  - +.azure-dns.net
-  - +.azure-dns.org
-  - +.microsoft.az
-  - +.microsoftdiplomados.com
-  - +.bing123.com
-  - +.flipwithsurface.com
-  - +.masalladeloslimites.com
-  - +.bingapis.com
-  - +.bingapistatistics.com
-  - +.bingparachute.com
-  - +.bingsandbox.com
-  - +.bingvisualsearch.com
-  - +.bingworld.com
-  - +.bluehatnights.com
-  - +.dictate.ms
-  - +.sprinklesapp.com
-  - +.bing.net
-  - +.bingagencyawards.com
-  - +.microsoft-give.com
-  - +.microsoftcloudsummit.com
-  - +.bing.com
-  - +.microsoftlatamholiday.com
-  - +.microsoftmxfilantropia.com
-  - +.microsoftpartnersolutions.com
-  - +.msunlimitedcloudsummit.com
-  - +.office365love.com
-  - +.office365tw.com
-  - +.renovacionoffice.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.com
-  - +.msocsp.com
-  - +.microsoftnews.cc
-  - +.microsoftnews.com
-  - +.microsoftnews.net
-  - +.microsoftnews.org
-  - +.skypedata.akadns.net
   - +.spoprod-a.akamaihd.net
+  - +.skypedata.akadns.net
   - +.skype-edf.akadns.net
   - +.microsoftstore.com.hk
   - +.live.com.au
@@ -1534,6 +1534,21 @@ payload:
   - vz.download.prss.microsoft.com
   - wscont1.apps.microsoft.com
   - wscont2.apps.microsoft.com
+  - +.bing.com.cn
+  - +.bingads.com
+  - +.cn.bing.com
+  - +.cn.bing.net
+  - +.cn.mm.bing.net
+  - +.ditu.live.com
+  - +.r.bing.com
+  - +.th.bing.com
+  - bj1.api.bing.com
+  - emoi-cncdn.bing.com
+  - www.microsoft.com
+  - +.microsoftnews.cn
+  - +.msn.cn
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
   - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
@@ -1620,21 +1635,6 @@ payload:
   - +.azure-dns-8.cn
   - +.azure-dns-9.cn
   - +.azure-dns-10.cn
-  - +.bing.com.cn
-  - +.bingads.com
-  - +.cn.bing.com
-  - +.cn.bing.net
-  - +.cn.mm.bing.net
-  - +.ditu.live.com
-  - +.r.bing.com
-  - +.th.bing.com
-  - bj1.api.bing.com
-  - emoi-cncdn.bing.com
-  - www.microsoft.com
-  - +.microsoftnews.cn
-  - +.msn.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
   - +.0emm.com
   - +.1e100.net
   - +.1ucrs.com
