@@ -1,0 +1,68 @@
+name: commit-and-purge
+description: >
+  Stage the given paths, commit with a CST timestamp, push to main with a
+  rebase-retry loop (resilient to concurrent pushes from sibling workflows),
+  then purge the jsDelivr CDN cache for the published path. The purge only runs
+  when something was actually committed.
+
+inputs:
+  paths:
+    description: "Space-separated git pathspecs to stage (e.g. 'compilation/mihomo')"
+    required: true
+  purge-path:
+    description: >
+      Path appended to https://purge.jsdelivr.net/gh/<repo>@main/ to purge,
+      e.g. 'compilation/mihomo/' or 'compilation/ad/singbox-ad.srs'
+    required: true
+  message:
+    description: "Commit message (defaults to the current CST timestamp)"
+    required: false
+    default: ""
+
+runs:
+  using: composite
+  steps:
+    - name: Commit, push & purge
+      shell: bash
+      run: |
+        set -euo pipefail
+        export TZ=Asia/Shanghai
+
+        msg="${{ inputs.message }}"
+        [[ -n "$msg" ]] || msg="$(date '+%Y-%m-%d %H:%M:%S')"
+
+        git config user.name  "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        git add ${{ inputs.paths }}
+
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+          exit 0
+        fi
+
+        git commit -m "$msg"
+
+        # Multiple sibling workflows may push to main at once. Retry with a
+        # rebase + jittered backoff so concurrent pushes settle without a
+        # serializing concurrency lock (which would cancel piled-up runs).
+        pushed=0
+        attempts=8
+        for attempt in $(seq 1 "$attempts"); do
+          if git push origin HEAD:main; then
+            pushed=1
+            break
+          fi
+          echo "Push rejected (attempt ${attempt}/${attempts}); rebasing onto origin/main…"
+          sleep "$(( (RANDOM % 5) + 1 ))"
+          git pull --rebase -X ours origin main
+        done
+
+        if [[ "$pushed" -ne 1 ]]; then
+          echo "ERROR: failed to push after ${attempts} attempts." >&2
+          exit 1
+        fi
+
+        url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/${{ inputs.purge-path }}"
+        echo "Purging jsDelivr: $url"
+        curl -fsS "$url" || true

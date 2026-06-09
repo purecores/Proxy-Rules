@@ -1,0 +1,52 @@
+name: shadowrocket-ruleset
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 06:50 CST (UTC+8)
+    - cron: "50 22 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - "txt/shadowrocket/**"
+      - ".github/scripts/shadowrocket-ruleset.sh"
+      - ".github/workflows/shadowrocket-ruleset.yml"
+      - ".github/actions/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup yq
+        uses: ./.github/actions/setup-binary
+        with:
+          tool: yq
+
+      - name: Generate Shadowrocket list rules
+        run: bash .github/scripts/shadowrocket-ruleset.sh
+
+      - name: Check for changes
+        id: diff
+        if: github.ref == 'refs/heads/main'
+        uses: ./.github/actions/stage-changes
+        with:
+          paths: compilation/shadowrocket
+
+      - name: Commit & push (only if changed)
+        if: steps.diff.outputs.changed == 'true'
+        uses: ./.github/actions/commit-and-purge
+        with:
+          paths: compilation/shadowrocket
+          purge-path: compilation/shadowrocket/

@@ -1,0 +1,63 @@
+name: build-dat
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 03:00 CST (UTC+8), 1 hour after mihomo-ruleset
+    - cron: "0 19 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - "txt/mihomo/AIGC.txt"
+      - "txt/mihomo/Community.txt"
+      - "txt/mihomo/Direct.txt"
+      - "txt/mihomo/Proxy.txt"
+      - "txt/mihomo/ip.txt"
+      - "txt/mihomo/extra.yaml"
+      - "personaluse/**"
+      - ".github/scripts/build-dat.py"
+      - ".github/workflows/build-dat.yml"
+      - ".github/actions/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+          cache: pip
+          cache-dependency-path: .github/scripts/build-dat.py
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Build GeoSite.dat and GeoIP.dat
+        run: python3 .github/scripts/build-dat.py
+
+      - name: Check for changes
+        id: diff
+        if: github.ref == 'refs/heads/main'
+        uses: ./.github/actions/stage-changes
+        with:
+          paths: compilation/GeoSite.dat compilation/GeoIP.dat
+
+      - name: Commit & push (only if changed)
+        if: steps.diff.outputs.changed == 'true'
+        uses: ./.github/actions/commit-and-purge
+        with:
+          paths: compilation/GeoSite.dat compilation/GeoIP.dat
+          purge-path: compilation/

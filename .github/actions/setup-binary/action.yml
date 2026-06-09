@@ -1,0 +1,116 @@
+name: setup-binary
+description: >
+  Download a release binary (mihomo / sing-box / yq) for linux-amd64 onto PATH.
+  Resolves the latest release tag (or a pinned one), then caches by the resolved
+  version so unchanged versions are not re-downloaded.
+
+inputs:
+  tool:
+    description: "Which binary to install: mihomo | sing-box | yq"
+    required: true
+  version:
+    description: "Release tag to install, or 'latest' to resolve the newest release"
+    required: false
+    default: latest
+
+outputs:
+  version:
+    description: "The resolved release tag that was installed"
+    value: ${{ steps.resolve.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Resolve version
+      id: resolve
+      shell: bash
+      run: |
+        set -euo pipefail
+        case "${{ inputs.tool }}" in
+          mihomo)   repo="MetaCubeX/mihomo" ;;
+          sing-box) repo="SagerNet/sing-box" ;;
+          yq)       repo="mikefarah/yq" ;;
+          *) echo "ERROR: unknown tool '${{ inputs.tool }}'" >&2; exit 1 ;;
+        esac
+
+        ver="${{ inputs.version }}"
+        if [[ "$ver" == "latest" ]]; then
+          ver="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/latest" | jq -r .tag_name)"
+          [[ -n "$ver" && "$ver" != "null" ]] || { echo "ERROR: cannot resolve latest tag for $repo" >&2; exit 1; }
+        fi
+
+        echo "repo=$repo"   >> "$GITHUB_OUTPUT"
+        echo "version=$ver" >> "$GITHUB_OUTPUT"
+        echo "Resolved ${{ inputs.tool }} -> $ver"
+
+    - name: Restore from cache
+      id: cache
+      uses: actions/cache@v5
+      with:
+        path: /tmp/setup-binary/${{ inputs.tool }}
+        key: setup-binary-${{ inputs.tool }}-${{ steps.resolve.outputs.version }}-linux-amd64
+
+    - name: Download (cache miss)
+      if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        set -euo pipefail
+        tool="${{ inputs.tool }}"
+        repo="${{ steps.resolve.outputs.repo }}"
+        ver="${{ steps.resolve.outputs.version }}"
+        ver_bare="${ver#v}"
+
+        dest="/tmp/setup-binary/${tool}"
+        work="$(mktemp -d)"
+        mkdir -p "$dest"
+
+        case "$tool" in
+          yq)
+            curl -fsSL --retry 3 --retry-delay 2 \
+              "https://github.com/${repo}/releases/download/${ver}/yq_linux_amd64" \
+              -o "${dest}/yq"
+            ;;
+
+          sing-box)
+            asset="sing-box-${ver_bare}-linux-amd64.tar.gz"
+            curl -fsSL --retry 3 --retry-delay 2 \
+              "https://github.com/${repo}/releases/download/${ver}/${asset}" \
+              -o "${work}/sing-box.tar.gz"
+            tar -xzf "${work}/sing-box.tar.gz" -C "${work}"
+            bin="$(find "${work}" -type f -name sing-box -print -quit)"
+            [[ -n "$bin" ]] || { echo "ERROR: sing-box binary not found in tarball" >&2; exit 1; }
+            cp "$bin" "${dest}/sing-box"
+            ;;
+
+          mihomo)
+            # Use the "compatible" build: runs on any x86-64 microarchitecture.
+            url="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/tags/${ver}" \
+              | jq -r '.assets[].browser_download_url
+                       | select(test("mihomo-linux-amd64-compatible-.*\\.gz$"))' \
+              | head -n1)"
+            [[ -n "$url" && "$url" != "null" ]] || { echo "ERROR: no mihomo compatible .gz asset for ${ver}" >&2; exit 1; }
+            curl -fsSL --retry 3 --retry-delay 2 "$url" -o "${work}/mihomo.gz"
+            gzip -df "${work}/mihomo.gz"
+            cp "${work}/mihomo" "${dest}/mihomo"
+            ;;
+        esac
+
+        chmod +x "${dest}"/*
+        rm -rf "${work}"
+
+    - name: Add to PATH
+      shell: bash
+      run: |
+        set -euo pipefail
+        tool="${{ inputs.tool }}"
+        dest="/tmp/setup-binary/${tool}"
+        chmod +x "${dest}"/* 2>/dev/null || true
+        echo "${dest}" >> "$GITHUB_PATH"
+
+        # Tool-specific version probe. Never invoke the binary with an unknown
+        # flag: mihomo treats that as "run the proxy" and would hang the step.
+        case "$tool" in
+          yq)       "${dest}/yq" --version || true ;;
+          sing-box) "${dest}/sing-box" version || true ;;
+          mihomo)   "${dest}/mihomo" -v || true ;;
+        esac

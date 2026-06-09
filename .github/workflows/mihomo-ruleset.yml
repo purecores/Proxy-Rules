@@ -1,0 +1,62 @@
+name: mihomo-ruleset
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 02:00 CST (UTC+8)
+    - cron: "0 18 * * *"
+  push:
+    branches: ["main"]
+    paths:
+      - "txt/mihomo/**"
+      - "personaluse/personaluse-d.yaml"
+      - "personaluse/personaluse-p.yaml"
+      - "personaluse/ai.yaml"
+      - ".github/scripts/mihomo-ruleset.sh"
+      - ".github/workflows/mihomo-ruleset.yml"
+      - ".github/actions/**"
+
+permissions:
+  contents: write
+
+# Serialize only against other runs of THIS workflow; cross-workflow pushes to
+# main are handled by the rebase-retry loop in the commit-and-purge action.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup yq
+        uses: ./.github/actions/setup-binary
+        with:
+          tool: yq
+
+      - name: Setup mihomo
+        uses: ./.github/actions/setup-binary
+        with:
+          tool: mihomo
+
+      - name: Merge & compile
+        run: bash .github/scripts/mihomo-ruleset.sh
+
+      - name: Check for changes
+        id: diff
+        if: github.ref == 'refs/heads/main'
+        uses: ./.github/actions/stage-changes
+        with:
+          paths: compilation/mihomo
+
+      - name: Commit & push (only if changed)
+        if: steps.diff.outputs.changed == 'true'
+        uses: ./.github/actions/commit-and-purge
+        with:
+          paths: compilation/mihomo
+          purge-path: compilation/mihomo/
