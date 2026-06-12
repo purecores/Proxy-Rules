@@ -77,28 +77,35 @@ payload:
   - +.opensource.guide
   - +.repo.new
   - +.thegithubshop.com
+  - +.githubcopilot.com
   - +.npm.community
   - +.npmjs.com
   - +.npmjs.org
-  - +.githubcopilot.com
   - +.collector.github.com
   - copilot-telemetry-service.githubusercontent.com
   - copilot-telemetry.githubusercontent.com
   - +.esm.run
   - +.jsdelivr.com
   - +.jsdelivr.net
-  - amp.akamaized.net
-  - notary-submissions-prod.s3-accelerate.amazonaws.com
-  - notary-submissions-prod.s3.us-west-2.amazonaws.com
-  - appleworldwidedeveloper.hb-api.omtrdc.net
-  - appleworldwidedeveloper.sc.omtrdc.net
-  - p-events-delivery.akamaized.net
-  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
   - homebrew.bintray.com
-  - developers.facebook.com
+  - gitlab-assets.oss-cn-hongkong.aliyuncs.com
+  - d29vzk4ow07wi7.cloudfront.net
   - android.googlesource.com
+  - developers.facebook.com
   - docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
   - docker-pinata-support.s3.amazonaws.com
+  - firebase.google.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaselogging-pa.googleapis.com
+  - firebaselogging.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
   - az764295.vo.msecnd.net
   - bingsettingssearch.trafficmanager.net
   - default.exp-tas.com
@@ -115,23 +122,16 @@ payload:
   - vscode.blob.core.windows.net
   - vscode.search.windows.net
   - vsmarketplacebadge.apphb.com
-  - d29vzk4ow07wi7.cloudfront.net
-  - firebase.google.com
-  - firebase.googleapis.com
-  - firebaseappcheck.googleapis.com
-  - firebasedynamiclinks-ipv4.googleapis.com
-  - firebasedynamiclinks-ipv6.googleapis.com
-  - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
-  - firebaseinstallations.googleapis.com
-  - firebaselogging-pa.googleapis.com
-  - firebaselogging.googleapis.com
-  - firebaseperusertopics-pa.googleapis.com
-  - firebaseremoteconfig.googleapis.com
+  - notary-submissions-prod.s3-accelerate.amazonaws.com
+  - notary-submissions-prod.s3.us-west-2.amazonaws.com
+  - appleworldwidedeveloper.hb-api.omtrdc.net
+  - appleworldwidedeveloper.sc.omtrdc.net
+  - p-events-delivery.akamaized.net
+  - amp.akamaized.net
   - +.android
   - +.java
-  - +.fortawesome.com
-  - +.mingw.org
+  - +.ubuntu.com
+  - +.godbolt.org
   - +.badgen.net
   - +.bitvise.com
   - +.bugsnag.com
@@ -160,7 +160,7 @@ payload:
   - +.gitgud.io
   - +.gnome.org
   - +.gnu.org
-  - +.godbolt.org
+  - +.ubuntu.net
   - +.hex.pm
   - +.hexdocs.pm
   - +.imageglass.org
@@ -177,7 +177,7 @@ payload:
   - +.macports.org
   - +.mariadb.org
   - +.mate-desktop.org
-  - +.gitbook.com
+  - +.mingw.org
   - +.mobatek.net
   - +.mpv.io
   - +.mysql.com
@@ -239,70 +239,8 @@ payload:
   - +.motopress.com
   - +.wpmailsmtp.com
   - +.zed.dev
-  - +.haskell.org
-  - +.haskellstack.org
-  - +.stackage.org
-  - +.openwrt.org
-  - +.lede-project.org
-  - +.perl.org
-  - +.cpan.org
-  - +.metacpan.org
-  - +.modperl.pl
-  - +.polymer-project.org
-  - +.polymerproject.org
-  - +.lfai.foundation
-  - +.linuxfoundation.org
-  - +.kernel.org
-  - +.linux.org
-  - +.openjsf.org
-  - +.mochajs.org
-  - +.nodejs.org
-  - +.amp.dev
-  - +.ampproject.com
-  - +.ampproject.net
-  - +.ampproject.org
-  - +.electronjs.org
-  - +.jquery.com
-  - +.jquerymobile.com
-  - +.jqueryui.com
-  - +.macruby.com
-  - +.cups.org
-  - +.macruby.net
-  - +.swift.org
-  - +.appleswift.com
-  - +.webobjects.com
-  - +.wpewebkit.org
-  - +.calendarserver.org
-  - +.macruby.org
-  - +.macosforge.org
-  - +.servicetalk.io
-  - +.apple-cloudkit.com
-  - +.foundationdb.org
-  - +.apple-mapkit.com
-  - +.webkitgtk.org
-  - +.carekit.org
-  - +.researchandcare.org
-  - +.researchkit.hk
-  - +.researchkit.net
-  - +.researchkit.org
-  - +.researchkit.tv
-  - +.webkit.org
-  - +.readthedocs-hosted.com
-  - +.readthedocs.com
-  - +.framerusercontent.com
-  - +.framerstatic.com
-  - +.framercanvas.com
-  - +.framer.website
-  - +.framer.com
-  - +.termux.org
-  - +.readthedocs.io
-  - +.readthedocs.org
-  - +.rust-lang.org
-  - +.rustup.rs
-  - +.crates.io
-  - +.docs.rs
-  - +.sourcehut.org
-  - +.sr.ht
+  - +.redhat.com
+  - +.redhat.org
   - +.askubuntu.com
   - +.blogoverflow.com
   - +.codeforaliving.io
@@ -328,71 +266,12 @@ payload:
   - +.superuser.com
   - +.tex-talk.net
   - +.thesffblog.com
-  - +.gitlab.com
-  - +.gitlab.io
-  - +.gitlab.net
-  - +.gitlab-static.net
-  - +.embed.ly
-  - +.embedly.com
-  - +.playerjs.io
-  - +.grazie.ai
-  - +.jetbrains.ai
-  - +.termux.dev
-  - +.termux.com
-  - +.k8s.io
-  - +.braventures.com
-  - +.braveux.com
-  - +.compass.is
-  - +.fightforux.com
-  - +.forthebadge.com
-  - +.stockagainstphotography.com
-  - +.sentry.io
-  - +.sentry-cdn.com
-  - +.scala-lang.org
-  - +.scala-sbt.org
-  - +.codeberg.org
-  - +.codeberg.page
-  - +.pycon.org
-  - +.pypa.io
-  - +.pypi.io
-  - +.pypi.org
-  - +.python.org
-  - +.pythonhosted.org
-  - +.unity.com
-  - +.unity3d.com
-  - +.archlinux.de
-  - +.archlinux.org
-  - +.archlinux.page
-  - +.archlinuxarm.org
-  - +.pkgbuild.com
-  - +.archlinuxcn.org
-  - +.fastlane.ci
-  - +.fastlane.tools
-  - +.brew.sh
-  - +.datalore.io
-  - +.intellij.com
-  - +.intellij.net
-  - +.intellij.org
-  - +.jb.gg
-  - +.jetbrains.cloud
-  - +.jetbrains.com
-  - +.jetbrains.net
-  - +.jetbrains.space
-  - +.jetbrains.team
-  - +.kotlinlang.org
-  - +.youtrack.cloud
-  - +.azurecr.io
-  - +.docker.io
-  - +.ecr.aws
-  - +.gcr.io
-  - +.quay.io
+  - +.github1s.com
+  - +.sourcegraph.com
+  - +.redis.io
+  - +.redislabs.com
   - +.kubernetes.io
-  - +.dotdeb.org
-  - +.debian.org
-  - +.fontawesome.com
-  - +.flutterapp.com
-  - +.artixlinux.org
-  - +.getfedora.org
+  - +.k8s.io
   - +.go-lang.com
   - +.go-lang.net
   - +.go-lang.org
@@ -401,16 +280,94 @@ payload:
   - +.golang.com
   - +.golang.net
   - +.golang.org
-  - +.consul.io
-  - +.hashicorp.com
-  - +.nomadproject.io
-  - +.packer.io
-  - +.terraform.io
-  - +.vagrantcloud.com
-  - +.vagrantup.com
+  - +.brew.sh
+  - +.gitlab.com
+  - +.gitlab.io
+  - +.gitlab.net
+  - +.gitlab-static.net
+  - +.braventures.com
+  - +.braveux.com
+  - +.compass.is
+  - +.fightforux.com
+  - +.forthebadge.com
+  - +.stockagainstphotography.com
+  - +.ubuntuforums.org
+  - +.pycon.org
+  - +.pypa.io
+  - +.pypi.io
+  - +.pypi.org
+  - +.python.org
+  - +.pythonhosted.org
+  - +.azurecr.io
+  - +.docker.io
+  - +.ecr.aws
+  - +.gcr.io
+  - +.quay.io
+  - +.grazie.ai
+  - +.jetbrains.ai
+  - +.fedoraforum.org
+  - +.fedorainfracloud.org
   - +.vaultproject.io
-  - +.redhat.com
-  - +.redhat.org
+  - +.vagrantup.com
+  - +.vagrantcloud.com
+  - +.fedoramagazine.org
+  - +.fedorapeople.org
+  - +.fedoraproject.org
+  - +.getfedora.org
+  - +.flathub.org
+  - +.flatpak.org
+  - +.jfrog.com
+  - +.jfrog.org
+  - +.bintray.com
+  - +.apache.org
+  - +.android.com
+  - +.androidify.com
+  - +.debian.org
+  - +.dotdeb.org
+  - +.sourcehut.org
+  - +.sr.ht
+  - +.mystrikingly.com
+  - +.strikingly.com
+  - +.strikinglycdn.com
+  - +.mongodb.com
+  - +.mongodb.org
+  - +.nginx.com
+  - +.nginx.org
+  - +.readthedocs-hosted.com
+  - +.readthedocs.com
+  - +.readthedocs.io
+  - +.readthedocs.org
+  - +.ruby-lang.org
+  - +.rubygems.org
+  - +.fastlane.ci
+  - +.fastlane.tools
+  - +.fontawesome.com
+  - +.fortawesome.com
+  - +.gitbook.com
+  - +.gitbook.io
+  - +.perl.org
+  - +.cpan.org
+  - +.metacpan.org
+  - +.modperl.pl
+  - +.terraform.io
+  - +.packer.io
+  - +.termux.com
+  - +.termux.dev
+  - +.termux.org
+  - +.canonical.com
+  - +.launchpad.net
+  - +.launchpadcontent.net
+  - +.launchpadlibrarian.com
+  - +.launchpadlibrarian.net
+  - +.launchpadlibrarian.org
+  - +.snapcraft.io
+  - +.snapstore.io
+  - +.intellinuxgraphics.com
+  - +.artixlinux.org
+  - +.ubuntu-touch.io
+  - +.flutter.dev
+  - +.flutterapp.com
+  - +.pub.dev
   - +.accountkit.com
   - +.atscaleconference.com
   - +.botorch.org
@@ -454,79 +411,50 @@ payload:
   - +.rocksdb.net
   - +.rocksdb.org
   - +.yogalayout.com
-  - +.01.org
-  - +.hyperscan.io
-  - +.intellinuxgraphics.com
-  - +.intellinuxgraphics.net
-  - +.oneapi.com
-  - +.oneapi.io
-  - +.opencas.io
-  - +.opendroneid.org
-  - +.openvino.ai
-  - +.openvinotoolkit.org
-  - +.renderingtoolkit.org
-  - +.snap-telemetry.io
-  - +.universalscalablefirmware.org
-  - +.acpica.com
-  - +.clearlinux.org
-  - +.ospray.net
-  - +.ospray.org
-  - +.nginx.com
-  - +.nginx.org
-  - +.apache.org
-  - +.android.com
-  - +.androidify.com
-  - +.dart.dev
-  - +.dartlang.org
-  - +.dartpad.dev
-  - +.compose-spec.io
-  - +.docker.com
-  - +.dockerstatic.com
-  - +.flutter.dev
-  - +.adventofcode.com
-  - +.pub.dev
-  - +.canonical.com
-  - +.ubuntu.com
-  - +.ubuntu.net
-  - +.ubuntuforums.org
-  - +.ubuntu-touch.io
-  - +.launchpad.net
-  - +.launchpadcontent.net
-  - +.launchpadlibrarian.com
-  - +.launchpadlibrarian.net
-  - +.launchpadlibrarian.org
-  - +.snapcraft.io
-  - +.snapstore.io
-  - +.qt.io
-  - +.qt-project.org
-  - +.redis.io
-  - +.redislabs.com
   - +.fury.blog
   - +.fury.co
   - +.fury.dev
   - +.fury.help
   - +.fury.io
   - +.gemfury.com
-  - +.mystrikingly.com
-  - +.strikingly.com
-  - +.strikinglycdn.com
-  - +.videopress.com
-  - +.w.org
-  - +.wordcamp.org
-  - +.wordpress.com
-  - +.wordpress.net
-  - +.wordpress.org
-  - +.wordpress.tv
-  - +.wp-themes.com
-  - +.wp.com
-  - +.wpvip.com
-  - +.alpinelinux.org
-  - +.java.com
-  - +.java.net
-  - +.anaconda.cloud
-  - +.anaconda.com
-  - +.anaconda.org
-  - +.conda.io
+  - +.haskell.org
+  - +.haskellstack.org
+  - +.stackage.org
+  - +.scala-lang.org
+  - +.scala-sbt.org
+  - +.compose-spec.io
+  - +.docker.com
+  - +.dockerstatic.com
+  - +.framer.com
+  - +.framer.website
+  - +.framercanvas.com
+  - +.framerstatic.com
+  - +.framerusercontent.com
+  - +.rust-lang.org
+  - +.rustup.rs
+  - +.crates.io
+  - +.docs.rs
+  - +.bootstrapcdn.com
+  - +.getbootstrap.com
+  - +.qt.io
+  - +.qt-project.org
+  - +.crashlytics.com
+  - +.firebase.com
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
+  - +.datalore.io
+  - +.intellij.com
+  - +.intellij.net
+  - +.intellij.org
+  - +.jb.gg
+  - +.jetbrains.cloud
+  - +.jetbrains.com
+  - +.jetbrains.net
+  - +.jetbrains.space
+  - +.jetbrains.team
+  - +.kotlinlang.org
+  - +.youtrack.cloud
   - +.adaptivecards.io
   - +.api-extractor.com
   - +.apisof.net
@@ -578,61 +506,143 @@ payload:
   - +.vscode-cdn.net
   - +.vscode-unpkg.net
   - +.xamarin.com
-  - +.sourcegraph.com
-  - +.mongodb.com
-  - +.mongodb.org
-  - +.ruby-lang.org
-  - +.rubygems.org
+  - +.nomadproject.io
+  - +.unity.com
+  - +.unity3d.com
+  - +.v8.dev
+  - +.v8project.org
+  - +.macruby.com
+  - +.cups.org
+  - +.macruby.net
+  - +.swift.org
+  - +.appleswift.com
+  - +.webobjects.com
+  - +.wpewebkit.org
+  - +.calendarserver.org
+  - +.macruby.org
+  - +.macosforge.org
+  - +.servicetalk.io
+  - +.apple-cloudkit.com
+  - +.foundationdb.org
+  - +.apple-mapkit.com
+  - +.webkitgtk.org
+  - +.carekit.org
+  - +.researchandcare.org
+  - +.researchkit.hk
+  - +.researchkit.net
+  - +.researchkit.org
+  - +.researchkit.tv
+  - +.webkit.org
+  - +.hashicorp.com
+  - +.consul.io
+  - +.playerjs.io
+  - +.embedly.com
+  - +.embed.ly
+  - +.kernel.org
+  - +.dart.dev
+  - +.dartlang.org
+  - +.dartpad.dev
+  - +.discourse-cdn.com
+  - +.discourse.group
+  - +.discourse.org
+  - +.alpinelinux.org
+  - +.java.com
+  - +.java.net
+  - +.sentry.io
+  - +.sentry-cdn.com
+  - +.anaconda.cloud
+  - +.anaconda.com
+  - +.anaconda.org
+  - +.conda.io
+  - +.archlinux.de
+  - +.archlinux.org
+  - +.archlinux.page
+  - +.archlinuxarm.org
+  - +.pkgbuild.com
+  - +.archlinuxcn.org
   - +.tilda.cc
   - +.tilda.ru
   - +.tilda.ws
   - +.tildaapi.com
   - +.tildacdn.com
-  - +.v8.dev
-  - +.v8project.org
-  - +.fedoraforum.org
-  - +.fedorainfracloud.org
-  - +.fedoramagazine.org
-  - +.fedorapeople.org
-  - +.fedoraproject.org
-  - +.gitbook.io
-  - +.flathub.org
-  - +.flatpak.org
-  - +.jfrog.com
-  - +.jfrog.org
-  - +.bintray.com
-  - +.bootstrapcdn.com
-  - +.getbootstrap.com
-  - +.discourse-cdn.com
-  - +.discourse.group
-  - +.discourse.org
-  - +.firebase.com
-  - +.firebase.io
-  - +.firebaseapp.com
-  - +.firebaseio.com
-  - +.github1s.com
-  - +.developer.apple.com
-  - +.mcr.microsoft.com
-  - +.visualstudio.co.uk
-  - +.devimages-cdn.apple.com
-  - +.playgrounds-cdn.apple.com
-  - +.developerservices2.apple.com
-  - +.devstreaming-cdn.apple.com
+  - +.videopress.com
+  - +.w.org
+  - +.wordcamp.org
+  - +.wordpress.com
+  - +.wordpress.net
+  - +.wordpress.org
+  - +.wordpress.tv
+  - +.wp-themes.com
+  - +.wp.com
+  - +.wpvip.com
+  - +.codeberg.org
+  - +.codeberg.page
+  - +.01.org
+  - +.hyperscan.io
+  - +.adventofcode.com
+  - +.intellinuxgraphics.net
+  - +.oneapi.com
+  - +.oneapi.io
+  - +.opencas.io
+  - +.opendroneid.org
+  - +.openvino.ai
+  - +.openvinotoolkit.org
+  - +.renderingtoolkit.org
+  - +.snap-telemetry.io
+  - +.universalscalablefirmware.org
+  - +.acpica.com
+  - +.clearlinux.org
+  - +.ospray.net
+  - +.ospray.org
+  - +.openwrt.org
+  - +.lede-project.org
+  - +.polymer-project.org
+  - +.polymerproject.org
+  - +.lfai.foundation
+  - +.linuxfoundation.org
+  - +.linux.org
+  - +.openjsf.org
+  - +.electronjs.org
+  - +.jquery.com
+  - +.jquerymobile.com
+  - +.jqueryui.com
+  - +.mochajs.org
+  - +.nodejs.org
+  - +.amp.dev
+  - +.ampproject.com
+  - +.ampproject.net
+  - +.ampproject.org
   - +.timestamp.apple.com
+  - +.devimages-cdn.apple.com
+  - +.devstreaming-cdn.apple.com
+  - +.developerservices2.apple.com
+  - +.playgrounds-cdn.apple.com
+  - +.developer.apple.com
+  - +.visualstudio.co.uk
+  - +.mcr.microsoft.com
   - +.greenend.org.uk
-  - cdn.ampproject.org
-  - +.researchkit.cn
-  - +.researchkit.com.cn
-  - +.swiftui.cn
-  - +.swiftui.com.cn
-  - +.iads.unity3d.com
-  - +.unityads.unity3d.com
+  - crashlyticsreports-pa.googleapis.com
+  - firebase-settings.crashlytics.com
+  - update.crashlytics.com
   - +.cdn.jetbrains.com
   - +.download-cdn.jetbrains.com.cn
   - +.microsoftreactor.cn
   - +.microsoftreactor.com.cn
   - +.reactorms.com.cn
-  - firebase-settings.crashlytics.com
+  - +.analytics.cloud.unity3d.com
+  - +.api2.amplitude.com
+  - +.config.uca.cloud.unity3d.com
+  - +.cdp.cloud.unity3d.com
+  - +.prd-lender.cdp.internal.unity3d.com
+  - +.iads.unity3d.com
+  - +.perf.cloud.unity3d.com
+  - +.perf-events.cloud.unity3d.com
+  - +.unityads.unity3d.com
+  - +.researchkit.cn
+  - +.researchkit.com.cn
+  - +.swiftui.cn
+  - +.swiftui.com.cn
+  - cdn.ampproject.org
   - +.b-cdn.net
   - +.bunny.net
   - +.bunnycdn.com
@@ -641,67 +651,6 @@ payload:
   - +.gcdn.co
   - +.gcore.com
   - +.gcore.pro
-  - +.cdn77.com
-  - +.cdn77.org
-  - +.argotunnel.com
-  - +.browser.run
-  - +.cfargotunnel.com
-  - +.cfdata.org
-  - +.cfl.re
-  - +.cloudflare-dns.com
-  - +.cloudflare-ech.com
-  - +.cloudflare-esni.com
-  - +.cloudflare-gateway.com
-  - +.cloudflare-quic.com
-  - +.cloudflare-terms-of-service-abuse.com
-  - +.cloudflare.com
-  - +.cloudflare.dev
-  - +.cloudflare.net
-  - +.cloudflare.tv
-  - +.cloudflareaccess.com
-  - +.cloudflareapps.com
-  - +.cloudflarebolt.com
-  - +.cloudflarebrowser.com
-  - +.cloudflarechallenge.com
-  - +.cloudflareclient.com
-  - +.cloudflarecp.com
-  - +.cloudflareinsights.com
-  - +.cloudflareok.com
-  - +.cloudflarepartners.com
-  - +.cloudflareportal.com
-  - +.cloudflarepreview.com
-  - +.cloudflareregistrar.com
-  - +.cloudflareresearch.com
-  - +.cloudflareresolve.com
-  - +.cloudflaressl.com
-  - +.cloudflarestatus.com
-  - +.cloudflarestorage.com
-  - +.cloudflarestream.com
-  - +.cloudflaresupport.com
-  - +.cloudflaretest.com
-  - +.cloudflarewarp.com
-  - +.cloudflareworkers.com
-  - +.encryptedsni.com
-  - +.every1dns.net
-  - +.foundationdns.com
-  - +.foundationdns.net
-  - +.foundationdns.org
-  - +.imagedelivery.net
-  - +.isbgpsafeyet.com
-  - +.pacloudflare.com
-  - +.pages.dev
-  - +.r2.dev
-  - +.trycloudflare.com
-  - +.videodelivery.net
-  - +.warp.plus
-  - +.workers.dev
-  - +.cf-ipfs.com
-  - +.cloudflare-ipfs.com
-  - +.stackpath.com
-  - +.stackpath.dev
-  - +.vrcdn.cloud
-  - +.vrcdn.live
-  - +.vrcdn.video
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -771,6 +720,60 @@ payload:
   - +.iamakamai.net
   - +.soasta-dswb.com
   - +.srtcdn.net
+  - +.argotunnel.com
+  - +.browser.run
+  - +.cfargotunnel.com
+  - +.cfdata.org
+  - +.cfl.re
+  - +.cloudflare-dns.com
+  - +.cloudflare-ech.com
+  - +.cloudflare-esni.com
+  - +.cloudflare-gateway.com
+  - +.cloudflare-quic.com
+  - +.cloudflare-terms-of-service-abuse.com
+  - +.cloudflare.com
+  - +.cloudflare.dev
+  - +.cloudflare.net
+  - +.cloudflare.tv
+  - +.cloudflareaccess.com
+  - +.cloudflareapps.com
+  - +.cloudflarebolt.com
+  - +.cloudflarebrowser.com
+  - +.cloudflarechallenge.com
+  - +.cloudflareclient.com
+  - +.cloudflarecp.com
+  - +.cloudflareinsights.com
+  - +.cloudflareok.com
+  - +.cloudflarepartners.com
+  - +.cloudflareportal.com
+  - +.cloudflarepreview.com
+  - +.cloudflareregistrar.com
+  - +.cloudflareresearch.com
+  - +.cloudflareresolve.com
+  - +.cloudflaressl.com
+  - +.cloudflarestatus.com
+  - +.cloudflarestorage.com
+  - +.cloudflarestream.com
+  - +.cloudflaresupport.com
+  - +.cloudflaretest.com
+  - +.cloudflarewarp.com
+  - +.cloudflareworkers.com
+  - +.encryptedsni.com
+  - +.every1dns.net
+  - +.foundationdns.com
+  - +.foundationdns.net
+  - +.foundationdns.org
+  - +.imagedelivery.net
+  - +.isbgpsafeyet.com
+  - +.pacloudflare.com
+  - +.pages.dev
+  - +.r2.dev
+  - +.trycloudflare.com
+  - +.videodelivery.net
+  - +.warp.plus
+  - +.workers.dev
+  - +.cf-ipfs.com
+  - +.cloudflare-ipfs.com
   - +.fastly-edge.com
   - +.fastly-terrarium.com
   - +.fastly.com
@@ -779,6 +782,11 @@ payload:
   - +.fastlylabs.com
   - +.fastlylb.net
   - +.zencdn.net
+  - +.quantil.com
+  - +.stackpath.com
+  - +.stackpath.dev
+  - +.cdn77.com
+  - +.cdn77.org
   - +.imgix.com
   - +.imgix.net
   - +.delvenetworks.com
@@ -791,9 +799,22 @@ payload:
   - +.llnwi.net
   - +.pagecdn.com
   - +.pagecdn.io
-  - +.quantil.com
-  - +.one.one.one
+  - +.vrcdn.cloud
+  - +.vrcdn.live
+  - +.vrcdn.video
   - +.akamai.co.kr
+  - +.one.one.one
+  - +.accdn.com.cn
+  - +.akadns88.net
+  - +.akadns99.net
+  - +.akamai.com
+  - +.akcdn.com.cn
+  - +.aptdn.net
+  - +.edgekey88.net
+  - +.janrain.biz
+  - +.janrainservices.com
+  - +.skycdn.com.cn
+  - +.tl88.net
   - +.cf-china.info
   - +.cf-ns.com
   - +.cf-ns.net
@@ -813,17 +834,6 @@ payload:
   - +.cloudflareprod.com
   - +.cloudflarestaging.com
   - +.cloudflarestoragegw.com
-  - +.accdn.com.cn
-  - +.akadns88.net
-  - +.akadns99.net
-  - +.akamai.com
-  - +.akcdn.com.cn
-  - +.aptdn.net
-  - +.edgekey88.net
-  - +.janrain.biz
-  - +.janrainservices.com
-  - +.skycdn.com.cn
-  - +.tl88.net
   - +.bilibili.tv
   - +.biliintl.com
   - +.dreamcast.hk
@@ -1049,19 +1059,21 @@ payload:
   - steamuserimages-a.akamaihd.net
   - steamvideo-a.akamaihd.net
   - steamcloudsweden.blob.core.windows.net
-  - +.steamstatic.com
+  - +.valve.net
+  - +.steamdeck.com
   - +.steam.tv
-  - +.underlords.com
   - +.steam-api.com
   - +.steam-chat.com
   - +.steamcommunity.com
   - +.steamcontent.com
-  - +.steamdeck.com
-  - +.valvesoftware.com
-  - +.steampowered.com
-  - +.playartifact.com
   - +.s.team
   - +.steamgames.com
+  - +.steampowered.com
+  - +.steamstatic.com
+  - +.underlords.com
+  - +.dota2.com
+  - +.valvesoftware.com
+  - +.playartifact.com
   - +.steam.apac.qtlglb.com
   - +.steam.eca.qtlglb.com
   - +.steam.naeu.qtlglb.com
@@ -1116,30 +1128,33 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
-  - crl.microsoft.com
-  - mscrl.microsoft.com
-  - ocsp.microsoft.com
-  - oneocsp.microsoft.com
   - flightsimulator.azureedge.net
   - prodforza.blob.core.windows.net
   - azure.microsoft.com
   - azuremarketplace.microsoft.com
   - location.microsoft.com
+  - crl.microsoft.com
+  - mscrl.microsoft.com
+  - ocsp.microsoft.com
+  - oneocsp.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
   - +.skype
   - +.windows
-  - +.bing
-  - +.azure
   - +.xbox
   - +.onedriveupdater
   - +.onedrive
-  - +.msocdn.com
+  - +.bing
+  - +.azure
+  - +.yammer.com
+  - +.msidentity.com
+  - +.microsoft.cl
   - +.microsoft.com
   - +.microsoft.cz
   - +.microsoft.de
-  - +.microsoft.dk
+  - +.tellmewhygame.com
+  - +.microsoft.ee
   - +.microsoft.es
   - +.microsoft.eu
   - +.microsoft.fi
@@ -1287,7 +1302,8 @@ payload:
   - +.msgamesresearch.com
   - +.msgamestudios.com
   - +.mshome.net
-  - +.msidentity.com
+  - +.xbox.co
+  - +.msocdn.com
   - +.msturing.org
   - +.msudalosti.com
   - +.mymicrosoft.com
@@ -1363,41 +1379,14 @@ payload:
   - +.windowsupdate.com
   - +.winhec.com
   - +.winhec.net
-  - +.yammer.com
-  - +.microsoft.ch
-  - +.microsoft.ee
-  - +.microsoft.cl
-  - +.msocsp.com
-  - +.microsoftnews.cc
-  - +.microsoftnews.com
-  - +.microsoftnews.net
-  - +.microsoftnews.org
-  - +.microsoftnewsforkids.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.org
-  - +.microsoftnewskids.com
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.org
-  - +.msn.com
-  - +.msnewskids.com
-  - +.msnewskids.net
-  - +.msnewskids.org
-  - +.msnkids.com
-  - +.microsoftstart.com
-  - +.start.com
   - +.microsoft.cat
-  - +.microsoft.ca
-  - +.onedrive.com
-  - +.sharepoint.cn
-  - +.livefilestore.com
-  - +.1drv.com
-  - +.microsoft.by
   - +.gamepass.com
+  - +.1drv.com
   - +.orithegame.com
   - +.renovacionxboxlive.com
-  - +.tellmewhygame.com
-  - +.xbox.co
-  - +.xbox.com
+  - +.microsoft.dk
+  - +.microsoft.ch
+  - +.xbx.lv
   - +.xbox.eu
   - +.xbox.org
   - +.xbox360.co
@@ -1414,7 +1403,7 @@ payload:
   - +.xboxplayanywhere.com
   - +.xboxservices.com
   - +.xboxstudios.com
-  - +.xbx.lv
+  - +.xbox.com
   - +.asobostudio.com
   - +.flightsimulator.com
   - +.beth.games
@@ -1433,7 +1422,7 @@ payload:
   - +.minecraftservices.com
   - +.minecraftshop.com
   - +.mojang.com
-  - +.microsoft.be
+  - +.microsoft.ca
   - +.aadrm.com
   - +.azure-devices-int.net
   - +.azure-devices.net
@@ -1489,7 +1478,7 @@ payload:
   - +.azure-dns.info
   - +.azure-dns.net
   - +.azure-dns.org
-  - +.microsoft.az
+  - +.microsoft.by
   - +.microsoftdiplomados.com
   - +.bing123.com
   - +.flipwithsurface.com
@@ -1515,11 +1504,34 @@ payload:
   - +.office365love.com
   - +.office365tw.com
   - +.renovacionoffice.com
-  - +.spoprod-a.akamaihd.net
+  - +.livefilestore.com
+  - +.sharepoint.cn
+  - +.onedrive.com
+  - +.msocsp.com
+  - +.microsoftnews.cc
+  - +.microsoftnews.com
+  - +.microsoftnews.net
+  - +.microsoftnews.org
+  - +.microsoftnewsforkids.com
+  - +.microsoftnewsforkids.net
+  - +.microsoftnewsforkids.org
+  - +.microsoftnewskids.com
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.org
+  - +.msn.com
+  - +.msnewskids.com
+  - +.msnewskids.net
+  - +.msnewskids.org
+  - +.msnkids.com
+  - +.microsoftstart.com
+  - +.start.com
+  - +.microsoft.be
+  - +.microsoft.az
+  - +.live.com.au
   - +.skypedata.akadns.net
   - +.skype-edf.akadns.net
   - +.microsoftstore.com.hk
-  - +.live.com.au
+  - +.spoprod-a.akamaihd.net
   - +.dcg.microsoft.com
   - +.dynamics.cn
   - +.engkoo.com
@@ -1588,11 +1600,6 @@ payload:
   - vz.download.prss.microsoft.com
   - wscont1.apps.microsoft.com
   - wscont2.apps.microsoft.com
-  - www.microsoft.com
-  - +.microsoftnews.cn
-  - +.msn.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
   - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
@@ -1689,7 +1696,28 @@ payload:
   - +.th.bing.com
   - bj1.api.bing.com
   - emoi-cncdn.bing.com
+  - www.microsoft.com
+  - +.microsoftnews.cn
+  - +.msn.cn
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
   - google-ohttp-relay-safebrowsing.fastly-edge.com
+  - alt7-mtalk.google.com
+  - alt8-mtalk.google.com
+  - mtalk-dev.google.com
+  - mtalk-staging.google.com
+  - mtalk4.google.com
+  - ai.google.dev
+  - alkalicore-pa.clients6.google.com
+  - alkalimakersuite-pa.clients6.google.com
+  - webchannel-alkalimakersuite-pa.clients6.google.com
+  - cloudaicompanion.googleapis.com
+  - cloudcode-pa.googleapis.com
+  - daily-cloudcode-pa.googleapis.com
+  - notebooklm-pa.googleapis.com
+  - notebooklm.googleapis.com
+  - antigravity-pa.googleapis.com
+  - antigravity.googleapis.com
   - scholar.google.ae
   - scholar.google.at
   - scholar.google.be
@@ -1770,22 +1798,6 @@ payload:
   - preprod-publicca.googleapis.com
   - clients1.google.com
   - pki.google.com
-  - ai.google.dev
-  - alkalicore-pa.clients6.google.com
-  - alkalimakersuite-pa.clients6.google.com
-  - webchannel-alkalimakersuite-pa.clients6.google.com
-  - cloudaicompanion.googleapis.com
-  - cloudcode-pa.googleapis.com
-  - daily-cloudcode-pa.googleapis.com
-  - notebooklm-pa.googleapis.com
-  - notebooklm.googleapis.com
-  - antigravity-pa.googleapis.com
-  - antigravity.googleapis.com
-  - alt7-mtalk.google.com
-  - alt8-mtalk.google.com
-  - mtalk-dev.google.com
-  - mtalk-staging.google.com
-  - mtalk4.google.com
   - +.chrome
   - +.dclk
   - +.gbiz
@@ -1799,8 +1811,8 @@ payload:
   - +.nexus
   - +.xn--flw351e
   - +.xn--qcka1pmc
-  - +.quickoffice.com
-  - +.iam.soy
+  - +.revolv.com
+  - +.crossmediapanel.com
   - +.google.as
   - +.google.at
   - +.google.az
@@ -1828,67 +1840,8 @@ payload:
   - +.google.cz
   - +.google.de
   - +.google.dj
-  - +.blogspot.mk
-  - +.blogspot.md
-  - +.blogspot.lu
-  - +.blogspot.lt
-  - +.blogspot.li
-  - +.blogspot.kr
-  - +.blogspot.de
-  - +.blogspot.it
-  - +.blogspot.is
-  - +.blogspot.in
-  - +.blogspot.ie
-  - +.blogspot.hu
-  - +.blogspot.hr
-  - +.blogspot.hk
-  - +.blogspot.gr
-  - +.blogspot.fr
-  - +.blogspot.rs
-  - +.blogspot.tw
-  - +.blogspot.jp
-  - +.blogspot.cz
-  - +.blogspot.cv
-  - +.blogblog.com
-  - +.blogspot.my
-  - +.blogger.com
-  - +.blogspot.no
-  - +.blogspot.pe
-  - +.blogspot.pt
-  - +.blogspot.qa
-  - +.blogspot.re
-  - +.blogspot.ro
-  - +.blogspot.fi
-  - +.blogspot.ru
-  - +.blogspot.se
-  - +.blogspot.sg
-  - +.blogspot.com
-  - +.blogspot.si
-  - +.blogspot.sk
-  - +.blogspot.sn
-  - +.blogspot.td
-  - +.blogspot.dk
-  - +.blogspot.ug
-  - +.blogspot.vn
-  - +.blogspot.cl
-  - +.blogspot.ch
-  - +.blogspot.cf
-  - +.blogspot.ca
-  - +.blogspot.bj
-  - +.blogspot.bg
-  - +.blogspot.be
-  - +.blogspot.ba
-  - +.blogspot.am
-  - +.blogspot.al
-  - +.blogspot.ae
-  - +.blogspot.mx
-  - +.blogspot.nl
-  - +.google.ad
-  - +.xn--ngstr-lra8j.com
-  - +.googleplay.com
+  - +.sheets.new
   - +.screenwisetrendspanel.com
-  - +.ai.studio
-  - +.deepmind.com
   - +.google.dk
   - +.google.dm
   - +.google.dz
@@ -2020,7 +1973,7 @@ payload:
   - +.coova.com
   - +.coova.net
   - +.coova.org
-  - +.crossmediapanel.com
+  - +.slides.new
   - +.cs4hs.com
   - +.dartsearch.net
   - +.dataliberation.org
@@ -2075,11 +2028,6 @@ payload:
   - +.googlecert.net
   - +.googlecode.com
   - +.googlecommerce.com
-  - +.xn--p8j9a0d9c9a.xn--q9jyb4c
-  - +.new.day
-  - +.schemer.com
-  - +.hey.boo
-  - +.get.rsvp
   - +.googledanmark.com
   - +.googledomains.com
   - +.googledrive.com
@@ -2117,7 +2065,6 @@ payload:
   - +.haplorrhini.com
   - +.hdrplusdata.org
   - +.hindiweb.com
-  - +.get.page
   - +.html5rocks.com
   - +.hwgo.com
   - +.iamremarkable.org
@@ -2146,7 +2093,7 @@ payload:
   - +.oauthz.com
   - +.on.here
   - +.on2.com
-  - +.screenwisetrends.com
+  - +.onefifteen.net
   - +.onefifteen.org
   - +.oneworldmanystories.com
   - +.openthread.io
@@ -2171,18 +2118,16 @@ payload:
   - +.projectbaseline.com
   - +.publishproxy.com
   - +.questvisual.com
-  - +.google.al
+  - +.quickoffice.com
   - +.quiksee.com
-  - +.revolv.com
+  - +.google.al
   - +.ridepenguin.com
   - +.run.app
   - +.savethedate.foo
   - +.saynow.com
+  - +.schemer.com
+  - +.screenwisetrends.com
   - +.google.am
-  - +.onefifteen.net
-  - +.get.new
-  - +.sheets.new
-  - +.slides.new
   - +.snapseed.com
   - +.solveforx.com
   - +.stadia.dev
@@ -2200,7 +2145,6 @@ payload:
   - +.tfhub.dev
   - +.thecleversense.com
   - +.thegooglestore.com
-  - +.get.how
   - +.thinkquarterly.com
   - +.thinkwithgoogle.com
   - +.tiltbrush.com
@@ -2229,7 +2173,6 @@ payload:
   - +.widevine.com
   - +.withgoogle.com
   - +.womenwill.com
-  - +.get.dev
   - +.womenwill.id
   - +.womenwill.in
   - +.womenwill.mx
@@ -2243,20 +2186,114 @@ payload:
   - +.xn--gogl-1nd42e.com
   - +.xplr.co
   - +.zukunftswerkstatt.de
+  - +.blogspot.nl
+  - +.blogspot.mx
+  - +.blogspot.ae
+  - +.blogspot.al
+  - +.blogspot.am
+  - +.blogspot.ba
+  - +.blogspot.be
+  - +.blogspot.bg
+  - +.blogspot.bj
+  - +.blogspot.ca
+  - +.blogspot.cf
+  - +.blogspot.ch
+  - +.blogspot.cl
+  - +.blogspot.vn
+  - +.blogspot.ug
+  - +.blogspot.dk
+  - +.blogspot.td
+  - +.blogspot.sn
+  - +.blogspot.sk
+  - +.blogspot.si
+  - +.blogspot.com
+  - +.blogspot.sg
+  - +.blogspot.se
+  - +.blogspot.ru
+  - +.blogspot.fi
+  - +.blogspot.ro
+  - +.blogspot.re
+  - +.blogspot.qa
+  - +.blogspot.pt
+  - +.blogspot.pe
+  - +.blogspot.no
+  - +.blogger.com
+  - +.blogspot.my
+  - +.blogblog.com
+  - +.blogspot.cv
+  - +.blogspot.cz
+  - +.blogspot.jp
+  - +.blogspot.tw
+  - +.blogspot.rs
+  - +.blogspot.fr
+  - +.blogspot.gr
+  - +.blogspot.hk
+  - +.blogspot.hr
+  - +.blogspot.hu
+  - +.blogspot.ie
+  - +.blogspot.in
+  - +.blogspot.is
+  - +.blogspot.it
+  - +.blogspot.de
+  - +.blogspot.kr
+  - +.blogspot.li
+  - +.blogspot.lt
+  - +.blogspot.lu
+  - +.blogspot.md
+  - +.blogspot.mk
+  - +.google.ad
+  - +.opensourceinsights.dev
   - +.kaggle.com
   - +.kaggle.io
   - +.kaggle.net
   - +.kaggleusercontent.com
-  - +.deps.dev
-  - +.deps.info
-  - +.opensourceinsight.dev
-  - +.opensourceinsights.dev
   - +.google.ae
+  - +.deepmind.com
+  - +.ai.studio
+  - +.opensourceinsight.dev
+  - +.deps.info
+  - +.deps.dev
+  - +.xn--p8j9a0d9c9a.xn--q9jyb4c
+  - +.new.day
+  - +.iam.soy
+  - +.hey.boo
+  - +.get.rsvp
+  - +.get.page
+  - +.get.new
+  - +.get.how
+  - +.get.dev
   - +.get.app
   - +.crr.com
   - +.charlestonroadregistry.com
+  - +.xn--ngstr-lra8j.com
+  - +.googleplay.com
+  - +.google.co.zw
+  - +.google.com.ag
+  - +.google.com.af
+  - +.google.com.ai
+  - +.blogspot.com.by
+  - +.blogspot.co.at
+  - +.blogspot.co.id
+  - +.blogspot.co.il
+  - +.blogspot.co.ke
+  - +.blogspot.co.nz
+  - +.blogspot.co.uk
+  - +.blogspot.co.za
+  - +.blogspot.com.mt
+  - +.blogspot.com.br
+  - +.blogspot.com.ng
+  - +.blogspot.com.co
+  - +.blogspot.com.au
+  - +.blogspot.com.ee
+  - +.blogspot.com.eg
+  - +.blogspot.com.cy
+  - +.blogspot.com.ar
+  - +.blogspot.com.uy
+  - +.blogspot.com.es
+  - +.blogspot.com.tr
   - +.womenwill.com.br
   - +.thinkquarterly.co.uk
+  - +.google.com.mm
   - +.howtogetmo.co.uk
   - +.googlecompare.co.uk
   - +.google.com.vn
@@ -2287,7 +2324,6 @@ payload:
   - +.google.com.my
   - +.google.com.mx
   - +.google.com.mt
-  - +.google.com.mm
   - +.google.com.ly
   - +.google.com.lb
   - +.google.com.kw
@@ -2313,10 +2349,6 @@ payload:
   - +.google.com.bd
   - +.google.com.au
   - +.google.com.ar
-  - +.google.com.ai
-  - +.google.com.ag
-  - +.google.com.af
-  - +.google.co.zw
   - +.google.co.zm
   - +.google.co.za
   - +.google.co.vi
@@ -2340,26 +2372,6 @@ payload:
   - +.google.co.ck
   - +.google.co.bw
   - +.google.co.ao
-  - +.blogspot.com.tr
-  - +.blogspot.com.es
-  - +.blogspot.com.uy
-  - +.blogspot.com.ar
-  - +.blogspot.com.cy
-  - +.blogspot.com.eg
-  - +.blogspot.com.ee
-  - +.blogspot.com.au
-  - +.blogspot.com.co
-  - +.blogspot.com.ng
-  - +.blogspot.com.br
-  - +.blogspot.com.mt
-  - +.blogspot.co.za
-  - +.blogspot.co.uk
-  - +.blogspot.co.nz
-  - +.blogspot.co.ke
-  - +.blogspot.co.il
-  - +.blogspot.co.id
-  - +.blogspot.co.at
-  - +.blogspot.com.by
   - +.google.cn
   - +.g.cn
   - +.gkecnapps.cn
@@ -2418,10 +2430,13 @@ payload:
   - +.partnerad.l.google.com
   - +.urchin.com
   - analytics.google.com
+  - +.265.com
   - +.gvt1-cn.com
   - +.gvt2-cn.com
+  - recaptcha-cn.net
+  - recaptcha.net
+  - www.recaptcha-cn.net
   - www.recaptcha.net
-  - 265.com
   - 2mdn-cn.net
   - 2mdn.net
   - admob-cn.com
@@ -2446,7 +2461,6 @@ payload:
   - clientservices.googleapis.com
   - cn.widevine.com
   - connectivitycheck.gstatic.com
-  - crashlyticsreports-pa.googleapis.com
   - csi.gstatic.com
   - dartsearch-cn.net
   - dg-meta.video.google.com
@@ -2495,8 +2509,6 @@ payload:
   - prod.databe.floonet.goog
   - qiao-cn.com
   - qpx.googleflights.net
-  - recaptcha-cn.net
-  - recaptcha.net
   - redirector.bdn.dev
   - redirector.c.chat.google.com
   - redirector.c.mail.google.com
@@ -2517,7 +2529,6 @@ payload:
   - staging.databe.floonet.goog
   - tac.googleapis.com
   - tools.google.com
-  - update.crashlytics.com
   - update.googleapis.com
   - wear.googleapis.com
   - www-google-analytics.l.google.com
@@ -2525,14 +2536,6 @@ payload:
   - www.destinationurl.com
   - www.gstatic.com
   - www.pxcc.com
-  - pki-goog.l.google.com
-  - c.pki.goog
-  - i.pki.goog
-  - o.pki.goog
-  - crl.pki.goog
-  - crls.pki.goog
-  - ocsp.pki.goog
-  - redirector.c.play.google.com
   - alt1-mtalk.google.com
   - alt2-mtalk.google.com
   - alt3-mtalk.google.com
@@ -2540,6 +2543,14 @@ payload:
   - alt5-mtalk.google.com
   - alt6-mtalk.google.com
   - mtalk.google.com
+  - redirector.c.play.google.com
+  - pki-goog.l.google.com
+  - c.pki.goog
+  - i.pki.goog
+  - o.pki.goog
+  - crl.pki.goog
+  - crls.pki.goog
+  - ocsp.pki.goog
   - +.play-fe.googleapis.com
   - +.play-games.googleusercontent.com
   - +.play-lh.googleusercontent.com
@@ -3316,7 +3327,6 @@ payload:
   - +.cpu-monkey.com
   - +.cq99.us
   - +.crackle.com
-  - +.crashlytics.com
   - +.crazypool.org
   - +.crazyshit.com
   - +.crbug.com
@@ -6917,7 +6927,8 @@ payload:
   - +.aws
   - +.apple
   - +.amazon
-  - +.alpherafs.ca
+  - +.jfn.su
+  - +.smartfea.com
   - +.1337x.is
   - +.1337x.st
   - +.1337x.tw
@@ -7048,7 +7059,6 @@ payload:
   - +.24hjav.com
   - +.24porn.com
   - +.24porn.pro
-  - +.265.com
   - +.265sdwe3.com
   - +.2789av.com
   - +.27mmwmmw.top
@@ -7628,7 +7638,6 @@ payload:
   - +.adorevids.com
   - +.adporn.cc
   - +.adpornu.xyz
-  - +.jiuse.ai
   - +.adskcloud.com
   - +.adskcloud.net
   - +.adskeng.net
@@ -8048,7 +8057,7 @@ payload:
   - +.zerochan.net
   - +.alpherafinancialservices.es
   - +.alpherafinancialservices.in
-  - +.jitsi.org
+  - +.alpherafs.ca
   - +.zeriamerikes.com
   - +.zeplin.io
   - +.zeplin.dev
@@ -11635,7 +11644,7 @@ payload:
   - +.yandex.asia
   - +.cygames.jp
   - +.cylink.pro
-  - +.cylink0122.icu
+  - +.jiuse821.com
   - +.czechav.com
   - +.czechbiporn.com
   - +.czechcasting.com
@@ -14522,15 +14531,16 @@ payload:
   - +.xtubebdsm.com
   - +.xtracloud.net
   - +.geforce.com
-  - +.xtegvk.xyz
+  - +.xtom.us
   - +.geilegratisporno.com
   - +.geileomas.com
   - +.geinoueroch.com
   - +.gekkan-bushi.com
   - +.gelbooru.me
-  - +.xtapes.to
+  - +.xtom.social
   - +.gemfire.net
   - +.gemini.com
+  - +.xtom.sg
   - +.gendai.net
   - +.genetic-technologies.am
   - +.geneticconstructor.com
@@ -14579,11 +14589,13 @@ payload:
   - +.gettyimages.at
   - +.gettyimages.be
   - +.gettyimages.ch
-  - +.xsz-av.com
-  - +.xsvod.xyz
+  - +.xtom.nl
+  - +.xtom.jp
+  - +.xtom.hk
   - +.gettyimages.com
-  - +.xstas.biz
-  - +.xslist.org
+  - +.xtom.ee
+  - +.xtom.de
+  - +.xtom.com
   - +.gettyimages.dk
   - +.gettyimages.es
   - +.gettyimages.fi
@@ -14685,11 +14697,9 @@ payload:
   - +.globalsign.be
   - +.globalsign.ch
   - +.globalsign.cloud
-  - +.xsijishe.net
-  - +.xsijishe.com
-  - +.xshr.online
-  - +.xshaker.net
-  - +.xsela.cc
+  - +.xtom.au
+  - +.xtegvk.xyz
+  - +.xtapes.to
   - +.globalsign.es
   - +.globalsign.eu
   - +.globalsign.fr
@@ -14697,11 +14707,11 @@ payload:
   - +.globalsign.nl
   - +.globalspec.com
   - +.globo.com
+  - +.xsz-av.com
   - +.globoplay.com
-  - +.xscale.com
-  - +.xsava.xyz
-  - +.xrea.com
-  - +.xqwherb.sbs
+  - +.xsvod.xyz
+  - +.xstas.biz
+  - +.xslist.org
   - +.gloporn.com
   - +.gloryholeswallow.com
   - +.gloryofheracles.com
@@ -14726,6 +14736,7 @@ payload:
   - +.gmo-pg.com
   - +.gmo-ps.com
   - +.gmo-rakurakuhp.jp
+  - +.xsijishe.net
   - +.gmo-research.ai
   - +.gmo-sol.jp
   - +.gmo-vp.com
@@ -14740,6 +14751,7 @@ payload:
   - +.gmossp.jp
   - +.gnai-dh.sbs
   - +.gnailapp.sbs
+  - +.xsijishe.com
   - +.gnom-cham.com
   - +.gnzi.xyz
   - +.gnzi1.top
@@ -14768,12 +14780,12 @@ payload:
   - +.gogoanime3.co
   - +.gogocdn.net
   - +.gogotaku.info
-  - +.xpornplease.com
+  - +.xshr.online
   - +.gohentai.net
   - +.goicq.org
-  - +.xpornblog.com
+  - +.xshaker.net
   - +.gold-gay.com
-  - +.xpoleuno.com
+  - +.xsela.cc
   - +.goldengate.hu
   - +.goldgay.tv
   - +.goldjizz.com
@@ -14800,6 +14812,13 @@ payload:
   - +.goodsrv.de
   - +.123hplaserjet.com
   - +.123dsculpt.com
+  - +.xscale.com
+  - +.xsava.xyz
+  - +.xrea.com
+  - +.xqwherb.sbs
+  - +.xpornplease.com
+  - +.xpornblog.com
+  - +.xpoleuno.com
   - +.xpee.com
   - +.xpaja.net
   - +.xozilla.com
@@ -14870,20 +14889,10 @@ payload:
   - +.xn--ubt498knmf.com
   - +.xn--tkry91n.com
   - +.xn--sjqr38j.com
-  - +.xn--sgt856gbjl.cc
-  - +.xn--ruq8a011kt6y.xn--hxt814e
-  - +.xn--r8jwklh769hk43amcfoyl3z3a.com
-  - +.xn--r8jwklh769h2mc880dk1o431a.com
-  - +.xn--qoq462m.com
-  - +.0plkijj.vip
-  - +.xn--q41am8x.com
-  - +.xn--pssu7cv61ahwcb1p2yk.xn--j6w193g
-  - +.xn--pssu7cv61ahwcb1p2yk.hk
-  - +.xn--pssu7cv61ahw8aq79bztd.xn--j6w193g
   - +.googleapis-cn.com
   - +.googleapps-cn.com
   - +.googlecensorship.org
-  - +.xn--pssu7cv61ahw8aq79bztd.hk
+  - +.xn--sgt856gbjl.cc
   - +.googleflights-cn.net
   - +.goope.jp
   - +.gopayment.com
@@ -14916,10 +14925,10 @@ payload:
   - +.gpb.ru
   - +.gpstatic.com
   - +.gpstheseries.com
-  - +.xn--pssu7cv61af44b.xn--j6w193g
+  - +.xn--ruq8a011kt6y.xn--hxt814e
   - +.gputechconf.com
-  - +.xn--pssu7cv61af44b.hk
-  - +.xn--pssu7cv61af1tcs59bnvd.xn--j6w193g
+  - +.xn--r8jwklh769hk43amcfoyl3z3a.com
+  - +.xn--r8jwklh769h2mc880dk1o431a.com
   - +.gputechconf.eu
   - +.gputechconf.in
   - +.gputechconf.jp
@@ -14933,7 +14942,7 @@ payload:
   - +.graiasmovies.com
   - +.grandepornogratis.com
   - +.grandfuckauto.xxx
-  - +.xn--pssu7cv61af1tcs59bnvd.hk
+  - +.xn--qoq462m.com
   - +.grannygetsafacial.com
   - +.grannylister.com
   - +.grannylovesbbc.com
@@ -14953,15 +14962,15 @@ payload:
   - +.grapheneos.ovh
   - +.grapheneos.page
   - +.grapheneos.social
-  - +.xn--pssu7ci2j23mp9ny48b.xn--j6w193g
+  - +.0plkijj.vip
   - +.gravitytank.com
   - +.greatergothammini.com
-  - +.xn--pssu7ci2j23mp9ny48b.hk
+  - +.xn--q41am8x.com
   - +.greatgame.asia
   - +.greatretroporn.com
   - +.green-box-tv.com
   - +.greenbuildingstudio.com
-  - +.xn--pearsonenespaol-brb.com
+  - +.xn--pssu7cv61ahwcb1p2yk.xn--j6w193g
   - +.greenlakeaas.com
   - +.greenlakehybridcloud.com
   - +.greenplum.net
@@ -14969,6 +14978,7 @@ payload:
   - +.grooby.com
   - +.groq.com
   - +.group-ib.ae
+  - +.xn--pssu7cv61ahwcb1p2yk.hk
   - +.group-ib.com
   - +.group-ib.de
   - +.group-ib.eu
@@ -14985,17 +14995,20 @@ payload:
   - +.gscanada.info
   - +.gsccdn.com
   - +.gshow.com
+  - +.xn--pssu7cv61ahw8aq79bztd.xn--j6w193g
   - +.gslink.us
   - +.gstatic-cn.com
   - +.gt536.top
+  - +.xn--pssu7cv61ahw8aq79bztd.hk
   - +.gtvmediagroupfairfund.com
   - +.gu-web.net
   - +.guambmw.com
+  - +.xn--pssu7cv61af44b.xn--j6w193g
   - +.guangming.org
   - +.guaranitermal.com
   - +.guardarian.com
   - +.guardianapis.com
-  - +.xn--mxtq18a.xn--j6w193g
+  - +.xn--pssu7cv61af44b.hk
   - +.guardianproject.info
   - +.123dpro.net
   - +.gucci.com
@@ -15003,17 +15016,17 @@ payload:
   - +.guccitimeless.com
   - +.123dpro.com
   - +.guifw.xyz
-  - +.xn--mxtq18a.hk
-  - +.xn--mtswd61ejxq.com
+  - +.xn--pssu7cv61af1tcs59bnvd.xn--j6w193g
+  - +.xn--pssu7cv61af1tcs59bnvd.hk
   - +.gumtree.sg
-  - +.xn--mts47c3w9b1qr.net
+  - +.xn--pssu7ci2j23mp9ny48b.xn--j6w193g
   - +.guo.media
   - +.guochantube.com
   - +.guochanw.life
   - +.guruofporn.com
   - +.guysnightlife.com
   - +.gv.com
-  - +.xn--kput3imi374g.xn--hxt814e
+  - +.xn--pssu7ci2j23mp9ny48b.hk
   - +.gw2ru.com
   - +.gwiki.net
   - +.gwktravelex.nl
@@ -15024,6 +15037,7 @@ payload:
   - +.h-chan.me
   - +.h-doujinshi.xyz
   - +.h-flash.com
+  - +.xn--pearsonenespaol-brb.com
   - +.h-webtoon.com
   - +.h0930.com
   - +.h18ani1.vip
@@ -15065,7 +15079,6 @@ payload:
   - +.half.tv
   - +.halfcanada.com
   - +.halfjapan.com
-  - +.xn--hxtr4rozx.xn--czr694b
   - +.hami-mod.buzz
   - +.hamsterfucktube.com
   - +.hamsterporn.tv
@@ -15079,13 +15092,12 @@ payload:
   - +.hanime.xxx
   - +.hanime.xyz
   - +.hanr-bao.mom
-  - +.xn--hhr917d3fecva.xyz
   - +.hao21.xyz
   - +.hao62.xyz
   - +.haori888.com
-  - +.xn--hckl3e1e8a8ajin0czf.net
+  - +.xn--mxtq18a.xn--j6w193g
   - +.happymeal.com
-  - +.xn--hb4aw0g.com
+  - +.xn--mxtq18a.hk
   - +.happymealdigital.com
   - +.happysrv.de
   - +.hardcore-sex-filme.com
@@ -15096,12 +15108,11 @@ payload:
   - +.harperacademic.com
   - +.harperapps.com
   - +.harpercollins.ca
-  - +.xn--h1ao.site
-  - +.xn--gtvz22d.xn--hxt814e
+  - +.xn--mtswd61ejxq.com
+  - +.xn--mts47c3w9b1qr.net
   - +.harpercollins.com
-  - +.xn--gtvz22d.wang
+  - +.xn--kput3imi374g.xn--hxt814e
   - +.harpercollinsadvantage.com
-  - +.xn--gtvq61aiijy0b.xn--hxt814e
   - +.harpercollinschristian.com
   - +.harpercollinsspeakersbureau.com
   - +.hashflow.com
@@ -15151,7 +15162,7 @@ payload:
   - +.hbolacontent.net
   - +.hbolaunchpad.com
   - +.hbomailman.com
-  - +.xn--gmq92kd2rm1kx34a.com
+  - +.xn--hxtr4rozx.xn--czr694b
   - +.hbomax.eu
   - +.hbomaxcdn.com
   - +.hbomediarelations.com
@@ -15226,7 +15237,7 @@ payload:
   - +.heavy-r.com
   - +.heavyfetish.com
   - +.hebiphone.com
-  - +.xn--gmq348bujlxrb.com
+  - +.xn--hhr917d3fecva.xyz
   - +.hegre.com
   - +.heiguab.top
   - +.heijidi.life
@@ -15255,7 +15266,8 @@ payload:
   - +.hentai-gif-anime.com
   - +.hentai-img.com
   - +.hentai-moon.com
-  - +.xn--gdt08a.xn--j6w193g
+  - +.xn--hckl3e1e8a8ajin0czf.net
+  - +.xn--hb4aw0g.com
   - +.hentai-vostfr.net
   - +.hentai.desi
   - +.hentai.game
@@ -15342,7 +15354,7 @@ payload:
   - +.hentaiprn.com
   - +.hentaiprno.com
   - +.hentaipros.com
-  - +.xn--gdt08a.hk
+  - +.xn--h1ao.site
   - +.hentairead.com
   - +.hentairead.info
   - +.hentairead.vip
@@ -15382,6 +15394,7 @@ payload:
   - +.hentaizz.net
   - +.henti-night.com
   - +.heptio.com
+  - +.xn--gtvz22d.xn--hxt814e
   - +.hereistheporn.com
   - +.herexxx.com
   - +.hernudepics.com
@@ -15407,10 +15420,8 @@ payload:
   - +.hewlett-packard.asia
   - +.hewlett-packard.ch
   - +.hewlett-packard.co
-  - +.0x0.st
-  - +.xn--fiqs8sxootzz.xn--hxt814e
-  - +.xn--fiqs8s1byzqyvl.xn--j6w193g
-  - +.xn--fiqs8s1byzqyvl.hk
+  - +.xn--gtvz22d.wang
+  - +.xn--gtvq61aiijy0b.xn--hxt814e
   - +.hewlett-packard.jp
   - +.hewlett-packard.mobi
   - +.hewlettpackard.enterprises
@@ -15444,9 +15455,9 @@ payload:
   - +.highporn.net
   - +.hightopnikes.com
   - +.highwirepress.com
-  - +.xn--fiqs8s1bxp3anr7a.xn--j6w193g
+  - +.xn--gmq92kd2rm1kx34a.com
   - +.hihigv.com
-  - +.xn--fiqs8s1bxp3anr7a.hk
+  - +.xn--gmq348bujlxrb.com
   - +.hilostripper.com
   - +.himalaya.exchange
   - +.hindawi.com
@@ -15454,7 +15465,6 @@ payload:
   - +.hiporn.net
   - +.hippyhillscomix.com
   - +.hipzoom.net
-  - +.xn--e1aigb.xn--p1ai
   - +.historyofdota.com
   - +.historyofdota.net
   - +.historyofdota.org
@@ -15464,18 +15474,17 @@ payload:
   - +.hitxhot.com
   - +.hjb246.top
   - +.hjb7e9.top
-  - +.xn--e1adjldbbpv.xn--90ais
-  - +.xn--d4ty0ojsqzfd.com
-  - +.xn--d1aqf.xn--p1ai
+  - +.xn--gdt08a.xn--j6w193g
+  - +.xn--gdt08a.hk
   - +.hk1lib.org
   - +.hkbigman.net
-  - +.xn--d1acpjx3f.xn--p1ai
+  - +.0x0.st
   - +.hkbn.net
   - +.hkbnes.net
   - +.hkbu.hk
   - +.hkcircleapp.com
   - +.hkcitizenmedia.com
-  - +.xn--d1abkf4ap.fun
+  - +.xn--fiqs8sxootzz.xn--hxt814e
   - +.hkcsl.com
   - +.hkedcity.net
   - +.hkej.com
@@ -15485,6 +15494,7 @@ payload:
   - +.hkf202312.shop
   - +.hkgolden.media
   - +.hkheadline.com
+  - +.xn--fiqs8s1byzqyvl.xn--j6w193g
   - +.hkporn.net
   - +.hkreadingcity.net
   - +.hkt-enterprise.com
@@ -15511,14 +15521,15 @@ payload:
   - +.hochi.news
   - +.hochu.tv
   - +.hoes.com
-  - +.0xxx.ws
-  - +.1-account.com
-  - +.xn--cck4d8b3009a.com
-  - +.xn--c1acbl2abdlkab1og.xn--p1ai
-  - +.xn--b1aechhj6bof8g5a.site
-  - +.xn--av-o44ep1d.com
+  - +.xn--fiqs8s1byzqyvl.hk
+  - +.xn--fiqs8s1bxp3anr7a.xn--j6w193g
+  - +.xn--fiqs8s1bxp3anr7a.hk
+  - +.xn--e1aigb.xn--p1ai
+  - +.xn--e1adjldbbpv.xn--90ais
+  - +.xn--d4ty0ojsqzfd.com
   - +.holaporno.xxx
   - +.holdemstripem.com
+  - +.xn--d1aqf.xn--p1ai
   - +.holloporn.com
   - +.hollyrandall.com
   - +.home-made-porn-movies.com
@@ -15547,6 +15558,7 @@ payload:
   - +.homesexmade.com
   - +.homestylerapp.com
   - +.homestylernews.com
+  - +.xn--d1acpjx3f.xn--p1ai
   - +.hominis.media
   - +.homo.xxx
   - +.honawalaan.com
@@ -15555,6 +15567,7 @@ payload:
   - +.hongjie11.xyz
   - +.hongkongdoll.tv
   - +.hongkongdollvideo.org
+  - +.xn--d1abkf4ap.fun
   - +.honkaiimpact3.com
   - +.honkaistarrail.com
   - +.honnaka.jp
@@ -15644,7 +15657,7 @@ payload:
   - +.housing.com
   - +.housingcdn.com
   - +.howfuck.me
-  - +.xn--90wwvt03e.com
+  - +.0xxx.ws
   - +.howtohackfacebook-account.com
   - +.hoyo.link
   - +.hoyolab.com
@@ -15797,6 +15810,13 @@ payload:
   - +.hsbc.am
   - +.hsbc.bm
   - +.hsbc.ca
+  - +.1-account.com
+  - +.xn--cck4d8b3009a.com
+  - +.xn--c1acbl2abdlkab1og.xn--p1ai
+  - +.xn--b1aechhj6bof8g5a.site
+  - +.xn--av-o44ep1d.com
+  - +.hsbc.com
+  - +.xn--90wwvt03e.com
   - +.xn--90aifd0azb.xn--p1acf
   - +.xn--90aifd0az.shop
   - +.xn--90absjljw3g.xn--p1ai
@@ -15805,7 +15825,6 @@ payload:
   - +.xn--80asgb.xn--p1ai
   - +.xn--80arpq.xn--p1ai
   - +.xn--80aqcf7a6do.com
-  - +.hsbc.com
   - +.xn--80aj3b.xn--p1ai
   - +.xn--80acbjgsdq2cl.xn--p1ai
   - +.xn--80acbjgmges7ca.xn--p1ai
@@ -15813,21 +15832,12 @@ payload:
   - +.xn--80a9a4b.xn--p1ai
   - +.xn--7hv594h.com
   - +.xn--74q434dwff.net
-  - +.xn--74q434dwff.com
-  - +.xn--74q035i.xn--hxt814e
-  - +.xn--6eup7j.net
-  - +.xn--6eup7j.com
-  - +.xn--4vq477m.com
-  - +.xn--4vq475g.com
-  - +.xn--3et96bj49ahpq.com
-  - +.xn--2vxsp6vi4j.com
-  - +.xn--205-4g6em5t.com
   - +.hsbc.de
   - +.hsbc.fr
   - +.hsbc.lk
   - +.hsbc.net
   - +.hsbc.uk
-  - +.xn--204-4g6em5t.com
+  - +.xn--74q434dwff.com
   - +.hsbcinnovationbanking.com
   - +.hsbcnet.com
   - +.hsbcprivatebank.com
@@ -15841,10 +15851,10 @@ payload:
   - +.hsmexpress.com
   - +.hsmworks.com
   - +.hsmxpress.com
-  - +.xn--203-4g6em5t.com
+  - +.xn--74q035i.xn--hxt814e
   - +.hsxsp1.buzz
   - +.hsyy.vip
-  - +.xn--202-4g6em5t.com
+  - +.xn--6eup7j.net
   - +.htlvbooks.com
   - +.htnewbooks.com
   - +.httpfacebook.com
@@ -15867,10 +15877,11 @@ payload:
   - +.huaxin80.com
   - +.huaxinvip.top
   - +.hubblephone.com
-  - +.xn--201-4g6em5t.com
+  - +.xn--6eup7j.com
   - +.huffingtonpost.ca
-  - +.xn--096-4g6em5t.com
-  - +.xn----8sbwjbxyd.xn--p1ai
+  - +.xn--4vq477m.com
+  - +.xn--4vq475g.com
+  - +.xn--3et96bj49ahpq.com
   - +.huffingtonpost.de
   - +.huffingtonpost.es
   - +.huffingtonpost.fr
@@ -15898,7 +15909,7 @@ payload:
   - +.hulucall.com
   - +.hulufree.com
   - +.hulugans.com
-  - +.hulugermany.com
+  - +.jiuse823.com
   - +.hulugo.com
   - +.huluhuluhuluhulu10.work
   - +.huluinstantmessenger.com
@@ -15929,12 +15940,12 @@ payload:
   - +.hustler.com
   - +.hutao.cloud
   - +.hutpromos.com
-  - +.xn----8sbkfzespdwig.xn--p1ai
+  - +.xn--2vxsp6vi4j.com
   - +.hwslabs.com
   - +.hxcsxs.pro
   - +.hxdoll.com
   - +.hxxn12.top
-  - +.xn----8sbeoy5bze.com
+  - +.xn--205-4g6em5t.com
   - +.hydrogenaud.io
   - +.hyper.is
   - +.hyperdreams.com
@@ -15950,11 +15961,11 @@ payload:
   - +.i-cable.com
   - +.i-cablecomm.com
   - +.i-o-u.info
-  - +.xn----8sbaroledu6bi7j.com
-  - +.xn----8sbahiqzthbd0bn.xn--p1ai
+  - +.xn--204-4g6em5t.com
+  - +.xn--203-4g6em5t.com
   - +.i.org
   - +.i234.me
-  - +.xn----7sbhmncai5a0arm7c1e.xn--p1ai
+  - +.xn--202-4g6em5t.com
   - +.i91dz.com
   - +.iaablog.com
   - +.iafd.com
@@ -15966,12 +15977,10 @@ payload:
   - +.ibeatsbydre.cc
   - +.ibeatsbydre.com
   - +.ibkr.ca
-  - +.xn----7sbbamm1bv2bh7i.com
-  - +.xn----7sbbab6bregnh7b8if5b.com
+  - +.xn--201-4g6em5t.com
   - +.ibkr.com
-  - +.xn----7sbabae2a0bnvtsfr4loc.com
-  - +.xn----7sbaba0dc6cdn7cxcj.com
-  - +.xn-----6kc7adj0c9esa.com
+  - +.xn--096-4g6em5t.com
+  - +.xn----8sbwjbxyd.xn--p1ai
   - +.ibkr.eu
   - +.ibkr.ie
   - +.ibkrguides.com
@@ -15982,20 +15991,21 @@ payload:
   - +.ibm.net
   - +.ibm.us
   - +.ibonedyourmom.com
-  - +.xmoviesforyou.com
+  - +.xn----8sbkfzespdwig.xn--p1ai
   - +.ibook.com
   - +.ibook.eu
   - +.ibook.net
   - +.ibookpartner.com
   - +.ibooksauthor.com
   - +.ibradome.com
+  - +.xn----8sbeoy5bze.com
   - +.iccf.com
   - +.icegay.tv
   - +.icegaytube.tv
   - +.iceporn.com
   - +.iceporncasting.com
   - +.icevirtuallibrary.com
-  - +.xmissy.nl
+  - +.xn----8sbaroledu6bi7j.com
   - +.ichigocandy.com
   - +.ichineseporn.com
   - +.icloud-content.com
@@ -16077,7 +16087,7 @@ payload:
   - +.icqtoday.com
   - +.icqtutor.com
   - +.icqvideo.com
-  - +.xmforever.rest
+  - +.xn----8sbahiqzthbd0bn.xn--p1ai
   - +.icuminside.com
   - +.id.ru
   - +.idarkdoll.com
@@ -16088,7 +16098,7 @@ payload:
   - +.ideco.ru
   - +.idecosoftware.ru
   - +.idelreal.org
-  - +.xmbsyj.top
+  - +.xn----7sbhmncai5a0arm7c1e.xn--p1ai
   - +.identrust.com
   - +.identrust.net
   - +.idnike.com
@@ -16136,13 +16146,14 @@ payload:
   - +.ieeesystemscouncil.org
   - +.ieeeusa.org
   - +.ietf.org
-  - +.xmav99.com
-  - +.xmature.su
+  - +.xn----7sbbamm1bv2bh7i.com
+  - +.xn----7sbbab6bregnh7b8if5b.com
   - +.ifastcorp.com
-  - +.xmalay.com
-  - +.xmail.ru
+  - +.xn----7sbabae2a0bnvtsfr4loc.com
+  - +.xn----7sbaba0dc6cdn7cxcj.com
   - +.ifastgb.com
   - +.ifastgp.com
+  - +.xn-----6kc7adj0c9esa.com
   - +.ifastnetwork.com
   - +.ifasttv.com
   - +.ifontcloud.com
@@ -16172,7 +16183,7 @@ payload:
   - +.ihsdav.cc
   - +.iijav.com
   - +.iina.io
-  - +.xlydh.cc
+  - +.xmoviesforyou.com
   - +.iirmll.com
   - +.ijavhd.com
   - +.ijavtorrent.com
@@ -16187,8 +16198,17 @@ payload:
   - +.ikea.ca
   - +.ikea.ch
   - +.ikea.cl
+  - +.xmissy.nl
+  - +.xmforever.rest
+  - +.xmbsyj.top
+  - +.xmav99.com
+  - +.xmature.su
+  - +.xmalay.com
+  - +.xmail.ru
+  - +.xlydh.cc
   - +.xlstudio.com
   - +.xlovecam.com
+  - +.ikea.com
   - +.xlinkz.to
   - +.xlgirls.com
   - +.xlecx.org
@@ -16198,7 +16218,6 @@ payload:
   - +.xknoop.com
   - +.xkeezmovies.com
   - +.xjavporn.com
-  - +.ikea.com
   - +.xj87ti.com
   - +.xiuren.org
   - +.xinsheng.net
@@ -16210,14 +16229,6 @@ payload:
   - +.xing66.life
   - +.xinfhw.com
   - +.xindelu.com
-  - +.xinaia-av.buzz
-  - +.xin21.xyz
-  - +.xie56.xyz
-  - +.xiaoyaoge.xyz
-  - +.xiaoshuobb.life
-  - +.xiaoou.tv
-  - +.xiaoou.io
-  - +.xiaomiflash.com
   - +.ikea.cz
   - +.ikea.de
   - +.ikea.dk
@@ -16261,11 +16272,14 @@ payload:
   - +.ikea.sk
   - +.ikea.ua
   - +.ikea.us
+  - +.xinaia-av.buzz
   - +.ikids.com
   - +.iknowthatgirl.com
+  - +.xin21.xyz
   - +.ilife.eu
   - +.ilife.gr
   - +.ilife.wang
+  - +.xie56.xyz
   - +.illgames.jp
   - +.illianacomputerrecycling.com
   - +.illusion111.com
@@ -16289,7 +16303,6 @@ payload:
   - +.imac-apple.com
   - +.imac-applecomputer.com
   - +.imac.co
-  - +.xiaogirls.com
   - +.imac.com
   - +.imac.eu
   - +.imac.gr
@@ -16304,7 +16317,7 @@ payload:
   - +.imagemodeler.com
   - +.imagepost.com
   - +.images-amazon.com
-  - +.xiaofu.me
+  - +.xiaoyaoge.xyz
   - +.imageshack.com
   - +.imagetwist.com
   - +.imageworks.com
@@ -16315,6 +16328,7 @@ payload:
   - +.imdb.com
   - +.imdb.to
   - +.imessage.tv
+  - +.xiaoshuobb.life
   - +.imgbb.com
   - +.imgcrl.org
   - +.imgschan.xyz
@@ -16345,7 +16359,7 @@ payload:
   - +.inbox.ru
   - +.incentivetravelgifts.com
   - +.incestflix.com
-  - +.xianir.xyz
+  - +.xiaoou.tv
   - +.incestporn.xxx
   - +.incestvidz.com
   - +.incezt.net
@@ -16354,7 +16368,7 @@ payload:
   - +.ind.sh
   - +.indazn.com
   - +.indaznlab.com
-  - +.xiangrikui-app.com
+  - +.xiaoou.io
   - +.independentoperatorcn.com
   - +.indexxx.com
   - +.indiaipad.com
@@ -16373,7 +16387,7 @@ payload:
   - +.indiansexstories.net
   - +.indiansexstories2.net
   - +.indienudes.com
-  - +.xhub.tv
+  - +.xiaomiflash.com
   - +.indonesiaporn.name
   - +.industrialtoys.com
   - +.infinitetoons.com
@@ -16381,12 +16395,9 @@ payload:
   - +.influencersgonewild.com
   - +.infocert.digital
   - +.infocert.it
-  - +.xhreal5.com
-  - +.xhpingcdn.com
   - +.infoq.com
   - +.infoq.jp
   - +.informs.org
-  - +.xhot.pro
   - +.infowars.com
   - +.infowarsmedia.com
   - +.infrapedia.com
@@ -16411,7 +16422,6 @@ payload:
   - +.inshot.com
   - +.inshotapp.com
   - +.inside-games.jp
-  - +.xhnews.live
   - +.insidefilms.com
   - +.insidemacintosh.com
   - +.insideok.ru
@@ -16503,6 +16513,16 @@ payload:
   - +.intel.cl
   - +.intel.cm
   - +.intel.co
+  - +.xiaogirls.com
+  - +.xiaofu.me
+  - +.xianir.xyz
+  - +.xiangrikui-app.com
+  - +.xhub.tv
+  - +.xhreal5.com
+  - +.xhpingcdn.com
+  - +.intel.com
+  - +.xhot.pro
+  - +.xhnews.live
   - +.xhcdn.com
   - +.xhamsterlive.com
   - +.xhamster3.com
@@ -16511,7 +16531,6 @@ payload:
   - +.xhamster18.desi
   - +.xhamster18.com
   - +.xhamster.xxx
-  - +.intel.com
   - +.xhamster.desi
   - +.xh.video
   - +.xh-porn.com
@@ -16519,13 +16538,6 @@ payload:
   - +.xgtd3.com
   - +.xgsp.tv
   - +.xgroovy.com
-  - +.xgirls.webcam
-  - +.xgaytube.tv
-  - +.xgaytube.com
-  - +.xgames.zone
-  - +.xfuckonline.com
-  - +.xfreehd.com
-  - +.xfockers.com
   - +.intel.cr
   - +.intel.cu
   - +.intel.cz
@@ -16657,14 +16669,14 @@ payload:
   - +.inteltechnologyprovider.com
   - +.intelvmwarecybersecurity.com
   - +.interactivebrokers.ca
-  - +.xfemaledom.com
-  - +.xfantazy.com
-  - +.xeon.com
-  - +.xenoblade.com
+  - +.xgirls.webcam
+  - +.xgaytube.tv
+  - +.xgaytube.com
+  - +.xgames.zone
   - +.interactivebrokers.eu
   - +.interactivebrokers.ie
   - +.interactivesex.xxx
-  - +.xemales.com
+  - +.xfuckonline.com
   - +.intercom.com
   - +.intercom.io
   - +.intercomassets.com
@@ -16678,16 +16690,15 @@ payload:
   - +.interracial-sites.com
   - +.intescort.com
   - +.intgram.com
-  - +.xecce.com
+  - +.xfreehd.com
   - +.intimateinvasions.com
   - +.intporn.com
   - +.intramuscularinjection.info
   - +.123dcatch.com
   - +.intuit-gopayment.com
   - +.intuit.ca
-  - +.xdty.org
+  - +.xfockers.com
   - +.intuit.com
-  - +.xdsummit.com
   - +.intuit.fr
   - +.intuitaffiliate.com
   - +.intuitbenefits.com
@@ -16699,8 +16710,7 @@ payload:
   - +.inventor-certified.com
   - +.inventorfusion.com
   - +.inventorseries.com
-  - +.xdporner.com
-  - +.xdir.vip
+  - +.xfemaledom.com
   - +.invity.io
   - +.inxporn.com
   - +.ioe.com
@@ -16715,14 +16725,14 @@ payload:
   - +.ip.sb
   - +.ip73.com
   - +.ipa-iphone.net
-  - +.xdh999.one
+  - +.xfantazy.com
   - +.ipad.de
   - +.ipad.host
   - +.ipad.wang
   - +.ipad3.com
   - +.ipadair.cl
   - +.ipadair.cm
-  - +.xdaimages.com
+  - +.xeon.com
   - +.ipadair.fr
   - +.ipadair.hk
   - +.ipadair.ie
@@ -16730,16 +16740,17 @@ payload:
   - +.ipadair.tw
   - +.ipadaustralia.com
   - +.ipadmini.cm
-  - +.xdaddy.in
+  - +.xenoblade.com
   - +.ipadmini.lk
   - +.ipadpro.buzz
   - +.ipfs-gateway.cloud
-  - +.xda-developers.com
-  - +.xda-cdn.com
-  - +.xcum.com
-  - +.xchina.fun
-  - +.xchina.co
-  - +.xcg123.com
+  - +.xemales.com
+  - +.xecce.com
+  - +.xdty.org
+  - +.xdsummit.com
+  - +.xdporner.com
+  - +.xdir.vip
+  - +.xdh999.one
   - +.ipfs.tech
   - +.iphine.com
   - +.iphone-cd.com
@@ -16755,23 +16766,26 @@ payload:
   - +.iphone-zh.com
   - +.iphone.cm
   - +.iphone.com
-  - +.xcams.com
+  - +.xdaimages.com
   - +.iphone.es
   - +.iphone.host
+  - +.xdaddy.in
   - +.iphone.pt
   - +.iphone.rs
   - +.iphone.ru
   - +.iphone.wang
   - +.iphone4.com
-  - +.xcafe.com
+  - +.xda-developers.com
   - +.iphone4s.com
   - +.iphone5.com
   - +.iphone5casescovers.com
   - +.iphone5s5case.com
+  - +.xda-cdn.com
   - +.iphonecase2013.com
   - +.iphonecase5.com
   - +.iphonecases100.com
   - +.iphonecases5.com
+  - +.xcum.com
   - +.iphonecollcase.com
   - +.iphonefc.com
   - +.iphonegermany.com
@@ -16792,9 +16806,12 @@ payload:
   - +.ipod.ch
   - +.ipod.cm
   - +.ipod.co
-  - +.xbrasilporno.com
-  - +.xboyvids.com
+  - +.xchina.fun
+  - +.xchina.co
   - +.ipod.com
+  - +.xcg123.com
+  - +.xcams.com
+  - +.xcafe.com
   - +.ipod.de
   - +.ipod.es
   - +.ipod.eu
@@ -16826,6 +16843,8 @@ payload:
   - +.ippstatic.com
   - +.iprad-ryoma.com
   - +.iproperty.com
+  - +.xbrasilporno.com
+  - +.xboyvids.com
   - +.iqiyiavlive.buzz
   - +.iqq2.cc
   - +.iqq3.cc
@@ -16946,7 +16965,6 @@ payload:
   - +.japanfist.org
   - +.japanknowledge.com
   - +.japanporn.tv
-  - +.xbooru.com
   - +.japanxxxfilms.com
   - +.japon-girls.com
   - +.japteenx.com
@@ -16959,7 +16977,6 @@ payload:
   - +.jav-subtitles.com
   - +.jav-vr.net
   - +.jav.app
-  - +.xbooks.work
   - +.jav.dog
   - +.jav.gallery
   - +.jav.guru
@@ -17124,42 +17141,36 @@ payload:
   - +.jerkmate.tv
   - +.jerkmatelive.org
   - +.jerkofftocelebs.com
-  - +.xbookcn.net
   - +.jessicaturner.com
   - +.jetfuelapp.com
   - +.jetfuelapps.com
   - +.jfengtime.com
-  - +.jfn.su
   - +.jgg18.xyz
   - +.jhxl.org
   - +.jhzyw.xyz
   - +.jiaochuanba25.buzz
   - +.jiaochuanba26.buzz
   - +.jiayoulu.com
-  - +.xbnat.com
   - +.jieav.com
   - +.jijiji.ca
   - +.jilhub.com
   - +.jimeng22.com
   - +.jira-tcsbank.ru
   - +.jira.com
-  - +.1337x.gd
-  - +.xbhuijiab.info
+  - +.jitsi.org
+  - +.jiuse.ai
   - +.jiuse.icu
   - +.jiuse.io
   - +.jiuse6666.com
-  - +.jiuse821.com
-  - +.jiuse822.com
-  - +.jiuse823.com
+  - +.cylink0122.icu
+  - +.1337x.gd
+  - +.hulugermany.com
   - +.jivara.global
   - +.jivo.chat
   - +.jivo.ru
-  - +.xbeegtube.com
-  - +.xbanny.com
   - +.jivochat.com
-  - +.xbabe.mobi
-  - +.xb18.me
-  - +.xaxy.xyz
+  - +.xbooru.com
+  - +.xbooks.work
   - +.jivochat.de
   - +.jivochat.es
   - +.jivochat.ng
@@ -17167,7 +17178,7 @@ payload:
   - +.jivosite.com
   - +.jivosite.ru
   - +.jiyou520.com
-  - +.xattractive.com
+  - +.xbookcn.net
   - +.jizzboom.com
   - +.jizzbunker.com
   - +.jizzhut.com
@@ -17190,7 +17201,6 @@ payload:
   - +.jm365.work
   - +.jm365.xyz
   - +.jm98.cc
-  - +.xapplist.com
   - +.jmapibranch1.cc
   - +.jmapibranch2.cc
   - +.jmapibranch3.cc
@@ -17226,7 +17236,7 @@ payload:
   - +.jmvbt.com
   - +.jneurosci.org
   - +.joanabliss.com
-  - +.xanimeporn.tv
+  - +.xbnat.com
   - +.jodic-forum.org
   - +.joeswall.com
   - +.johnpersons.com
@@ -17242,16 +17252,17 @@ payload:
   - +.jokerlu1.cc
   - +.jokerlu1.info
   - +.joox.com
-  - +.xanimeporn.com
+  - +.xbhuijiab.info
   - +.jorropo.net
   - +.jos.com
   - +.jove.com
   - +.joyclub.de
   - +.joyjoy.net
   - +.joylovedolls.com
-  - +.xandr.com
+  - +.xbeegtube.com
   - +.joyourself.com
   - +.joysporn.com
+  - +.xbanny.com
   - +.jpav.us
   - +.jpavcom.com
   - +.jpbabe.com
@@ -17259,14 +17270,13 @@ payload:
   - +.jpg4.biz
   - +.jpg4.pw
   - +.jpg4us.net
-  - +.x99av.com
+  - +.xbabe.mobi
   - +.jpmorgan.ru
   - +.jpvhub.com
   - +.jr24h.com
   - +.jsati.com
   - +.jsatmobile.com
   - +.jsbridgestone.com
-  - +.x6av.com
   - +.jstor.org
   - +.jstv51.com
   - +.jstv52.com
@@ -17276,7 +17286,7 @@ payload:
   - +.jtube.space
   - +.judeporn.com
   - +.juggsjoy.com
-  - +.x3vid.com
+  - +.xb18.me
   - +.juiceced.xyz
   - +.juicytwink.com
   - +.julesjordan.com
@@ -17284,6 +17294,7 @@ payload:
   - +.juliamovies.com
   - +.jump.taxi
   - +.jumpwork.ru
+  - +.xaxy.xyz
   - +.just.xxx
   - +.justav.net
   - +.justdoit.us
@@ -17310,7 +17321,7 @@ payload:
   - +.juzi-js.shop
   - +.juzige.xyz
   - +.jvid.com
-  - +.x18r.com
+  - +.xattractive.com
   - +.jword.jp
   - +.jwpcdn.com
   - +.jwplatform.com
@@ -17320,13 +17331,12 @@ payload:
   - +.jzydh.com
   - +.k9vidz.com
   - +.kaamuu.com
-  - +.x18r.co
-  - +.x1337x.ws
-  - +.x1337x.se
-  - +.x1337x.eu
+  - +.xapplist.com
+  - +.xanimeporn.tv
+  - +.xanimeporn.com
+  - +.xandr.com
   - +.kaipoke.jp
   - +.kairakudoujin.net
-  - +.x0rd38.xyz
   - +.kakao.vc
   - +.kakaobank.com
   - +.kakaobank.io
@@ -17354,6 +17364,7 @@ payload:
   - +.kamisama-day.jp
   - +.kamisama-maeda-lab.com
   - +.kampalaexclusiveescorts.com
+  - +.x99av.com
   - +.kanav.info
   - +.kanporno.com
   - +.kantan.game
@@ -17374,12 +17385,15 @@ payload:
   - +.kaspersky-labs.com
   - +.kaspersky.be
   - +.kaspersky.ca
+  - +.x6av.com
+  - +.x3vid.com
+  - +.x18r.com
+  - +.x18r.co
+  - +.x1337x.ws
   - +.kaspersky.com
-  - +.x-fetish.org
-  - +.x-caprice.com
-  - +.x-artvideo.net
-  - +.wzzyw.buzz
-  - +.wztv8.com
+  - +.x1337x.se
+  - +.x1337x.eu
+  - +.x0rd38.xyz
   - +.kaspersky.cz
   - +.kaspersky.de
   - +.kaspersky.dk
@@ -17402,7 +17416,6 @@ payload:
   - +.katestube.com
   - +.kavkazr.com
   - +.kaydara.com
-  - +.wzmyg.com
   - +.kbzbank.com
   - +.kbzpay.com
   - +.kc3000.shop
@@ -17443,7 +17456,6 @@ payload:
   - +.kicksnike1.com
   - +.kicu.tv
   - +.kidsnikeshoes.com
-  - +.wzlthw.com
   - +.kiji.ca
   - +.kijii.ca
   - +.kijij.ca
@@ -17464,8 +17476,7 @@ payload:
   - +.kindgirls.com
   - +.kindindianporn.com
   - +.123dappipad.com
-  - +.wyqqdz.com
-  - +.wyndlabs.ai
+  - +.x-fetish.org
   - +.kindle.com
   - +.kindle.de
   - +.kindle.es
@@ -17490,7 +17501,7 @@ payload:
   - +.kingf-av.sbs
   - +.kingf-tv.buzz
   - +.kingfav.sbs
-  - +.wynd.network
+  - +.x-caprice.com
   - +.kingkongapp.com
   - +.kingofpics.com
   - +.kingstagram.com
@@ -17498,11 +17509,11 @@ payload:
   - +.kinguno.xyz
   - +.kink.com
   - +.kinkbook.com
+  - +.x-artvideo.net
   - +.kinklive.com
   - +.kinkoid.com
   - +.kinkyfamily.com
   - +.kinkypeepz.com
-  - +.wxoyt.com
   - +.kinopoisk.ru
   - +.kinorium.com
   - +.kion.ru
@@ -17515,18 +17526,18 @@ payload:
   - +.kisscos.net
   - +.kissjav.com
   - +.kissjav.li
-  - +.wwwxoom.com
+  - +.wzzyw.buzz
   - +.kiwi.jp
   - +.kiwibrowser.com
-  - +.wwwwebay.com
-  - +.wwwpornhub.pro
+  - +.wztv8.com
+  - +.wzmyg.com
   - +.kk.stream
-  - +.wwwpaypass.com
+  - +.wzlthw.com
   - +.kkddsex7.com
   - +.kkfcc03.com
   - +.kkiah.com
   - +.kktix.com
-  - +.wwwmfacebook.com
+  - +.wyqqdz.com
   - +.kktv.me
   - +.klik.me
   - +.kmdhyy.com
@@ -17534,7 +17545,7 @@ payload:
   - +.kmff17.com
   - +.knightspeak.com
   - +.knovel.com
-  - +.wwwmacbookair.com
+  - +.wyndlabs.ai
   - +.knoxemm.com
   - +.koalaporn.com
   - +.kobbeatssbydredk.com
@@ -17545,10 +17556,9 @@ payload:
   - +.kompoz.com
   - +.kompoz2.com
   - +.konachan.net
-  - +.wwwlapple.com
+  - +.wynd.network
   - +.123dapp.com
   - +.konami-igaming.online
-  - +.wwwitunes.com
   - +.konami.com
   - +.konami.net
   - +.konami.org
@@ -17607,27 +17617,26 @@ payload:
   - +.kuper.ru
   - +.kusugurizanmai.com
   - +.kutjeporno.com
-  - +.wwwipodlounge.com
   - +.kynogon.com
   - +.kyodo-d.info
   - +.kyodo-d.jp
   - +.kyodoimages.jp
   - +.kyodonews.jp
   - +.kyodonews.net
-  - +.wwwinstagram.com
+  - +.wxoyt.com
   - +.kyurem.com
-  - +.wwwicloud.com
+  - +.wwwxoom.com
   - +.la-mama.ru
-  - +.wwwhuluplus.com
-  - +.wwwfacebook.com
+  - +.wwwwebay.com
+  - +.wwwpornhub.pro
   - +.lacomics.org
   - +.ladies.com
   - +.ladybaba.net
   - +.ladyboygold.com
   - +.ladyboygold.eu
   - +.ladyboypornonly.com
-  - +.wwwfacebok.com
-  - +.wwwebay.net
+  - +.wwwpaypass.com
+  - +.wwwmfacebook.com
   - +.lanasbigboobs.com
   - +.langchain.com
   - +.langsuirs.com
@@ -17656,7 +17665,7 @@ payload:
   - +.latticedata.com
   - +.launchpad.wang
   - +.lavteam.org
-  - +.wwwebay.com
+  - +.wwwmacbookair.com
   - +.laxd.com
   - +.lazymike.com
   - +.lbctrl.com
@@ -17670,7 +17679,7 @@ payload:
   - +.le-direct.tv
   - +.leaguehighschool.com
   - +.leagueoflegends.ca
-  - +.wwwdecide.com
+  - +.wwwlapple.com
   - +.leagueoflegends.com
   - +.leagueoflegends.info
   - +.leagueoflegends.kr
@@ -17730,7 +17739,7 @@ payload:
   - +.lg.com
   - +.lgappstv.com
   - +.lgbtq.games
-  - +.wwwapplemusic.com
+  - +.wwwitunes.com
   - +.lge.com
   - +.lgecareers.com
   - +.lghvac.com
@@ -17739,10 +17748,10 @@ payload:
   - +.lgsalesportal.com
   - +.lianhonghong.com
   - +.lianjiajr.net
-  - +.wwwapple.net
+  - +.wwwipodlounge.com
   - +.liberapay.com
   - +.liberapay.org
-  - +.wwwapple.com
+  - +.wwwinstagram.com
   - +.libgen.fun
   - +.libgen.life
   - +.libgen.me
@@ -17764,7 +17773,7 @@ payload:
   - +.lifestyle-tec.ru
   - +.lifewire.com
   - +.lightbridge.com
-  - +.www8-hp.com
+  - +.wwwicloud.com
   - +.lighter.exchange
   - +.lighter.xyz
   - +.lightxxxtube.com
@@ -17790,7 +17799,7 @@ payload:
   - +.linearcollider.org
   - +.linecorp.com
   - +.linefriends.com
-  - +.www.sb
+  - +.wwwhuluplus.com
   - +.linegame.jp
   - +.linemobile.com
   - +.linemyshop.com
@@ -17806,8 +17815,8 @@ payload:
   - +.linkshit.com
   - +.linotype.com
   - +.linseysworld.com
-  - +.www-sms-apple.com
-  - +.www-paypal.us
+  - +.wwwfacebook.com
+  - +.wwwfacebok.com
   - +.lisiku.com
   - +.lisiku1.com
   - +.list.ru
@@ -17821,12 +17830,14 @@ payload:
   - +.litv.tv
   - +.liuhefabu.club
   - +.live-video.net
-  - +.www-paypal.info
+  - +.wwwebay.net
   - +.liveauction.com
   - +.livecamclips.com
   - +.livehdcams.com
   - +.livejasmin.com
   - +.livejasminbabes.net
+  - +.livejournal.com
+  - +.livejournal.net
   - +.livemodels.co
   - +.liveperson.net
   - +.livephotos.tv
@@ -17839,10 +17850,10 @@ payload:
   - +.livesketchshare.com
   - +.livexxx.me
   - +.livinno.org
-  - +.www-facebook.com
+  - +.wwwebay.com
   - +.lizardporn.com
   - +.lizardwrangler.com
-  - +.www-bestbuystores.com
+  - +.wwwdecide.com
   - +.ll82y2ifdd.top
   - +.llama.com
   - +.llbd10.shop
@@ -17866,7 +17877,7 @@ payload:
   - +.localpresshk.com
   - +.localxlist.org
   - +.logi.com
-  - +.wwtbam.com
+  - +.wwwapplemusic.com
   - +.logicoolg.com
   - +.login-account.net
   - +.login-paypal.com
@@ -17877,9 +17888,10 @@ payload:
   - +.logitech.io
   - +.logitechg.com
   - +.logitechg.fr
-  - +.wwr-stardom.com
+  - +.wwwapple.net
+  - +.wwwapple.com
   - +.loholidayhk.com
-  - +.wwe9.com
+  - +.www8-hp.com
   - +.lokinet.org
   - +.lol-europe.com
   - +.lolclub.org
@@ -17895,7 +17907,7 @@ payload:
   - +.lolita.bet
   - +.lollipopescorts.com
   - +.lolpcs.com
-  - +.wwe.com
+  - +.www.sb
   - +.lolstatic.com
   - +.lolusercontent.com
   - +.londonhotescort.com
@@ -17920,7 +17932,7 @@ payload:
   - +.lostbetsgames.com
   - +.lotcrap.com
   - +.louisvuitton.com
-  - +.wwapple.net
+  - +.www-sms-apple.com
   - +.love4porn.com
   - +.love6.tv
   - +.love7.xyz
@@ -17936,7 +17948,7 @@ payload:
   - +.lovejav.net
   - +.loveloveskill.com
   - +.lovemarca.com
-  - +.ww9094.com
+  - +.www-paypal.us
   - +.loveparents.org
   - +.lovepartners.life
   - +.loverslab.com
@@ -17954,15 +17966,16 @@ payload:
   - +.lrfdsoftware.com
   - +.lrysgee.xyz
   - +.lsawards.com
-  - +.wvm0agb4.me
+  - +.www-paypal.info
   - +.lsj2.shop
   - +.lsj40.xyz
   - +.lsjfuli308.xyz
   - +.lspimg.com
   - +.lss55.com
-  - +.wuyefuli.org
+  - +.www-facebook.com
   - +.lthgav.buzz
-  - +.wuxiapple.com
+  - +.www-bestbuystores.com
+  - +.wwtbam.com
   - +.ltube.life
   - +.lu2100.com
   - +.lu2200.com
@@ -17997,18 +18010,19 @@ payload:
   - +.lxxlxx.com
   - +.lysol.ca
   - +.lysol.cl
-  - +.wuso.me
+  - +.wwr-stardom.com
   - +.lysol.com
-  - +.wunvb.com
   - +.lysol.net
   - +.lyzsxx.com
   - +.m-power.com
+  - +.wwe9.com
   - +.m2m.com
   - +.ma1lib.org
   - +.maa.plus
   - +.mabbank.com
   - +.mac-mini.com
   - +.mac.com
+  - +.wwe.com
   - +.mac.eu
   - +.mac.rs
   - +.mac.wang
@@ -18018,10 +18032,11 @@ payload:
   - +.macbook.hk
   - +.macbook.tw
   - +.macbook.wang
-  - +.wto.org
+  - +.wwapple.net
+  - +.ww9094.com
   - +.macbookair.com
-  - +.wtmobile.com
-  - +.wtfpeople.com
+  - +.wvm0agb4.me
+  - +.wuyefuli.org
   - +.macbookair.es
   - +.macbookair.hk
   - +.macbookair.jp
@@ -18029,7 +18044,7 @@ payload:
   - +.macbookair.net
   - +.macbookpro.co
   - +.macbookpro.com
-  - +.wsjwine.com
+  - +.wuxiapple.com
   - +.macbookpro.net
   - +.macbookpro.us
   - +.macbookpros.com
@@ -18042,12 +18057,11 @@ payload:
   - +.machine-dna.com
   - +.machogaytube.com
   - +.machos.net
-  - +.wsjshop.com
   - +.machotube.tv
   - +.macintosh.eu
   - +.macintoshsoftware.com
   - +.macmini.com
-  - +.wsjplus.com
+  - +.wuso.me
   - +.macossierra.com
   - +.macosx.info
   - +.macosxlion.com
@@ -18080,7 +18094,7 @@ payload:
   - +.maedahiroyuki.com
   - +.mafia-linkz.to
   - +.mageconf.com
-  - +.wsjmediakit.com
+  - +.wunvb.com
   - +.magento.com
   - +.magento.net
   - +.magentocommerce.com
@@ -18098,7 +18112,6 @@ payload:
   - +.maileoch.com
   - +.mailhealth.com
   - +.mailicq.org
-  - +.wsjbarrons.com
   - +.mailonline.com
   - +.mailonsunday.ie
   - +.mainichi-athletepartners.jp
@@ -18130,7 +18143,6 @@ payload:
   - +.managed-pki.ch
   - +.managed-pki.de
   - +.managedpki.com
-  - +.wsj.jobs
   - +.mandatewire.com
   - +.manga-mill.com
   - +.manga18.art
@@ -18183,6 +18195,7 @@ payload:
   - +.marketing-cloud.com
   - +.marketing-nirvana.com
   - +.marketingcloud.com
+  - +.wto.org
   - +.marketo.com
   - +.marketo.net
   - +.marketo.tv
@@ -18224,10 +18237,18 @@ payload:
   - +.mastercard.ca
   - +.mastercard.ch
   - +.mastercard.cl
+  - +.wtmobile.com
+  - +.wtfpeople.com
+  - +.wsjwine.com
+  - +.wsjshop.com
+  - +.wsjplus.com
+  - +.wsjmediakit.com
+  - +.wsjbarrons.com
+  - +.wsj.jobs
   - +.ws-tcg.com
+  - +.mastercard.com
   - +.ws-blau.com
   - +.wrenchead.com
-  - +.mastercard.com
   - +.wowyoungporn.com
   - +.wowstars.com
   - +.wowsblitz.com
@@ -18237,15 +18258,6 @@ payload:
   - +.worldsfastestgamer.net
   - +.worldsex.com
   - +.worldsecuresystems.com
-  - +.worldsecureemail.com
-  - +.worldscientific.com
-  - +.worldpornvideos.com
-  - +.worldofwarships.com
-  - +.worldofwarplanes.com
-  - +.worldofwarcraft.com
-  - +.worldoftanks.eu
-  - +.worldoftanks.com
-  - +.worldofslaves.io
   - +.mastercard.cz
   - +.mastercard.de
   - +.mastercard.dk
@@ -18354,33 +18366,40 @@ payload:
   - +.mbeats-tech.com
   - +.mbheadphone.com
   - +.mcafee.com
-  - +.worldhack.com
-  - +.worldflipper.jp
+  - +.worldsecureemail.com
+  - +.worldscientific.com
   - +.mcd.com
-  - +.worldescortindex.com
-  - +.worldemojiday.com
-  - +.worldemojiawards.com
-  - +.worldcuprussia.com
-  - +.worldcoinpay.com
-  - +.world3d.biz
-  - +.workstations.tv
-  - +.workspaceone.com
+  - +.worldpornvideos.com
+  - +.worldofwarships.com
+  - +.worldofwarplanes.com
+  - +.worldofwarcraft.com
+  - +.worldoftanks.eu
+  - +.worldoftanks.com
+  - +.worldofslaves.io
   - +.mcdindia.com
   - +.mcdindonesia.com
   - +.mcdonalds-online.com
   - +.mcdonalds.be
   - +.mcdonalds.ca
-  - +.workspaceair.com
-  - +.worksmobile.com
-  - +.workplaceusecases.com
-  - +.workplace.com
+  - +.worldhack.com
+  - +.worldflipper.jp
+  - +.worldescortindex.com
+  - +.worldemojiday.com
+  - +.worldemojiawards.com
   - +.mcdonalds.com
+  - +.worldcuprussia.com
+  - +.worldcoinpay.com
+  - +.world3d.biz
+  - +.workstations.tv
+  - +.workspaceone.com
+  - +.workspaceair.com
   - +.mcdonalds.hk
   - +.mcdonalds.it
   - +.mcdonalds.no
   - +.mcdonalds.se
   - +.mcdonaldsapps.com
   - +.mcdonaldsarabia.com
+  - +.worksmobile.com
   - +.mcisco.com
   - +.mcpeaceofmind.com
   - +.mcs.st
@@ -18400,7 +18419,9 @@ payload:
   - +.mdyy.de
   - +.me-gay.com
   - +.me.com
+  - +.workplaceusecases.com
   - +.meadjohnson.com
+  - +.workplace.com
   - +.meadjohnson.net
   - +.mearki.com
   - +.meawallet.app
@@ -18409,22 +18430,18 @@ payload:
   - +.mecha-mozilla.org
   - +.media-amazon.com
   - +.media-imdb.com
-  - +.woolitecarpet.com
   - +.mediaclip.jp
   - +.mediafiles-cisco.com
   - +.mediasama.com
-  - +.woolite.us
   - +.medicalimplants-cadcam.com
   - +.medium.systems
   - +.mediumquality.ru
   - +.medow.ru
   - +.medrxiv.org
-  - +.woolite.pl
   - +.meendo.com
   - +.meetandfuck.games
   - +.meetandfuckgames.com
   - +.meetsmartbook.com
-  - +.woolite.com
   - +.megacamz.com
   - +.megafilmporno.com
   - +.megafon.com
@@ -18432,10 +18449,8 @@ payload:
   - +.megafonpro.ru
   - +.megamarket.ru
   - +.megamarket.tech
-  - +.woolite.ca
   - +.megaphone.fm
   - +.megapornfreehd.com
-  - +.woodmancastingx.com
   - +.megapornpics.com
   - +.megasrv.de
   - +.megatitsminka.com
@@ -18445,7 +18460,6 @@ payload:
   - +.meilleurpornos.com
   - +.meitula.net
   - +.melon.com
-  - +.wonporn.net
   - +.melonstube.com
   - +.meme111.com
   - +.memealerts.com
@@ -18464,7 +18478,6 @@ payload:
   - +.meraki.hk
   - +.merakigo.com
   - +.meridian.net
-  - +.wonporn.com
   - +.meshmixer.com
   - +.meshmixerforum.com
   - +.messybrainz.org
@@ -18499,26 +18512,29 @@ payload:
   - +.mhqwe.xyz
   - +.mhradio.org
   - +.mhshosting.com
-  - +.womensnikeshox.com
+  - +.woolitecarpet.com
+  - +.woolite.us
+  - +.woolite.pl
+  - +.woolite.com
   - +.mi9cdn.com
   - +.miadidas.com
   - +.miamifintechfestival.com
   - +.miaomwu.com
   - +.miaopa.net
-  - +.wolterskluwer.com
+  - +.woolite.ca
   - +.michill.jp
-  - +.wolfsex-me.sbs
+  - +.woodmancastingx.com
   - +.mickey.tv
   - +.mickybells.com
   - +.micoach.com
   - +.123bin.cc
-  - +.wolframalpha.com
+  - +.wonporn.net
   - +.micstl.com
   - +.midatlanticbmwmotorcycles.com
   - +.midentsolutions.com
   - +.midjourney.com
   - +.midoushe.com
-  - +.wolfberries.ru
+  - +.wonporn.com
   - +.miexnoviadesnuda.com
   - +.mihomeone.info
   - +.miitomo.com
@@ -18574,7 +18590,6 @@ payload:
   - +.mindmeld.com
   - +.minecraft.wiki
   - +.minecraftforge.net
-  - +.wolfatbestbuy.net
   - +.mingky.org
   - +.mingkyaa.com
   - +.mingpaotor.com
@@ -18591,7 +18606,6 @@ payload:
   - +.mini-connected.at
   - +.mini-connected.be
   - +.mini-connected.ch
-  - +.wolfatbestbuy.com
   - +.mini-connected.com
   - +.mini-connected.cz
   - +.mini-connected.de
@@ -18641,11 +18655,18 @@ payload:
   - +.mini.cc
   - +.mini.ch
   - +.mini.cl
+  - +.womensnikeshox.com
+  - +.wolterskluwer.com
+  - +.wolfsex-me.sbs
+  - +.wolframalpha.com
+  - +.wolfberries.ru
+  - +.mini.com
+  - +.wolfatbestbuy.net
+  - +.wolfatbestbuy.com
   - +.wogx.com
   - +.woflthenewsstation.com
   - +.wofl.tv
   - +.wnoaissulli1.com
-  - +.mini.com
   - +.wnacg.link
   - +.wmt.co
   - +.wmcloud.org
@@ -18653,15 +18674,6 @@ payload:
   - +.wldberris.ru
   - +.wkap.nl
   - +.wjny-one.sbs
-  - +.wiz-s.jp
-  - +.wixstatic.com
-  - +.wixsite.com
-  - +.wixmp.com
-  - +.wixipedia.net
-  - +.wixapps.net
-  - +.wixanswers.com
-  - +.wix.com
-  - +.wix-code.com
   - +.mini.cz
   - +.mini.de
   - +.mini.dk
@@ -18760,11 +18772,15 @@ payload:
   - +.miniso.by
   - +.miniso.ca
   - +.miniso.co
+  - +.wiz-s.jp
+  - +.wixstatic.com
   - +.miniso.com
-  - +.wistia.net
-  - +.wistia.com
-  - +.wish.com
-  - +.wisekey.com
+  - +.wixsite.com
+  - +.wixmp.com
+  - +.wixipedia.net
+  - +.wixapps.net
+  - +.wixanswers.com
+  - +.wix.com
   - +.miniso.ge
   - +.miniso.ie
   - +.miniso.jp
@@ -18777,7 +18793,7 @@ payload:
   - +.minisoindia.com
   - +.minisojordan.com
   - +.minisokorea.com
-  - +.wiseid.com
+  - +.wix-code.com
   - +.minisothailand.com
   - +.minisovietam.vn
   - +.minispace.com
@@ -18814,7 +18830,6 @@ payload:
   - +.mirabilis.com
   - +.mirailab.tech
   - +.mirandaicq.com
-  - +.wisecoin.com
   - +.mirrorsedge.com
   - +.mirrorsedge.jp
   - +.mirrorsedge.net
@@ -18827,18 +18842,16 @@ payload:
   - +.missav123.com
   - +.misshotgirls.com
   - +.misskey-square.net
-  - +.wise.com
-  - +.wise-research.com
   - +.misskey.art
   - +.misskey.cloud
   - +.misskey.design
   - +.misskey.flowers
+  - +.wistia.net
   - +.misskey.gg
   - +.misskey.io
-  - +.wiremoneytoirelandwithxoomeasierandcheaper.com
-  - +.wirelessreach.com
+  - +.wistia.com
   - +.misskey.stream
-  - +.wireless.radio
+  - +.wish.com
   - +.misskeyusercontent.jp
   - +.mistresskym.com
   - +.mit.edu
@@ -18848,12 +18861,15 @@ payload:
   - +.mitnaka.com
   - +.mitpressjournals.org
   - +.mixasiansex.com
+  - +.wisekey.com
   - +.mixi.net
   - +.mixmaturesex.com
   - +.mixvintagesex.com
-  - +.wired.com
+  - +.wiseid.com
+  - +.wisecoin.com
   - +.mjv-art.org
-  - +.wipower.com
+  - +.wise.com
+  - +.wise-research.com
   - +.mkb.ru
   - +.mkt.com
   - +.mktdns.com
@@ -18863,9 +18879,9 @@ payload:
   - +.mlbootcamp.ru
   - +.mm-cg.com
   - +.mm9841.cc
-  - +.winudf.com
+  - +.wiremoneytoirelandwithxoomeasierandcheaper.com
   - +.mmgy.cc
-  - +.winticket.jp
+  - +.wirelessreach.com
   - +.mmmanual.com
   - +.mmonsterheadphones.net
   - +.mmscdh.one
@@ -18874,7 +18890,7 @@ payload:
   - +.mmtv.life
   - +.mmwxl27.top
   - +.mo.co
-  - +.wintermute.com
+  - +.wireless.radio
   - +.mobile-icq.com
   - +.mobile.de
   - +.mobilefacebook.com
@@ -18885,7 +18901,6 @@ payload:
   - +.mobileporngames.com
   - +.mobilepornmovies.com
   - +.mobilevrxxx.com
-  - +.winning11.com
   - +.mobmyanmar.com
   - +.mocloudplus.com
   - +.modelmediaus.com
@@ -18902,7 +18917,6 @@ payload:
   - +.moeimg.net
   - +.moepedia.net
   - +.moez-m.com
-  - +.wink.ru
   - +.mofos.com
   - +.mofosex.com
   - +.mofosnetwork.com
@@ -18917,13 +18931,13 @@ payload:
   - +.mom-gfs.com
   - +.mom-sex-videos.com
   - +.mom50.com
-  - +.wink.am
   - +.momesear-chs.buzz
   - +.momfucktube.com
   - +.momhomeporn.com
   - +.mommystoytime.com
   - +.momo.dm
   - +.momo5188.com
+  - +.wired.com
   - +.momon-ga.com
   - +.momoniji.com
   - +.momotk.com
@@ -18944,6 +18958,7 @@ payload:
   - +.momtube.club
   - +.monaitv.me
   - +.monbeats2013.com
+  - +.wipower.com
   - +.moneywithfacebook.com
   - +.monitrix.net
   - +.monotype.com
@@ -19023,12 +19038,13 @@ payload:
   - +.morewithautodesk.com
   - +.morganclaypool.com
   - +.mornporn.com
-  - +.wing.com
-  - +.windy.com
-  - +.windsurf.com
+  - +.winudf.com
+  - +.winticket.jp
+  - +.wintermute.com
   - +.mortein.com
-  - +.windsurf.build
-  - +.windowsuem.com
+  - +.winning11.com
+  - +.wink.ru
+  - +.wink.am
   - +.morteincam.com
   - +.mostly.jp
   - +.mostpopularpornsites.com
@@ -19039,7 +19055,11 @@ payload:
   - +.motorola.ca
   - +.motorola.cl
   - +.motorola.co
+  - +.wing.com
   - +.motorola.com
+  - +.windy.com
+  - +.windsurf.com
+  - +.windsurf.build
   - +.motorola.de
   - +.motorola.es
   - +.motorola.fr
@@ -19107,6 +19127,7 @@ payload:
   - +.mplstudios.com
   - +.mpweekly.com
   - +.mql5.com
+  - +.windowsuem.com
   - +.mr-tireman.jp
   - +.mradx.net
   - +.mray.club
@@ -19126,7 +19147,6 @@ payload:
   - +.mrvideosdesexo.xxx
   - +.ms4dre.com
   - +.msi.com
-  - +.100beatscheap.com
   - +.msnbc.com
   - +.msoopent.com
   - +.mt.lv
@@ -19143,7 +19163,6 @@ payload:
   - +.muchohentai.com
   - +.muchomasporno.com
   - +.mucinex.ca
-  - +.wimpmusic.com
   - +.mucinex.com
   - +.mucinex.net
   - +.mucinex.tv
@@ -19163,7 +19182,6 @@ payload:
   - +.multiplydiversity.com
   - +.multporn.net
   - +.muncloud.dog
-  - +.willyporn.com
   - +.muramura.tv
   - +.muryouav.net
   - +.muscache.com
@@ -19198,11 +19216,9 @@ payload:
   - +.my-formosa.com
   - +.my-magazine.me
   - +.my-manager-account.com
-  - +.willberis.ru
   - +.my-tbank.ru
   - +.my.com
   - +.my.games
-  - +.willberiess.ru
   - +.my13la.com
   - +.my1stflame.com
   - +.my20dc.com
@@ -19318,7 +19334,6 @@ payload:
   - +.mynike.com
   - +.mypearson.com
   - +.mypearsonenglish.ch
-  - +.wiliberes.ru
   - +.mypearsonshop.mx
   - +.mypikpak.net
   - +.mypornads.com
@@ -19336,7 +19351,6 @@ payload:
   - +.myproseries.com
   - +.myq2.com
   - +.myqnapcloud.com
-  - +.wiley.com
   - +.myradio.hk
   - +.myrewardzone.com
   - +.myrimmingporn.com
@@ -19356,14 +19370,13 @@ payload:
   - +.mythicentertainment.com
   - +.mythicentertainment.net
   - +.mythicgames.com
-  - +.wildxxxhardcore.com
   - +.mytokenapi.com
   - +.mytopf.com
   - +.mytrannycams.com
   - +.mytrk.link
   - +.myvisaluxuryhotels.com
-  - +.wildfreevideos.com
-  - +.wildfanny.com
+  - +.100beatscheap.com
+  - +.wimpmusic.com
   - +.mywaytopay.info
   - +.mywaytopay.net
   - +.mywifecuckold.com
@@ -19381,8 +19394,7 @@ payload:
   - +.n3ro.wtf
   - +.na-att-idns.net
   - +.naaktevrouwenporno.com
-  - +.wildeberris.ru
-  - +.wildeberies.ru
+  - +.willyporn.com
   - +.naiadsystems.com
   - +.naihenda.shop
   - +.naihendauou.lol
@@ -19399,17 +19411,16 @@ payload:
   - +.nakedgirls.biz
   - +.nakedmodelsxxx.com
   - +.nakednews.com
-  - +.wildcamporn.com
   - +.namemc.com
   - +.namemybeats.com
   - +.namethatporn.com
   - +.namethatpornad.com
   - +.nan-net.com
-  - +.wildbrris.ru
+  - +.willberis.ru
   - +.naoconto.com
   - +.napiszex.com
   - +.narod.ru
-  - +.wildbries.ru
+  - +.willberiess.ru
   - +.nastranincad.com
   - +.nastrannx.com
   - +.nastrantraining.com
@@ -19417,12 +19428,12 @@ payload:
   - +.nasty.singles
   - +.nastyvids.com
   - +.nataliefiore.com
-  - +.wildbress.ru
+  - +.wiliberes.ru
   - +.natgeomaps.com
-  - +.wildbirris.ru
+  - +.wiley.com
   - +.nationalgeographic.com
   - +.nationalgeographicpartners.com
-  - +.wildbiries.ru
+  - +.wildxxxhardcore.com
   - +.naturalvoices.com
   - +.nature.com
   - +.naturemag.org
@@ -19447,8 +19458,8 @@ payload:
   - +.naverncp.com
   - +.navisworks.com
   - +.navisworks.net
-  - +.wildberrise.ru
-  - +.wildberriess.ru
+  - +.wildfreevideos.com
+  - +.wildfanny.com
   - +.naydex.net
   - +.nbabot.net
   - +.nbc.co
@@ -19461,7 +19472,7 @@ payload:
   - +.nbdh15.buzz
   - +.nbys.tv
   - +.nbys1.tv
-  - +.wildberries.uz
+  - +.wildeberris.ru
   - +.ncloud.com
   - +.nebay.net
   - +.neborder.com
@@ -19492,13 +19503,13 @@ payload:
   - +.neisolutions.com
   - +.neiworks.com
   - +.nejm.org
-  - +.wildberries.tm
+  - +.wildeberies.ru
   - +.nekoxxx.com
   - +.nenastran.com
   - +.nenitas.club
   - +.nentindo.net
   - +.neoforged.net
-  - +.wildberries.tj
+  - +.wildcamporn.com
   - +.neow.in
   - +.nerdnudes.com
   - +.nervanasys.com
@@ -19535,7 +19546,7 @@ payload:
   - +.netlify.com
   - +.netlifystatus.com
   - +.netlock.hu
-  - +.wildberries.ru
+  - +.wildbrris.ru
   - +.netpornsex.com
   - +.netpornsex.net
   - +.netsolssl.com
@@ -19558,7 +19569,7 @@ payload:
   - +.newbemany.com
   - +.newbienudes.com
   - +.newbrazz.com
-  - +.wildberries.lt
+  - +.wildbries.ru
   - +.newdrediscount.com
   - +.neweconomyforum.com
   - +.newenergyfinance.com
@@ -19573,19 +19584,19 @@ payload:
   - +.newmonst1erbeatsto1re.com
   - +.newmonsterbeatsheadphones.com
   - +.newpppp.com
-  - +.wildberries.kz
-  - +.wildberries.kg
-  - +.wildberries.ge
-  - +.wildberries.eu
-  - +.wildberries.es
-  - +.wildberries.by
+  - +.wildbress.ru
+  - +.wildbirris.ru
+  - +.wildbiries.ru
+  - +.wildberrise.ru
+  - +.wildberriess.ru
+  - +.wildberries.uz
   - +.newsamerica.com
-  - +.wildberries.am
-  - +.wildberr.ru
-  - +.wildberiss.ru
+  - +.wildberries.tm
+  - +.wildberries.tj
+  - +.wildberries.ru
   - +.newschristmasshopping.com
-  - +.wildberdes.ru
-  - +.wildbeeries.ru
+  - +.wildberries.lt
+  - +.wildberries.kz
   - +.newscorp.com
   - +.newscorpaustralia.com
   - +.newsensations.com
@@ -19594,18 +19605,18 @@ payload:
   - +.newsexxxx.com
   - +.newsfeed.com
   - +.newsgawakaru.com
-  - +.wildbarries.ru
-  - +.wildbaries.ru
+  - +.wildberries.kg
+  - +.wildberries.ge
   - +.newsmart.jp
   - +.newsmax.in
   - +.newsmaxtv.com
   - +.newsnowfox.com
-  - +.wilberry.ru
-  - +.wilberris.ru
+  - +.wildberries.eu
+  - +.wildberries.es
   - +.newssyndication.com
   - +.newsukadops.com
   - +.newsupermariobrosu.com
-  - +.wilberies.ru
+  - +.wildberries.by
   - +.newtofea.com
   - +.newton.com
   - +.newxxx24.cc
@@ -19615,23 +19626,30 @@ payload:
   - +.nexitcore.com
   - +.nexo.com
   - +.nexo.io
-  - +.wilberes.ru
+  - +.wildberries.am
   - +.nexon.io
   - +.nexon.net
+  - +.wildberr.ru
+  - +.wildberiss.ru
   - +.nexpart.com
   - +.nexpart.tv
   - +.next.com
   - +.next.hk
   - +.nextapple.com
+  - +.wildberdes.ru
+  - +.wildbeeries.ru
+  - +.wildbarries.ru
   - +.nextgenerationcam.com
   - +.nextgenerationcenter.com
   - +.nextjs.org
+  - +.wildbaries.ru
   - +.nextmedia.com
-  - +.wikisexguide.com
+  - +.wilberry.ru
   - +.nextmgz.com
+  - +.wilberris.ru
   - +.nextstop.com
-  - +.wikiquote.org
-  - +.wikiporn.tv
+  - +.wilberies.ru
+  - +.wilberes.ru
   - +.nextwork.hk
   - +.nextwork.tw
   - +.11jav.com
@@ -19666,7 +19684,6 @@ payload:
   - +.nhk.jp
   - +.nhkworld.jp
   - +.nhncorp.jp
-  - +.wikimediafoundation.org
   - +.niceanimegames.com
   - +.nicegram.app
   - +.nicegram.cloud
@@ -19683,7 +19700,6 @@ payload:
   - +.nicomanga.jp
   - +.niconico.com
   - +.nicoseiga.jp
-  - +.wikimediacloud.org
   - +.nightclub.eu
   - +.nights.fun
   - +.nijiclamp.com
@@ -19705,6 +19721,7 @@ payload:
   - +.nike-usa.com
   - +.nike.ci
   - +.nike.com
+  - +.wikisexguide.com
   - +.nike.gy
   - +.nike.hk
   - +.nike.host
@@ -19817,6 +19834,7 @@ payload:
   - +.nikesportswear.com
   - +.nikestares.com
   - +.nikestore.com
+  - +.wikiquote.org
   - +.nikestyles.com
   - +.nikeswim.com
   - +.niketaiwan.net
@@ -19834,13 +19852,13 @@ payload:
   - +.nikke-de.com
   - +.nikke-fr.com
   - +.nikke-sea.com
+  - +.wikiporn.tv
   - +.nikkei.jp
   - +.nikkei4946.com
   - +.nimg.jp
+  - +.wikimediafoundation.org
   - +.ninecommentaries.com
-  - +.wikihow.com
-  - +.wikifeet.com
-  - +.wikidot.com
+  - +.wikimediacloud.org
   - +.nineteentube.com
   - +.ninpu.cyou
   - +.nintendo-europe-sales.com
@@ -19848,12 +19866,7 @@ payload:
   - +.nintendo.at
   - +.nintendo.be
   - +.nintendo.ch
-  - +.wikia.org
-  - +.wikia.com
-  - +.wiki.gg
   - +.nintendo.com
-  - +.wikawika.xyz
-  - +.wiivc.net
   - +.nintendo.de
   - +.nintendo.dk
   - +.nintendo.es
@@ -19880,7 +19893,7 @@ payload:
   - +.nintendowii.com
   - +.niosii.com
   - +.niosii.net
-  - +.wiiugamepad.com
+  - +.wikihow.com
   - +.nist.gov
   - +.niuc2.com
   - +.nivod.tv
@@ -19889,7 +19902,7 @@ payload:
   - +.niziero.info
   - +.njav.tv
   - +.njavtv.com
-  - +.wiisportsresort.com
+  - +.wikifeet.com
   - +.njpw1972.com
   - +.nke6.com
   - +.nlm.io
@@ -19897,7 +19910,7 @@ payload:
   - +.nlt-media.com
   - +.nmbmw.com
   - +.nna.jp
-  - +.wiisports.com
+  - +.wikidot.com
   - +.nodeget.com
   - +.nodeimage.com
   - +.nodequality.com
@@ -19933,14 +19946,12 @@ payload:
   - +.novostrong.com
   - +.now-ashare.com
   - +.now-tv.com
-  - +.wiipartyu.com
   - +.now.sh
   - +.nowe.com
   - +.nowe.hk
   - +.nowjav.com
   - +.noxygames.com
   - +.nozomi.la
-  - +.wiifitu.com
   - +.npr.org
   - +.nptsibinbank.com
   - +.nrdh99.buzz
@@ -19955,9 +19966,9 @@ payload:
   - +.ntdimg.com
   - +.ntdtv-dc.com
   - +.ntdtv.ca
-  - +.wiifit.com
-  - +.wii-u.com
-  - +.wifiman.com
+  - +.wikia.org
+  - +.wikia.com
+  - +.wiki.gg
   - +.ntdtv.fr
   - +.ntdtv.jp
   - +.ntdtv.kr
@@ -19967,9 +19978,20 @@ payload:
   - +.ntdtvla.com
   - +.ntdvideo.tw
   - +.ntdvn.com
+  - +.wikawika.xyz
+  - +.wiivc.net
+  - +.wiiugamepad.com
+  - +.wiisportsresort.com
+  - +.wiisports.com
+  - +.wiipartyu.com
+  - +.wiifitu.com
+  - +.wiifit.com
+  - +.wii-u.com
+  - +.wifiman.com
   - +.wifi-mx.com
   - +.wifewantstoplay.com
   - +.wifevideos.net
+  - +.ntp.se
   - +.wifesharingpics.com
   - +.wifesexorgy.com
   - +.wifemovies.net
@@ -19979,7 +20001,6 @@ payload:
   - +.wifehomeporn.com
   - +.wife-home-videos.com
   - +.wieldberris.ru
-  - +.ntp.se
   - +.widberris.ru
   - +.widberri.ru
   - +.wibes.ru
@@ -19988,16 +20009,6 @@ payload:
   - +.whynotbi.com
   - +.whyiwantciscotelepresence.com
   - +.whyfacebook.com
-  - +.whychoosevmwareeuc.com
-  - +.whychooseview.com
-  - +.whychoosehorizon.com
-  - +.whvuxtub.com
-  - +.whvn.cc
-  - +.whosthehost.com
-  - +.whorevintagesex.com
-  - +.whoreteensex.com
-  - +.whoreslag.com
-  - +.whoreshub.com
   - +.ntten-mg.buzz
   - +.nu-bay.com
   - +.nu36.vip
@@ -20060,13 +20071,13 @@ payload:
   - +.nuro.jp
   - +.nurofen.at
   - +.nurofen.bg
-  - +.whoreasianporn.com
-  - +.whonix.org
-  - +.wholevideos.com
-  - +.wholesaleonlinemart.com
+  - +.whychoosevmwareeuc.com
+  - +.whychooseview.com
+  - +.whychoosehorizon.com
+  - +.whvuxtub.com
   - +.nurofen.com
-  - +.wholesalefine.com
-  - +.wholesalediscountpurses.com
+  - +.whvn.cc
+  - +.whosthehost.com
   - +.nurofen.cz
   - +.nurofen.de
   - +.nurofen.es
@@ -20095,19 +20106,21 @@ payload:
   - +.nvidia.at
   - +.nvidia.be
   - +.nvidia.ch
+  - +.whorevintagesex.com
+  - +.whoreteensex.com
+  - +.whoreslag.com
+  - +.whoreshub.com
+  - +.whoreasianporn.com
+  - +.nvidia.com
+  - +.whonix.org
+  - +.wholevideos.com
+  - +.wholesaleonlinemart.com
+  - +.wholesalefine.com
+  - +.wholesalediscountpurses.com
   - +.wholesale-exporter1.com
   - +.wholeplanetfoundation.org
   - +.wholekidsfoundation.org
   - +.wholefoodsmarket.com
-  - +.wholefoods.com
-  - +.nvidia.com
-  - +.wholecitiesfoundation.org
-  - +.who.int
-  - +.whitexxxtube.com
-  - +.whitesaas.com
-  - +.whisolutions.com
-  - +.whichav.video
-  - +.whichav.com
   - +.nvidia.cz
   - +.nvidia.de
   - +.nvidia.dk
@@ -20130,6 +20143,8 @@ payload:
   - +.nvidiaforhp.com
   - +.nvidiagrid.net
   - +.nwxs8.com
+  - +.wholefoods.com
+  - +.wholecitiesfoundation.org
   - +.nxtv.jp
   - +.nyaa.net
   - +.nyahentai.re
@@ -20140,7 +20155,6 @@ payload:
   - +.nyt.net
   - +.nytchina.com
   - +.o-courier.ru
-  - +.whereiskpkuang.com
   - +.o3.ru
   - +.o3t.ru
   - +.o3team.ru
@@ -20176,7 +20190,7 @@ payload:
   - +.odnoklasniki.ua
   - +.odnoklassniki.am
   - +.odnoklassniki.by
-  - +.whentai.com
+  - +.who.int
   - +.odnoklassniki.eu
   - +.odnoklassniki.lv
   - +.odnoklassniki.ru
@@ -20195,10 +20209,9 @@ payload:
   - +.offworldindustries.com
   - +.offworldindustries.net
   - +.ofiii.com
-  - +.whengirlsplay.com
+  - +.whitexxxtube.com
   - +.ogameblog.com
-  - +.wheelworks.net
-  - +.wheelpop.com
+  - +.whitesaas.com
   - +.ohentai.org
   - +.ohgratisporrfilm.com
   - +.ohpornocasero.com
@@ -20208,12 +20221,13 @@ payload:
   - +.ohsexotube.com
   - +.ohyeah1080.com
   - +.oiobbs.com
+  - +.whisolutions.com
   - +.ok.me
   - +.ok.xxx
   - +.okaapps.com
   - +.okazudouga.tokyo
   - +.okcdn.ru
-  - +.whatthefox.com
+  - +.whichav.video
   - +.okiwine.jp
   - +.okkisokuho.com
   - +.okko.sport
@@ -20225,7 +20239,9 @@ payload:
   - +.okx-dns.com
   - +.okx-dns1.com
   - +.okx-dns2.com
+  - +.okx.ac
   - +.okx.cab
+  - +.whichav.com
   - +.older-women-movies.com
   - +.older-women-porn.com
   - +.older.tube
@@ -20263,11 +20279,9 @@ payload:
   - +.onbeatsbydresale.com
   - +.oncars.in
   - +.ondigitalocean.com
-  - +.whatsappbrand.com
   - +.one889.app
   - +.onedinesfree.com
   - +.onedrive.co
-  - +.whatsapp.tv
   - +.onedrive.eu
   - +.onedrive.net
   - +.onedrive.org
@@ -20287,7 +20301,7 @@ payload:
   - +.onkakao.net
   - +.online-deals.net
   - +.online-instagram.com
-  - +.whatsapp.org
+  - +.whereiskpkuang.com
   - +.onlineapplestore.com
   - +.onlinefucktube.com
   - +.onlinegamer.jp
@@ -20324,13 +20338,15 @@ payload:
   - +.onstream.cc
   - +.onxxxtube.com
   - +.onxxxvideo.com
+  - +.whentai.com
   - +.op.gg
   - +.op7979.com
   - +.opac-project.eu
-  - +.whatsapp.info
+  - +.whengirlsplay.com
   - +.openamt.com
   - +.openapiplatform.com
   - +.openapiservice.com
+  - +.wheelworks.net
   - +.openclaw.ai
   - +.opencollective.com
   - +.opencreate.org
@@ -20348,7 +20364,7 @@ payload:
   - +.openstreetmaps.org
   - +.opentgc.com
   - +.opentimetable.jp
-  - +.whatsapp.cc
+  - +.wheelpop.com
   - +.openweathermap.org
   - +.opera.com
   - +.opinionjournal.com
@@ -20377,9 +20393,8 @@ payload:
   - +.orgasmlist.com
   - +.orgypornonly.com
   - +.orgyxxxhub.com
-  - +.whatsapp-plus.net
   - +.orientalasianporn.com
-  - +.whatsapp-plus.me
+  - +.whatthefox.com
   - +.origin.com
   - +.origin.tv
   - +.originalhulu.com
@@ -20415,7 +20430,6 @@ payload:
   - +.oursexgames.com
   - +.ourshdtv.com
   - +.ourshemales.com
-  - +.whatsapp-plus.info
   - +.out-app-purchase.com
   - +.outbound.io
   - +.outdoorpublicsex.com
@@ -20424,6 +20438,7 @@ payload:
   - +.over18arcade.com
   - +.overapple.com
   - +.overleaf.com
+  - +.whatsappbrand.com
   - +.overthumbs.com
   - +.ovid.com
   - +.oxfordaasc.com
@@ -20452,8 +20467,8 @@ payload:
   - +.ozon-tech.ru
   - +.ozon.by
   - +.ozon.com
-  - +.whatisworkspaceone.com
-  - +.whatisairwatch.com
+  - +.whatsapp.tv
+  - +.whatsapp.org
   - +.ozon.dev
   - +.ozon.express
   - +.ozon.kz
@@ -20653,7 +20668,7 @@ payload:
   - +.paypal-viewpoints.net
   - +.paypal.ca
   - +.paypal.com
-  - +.whatboyswant.com
+  - +.whatsapp.info
   - +.paypal.hk
   - +.paypal.info
   - +.paypal.jp
@@ -20699,6 +20714,7 @@ payload:
   - +.paypalx.com
   - +.paypaly.com
   - +.paypass.net
+  - +.whatsapp.cc
   - +.payppal.com
   - +.payroll.com
   - +.payserve.com
@@ -20713,16 +20729,16 @@ payload:
   - +.pccw.com
   - +.pccwglobal.com
   - +.pccwsolutions.com
-  - +.whasil.xyz
+  - +.whatsapp-plus.net
   - +.pchomeec.tw
-  - +.wgcrowd.io
-  - +.wgcdn.co
+  - +.whatsapp-plus.me
+  - +.whatsapp-plus.info
   - +.pcloud.tw
-  - +.wfm.com
+  - +.whatisworkspaceone.com
+  - +.whatisairwatch.com
   - +.pctlwm.com
   - +.pdf.new
   - +.pdncommunity.com
-  - +.weverse.io
   - +.pdxbmw.com
   - +.peach-cherry.com
   - +.peachy18.com
@@ -20734,13 +20750,11 @@ payload:
   - +.pearson-studium.ch
   - +.pearson.ch
   - +.pearson.cl
-  - +.wetsextube.com
-  - +.wetpussygames.com
+  - +.whatboyswant.com
   - +.pearson.com
-  - +.wetplace.com
-  - +.wetnhorny.com
-  - +.wetchicks.org
-  - +.wetandpuffy.com
+  - +.whasil.xyz
+  - +.wgcrowd.io
+  - +.wgcdn.co
   - +.pearson.es
   - +.pearson.fr
   - +.pearson.pl
@@ -20756,8 +20770,7 @@ payload:
   - +.pearsoncanada.ca
   - +.pearsonclinical.be
   - +.pearsonclinical.ca
-  - +.wet-ass-pussy.com
-  - +.westlaw.com
+  - +.wfm.com
   - +.pearsonclinical.de
   - +.pearsonclinical.dk
   - +.pearsonclinical.es
@@ -20769,6 +20782,7 @@ payload:
   - +.pearsonclinical.se
   - +.pearsoncmg.com
   - +.pearsoncred.com
+  - +.weverse.io
   - +.pearsoned.com
   - +.pearsoneducacion.net
   - +.pearsoneducationbooks.com
@@ -20776,18 +20790,22 @@ payload:
   - +.pearsonelt.com
   - +.pearsonenespanol.com
   - +.pearsonhighered.com
-  - +.westernunion.ru
+  - +.wetsextube.com
   - +.pearsonlongman.ch
   - +.pearsononlineacademy.com
   - +.pearsonperu.pe
-  - +.westerndigital.com
+  - +.wetpussygames.com
+  - +.wetplace.com
   - +.pearsonvue.com
   - +.pearsonvue.net
   - +.peekvids.com
   - +.peepholecam.com
   - +.peerj.com
   - +.pegn.com
+  - +.wetnhorny.com
   - +.pelvicexam.info
+  - +.wetchicks.org
+  - +.wetandpuffy.com
   - +.penisbot.com
   - +.pensions-expert.com
   - +.penthouse.com
@@ -20815,6 +20833,7 @@ payload:
   - +.perverttube.com
   - +.petardas.com
   - +.petardas.xxx
+  - +.wet-ass-pussy.com
   - +.petite.one
   - +.petiteamateurteen.com
   - +.petiteballerinasfucked.com
@@ -20837,7 +20856,6 @@ payload:
   - +.physicalexam.info
   - +.physiology.org
   - +.pi-vr.com
-  - +.wen21.xyz
   - +.piapro.net
   - +.picacg2022.com
   - +.picacgp.com
@@ -20884,16 +20902,10 @@ payload:
   - +.pinterest.be
   - +.pinterest.ch
   - +.pinterest.co
-  - +.wellnessinstitute.com
-  - +.wellmaturetube.com
-  - +.wellfuckedwife.com
-  - +.wellberies.ru
-  - +.wellberes.ru
-  - +.weldberric.ru
-  - +.weldberres.ru
-  - +.weldberies.ru
-  - +.welcomix.com
-  - +.welcometobestbuy.ca
+  - +.westlaw.com
+  - +.westernunion.ru
+  - +.westerndigital.com
+  - +.wen21.xyz
   - +.pinterest.dk
   - +.pinterest.ec
   - +.pinterest.engineering
@@ -20921,9 +20933,9 @@ payload:
   - +.pixanalytics.com
   - +.pixfs.net
   - +.pixhost.to
-  - +.welberris.ru
+  - +.wellnessinstitute.com
   - +.pixiv-recommend.net
-  - +.weknowporn.com
+  - +.wellmaturetube.com
   - +.pixiv.help
   - +.pixiv.me
   - +.pixivision.net
@@ -20938,10 +20950,11 @@ payload:
   - +.pjbyj.top
   - +.pjful-app.lol
   - +.pjgirls.com
-  - +.weiyuksj.com
+  - +.wellfuckedwife.com
   - +.pki-post.ch
   - +.pki-posta.ch
   - +.pki-poste.ch
+  - +.wellberies.ru
   - +.placesdocs.com
   - +.planetminecraft.com
   - +.planetsuzy.org
@@ -20959,7 +20972,7 @@ payload:
   - +.playapex.com
   - +.playbar.biz
   - +.playbattlegrounds.com
-  - +.weinvoiceit.com
+  - +.wellberes.ru
   - +.playbydurex.com
   - +.playcover.io
   - +.playfamily.ru
@@ -21052,6 +21065,7 @@ payload:
   - +.polyu.hk
   - +.ponyanimalsex.com
   - +.poofetish.com
+  - +.weldberric.ru
   - +.poop-pee.online
   - +.poopee-puke.com
   - +.poopeegirls.com
@@ -21167,7 +21181,7 @@ payload:
   - +.porngladiator.com
   - +.porngo.com
   - +.porngo.tube
-  - +.weimi180.com
+  - +.weldberres.ru
   - +.porngrabbz.com
   - +.porngub.com
   - +.pornguide.blog
@@ -21237,7 +21251,7 @@ payload:
   - +.pornnetworkdeals.com
   - +.pornnut.com
   - +.porno-erotica.com
-  - +.weildberries.ru
+  - +.weldberies.ru
   - +.porno365.net
   - +.porno365.website
   - +.porno49.com
@@ -21247,7 +21261,9 @@ payload:
   - +.pornobengala.com
   - +.pornoboard.net
   - +.pornoboliviaxxx.com
+  - +.welcomix.com
   - +.pornobox.net
+  - +.welcometobestbuy.ca
   - +.pornobrasil.com
   - +.pornobrasil.org
   - +.pornobrasileiro.tv
@@ -21270,10 +21286,11 @@ payload:
   - +.pornogids.net
   - +.pornogram.xxx
   - +.pornogramxxx.com
+  - +.welberris.ru
   - +.pornogrund.com
   - +.pornohd.blue
   - +.pornohd.plus
-  - +.weekly-economist.com
+  - +.weknowporn.com
   - +.pornohut.info
   - +.pornohutdeutsch.net
   - +.pornoid.com
@@ -21305,6 +21322,7 @@ payload:
   - +.pornotime.net
   - +.pornotree.com
   - +.pornotron.net
+  - +.weiyuksj.com
   - +.pornotube69.nl
   - +.pornov1080.name
   - +.pornovenezolanox.com
@@ -21394,6 +21412,7 @@ payload:
   - +.postegro.it
   - +.postimages.org
   - +.postimg.cc
+  - +.weinvoiceit.com
   - +.posty.kr
   - +.postyourgirls.ws
   - +.potenza.jp
@@ -21498,7 +21517,6 @@ payload:
   - +.prod-my.games
   - +.prodcontest.com
   - +.prodrive-japan.com
-  - +.webtype.com
   - +.profilemaster.com
   - +.profreeporno.com
   - +.progress.com
@@ -21515,7 +21533,7 @@ payload:
   - +.promodj.com
   - +.promonsterbeatsbydre.com
   - +.pron.guru
-  - +.webtoonscorp.com
+  - +.weimi180.com
   - +.propertysex.com
   - +.proporn.com
   - +.proptiger.com
@@ -21535,7 +21553,7 @@ payload:
   - +.protonweb.com
   - +.proxifier.com
   - +.proxyadult.org
-  - +.webtoons.com
+  - +.weildberries.ru
   - +.proxyrarbg.org
   - +.prpops.com
   - +.prts.plus
@@ -21622,6 +21640,7 @@ payload:
   - +.qcomgeo2.com
   - +.qctconnect.com
   - +.qdiehzz7.me
+  - +.weekly-economist.com
   - +.qiao-cn.com
   - +.qinav.com
   - +.qingse.one
@@ -21642,20 +21661,16 @@ payload:
   - +.qorno.com
   - +.qporno.xxx
   - +.qprize.com
-  - +.webpass.net
-  - +.webofscience.com
   - +.qq33qq.com
   - +.qqbs.asia
   - +.qqbs.work
   - +.qr.ae
   - +.qualcomm-email.com
   - +.qualcomm-inc.com
-  - +.webofknowledge.com
-  - +.webobjects.net
-  - +.webobjects.eu
-  - +.webobjects.de
+  - +.webtype.com
+  - +.webtoonscorp.com
+  - +.webtoons.com
   - +.qualcomm.com
-  - +.webnovel.com
   - +.qualcomm.de
   - +.qualcomm.fr
   - +.qualcommhalo.com
@@ -21667,16 +21682,18 @@ payload:
   - +.quanben-xiaoshuo.com
   - +.quanben.io
   - +.quatrowireless.com
-  - +.webmoneyinfo.com
   - +.quicinc.com
-  - +.webmademovies.org
+  - +.webpass.net
+  - +.webofscience.com
+  - +.webofknowledge.com
   - +.quickbooks.com
-  - +.webhosting.com
+  - +.webobjects.net
+  - +.webobjects.eu
   - +.quickbooks.fr
   - +.quickbooks.in
   - +.quickbooks2000.com
   - +.quickbooksenligne.ca
-  - +.webgirlsonline.net
+  - +.webobjects.de
   - +.quickbooksonline.com
   - +.quickconnect.to
   - +.quickiepage.com
@@ -21684,7 +21701,6 @@ payload:
   - +.quicktake.video
   - +.quicktime.cc
   - +.quicktime.com
-  - +.webgata.net
   - +.quicktime.eu
   - +.quicktime.net
   - +.quicktime.tv
@@ -21708,6 +21724,7 @@ payload:
   - +.qysg8.buzz
   - +.qzav.tv
   - +.r10s.com
+  - +.webnovel.com
   - +.r18av.com
   - +.r18lu-avi.shop
   - +.r18lu.com
@@ -21722,33 +21739,28 @@ payload:
   - +.radgametools.com
   - +.radian6.com
   - +.radiko-cf.com
-  - +.webex.fr
   - +.radiofarda.com
-  - +.webex.es
+  - +.webmoneyinfo.com
   - +.radiomango.fm
   - +.radiomarsho.com
   - +.radiosputnik.ru
   - +.radiosvoboda.org
   - +.radiotavisupleba.ge
   - +.radiyoyacuvoa.com
-  - +.webex.de
+  - +.webmademovies.org
   - +.raiffeisen-media.ru
   - +.raiffeisen.ru
-  - +.webex.com
   - +.rajwaphq.com
-  - +.webex.ca
   - +.rakuten-static.com
   - +.rakuten.ca
-  - +.webcitation.org
   - +.rakuten.com
-  - +.webcamtubexxx.com
-  - +.webcams.tv
+  - +.webhosting.com
+  - +.webgirlsonline.net
   - +.rakuten.tv
   - +.rakuten.tw
   - +.rakutenadvertising.com
   - +.rakutengiftcards.ca
-  - +.webcammedellin.co
-  - +.webcamjackers.com
+  - +.webgata.net
   - +.randyblue.com
   - +.rapefilms.net
   - +.rapetube.me
@@ -21773,7 +21785,7 @@ payload:
   - +.rat.xxx
   - +.ratedgross.com
   - +.ravm.tv
-  - +.webcamgirls.chat
+  - +.webex.fr
   - +.rayark.download
   - +.rayark.net
   - +.razer.com
@@ -21826,7 +21838,7 @@ payload:
   - +.reachthefinals.com
   - +.reachtheworldonfacebook.com
   - +.readerswivesonline.com
-  - +.webcam-teen.net
+  - +.webex.es
   - +.real-homemade-movies.com
   - +.real-mature-porn.com
   - +.real-thaipussy.com
@@ -21852,9 +21864,10 @@ payload:
   - +.realclearreligion.org
   - +.realclearscience.com
   - +.realclearworld.com
+  - +.webex.de
   - +.realcuckoldsex.com
   - +.realdoll.com
-  - +.web3modal.org
+  - +.webex.com
   - +.realestatejournal.com
   - +.realgfporn.com
   - +.reality-computing.com
@@ -21869,6 +21882,7 @@ payload:
   - +.realsound.jp
   - +.realteengirls.com
   - +.realtor.com
+  - +.webex.ca
   - +.realtype.jp
   - +.realvision.com
   - +.realviz.com
@@ -21889,8 +21903,10 @@ payload:
   - +.recode.net
   - +.reconinstruments.com
   - +.reconjet.com
+  - +.webcitation.org
   - +.redamateurtube.com
   - +.redbyhbo.com
+  - +.webcamtubexxx.com
   - +.redditblog.com
   - +.redditinc.com
   - +.redditmail.com
@@ -21911,7 +21927,7 @@ payload:
   - +.redtub3xxx.com
   - +.redtube.blog
   - +.redtube.com
-  - +.web-instagram.net
+  - +.webcams.tv
   - +.redtube9.com
   - +.redtubepremium.com
   - +.redwap-xxx.com
@@ -21948,7 +21964,7 @@ payload:
   - +.researchintel.com
   - +.resella.jp
   - +.resellablue.com
-  - +.weav.xyz
+  - +.webcammedellin.co
   - +.resoubanana.buzz
   - +.resoubang.buzz
   - +.respawnbyrazer.com
@@ -21965,11 +21981,11 @@ payload:
   - +.reuters.tv
   - +.revenue-performance-management.com
   - +.revistaepoca.com
-  - +.100bucksbabes.com
-  - +.100classicbooks.com
+  - +.webcamjackers.com
+  - +.webcamgirls.chat
   - +.revistapegn.com
-  - +.wearehairy.com
-  - +.weareebay.com
+  - +.webcam-teen.net
+  - +.web3modal.org
   - +.revit.com
   - +.revitcc.com
   - +.revitsucks.net
@@ -21985,7 +22001,6 @@ payload:
   - +.ria.ru
   - +.ricefever.com
   - +.rigums.xyz
-  - +.wdfiles.com
   - +.rinvdh7.xyz
   - +.riot-games.com
   - +.riot.com
@@ -21993,7 +22008,6 @@ payload:
   - +.riot.net
   - +.riotcdn.net
   - +.riotforgegames.com
-  - +.wdc.com
   - +.riotgames.com
   - +.riotgames.info
   - +.riotgames.jp
@@ -22014,11 +22028,11 @@ payload:
   - +.road-crew.com
   - +.roadblocks.com
   - +.roblocks.com
-  - +.wd.com
   - +.roblox.ca
   - +.roblox.cc
   - +.roblox.cl
-  - +.wbwh.tech
+  - +.web-instagram.net
+  - +.weav.xyz
   - +.roblox.de
   - +.roblox.dk
   - +.roblox.eu
@@ -22139,8 +22153,8 @@ payload:
   - +.rtespanol.com
   - +.rtfestival.ru
   - +.rtfrance.tv
-  - +.wbwh.ru
-  - +.wbvm4s.com
+  - +.100bucksbabes.com
+  - +.100classicbooks.com
   - +.rtings.com
   - +.rtnewsde.com
   - +.rtnewsde.online
@@ -22152,7 +22166,6 @@ payload:
   - +.rttv.com
   - +.rttv.ru
   - +.rtxv.ru
-  - +.wbtek.ru
   - +.rude.com
   - +.ruhub.tv
   - +.ruinedking.com
@@ -22189,7 +22202,7 @@ payload:
   - +.rustore.ru
   - +.rustore.team
   - +.rustore.tv
-  - +.wbstatic.ru
+  - +.wearehairy.com
   - +.rutor.info
   - +.rutracker.cc
   - +.rutracker.cr
@@ -22203,8 +22216,8 @@ payload:
   - +.rwbautomation.ru
   - +.rwbautomation.tech
   - +.rwbgeo.ru
-  - +.wbstatic.net
-  - +.wbrks.com
+  - +.weareebay.com
+  - +.wdfiles.com
   - +.rzr.to
   - +.s-bluemix.net
   - +.s-books.com
@@ -22213,7 +22226,7 @@ payload:
   - +.s-rewards.hk
   - +.s-xoom.com
   - +.s1s1s1.com
-  - +.wbrep.ru
+  - +.wdc.com
   - +.s2stagehance.com
   - +.s81c.com
   - +.s8ds5gfm.xyz
@@ -22230,12 +22243,11 @@ payload:
   - +.safebooru.org
   - +.safeliner.tech
   - +.saffrontech.com
-  - +.wbr.by
+  - +.wd.com
   - +.sage-observability.tech
   - +.sagepub.com
   - +.sahabatsetiasmartone.com
   - +.saiganak.com
-  - +.wbpay.ru
   - +.sale-nikeshoes.com
   - +.salebeatslasteststyle4you.com
   - +.saleblackfridaydrebeats.com
@@ -22247,7 +22259,7 @@ payload:
   - +.salesforceiq.com
   - +.salesforceliveagent.com
   - +.salesforcemarketingcloud.com
-  - +.wbmotivator.ru
+  - +.wbwh.tech
   - +.sambaporno.com
   - +.samebags.com
   - +.samokat.ru
@@ -22265,13 +22277,14 @@ payload:
   - +.samsungqbe.com
   - +.samsungrs.com
   - +.sandisk.ae
-  - +.wbmail.ru
-  - +.wbkids.ru
-  - +.wbinsights.com
+  - +.wbwh.ru
+  - +.wbvm4s.com
+  - +.wbtek.ru
   - +.sandisk.com
-  - +.wbgames.com
-  - +.wbdubna.ru
-  - +.wbdnbo.net
+  - +.wbstatic.ru
+  - +.wbstatic.net
+  - +.wbrks.com
+  - +.wbrep.ru
   - +.sandisk.de
   - +.sandisk.es
   - +.sandisk.fr
@@ -22281,24 +22294,24 @@ payload:
   - +.sandisk.it
   - +.sandisk.nl
   - +.sandisk.sg
-  - +.wbbasket.ru
+  - +.wbr.by
   - +.sanjesh.org
   - +.sankakuapi.com
   - +.sankei-ad-info.com
   - +.sankei-ad.net
-  - +.wbautomation.tech
+  - +.wbpay.ru
   - +.sankei-call.jp
-  - +.wbautomation.ru
-  - +.wballiance.com
-  - +.wbagora.com
+  - +.wbmotivator.ru
+  - +.wbmail.ru
+  - +.wbkids.ru
   - +.sankei-kurashi.com
   - +.sankei-shougakukai.jp
   - +.sankei-tours.com
-  - +.wb.ru
+  - +.wbinsights.com
   - +.sankei.jp
   - +.sankeibiz.jp
   - +.sankeishop.jp
-  - +.wb.kz
+  - +.wbgames.com
   - +.sanspo.com
   - +.sanvaras.com
   - +.saobjpg.com
@@ -22320,7 +22333,7 @@ payload:
   - +.savitabhabhi.vip
   - +.savitahd.net
   - +.savoycomputing.com
-  - +.wb.kg
+  - +.wbdubna.ru
   - +.sayeasy.eu
   - +.sb-cd.com
   - +.sb-mobile.jp
@@ -22354,12 +22367,11 @@ payload:
   - +.sbertroika.ru
   - +.sbgkstv.shop
   - +.sbibankllc.ru
-  - +.wb.am
+  - +.wbdnbo.net
   - +.sbitravelcard.com
   - +.sbnation.com
   - +.sbrf.ru
-  - +.wb-sale.ru
-  - +.wb-cloud.ru
+  - +.wbbasket.ru
   - +.sbuxcard.com
   - +.sc-cdn.net
   - +.sc.com
@@ -22388,14 +22400,18 @@ payload:
   - +.scharferporno.com
   - +.schiffvitamins.com
   - +.scholarpedia.org
-  - +.wb-basket.ru
+  - +.wbautomation.tech
   - +.schwab.com
-  - +.wb-bank.ru
+  - +.wbautomation.ru
+  - +.wballiance.com
   - +.schwabassetmanagement.com
   - +.schwabplan.com
   - +.sci-hub.ee
+  - +.wbagora.com
+  - +.wb.ru
   - +.sci-hub.se
   - +.sci-hub.st
+  - +.wb.kz
   - +.science.com
   - +.science.org
   - +.sciencedirect.com
@@ -22438,20 +22454,22 @@ payload:
   - +.seancody.com
   - +.seaofsolitude.com
   - +.seaporn.org
+  - +.wb.kg
   - +.seasidestory.tokyo
   - +.seattlespheres.com
   - +.seb.ru
+  - +.wb.am
   - +.secomtrust.net
   - +.second-ns.com
   - +.second-ns.de
   - +.secondns.at
   - +.secret-flirt-hub.com
-  - +.watersex.com
+  - +.wb-sale.ru
   - +.secretubes.com
   - +.sectigo.com
   - +.secure-paypal.info
-  - +.waterfox.net
-  - +.waterdamagesandiego.org
+  - +.wb-cloud.ru
+  - +.wb-basket.ru
   - +.securecloudtransformation.com
   - +.securepaypal.info
   - +.securitypreview.com
@@ -22469,7 +22487,7 @@ payload:
   - +.seiroganmania.com
   - +.seiron-sankei.com
   - +.sejie80.com
-  - +.water-and-power.com
+  - +.wb-bank.ru
   - +.seksmet.nl
   - +.sekswebsite.nl
   - +.sekur1213.guru
@@ -22490,7 +22508,6 @@ payload:
   - +.selkombank.ru
   - +.sellercommunity.com
   - +.semanticscholar.org
-  - +.watchteencam.com
   - +.sendvid.com
   - +.seneporno.com
   - +.seniortgp.com
@@ -22525,7 +22542,6 @@ payload:
   - +.sessoamatorialeitaliano.com
   - +.setapp.com
   - +.setka.ru
-  - +.watchmygirlfriend.tv
   - +.severeporn.com
   - +.severreal.org
   - +.sevgikurtulmaz.com
@@ -22571,7 +22587,6 @@ payload:
   - +.sexedanslepre.net
   - +.sexei.net
   - +.sexemulator.com
-  - +.watchmygf.to
   - +.sexfilm4free.com
   - +.sexfilmeporno.com
   - +.sexfilmstube.com
@@ -22707,7 +22722,6 @@ payload:
   - +.sg1lib.org
   - +.sgcheck.ru
   - +.sgp1.fun
-  - +.watchmygf.me
   - +.sgspe.de
   - +.sgspt.buzz
   - +.sh-xuxingda.com
@@ -22716,7 +22730,7 @@ payload:
   - +.shadowcomplex.com
   - +.shadowslaves.com
   - +.shadowsocks.com
-  - +.watchmyexgf.net
+  - +.watersex.com
   - +.shadowsocks.nl
   - +.shadowverse-evolve.com
   - +.shahr-bank.ir
@@ -22726,7 +22740,7 @@ payload:
   - +.shameless.com
   - +.shaparak.ir
   - +.shapelcounset.xyz
-  - +.watchjavonline.com
+  - +.waterfox.net
   - +.sharefile.com
   - +.sharethis.com
   - +.sharif.edu
@@ -22768,11 +22782,11 @@ payload:
   - +.shesfreaky.com
   - +.sheshaft.com
   - +.shibashuwu.net
-  - +.watchingthehawks.com
+  - +.waterdamagesandiego.org
+  - +.water-and-power.com
   - +.shikorina.net
-  - +.watchindianporn.net
+  - +.watchteencam.com
   - +.shinhangmc.com
-  - +.watchespn.com
   - +.shireyishunjian.com
   - +.shiroutoav.net
   - +.shishijump001.com
@@ -22781,11 +22795,11 @@ payload:
   - +.shithd.com
   - +.shitjav.com
   - +.shittytube.com
-  - +.watchersweb.com
+  - +.watchmygirlfriend.tv
   - +.shockingmovies.com
   - +.shoers.com
   - +.shoestop2.com
-  - +.watchdisneyfe.com
+  - +.watchmygf.to
   - +.shop-headphones.net
   - +.shop-pro.jp
   - +.shop-rt.com
@@ -22802,11 +22816,12 @@ payload:
   - +.shopdrebeats.com
   - +.shopdurex.com
   - +.shopee.cl
-  - +.watch-porn.net
-  - +.watch-my-gf.com
+  - +.watchmygf.me
+  - +.watchmyexgf.net
   - +.shopee.com
-  - +.watch-ebay.org
-  - +.waskucity.com
+  - +.watchjavonline.com
+  - +.watchingthehawks.com
+  - +.watchindianporn.net
   - +.shopee.es
   - +.shopee.fr
   - +.shopee.id
@@ -22900,19 +22915,19 @@ payload:
   - +.simplyipod.com
   - +.simsquad.com
   - +.simulationsquad.com
-  - +.washingtondcbmw.com
+  - +.watchespn.com
   - +.sinabank.ir
   - +.sinara.ru
-  - +.washa.tv
+  - +.watchersweb.com
   - +.sinchew.my
   - +.sing-box.app
   - +.sing4.lat
   - +.sing68.com
+  - +.watchdisneyfe.com
   - +.singlelogin.app
   - +.singlelogin.me
   - +.singlelogin.re
   - +.singlelogin.site
-  - +.wasdj.com
   - +.singtaobooks.com
   - +.singtaola.com
   - +.singtaonewscorp.com
@@ -22929,7 +22944,7 @@ payload:
   - +.siska.video
   - +.sislovesme.com
   - +.sissy-university.com
-  - +.warthunder.com
+  - +.watch-porn.net
   - +.sissy.game
   - +.sissyporncrossdresser.com
   - +.site.com
@@ -22969,6 +22984,7 @@ payload:
   - +.skyoceanrescue.it
   - +.10bet.com
   - +.skyperfectjsat.space
+  - +.watch-my-gf.com
   - +.skyporn.online
   - +.skysports.com
   - +.skysports.fr
@@ -23016,21 +23032,19 @@ payload:
   - +.smartcommunitiescoalition.org
   - +.smartedge.info
   - +.smartexpos.com
-  - +.smartfea.com
+  - +.jiuse822.com
+  - +.watch-ebay.org
   - +.smartnastran.com
   - +.smartone.com
   - +.smartoneholdings.com
   - +.smartonerobotics.com
-  - +.warnerbrosgames.com
   - +.smartonesolutions.hk
-  - +.wariowarediy.com
+  - +.waskucity.com
   - +.smartthings.com
   - +.smashed.xxx
-  - +.wariolandshakeit.com
   - +.smbcr-bank.ru
-  - +.wargaming.net
-  - +.wargaming.com
-  - +.warehouse.domains
+  - +.washingtondcbmw.com
+  - +.washa.tv
   - +.smmsp.xyz
   - +.smokinmovies.com
   - +.smotreshka.tv
@@ -23056,20 +23070,20 @@ payload:
   - +.sneakerpage.net
   - +.sneakerskick.com
   - +.snjulebu.com
-  - +.warddogs.com
+  - +.wasdj.com
   - +.snk-corp.info
   - +.snkplaymore.info
   - +.snow.me
   - +.snowcorp.com
   - +.snowmiku.com
-  - +.waranlov.com
+  - +.warthunder.com
   - +.socailcam.com
   - +.socalbmw.com
-  - +.waplog.com
   - +.soccerfinancier.ca
   - +.soccermatchpass.com
   - +.social.com
-  - +.wanuxi.com
+  - +.warnerbrosgames.com
+  - +.wariowarediy.com
   - +.socialcam.com
   - +.socialcammail.com
   - +.socialkam.com
@@ -23093,14 +23107,14 @@ payload:
   - +.softbankventuresasia.com
   - +.softbankworld.com
   - +.softether-download.com
-  - +.wantmywife.com
+  - +.wariolandshakeit.com
   - +.softmodels.net
-  - +.wantblogger.com
+  - +.wargaming.net
   - +.sojiy1124.top
   - +.sokmil.com
   - +.sokuresu.ai
   - +.solarcity.com
-  - +.want520.com
+  - +.wargaming.com
   - +.solid.ru
   - +.solostudioksale.com
   - +.solutionstation.com
@@ -23109,11 +23123,12 @@ payload:
   - +.sony-africa.com
   - +.sony-asia.com
   - +.sony-europe.com
-  - +.want-media.com
+  - +.warehouse.domains
   - +.sony-latin.com
   - +.sony-mea.com
   - +.sony-olympus-medical.com
   - +.sony-promotion.eu
+  - +.warddogs.com
   - +.sony-semicon.com
   - +.sony.at
   - +.sony.ba
@@ -23123,13 +23138,20 @@ payload:
   - +.sony.ca
   - +.sony.ch
   - +.sony.cl
+  - +.waranlov.com
+  - +.waplog.com
+  - +.wanuxi.com
+  - +.wantmywife.com
+  - +.wantblogger.com
+  - +.want520.com
+  - +.sony.com
+  - +.want-media.com
   - +.wanokokorosoh.com
   - +.wankzvr.com
   - +.wankz.com
   - +.wankoz.com
   - +.wankizer.com
   - +.wankgames.com
-  - +.sony.com
   - +.wanduww.buzz
   - +.wandan-dh.buzz
   - +.wancctv.asia
@@ -23138,9 +23160,6 @@ payload:
   - +.walmart.pharmacy
   - +.walmart.com
   - +.walmart-content.com
-  - +.101boyvideos.com
-  - +.wallhaven.cc
-  - +.wallberis.ru
   - +.sony.cz
   - +.sony.de
   - +.sony.dk
@@ -23171,7 +23190,7 @@ payload:
   - +.sony.sk
   - +.sony.ua
   - +.sonybank.jp
-  - +.walderis.ru
+  - +.101boyvideos.com
   - +.sonybsc.com
   - +.sonybuilding.jp
   - +.sonyclassics.com
@@ -23181,7 +23200,6 @@ payload:
   - +.sonyglobalsolutions.jp
   - +.sonykigyo.jp
   - +.sonylatvija.com
-  - +.waldberis.ru
   - +.sonypcl.jp
   - +.sonypictures.com
   - +.sonypicturesanimation.com
@@ -23189,9 +23207,6 @@ payload:
   - +.sonypicturesstudios.com
   - +.sonypicturestelevision.com
   - +.sonypicturestelevisiongames.com
-  - +.waldberies.ru
-  - +.wal.co
-  - +.wal-mart.com
   - +.soolakhi.com
   - +.soooyinfor.lol
   - +.soporn.com
@@ -23209,17 +23224,16 @@ payload:
   - +.sourcingforebay.net
   - +.sourcingforebay.tv
   - +.southfloridamini.com
-  - +.waisongcha.com
+  - +.wallhaven.cc
   - +.sovcombank.ru
   - +.sovec.net
-  - +.waildberies.ru
   - +.soyinyj.top
   - +.soyjak.party
   - +.soyjak.st
   - +.sp.cool
   - +.spaceexplored.com
   - +.spacemail.com
-  - +.waccas.com
+  - +.wallberis.ru
   - +.spaceship.com
   - +.spaindisney.com
   - +.spankandbang.com
@@ -23245,7 +23259,7 @@ payload:
   - +.speedhunters.com
   - +.speedracegear.com
   - +.speedrun.com
-  - +.waa.tw
+  - +.walderis.ru
   - +.speedxtra.com
   - +.spektral.cc
   - +.spermyporn.com
@@ -23262,13 +23276,14 @@ payload:
   - +.spizoo.com
   - +.splatoon2tournament.com
   - +.splunk.com
-  - +.wa.me
+  - +.waldberis.ru
   - +.spore.com
   - +.sportmail.ru
-  - +.w6un.com
+  - +.waldberies.ru
   - +.sportsfacebook.com
   - +.sportstream.com
-  - +.w3schools.com
+  - +.wal.co
+  - +.wal-mart.com
   - +.spoti.fi
   - +.spotify-everywhere.com
   - +.spotify.design
@@ -23296,7 +23311,7 @@ payload:
   - +.squarecapital.com
   - +.squarecdn.com
   - +.squarecloudservices.com
-  - +.w3.org
+  - +.waisongcha.com
   - +.squareup.com
   - +.squidplatform.com
   - +.squirrelgroup.net
@@ -23306,7 +23321,6 @@ payload:
   - +.ss-inf.net
   - +.ss2.us
   - +.ss7.app
-  - +.w0512.com
   - +.ssdevrd.com
   - +.sshs.club
   - +.sshs.pw
@@ -23314,7 +23328,7 @@ payload:
   - +.ssl-certificate.ch
   - +.ssl-images-amazon.com
   - +.ssl.com
-  - +.w.wiki
+  - +.waildberies.ru
   - +.sslpaypal.org
   - +.ssplive.pw
   - +.ssrpass.pw
@@ -23339,23 +23353,22 @@ payload:
   - +.starbucks.bg
   - +.starbucks.ca
   - +.starbucks.ch
+  - +.waccas.com
+  - +.waa.tw
+  - +.wa.me
+  - +.w6un.com
+  - +.w3schools.com
+  - +.starbucks.com
+  - +.w3.org
+  - +.w0512.com
+  - +.w.wiki
   - +.w-mt.co
   - +.vzw.com
   - +.vv1865.com
   - +.vuvuzela.io
-  - +.starbucks.com
   - +.vultr.com
   - +.vulgarx.com
   - +.vtvan.com
-  - +.vtsociety.org
-  - +.vtrahe.page
-  - +.vtbglobalperspectives.com
-  - +.vtb.ru
-  - +.vtb-direct.com
-  - +.vsphere.net
-  - +.vsphere.com
-  - +.vsezoo.com
-  - +.vsemrabota.ru
   - +.starbucks.de
   - +.starbucks.dk
   - +.starbucks.es
@@ -23421,17 +23434,21 @@ payload:
   - +.static-storage.net
   - +.static-verizon.com
   - +.static.fun
+  - +.vtsociety.org
   - +.staticmy.com
   - +.statsmakemecry.com
   - +.statuspage.io
   - +.staxus.com
   - +.stc-server.com
+  - +.vtrahe.page
   - +.stealthex.io
-  - +.vscale.ru
-  - +.vscale.io
-  - +.vscale.blog
-  - +.vrv.co
-  - +.vrsumo.com
+  - +.vtbglobalperspectives.com
+  - +.vtb.ru
+  - +.vtb-direct.com
+  - +.vsphere.net
+  - +.vsphere.com
+  - +.vsezoo.com
+  - +.vsemrabota.ru
   - +.steamdb.info
   - +.steaminventoryhelper.com
   - +.steamofporn.com
@@ -23476,15 +23493,11 @@ payload:
   - +.streetmeatasia.com
   - +.strepsils.at
   - +.strepsils.ch
-  - +.vrsexgames.biz
-  - +.vrpornranked.com
-  - +.vrpornmania.com
-  - +.vrpornjack.com
-  - +.vrporncat.com
-  - +.vrnastran.com
-  - +.vrfun18.com
-  - +.vredprofessional.com
-  - +.vredessentials.com
+  - +.vscale.ru
+  - +.vscale.io
+  - +.vscale.blog
+  - +.vrv.co
+  - +.vrsumo.com
   - +.strepsils.es
   - +.strepsils.fi
   - +.strepsils.fr
@@ -23528,7 +23541,7 @@ payload:
   - +.submittal-log.com
   - +.submityourflicks.com
   - +.subscene.com
-  - +.vred-essentials.com
+  - +.vrsexgames.biz
   - +.sucksex.com
   - +.sukafeti.jp
   - +.sukebelinks.com
@@ -23537,19 +23550,21 @@ payload:
   - +.summitceo.ru
   - +.sumomo-ch.com
   - +.sun.com
-  - +.vrchat.net
+  - +.vrpornranked.com
   - +.sundanceignite2016.com
   - +.sundayready.com
   - +.sunglassessale2014.com
+  - +.vrpornmania.com
   - +.supanimegames.com
   - +.superadultgames.com
   - +.supercell.com
-  - +.vrchat.cloud
+  - +.vrpornjack.com
   - +.supercell.net
   - +.supercellcreators.com
   - +.supercellgames.com
   - +.supercellid.com
   - +.supercellstore.com
+  - +.vrporncat.com
   - +.superearsenjoy.com
   - +.supergratisporno.com
   - +.superhqporn.com
@@ -23570,11 +23585,12 @@ payload:
   - +.supremacy.com
   - +.supremacy.net
   - +.sureporn.com
+  - +.vrnastran.com
   - +.surflite.co
   - +.surflite.net
   - +.suruga-ya.com
   - +.suruga-ya.jp
-  - +.vrcams.io
+  - +.vrfun18.com
   - +.sushi.ski
   - +.susiewildin.com
   - +.sustainablebuildingstudio.com
@@ -23599,7 +23615,7 @@ payload:
   - +.swag.live
   - +.swapsmut.com
   - +.sweetadult-tube.com
-  - +.vrbgay.com
+  - +.vredprofessional.com
   - +.sweetsext.com
   - +.sweetsinner.com
   - +.swegold.com
@@ -23614,6 +23630,7 @@ payload:
   - +.swingerpornfun.com
   - +.swingerporntube.com
   - +.swingers-homemade-videos.com
+  - +.vredessentials.com
   - +.swingersexorgy.com
   - +.swingexpert.nl
   - +.swiss-machining.com
@@ -23641,7 +23658,7 @@ payload:
   - +.swoo.sh
   - +.swoosh.com
   - +.swoosh.tv
-  - +.vpro.net
+  - +.vred-essentials.com
   - +.swtor.com
   - +.swtor.net
   - +.sxarab.top
@@ -23698,8 +23715,7 @@ payload:
   - +.tabustudios.co
   - +.tacamateurs.com
   - +.tachusz.xyz
-  - +.vpro.com
-  - +.vpornvideos.com
+  - +.vrchat.net
   - +.tagbank.ru
   - +.taiav.com
   - +.tail-f.com
@@ -23708,6 +23724,7 @@ payload:
   - +.tailscale.io
   - +.taiolongdh.sbs
   - +.taiwanadultexpo.com
+  - +.vrchat.cloud
   - +.taiwansex.tw
   - +.take2games.com
   - +.takegoto.com
@@ -23722,6 +23739,7 @@ payload:
   - +.tamtam.chat
   - +.tandberg-china.com
   - +.tandberg.com
+  - +.vrcams.io
   - +.tandfonline.com
   - +.tanflix.com
   - +.tantaly.com
@@ -23737,6 +23755,7 @@ payload:
   - +.target.com
   - +.targetimg1.com
   - +.tarkov.com
+  - +.vrbgay.com
   - +.tasexy.com
   - +.tasexy.top
   - +.tasteofpremium.jp
@@ -23756,6 +23775,7 @@ payload:
   - +.tbank-online.com
   - +.tbank.ru
   - +.tbib.org
+  - +.vps.hosting
   - +.tconf.ru
   - +.tcsbank.ru
   - +.tdev.by
@@ -23778,7 +23798,7 @@ payload:
   - +.technogym.bg
   - +.technogym.ch
   - +.technogym.com
-  - +.vpnrouter.homes
+  - +.vpro.net
   - +.technogym.ru
   - +.technogym.su
   - +.technologyandsociety.org
@@ -23786,6 +23806,7 @@ payload:
   - +.techstreet.com
   - +.techtimes.com
   - +.techtudo.com
+  - +.vpro.com
   - +.ted.com
   - +.tedcdn.com
   - +.teen-girl.net
@@ -23812,6 +23833,7 @@ payload:
   - +.teenwebcamtube.com
   - +.teeztube.com
   - +.tegrazone.co
+  - +.vpornvideos.com
   - +.tegrazone.com
   - +.tegrazone.jp
   - +.tegrazone.kr
@@ -23854,6 +23876,7 @@ payload:
   - +.test-ipv6.cl
   - +.test-ipv6.com
   - +.test-ipv6.cz
+  - +.vpnrouter.homes
   - +.test-ipv6.hu
   - +.test-ipv6.is
   - +.test-ipv6.se
@@ -23886,7 +23909,6 @@ payload:
   - +.the-monster-beats.com
   - +.the123d.com
   - +.theaffairs.com
-  - +.voyeurweb.com
   - +.theav.cc
   - +.theav.xyz
   - +.thebanker.com
@@ -23901,10 +23923,7 @@ payload:
   - +.thecamdude.com
   - +.thecandidbay.com
   - +.thecandidforum-voyeur.ru
-  - +.voyeurstyle.com
-  - +.voyeurporntapes.com
   - +.theclasshroom.com
-  - +.voyeurpapa.com
   - +.theclubprive.com
   - +.thecompaqstore.com
   - +.thecuckold.com
@@ -23943,8 +23962,6 @@ payload:
   - +.themarvelexperiencetour.com
   - +.themathsfactor.com
   - +.themeforest.net
-  - +.voyeurmonkey.com
-  - +.voyeurhouse.com
   - +.themilfmovies.com
   - +.themoviedb.org
   - +.thenationalpulse.com
@@ -23973,19 +23990,15 @@ payload:
   - +.theporntoplist.com
   - +.theporny.com
   - +.thesafeporn.com
-  - +.voyeurhit.com
-  - +.voyeureye.com
   - +.theshoppingexpresslane.net
   - +.thesims.com
   - +.thesims3.com
   - +.thesims4.com
   - +.thesimssocial.com
-  - +.voxops.net
   - +.thestationbymaker.com
-  - +.voxmedia.com
   - +.thesun.ie
-  - +.voxfieldguide.com
   - +.thethothub.com
+  - +.voyeurweb.com
   - +.thetimes.ie
   - +.thetrackernetwork.com
   - +.thetranny.com
@@ -24003,25 +24016,26 @@ payload:
   - +.thinkboxsoftware.com
   - +.thinkdifferent.us
   - +.thinkofliving.com
-  - +.voxcreative.com
+  - +.voyeurstyle.com
   - +.thirdns.de
   - +.thisisgame.com
+  - +.voyeurporntapes.com
   - +.thisispolaris.com
   - +.thismon.ee
   - +.thisvid.com
   - +.thisvidscat.net
   - +.thomsonreuters.ca
-  - +.vox-cdn.com
-  - +.votolia.com
+  - +.voyeurpapa.com
+  - +.voyeurmonkey.com
+  - +.voyeurhouse.com
+  - +.voyeurhit.com
   - +.thomsonreuters.com
-  - +.vortexmachining.com
-  - +.vomitkings.com
-  - +.volvotrucks.uy
-  - +.volvotrucks.tn
-  - +.volvotrucks.tm
-  - +.volvotrucks.sk
-  - +.volvotrucks.si
-  - +.volvotrucks.sg
+  - +.voyeureye.com
+  - +.voxops.net
+  - +.voxmedia.com
+  - +.voxfieldguide.com
+  - +.voxcreative.com
+  - +.vox-cdn.com
   - +.thomsonreuters.es
   - +.thomsonreuters.in
   - +.thomsonreuters.ru
@@ -24047,9 +24061,7 @@ payload:
   - +.tiava1.com
   - +.tiaz.site
   - +.tiberiumalliances.com
-  - +.volvotrucks.se
-  - +.volvotrucks.ru
-  - +.volvotrucks.rs
+  - +.votolia.com
   - +.tiburon.com
   - +.tickdata.com
   - +.tictoc.video
@@ -24073,10 +24085,10 @@ payload:
   - +.tiktokw.us
   - +.time-messenger.ru
   - +.time.gov
-  - +.volvotrucks.ro
+  - +.vortexmachining.com
   - +.timefxapp.com
   - +.timesmembership.com
-  - +.volvotrucks.qa
+  - +.vomitkings.com
   - +.timestalks.com
   - +.timeweb.cloud
   - +.timeweb.com
@@ -24115,7 +24127,7 @@ payload:
   - +.tkbqf2.life
   - +.tksex.com
   - +.tktube.com
-  - +.volvotrucks.ps
+  - +.volvotrucks.uy
   - +.tmdb.org
   - +.tmei-taoyuan.com
   - +.tmiaf.ru
@@ -24123,15 +24135,15 @@ payload:
   - +.tnatryouts.com
   - +.tnntoday.com
   - +.tnt-ea.com
-  - +.volvotrucks.pl
+  - +.volvotrucks.tn
   - +.tochka-tech.com
   - +.tochka.com
-  - +.volvotrucks.pk
-  - +.volvotrucks.ph
-  - +.volvotrucks.pe
+  - +.volvotrucks.tm
+  - +.volvotrucks.sk
+  - +.volvotrucks.si
   - +.tok.media
   - +.tokyo-hot.com
-  - +.volvotrucks.no
+  - +.volvotrucks.sg
   - +.tokyo-tosho.net
   - +.tokyomotion.com
   - +.tokyomotion.net
@@ -24140,7 +24152,7 @@ payload:
   - +.tokyotosho.info
   - +.tokyotosho.se
   - +.tomatespodres.com
-  - +.volvotrucks.nl
+  - +.volvotrucks.se
   - +.tomonews.net
   - +.tomsguide.com
   - +.tonec.com
@@ -24195,12 +24207,12 @@ payload:
   - +.toritonssl.com
   - +.toroporno.com
   - +.torrindex.net
-  - +.volvotrucks.net
+  - +.volvotrucks.ru
   - +.tospo-keiba.jp
   - +.tospotify.com
   - +.totalmateria.com
   - +.totoleak.com
-  - +.volvotrucks.my
+  - +.volvotrucks.rs
   - +.touchid.tv
   - +.touchid.wang
   - +.touchsmartpc.com
@@ -24211,16 +24223,16 @@ payload:
   - +.toutapp.com
   - +.towerauction.com
   - +.townofsins.com
-  - +.volvotrucks.mn
+  - +.volvotrucks.ro
   - +.townwifi.jp
   - +.toxin-up.sbs
   - +.toxinzoo.sbs
   - +.toy-cadcam.com
   - +.toy-people.com
   - +.toycadcam.com
-  - +.volvotrucks.mk
+  - +.volvotrucks.qa
   - +.tpension.ru
-  - +.volvotrucks.md
+  - +.volvotrucks.ps
   - +.tpornstars.com
   - +.tr.com
   - +.tracker.gg
@@ -24245,16 +24257,16 @@ payload:
   - +.travelex.be
   - +.travelex.bh
   - +.travelex.ca
-  - +.volvotrucks.ma
-  - +.volvotrucks.lv
-  - +.volvotrucks.lt
-  - +.volvotrucks.kz
+  - +.volvotrucks.pl
+  - +.volvotrucks.pk
+  - +.volvotrucks.ph
+  - +.volvotrucks.pe
   - +.travelex.com
-  - +.volvotrucks.kr
-  - +.volvotrucks.kg
-  - +.volvotrucks.jp
-  - +.volvotrucks.it
-  - +.volvotrucks.in
+  - +.volvotrucks.no
+  - +.volvotrucks.nl
+  - +.volvotrucks.net
+  - +.volvotrucks.my
+  - +.volvotrucks.mn
   - +.travelex.de
   - +.travelex.fr
   - +.travelex.it
@@ -24264,7 +24276,7 @@ payload:
   - +.travelexmoneycard.com
   - +.travelgirls.com
   - +.trbcdn.net
-  - +.volvotrucks.id
+  - +.volvotrucks.mk
   - +.trello.com
   - +.trellocdn.com
   - +.trendmicro.com
@@ -24282,7 +24294,7 @@ payload:
   - +.troisrivieresmini.com
   - +.tropictube.com
   - +.trpger.us
-  - +.volvotrucks.hu
+  - +.volvotrucks.md
   - +.trueamateurmodels.com
   - +.trueamateurs.com
   - +.trueanal.com
@@ -24329,7 +24341,7 @@ payload:
   - +.tryst.link
   - +.ts.la
   - +.ts.net
-  - +.volvotrucks.hr
+  - +.volvotrucks.ma
   - +.tsescortsdirectory.com
   - +.tsi.ai
   - +.tsmodelstube.com
@@ -24338,16 +24350,16 @@ payload:
   - +.tsquare.tv
   - +.tssp.best
   - +.tsthai.com
-  - +.volvotrucks.hk
+  - +.volvotrucks.lv
   - +.tsumino.com
   - +.tsundora.com
-  - +.volvotrucks.gr
+  - +.volvotrucks.lt
   - +.tsyum.com
   - +.ttcdn-us.com
   - +.tteshop.com
   - +.ttlivecdn.com
   - +.ttoverseaus.net
-  - +.volvotrucks.ge
+  - +.volvotrucks.kz
   - +.ttwstatic.com
   - +.tube-pornomovs.com
   - +.tube-sex-videos.com
@@ -24396,18 +24408,18 @@ payload:
   - +.tubsexer.com
   - +.tubxporn.com
   - +.tubxporn.xxx
-  - +.volvotrucks.fr
+  - +.volvotrucks.kr
   - +.tug.org
   - +.tukif.com
   - +.tuncommercialbank.com
-  - +.volvotrucks.fi
+  - +.volvotrucks.kg
   - +.turbo.com
   - +.turbogvideos.com
   - +.turbopages.org
   - +.turborepo.org
   - +.turbotax.com
   - +.turkeyblocks.org
-  - +.volvotrucks.es
+  - +.volvotrucks.jp
   - +.tusco.ru
   - +.tushy.com
   - +.tuta.com
@@ -24415,27 +24427,27 @@ payload:
   - +.tutamail.com
   - +.tutanota.com
   - +.tutanota.de
-  - +.volvotrucks.ee
+  - +.volvotrucks.it
   - +.tvappstore.net
   - +.tvb.com
-  - +.volvotrucks.dk
-  - +.volvotrucks.de
-  - +.volvotrucks.cz
-  - +.volvotrucks.com
+  - +.volvotrucks.in
+  - +.volvotrucks.id
+  - +.volvotrucks.hu
+  - +.volvotrucks.hr
   - +.tvbusa.com
   - +.tvbweekly.com
-  - +.volvotrucks.cl
+  - +.volvotrucks.hk
   - +.tver.jp
   - +.tvigle.ru
-  - +.volvotrucks.ch
-  - +.volvotrucks.by
+  - +.volvotrucks.gr
+  - +.volvotrucks.ge
   - +.tvnaviweb.jp
   - +.tvoyodbo.online
   - +.tvpromise.com
-  - +.volvotrucks.bg
+  - +.volvotrucks.fr
   - +.tw985.com
   - +.twavking.com
-  - +.volvotrucks.be
+  - +.volvotrucks.fi
   - +.twcomix.com
   - +.twcstorage.ru
   - +.tweakadmin.com
@@ -24455,7 +24467,7 @@ payload:
   - +.twinmotion.com
   - +.twinprime.com
   - +.twistedlinks.net
-  - +.volvotrucks.ba
+  - +.volvotrucks.es
   - +.twistys.com
   - +.twitchcon.com
   - +.twitchsvc.net
@@ -24498,7 +24510,7 @@ payload:
   - +.u9a9.cc
   - +.u9a9.com
   - +.uaa.com
-  - +.volvotrucks.az
+  - +.volvotrucks.ee
   - +.uber-assets.com
   - +.uber.com
   - +.ubereats.com
@@ -24513,11 +24525,11 @@ payload:
   - +.ucoz.ae
   - +.ucoz.club
   - +.ucoz.co
-  - +.volvotrucks.at
-  - +.volvotrucks.am
+  - +.volvotrucks.dk
+  - +.volvotrucks.de
   - +.ucoz.com
-  - +.volvotrucks.al
-  - +.volvotrucks.ae
+  - +.volvotrucks.cz
+  - +.volvotrucks.com
   - +.ucoz.de
   - +.ucoz.es
   - +.ucoz.fr
@@ -24539,13 +24551,13 @@ payload:
   - +.udemy.com
   - +.udemycdn.com
   - +.udfs.com
-  - +.volvotruckrental.be
+  - +.volvotrucks.cl
   - +.udndata.com
   - +.udnfunlife.com
   - +.udtrucksmeena.com
   - +.ueberamazon.de
   - +.uflash.tv
-  - +.volvotruckcenter.se
+  - +.volvotrucks.ch
   - +.uguide.ru
   - +.uguide.su
   - +.uguisupapa.net
@@ -24568,29 +24580,29 @@ payload:
   - +.ukoz.ru
   - +.ukraina.ru
   - +.ukwhoswho.com
-  - +.volvotruckcenter.no
+  - +.volvotrucks.by
   - +.ulol.com
   - +.ultimaforever.com
   - +.ultimaonline.com
   - +.ultradonkey.com
   - +.ultrasrv.de
   - +.uma.media
-  - +.volvotruckcenter.nl
-  - +.volvotruckcenter.kz
+  - +.volvotrucks.bg
+  - +.volvotrucks.be
   - +.umass.edu
   - +.umbrella.com
   - +.umschool.net
   - +.umsoplaneta.com
-  - +.volvotruckcenter.kr
+  - +.volvotrucks.ba
   - +.un.org
-  - +.volvotruckcenter.it
+  - +.volvotrucks.az
   - +.unbrandedproducts.com
   - +.uncams.com
   - +.uncensoredhentai.xxx
   - +.uncensoredsexparties.com
   - +.underhentai.net
   - +.unext-info.jp
-  - +.volvotruckcenter.fi
+  - +.volvotrucks.at
   - +.unext.jp
   - +.unidraw.io
   - +.uninhibitedcomix.com
@@ -24641,7 +24653,7 @@ payload:
   - +.userdrive.org
   - +.usersdrive.com
   - +.usertrust.com
-  - +.volvotruckcenter.es
+  - +.volvotrucks.am
   - +.usocial.pro
   - +.utdstc.com
   - +.uug22.com
@@ -24672,11 +24684,12 @@ payload:
   - +.uverse.com
   - +.uweb.ru
   - +.uxthemes.com
-  - +.volvotruckcenter.dk
+  - +.volvotrucks.al
   - +.v-av.com
   - +.v-has.com
   - +.v.gd
-  - +.volvotruckcenter.be
+  - +.v.ps
+  - +.volvotrucks.ae
   - +.v2ph.com
   - +.v2ray.cool
   - +.v7hds.com
@@ -24686,10 +24699,10 @@ payload:
   - +.vaginal-ultrasound.com
   - +.vaginalultrasound.info
   - +.vaginapics.pro
-  - +.volvospares.com
-  - +.volvosaatio.fi
+  - +.volvotruckrental.be
+  - +.volvotruckcenter.se
   - +.valorinveste.com
-  - +.volvopenta.us
+  - +.volvotruckcenter.no
   - +.valoryirene.com
   - +.value-domain.com
   - +.value-server.com
@@ -24702,21 +24715,21 @@ payload:
   - +.vanish.be
   - +.vanish.ch
   - +.vanish.cl
+  - +.volvotruckcenter.nl
+  - +.volvotruckcenter.kz
+  - +.volvotruckcenter.kr
+  - +.volvotruckcenter.it
+  - +.volvotruckcenter.fi
+  - +.volvotruckcenter.es
+  - +.volvotruckcenter.dk
+  - +.volvotruckcenter.be
+  - +.volvospares.com
+  - +.volvosaatio.fi
+  - +.volvopenta.us
   - +.volvopenta.se
   - +.volvopenta.nl
   - +.volvopenta.it
   - +.volvopenta.fr
-  - +.volvopenta.es
-  - +.volvopenta.de
-  - +.volvopenta.com
-  - +.volvomerchandise.com
-  - +.volvogrouptruckcenter.nl
-  - +.volvogroup.se
-  - +.volvogroup.ru
-  - +.volvogroup.pl
-  - +.volvogroup.pe
-  - +.volvogroup.nl
-  - +.volvogroup.mx
   - +.vanish.de
   - +.vanish.dk
   - +.vanish.es
@@ -24735,11 +24748,11 @@ payload:
   - +.vanish.si
   - +.vanish.sk
   - +.vanisharabia.com
-  - +.volvogroup.kr
+  - +.volvopenta.es
   - +.vanishcentroamerica.com
   - +.vanishinfo.cz
   - +.vanishstains.com
-  - +.volvogroup.jp
+  - +.volvopenta.de
   - +.vanitaonline.com
   - +.vanitha.in
   - +.vanithaveedu.com
@@ -24763,25 +24776,25 @@ payload:
   - +.veet.ca
   - +.veet.ch
   - +.veet.cl
+  - +.volvopenta.com
+  - +.volvomerchandise.com
+  - +.volvogrouptruckcenter.nl
+  - +.volvogroup.se
+  - +.volvogroup.ru
+  - +.volvogroup.pl
+  - +.veet.com
+  - +.volvogroup.pe
+  - +.volvogroup.nl
+  - +.volvogroup.mx
+  - +.volvogroup.kr
+  - +.volvogroup.jp
   - +.volvogroup.fr
   - +.volvogroup.de
   - +.volvogroup.com
   - +.volvogroup.be
   - +.volvodefense.com
   - +.volvoce.com
-  - +.veet.com
   - +.volvobuses.us
-  - +.volvobuses.tn
-  - +.volvobuses.sg
-  - +.volvobuses.se
-  - +.volvobuses.ru
-  - +.volvobuses.pl
-  - +.volvobuses.pk
-  - +.volvobuses.ph
-  - +.volvobuses.om
-  - +.volvobuses.no
-  - +.volvobuses.my
-  - +.volvobuses.mx
   - +.veet.de
   - +.veet.dk
   - +.veet.es
@@ -24801,7 +24814,7 @@ payload:
   - +.veetbangladesh.com
   - +.veetcentroamerica.com
   - +.veetclub.it
-  - +.volvobuses.ma
+  - +.volvobuses.tn
   - +.velaserver.com
   - +.velastaging.com
   - +.velasync.com
@@ -24836,16 +24849,16 @@ payload:
   - +.verisign.asia
   - +.verisign.biz
   - +.verisign.ch
-  - +.volvobuses.kr
-  - +.volvobuses.jo
+  - +.volvobuses.sg
+  - +.volvobuses.se
   - +.verisign.com
-  - +.volvobuses.it
-  - +.volvobuses.in
-  - +.volvobuses.hu
-  - +.volvobuses.hk
-  - +.volvobuses.fr
-  - +.volvobuses.fi
-  - +.volvobuses.es
+  - +.volvobuses.ru
+  - +.volvobuses.pl
+  - +.volvobuses.pk
+  - +.volvobuses.ph
+  - +.volvobuses.om
+  - +.volvobuses.no
+  - +.volvobuses.my
   - +.verisign.de
   - +.verisign.dk
   - +.verisign.es
@@ -24886,12 +24899,12 @@ payload:
   - +.vfsco.ca
   - +.vfsco.ch
   - +.vfsco.cl
-  - +.volvobuses.dk
-  - +.volvobuses.de
+  - +.volvobuses.mx
+  - +.volvobuses.ma
   - +.vfsco.com
-  - +.volvobuses.com
-  - +.volvobuses.co
-  - +.volvobuses.ch
+  - +.volvobuses.kr
+  - +.volvobuses.jo
+  - +.volvobuses.it
   - +.vfsco.cz
   - +.vfsco.de
   - +.vfsco.dk
@@ -24934,8 +24947,8 @@ payload:
   - +.viber.me
   - +.video-jav.net
   - +.video-one.com
-  - +.volvobuses.ca
-  - +.volvobuses.be
+  - +.volvobuses.in
+  - +.volvobuses.hu
   - +.video01.org
   - +.videochampion.com
   - +.videodesexo.blog
@@ -24943,14 +24956,14 @@ payload:
   - +.videos4sale.com
   - +.videosamadoresreais.com
   - +.videosdemadurasx.com
-  - +.volvobuses.at
-  - +.volvobrandshop.com
-  - +.volvo.se
+  - +.volvobuses.hk
+  - +.volvobuses.fr
+  - +.volvobuses.fi
   - +.videosection.com
   - +.videoshorny.com
   - +.videoskaseros.com
   - +.videosmadeathome.com
-  - +.volvo.com
+  - +.volvobuses.es
   - +.videosporno.life
   - +.videostravestis.xxx
   - +.videoxxxporn.biz
@@ -25019,8 +25032,20 @@ payload:
   - +.visa.be
   - +.visa.ca
   - +.visa.cl
+  - +.volvobuses.dk
+  - +.volvobuses.de
+  - +.volvobuses.com
+  - +.volvobuses.co
+  - +.volvobuses.ch
+  - +.volvobuses.ca
+  - +.volvobuses.be
+  - +.volvobuses.at
+  - +.volvobrandshop.com
+  - +.volvo.se
+  - +.volvo.com
   - +.volvo.ca
   - +.volvo-truck.nl
+  - +.visa.com
   - +.101tubeporn.com
   - +.vol.moe
   - +.vokevr.com
@@ -25029,7 +25054,6 @@ payload:
   - +.vodafone.de
   - +.vodafone.com
   - +.vod360.net
-  - +.visa.com
   - +.voazimbabwe.com
   - +.voatour.com
   - +.voatiengviet.com
@@ -25056,17 +25080,6 @@ payload:
   - +.vnanchoi.ca
   - +.vmwxw.com
   - +.vmwservices.com
-  - +.vmwsalesrewards.com
-  - +.vmworld2013.com
-  - +.vmworld2010.com
-  - +.vmworld.com
-  - +.vmwlearningplatform.com
-  - +.vmwlabconnect.com
-  - +.vmwidm.com
-  - +.vmwidm-ads.com
-  - +.vmwhorizonair.com
-  - +.vmwgcomms.com
-  - +.vmwdemo.com
   - +.visa.cz
   - +.visa.de
   - +.visa.dk
@@ -25123,16 +25136,16 @@ payload:
   - +.visaitalia.com
   - +.visakorea.com
   - +.visaluxuryhotelcollection.com
-  - +.vmwarevmc.com
-  - +.vmwareviewpoint.com
+  - +.vmwsalesrewards.com
+  - +.vmworld2013.com
   - +.visaluxuryhotels.com
-  - +.vmwareusergroupstore.com
+  - +.vmworld2010.com
   - +.visamiddleeast.com
   - +.visanet.net
   - +.visapcsdirect.com
   - +.visaplus.com
   - +.visasavingsedge.ca
-  - +.vmwarestuff.com
+  - +.vmworld.com
   - +.visasignaturehotels.com
   - +.visasoutheasteurope.com
   - +.visb.org
@@ -25144,13 +25157,13 @@ payload:
   - +.visiontimes.net
   - +.visiontimesjp.com
   - +.visual-arts.jp
-  - +.vmwarelearningplatform.com
-  - +.vmwarelearning.com
+  - +.vmwlearningplatform.com
+  - +.vmwlabconnect.com
   - +.vitukali.com
   - +.vivaxnxx.com
   - +.vixen.com
   - +.vixvids.to
-  - +.vmwareidentity.com
+  - +.vmwidm.com
   - +.vk-apps.com
   - +.vk-apps.ru
   - +.vk-cdn.me
@@ -25220,7 +25233,18 @@ payload:
   - +.vmwareemeablog.com
   - +.vmwaregrid.com
   - +.vmwarehorizon.com
-  - +.micb.gov.mm
+  - +.vmwareidentity.com
+  - +.vmwarelearning.com
+  - +.vmwarelearningplatform.com
+  - +.vmwarestuff.com
+  - +.vmwareusergroupstore.com
+  - +.vmwareviewpoint.com
+  - +.vmwarevmc.com
+  - +.vmwdemo.com
+  - +.vmwgcomms.com
+  - +.vmwhorizonair.com
+  - +.vmwidm-ads.com
+  - +.michinokubank.co.jp
   - +.visualarts.gr.jp
   - +.visasignature.co.kr
   - +.visaluxuryhotels.com.ar
@@ -25264,7 +25288,10 @@ payload:
   - +.visa.com.cy
   - +.visa.com.co
   - +.visa.com.bz
+  - +.vodafone.co.uk
   - +.visa.com.bs
+  - +.vodafone.com.au
+  - +.vodafone.com.tr
   - +.visa.com.br
   - +.visa.com.bo
   - +.visa.com.az
@@ -25275,17 +25302,23 @@ payload:
   - +.visa.co.za
   - +.visa.co.ve
   - +.visa.co.uk
-  - +.vodafone.co.uk
   - +.visa.co.th
-  - +.vodafone.com.au
-  - +.vodafone.com.tr
   - +.visa.co.nz
   - +.visa.co.ni
   - +.visa.co.ke
   - +.visa.co.jp
   - +.visa.co.in
   - +.visa.co.il
+  - +.volvobuses.co.nz
+  - +.volvobuses.co.uk
+  - +.volvobuses.co.za
   - +.visa.co.id
+  - +.volvobuses.com.ar
+  - +.volvobuses.com.au
+  - +.volvobuses.com.br
+  - +.volvobuses.com.kw
+  - +.volvobuses.com.pt
+  - +.volvobuses.com.tw
   - +.visa.co.cr
   - +.visa.co.ao
   - +.videosporno.com.br
@@ -25295,16 +25328,7 @@ payload:
   - +.video.fc2.com
   - +.vfsco.com.tr
   - +.vfsco.com.br
-  - +.volvobuses.co.nz
-  - +.volvobuses.co.uk
-  - +.volvobuses.co.za
   - +.vfsco.com.au
-  - +.volvobuses.com.ar
-  - +.volvobuses.com.au
-  - +.volvobuses.com.br
-  - +.volvobuses.com.kw
-  - +.volvobuses.com.pt
-  - +.volvobuses.com.tw
   - +.vfsco.co.za
   - +.vfsco.co.uk
   - +.verisign.com.vn
@@ -25321,6 +25345,7 @@ payload:
   - +.veet.com.pk
   - +.veet.com.ph
   - +.veet.com.my
+  - +.volvogroup.com.br
   - +.veet.com.mx
   - +.veet.com.hk
   - +.veet.com.co
@@ -25332,9 +25357,9 @@ payload:
   - +.veet.co.uk
   - +.veet.co.nz
   - +.veet.co.kr
-  - +.volvogroup.com.br
   - +.veet.co.in
   - +.veet.co.id
+  - +.volvopenta.com.br
   - +.vanishstains.com.au
   - +.vanishbancaseulook.com.br
   - +.vanish.com.tr
@@ -25346,7 +25371,6 @@ payload:
   - +.vanish.com.co
   - +.vanish.com.br
   - +.vanish.com.ar
-  - +.volvopenta.com.br
   - +.vanish.co.za
   - +.vanish.co.uk
   - +.vanish.co.nz
@@ -25360,15 +25384,6 @@ payload:
   - +.umsoplaneta.com.br
   - +.umagazine.com.hk
   - +.ulifestyle.com.hk
-  - +.ucoz.com.ro
-  - +.ucoz.com.br
-  - +.ucoz.co.uk
-  - +.ucoz.co.il
-  - +.uab.com.mm
-  - +.twca.com.tw
-  - +.tvmost.com.hk
-  - +.tvmedia.net.au
-  - +.tver.co.jp
   - +.volvotrucks.co.ao
   - +.volvotrucks.co.bw
   - +.volvotrucks.co.il
@@ -25379,7 +25394,7 @@ payload:
   - +.volvotrucks.co.za
   - +.volvotrucks.co.zm
   - +.volvotrucks.co.zw
-  - +.tvbs.com.tw
+  - +.ucoz.com.ro
   - +.volvotrucks.com.ar
   - +.volvotrucks.com.au
   - +.volvotrucks.com.bn
@@ -25390,6 +25405,15 @@ payload:
   - +.volvotrucks.com.tr
   - +.volvotrucks.com.tw
   - +.volvotrucks.com.ua
+  - +.ucoz.com.br
+  - +.ucoz.co.uk
+  - +.ucoz.co.il
+  - +.uab.com.mm
+  - +.twca.com.tw
+  - +.tvmost.com.hk
+  - +.tvmedia.net.au
+  - +.tver.co.jp
+  - +.tvbs.com.tw
   - +.tvbeventpower.com.hk
   - +.tvbanywhere.com.sg
   - +.tvb.com.au
@@ -25491,6 +25515,7 @@ payload:
   - +.2gis.com.cy
   - +.4gamers.com.tw
   - +.77bank.co.jp
+  - +.vtb-grants.fut.ru
   - +.82bank.co.jp
   - +.9nation.com.au
   - +.static9.net.au
@@ -25500,7 +25525,6 @@ payload:
   - +.starbucks.com.pe
   - +.starbucks.com.my
   - +.starbucks.com.mx
-  - +.vtb-grants.fut.ru
   - +.starbucks.com.kz
   - +.starbucks.com.kh
   - +.starbucks.com.hk
@@ -25515,13 +25539,13 @@ payload:
   - +.starbucks.co.nz
   - +.starbucks.co.jp
   - +.starbucks.co.id
+  - +.wadax.ne.jp
   - +.ssb.msk.ru
   - +.squarefoot.com.hk
   - +.sportswomenoftheyear.co.uk
   - +.sportswomanoftheyear.co.uk
   - +.sponichi.co.jp
   - +.speedtest.com.hk
-  - +.wadax.ne.jp
   - +.spacely.com.au
   - +.sonytc.co.jp
   - +.sonystoragemedia.co.jp
@@ -25588,6 +25612,7 @@ payload:
   - +.shigagin.co.jp
   - +.sgr.com.br
   - +.sexysites.com.ph
+  - +.waveomoney.com.mm
   - +.sexfilm.al.ru
   - +.sevenbank.co.jp
   - +.settv.com.tw
@@ -25595,7 +25620,6 @@ payload:
   - +.sekai.colorfulpalette.org
   - +.secretbabes.co.uk
   - +.secom.co.jp
-  - +.waveomoney.com.mm
   - +.sci.hubg.org
   - +.sci-hub.mksa.top
   - +.sci-hub.it.nf
@@ -25638,24 +25662,25 @@ payload:
   - +.redtube.com.br
   - +.reddit.app.link
   - +.realtype.co.jp
-  - +.realestate.com.au
-  - +.realcommercial.com.au
-  - +.rakuya.com.tw
-  - +.rakuten.ne.jp
-  - +.rakuten.com.tw
-  - +.rakuten-bank.co.jp
   - +.webex.co.in
   - +.webex.co.it
   - +.webex.co.jp
   - +.webex.co.kr
   - +.webex.co.nz
   - +.webex.co.uk
+  - +.realestate.com.au
   - +.webex.com.au
   - +.webex.com.br
   - +.webex.com.hk
   - +.webex.com.mx
+  - +.realcommercial.com.au
+  - +.rakuya.com.tw
+  - +.rakuten.ne.jp
+  - +.rakuten.com.tw
+  - +.rakuten-bank.co.jp
   - +.radioglobo.com.br
   - +.r18.clickme.net
+  - +.webobjects.co.uk
   - +.quicktime.com.au
   - +.quickbooksgetconnected.co.za
   - +.quickbooks.com.br
@@ -25666,20 +25691,19 @@ payload:
   - +.quatrum.com.br
   - +.qualcomm.com.tw
   - +.qualcomm.com.br
-  - +.webobjects.co.uk
   - +.qualcomm.co.uk
   - +.qualcomm.co.kr
   - +.qualcomm.co.jp
   - +.qualcomm.co.in
   - +.qualcomm.co.id
   - +.qpx.googleflights.net
+  - +.weeklytimesnow.com.au
   - +.pubmatic.co.jp
   - +.property.com.au
   - +.product.co.jp
   - +.pornovenezolano.com.ve
   - +.pornotube.blog.br
   - +.pornohoo.com.mx
-  - +.weeklytimesnow.com.au
   - +.pornogratis.vlog.br
   - +.pornobrasil.blog.br
   - +.pornobom.com.br
@@ -25731,20 +25755,21 @@ payload:
   - +.openweather.co.uk
   - +.openbook.org.tw
   - +.ootbstudio.co.kr
+  - +.whereilive.com.au
   - +.onedrive.co.uk
   - +.okinawabank.co.jp
+  - +.whimn.com.au
   - +.oitabank.co.jp
   - +.oglobo.com.br
   - +.oghost.com.br
   - +.ogakikyoritsu.co.jp
   - +.odnoklassniki.co.ee
-  - +.whereilive.com.au
   - +.o2action.co.kr
   - +.nxtdig.com.tw
   - +.nxtdig.com.hk
+  - +.wholefoodsmarket.co.uk
   - +.nvidia.com.ve
   - +.nvidia.com.ua
-  - +.whimn.com.au
   - +.nvidia.com.tw
   - +.nvidia.com.tr
   - +.nvidia.com.pl
@@ -25753,7 +25778,6 @@ payload:
   - +.nvidia.com.br
   - +.nvidia.com.au
   - +.nvidia.co.uk
-  - +.wholefoodsmarket.co.uk
   - +.nvidia.co.kr
   - +.nvidia.co.jp
   - +.nvidia.co.in
@@ -25795,6 +25819,7 @@ payload:
   - +.adidas.com.co
   - +.ntnews.com.au
   - +.ntdtv.co.kr
+  - +.wikia.nocookie.net
   - +.ntdtv.co.il
   - +.now.com.hk
   - +.nochubank.or.jp
@@ -25804,7 +25829,6 @@ payload:
   - +.nintendo.com.hk
   - +.nintendo.co.za
   - +.nintendo.co.uk
-  - +.wikia.nocookie.net
   - +.nintendo.co.kr
   - +.nintendo.co.jp
   - +.ninemsn.com.au
@@ -25832,6 +25856,7 @@ payload:
   - +.nexoncdn.co.kr
   - +.nexon.co.jp
   - +.newsxtend.com.au
+  - +.wildberries.co.il
   - +.newsprinters.co.uk
   - +.newsprestigenetwork.com.au
   - +.newslicensing.co.uk
@@ -25841,7 +25866,6 @@ payload:
   - +.newscareers.co.uk
   - +.newsapi.com.au
   - +.newsadds.com.au
-  - +.wildberries.co.il
   - +.news.net.au
   - +.adidas.com.eg
   - +.news.com.au
@@ -25890,6 +25914,7 @@ payload:
   - +.momami18.livedoor.blog
   - +.mof.kemomi.me
   - +.mobimon.com.tw
+  - +.wirelessgroup.co.uk
   - +.mminsurance.gov.mm
   - +.mmftb.gov.mm
   - +.mmbbank.com.mm
@@ -25898,8 +25923,8 @@ payload:
   - +.mizuhobank.co.jp
   - +.miyazakibank.co.jp
   - +.mixi.co.jp
+  - +.wisekey.com.hk
   - +.misskey.yukineko.me
-  - +.wirelessgroup.co.uk
   - +.misskey.ranranhome.info
   - +.misskey.noellabo.jp
   - +.misskey.gamelore.fun
@@ -25908,7 +25933,6 @@ payload:
   - +.mirrormedia.com.tw
   - +.minisolife.co.za
   - +.miniso.com.tr
-  - +.wisekey.com.hk
   - +.miniso.com.py
   - +.miniso.com.pl
   - +.miniso.com.mx
@@ -25949,8 +25973,8 @@ payload:
   - +.mini.co.cr
   - +.mini-connected.co.uk
   - +.mie.co.jp
-  - +.michinokubank.co.jp
   - +.hewlett-packard.com.mx
+  - +.micb.gov.mm
   - +.mi9.com.au
   - +.mi.nakn.jp
   - +.mi.mashiro.site
@@ -25970,6 +25994,7 @@ payload:
   - +.mcdonalds.com.lb
   - +.mcdonalds.com.hk
   - +.mcdonalds.com.au
+  - +.worldcurrencycard.co.za
   - +.mcdonalds.co.uk
   - +.mcdonalds.co.nz
   - +.mcdonalds.co.kr
@@ -25980,7 +26005,6 @@ payload:
   - +.mcdelivery.com.ph
   - +.mcdelivery.com.my
   - +.mcdelivery.com.au
-  - +.worldcurrencycard.co.za
   - +.mcdelivery.co.kr
   - +.mcdelivery.co.in
   - +.mcdelivery.co.id
@@ -26039,19 +26063,19 @@ payload:
   - +.ltsports.com.tw
   - +.loveminiso.com.br
   - +.love-sextoys.co.uk
+  - +.www.destinationurl.com
+  - +.adidas.com.hk
+  - +.adidas.com.my
+  - +.www.pxcc.com
   - +.lolshop.co.kr
+  - +.adidas.com.pe
   - +.lojaiphone.com.br
   - +.logosfilm.co.kr
   - +.logicool.co.jp
   - +.lizol.co.in
   - +.livrariart.com.br
   - +.lionhearts.co.kr
-  - +.www.destinationurl.com
-  - +.adidas.com.hk
-  - +.adidas.com.my
-  - +.www.pxcc.com
   - +.linefriends.com.tw
-  - +.adidas.com.pe
   - +.lge.co.kr
   - +.leagueoflegends.co.kr
   - +.lawdata.com.tw
@@ -26170,6 +26194,7 @@ payload:
   - +.intel.com.au
   - +.intel.com.ar
   - +.intel.co.za
+  - +.xhpjc6-cdn-settings.appsflyersdk.com
   - +.intel.co.uk
   - +.intel.co.kr
   - +.intel.co.jp
@@ -26179,7 +26204,6 @@ payload:
   - +.intel.co.ae
   - +.infotimes.com.tw
   - +.infolinker.com.tw
-  - +.xhpjc6-cdn-settings.appsflyersdk.com
   - +.infoglobo.com.br
   - +.indies-av.co.jp
   - +.incesto.blog.br
