@@ -38,6 +38,8 @@ payload:
   - alkalicore-pa.clients6.google.com
   - alkalimakersuite-pa.clients6.google.com
   - webchannel-alkalimakersuite-pa.clients6.google.com
+  - geminiweb-pa.clients.google.com
+  - geminiweb-pa.clients6.google.com
   - cloudaicompanion.googleapis.com
   - cloudcode-pa.googleapis.com
   - daily-cloudcode-pa.googleapis.com
@@ -45,38 +47,39 @@ payload:
   - notebooklm.googleapis.com
   - antigravity-pa.googleapis.com
   - antigravity.googleapis.com
-  - +.notebooklm.google
-  - +.flow.google
+  - +.notebook.google
+  - +.deepmind.google
   - +.antigravity-unleash.goog
   - +.antigravity.google
   - +.opal.google
-  - +.notebook.google
+  - +.flow.google
   - +.generativeai.google
   - +.labs.google
-  - +.deepmind.com
-  - +.jules.google
   - +.ai.studio
+  - +.jules.google
+  - +.notebooklm.google
   - +.gemini.google
-  - +.deepmind.google
-  - +.gemini.gstatic.com
-  - +.flow.google.com
-  - +.notebooklm.google.com
-  - +.aisandbox-pa.googleapis.com
+  - +.deepmind.com
   - +.notebook.google.com
+  - +.labs.google.com
+  - +.gemini.gstatic.com
+  - +.gemini.google.com
+  - +.bard.google.com
+  - +.notebooklm.google.com
   - +.aistudio.google.com
   - +.jules.google.com
-  - +.labs.google.com
-  - +.gemini.google.com
   - +.makersuite.google.com
-  - +.bard.google.com
+  - +.stitch.withgoogle.com
   - +.robinfrontend-pa.googleapis.com
+  - +.flow.google.com
+  - +.aisandbox-pa.googleapis.com
   - +.aicode.googleapis.com
   - +.aida.googleapis.com
   - +.proactivebackend-pa.googleapis.com
   - +.opal.google.com
   - +.generativelanguage.googleapis.com
   - +.geller-pa.googleapis.com
-  - +.stitch.withgoogle.com
+  - +.labstailwind.pa.googleapis.com
   - servd-anthropic-website.b-cdn.net
   - +.anthropic.com
   - +.clau.de
@@ -93,22 +96,24 @@ payload:
   - copilot-proxy.githubusercontent.com
   - copilot-workspace.githubnext.com
   - copilotprodattachments.blob.core.windows.net
+  - +.oystermercury.top
+  - +.clawhub.ai
   - +.cohere.ai
   - +.cohere.com
   - +.copilot-stg.com
-  - +.githubcopilot.com
   - +.copilot.com
-  - +.lpsnmedia.net
   - +.deepwiki.com
   - +.deepwiki.org
   - +.clipdrop.co
   - +.jasper.ai
   - +.kimi.ai
   - +.moonshot.ai
+  - +.meta.ai
+  - +.metaaivm.com
+  - +.muse.ai
   - +.agentclientprotocol.com
   - +.anythingllm.com
   - +.chutes.ai
-  - +.clawhub.ai
   - +.crewai.com
   - +.devin.ai
   - +.diabrowser.com
@@ -116,13 +121,11 @@ payload:
   - +.dify.ai
   - +.dreamgen.com
   - +.duck.ai
-  - +.liveperson.net
   - +.h2o.ai
   - +.kiro.dev
   - +.langchain.com
   - +.lmstudio.ai
   - +.lovart.ai
-  - +.meta.ai
   - +.midjourney.com
   - +.minimax.io
   - +.mistral.ai
@@ -139,50 +142,52 @@ payload:
   - +.sider.ai
   - +.spicywriter.com
   - +.talkai.info
-  - +.jetbrains.ai
+  - +.tapnow.ai
   - +.tripo3d.ai
-  - +.grazie.ai
-  - +.groq.com
-  - +.themeforest.net
-  - +.envatousercontent.com
-  - +.envato.com
+  - +.poe.com
+  - +.poecdn.net
   - +.envato-static.com
+  - +.envato.com
+  - +.envatousercontent.com
+  - +.themeforest.net
+  - +.githubcopilot.com
   - +.elevenlabs.io
   - +.elevenlabs.com
+  - +.x.ai
+  - +.grokipedia.com
+  - +.grok.com
+  - +.windsurf.com
+  - +.windsurf.build
+  - +.codeiumdata.com
+  - +.codeium.com
   - +.cursorapi.com
   - +.cursor.sh
-  - +.tapnow.ai
   - +.cursor.com
   - +.cursor-cdn.com
   - +.cerebras.ai
-  - +.codeium.com
-  - +.codeiumdata.com
-  - +.windsurf.build
-  - +.windsurf.com
-  - +.grok.com
-  - +.grokipedia.com
-  - +.x.ai
-  - +.comfy.org
-  - +.comfyci.org
-  - +.comfyregistry.org
-  - +.oystermercury.top
   - +.hf.co
   - +.hf.space
   - +.huggingface.co
-  - +.poe.com
-  - +.poecdn.net
-  - +.youmind.ai
-  - +.youmind.com
+  - +.grazie.ai
+  - +.jetbrains.ai
   - +.youmind.site
+  - +.liveperson.net
+  - +.lpsnmedia.net
+  - +.comfy.org
+  - +.comfyci.org
+  - +.comfyregistry.org
+  - +.coderabbit.ai
+  - +.groq.com
   - +.manus.im
   - +.manuscdn.com
-  - +.coderabbit.ai
+  - +.youmind.ai
+  - +.youmind.com
+  - +.grok.x.com
   - +.copilot.cloud.microsoft
   - +.copilot.microsoft.com
-  - +.grok.x.com
-  - +.grazie.aws.intellij.net
-  - +.gateway.ai.cloudflare.com
   - +.coderabbit.gallery.vsassets.io
+  - +.gateway.ai.cloudflare.com
+  - +.grazie.aws.intellij.net
   - +.coze.com
   - +.marscode.com
   - +.trae.ai
