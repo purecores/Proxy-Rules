@@ -42,7 +42,7 @@ runs:
 
     - name: Restore from cache
       id: cache
-      uses: actions/cache@v5
+      uses: actions/cache@v6
       with:
         path: /tmp/setup-binary/${{ inputs.tool }}
         key: setup-binary-${{ inputs.tool }}-${{ steps.resolve.outputs.version }}-linux-amd64

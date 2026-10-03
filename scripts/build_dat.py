@@ -25,6 +25,7 @@ import re
 import sys
 import urllib.request
 import urllib.error
+from concurrent.futures import ThreadPoolExecutor
 
 import yaml  # pyyaml
 
@@ -240,6 +241,30 @@ def fetch(url: str, retries: int = 3) -> str:
     return ""
 
 
+def _fetch_source(url: str, retries: int = 3) -> str:
+    """fetch() variant that reports which source failed."""
+    try:
+        return fetch(url, retries)
+    except Exception as exc:
+        raise RuntimeError(f"failed source {url}: {exc}") from exc
+
+
+def fetch_many(urls: list, retries: int = 3) -> list:
+    """Download sources in bounded parallel while preserving URL order.
+
+    Rule merging is first-seen-wins, so the configured order must not change;
+    the pool only hides network latency (wall time ~slowest source instead of
+    the sum). Override the concurrency with FETCH_WORKERS (default 8).
+    """
+    if not urls:
+        return []
+    workers = max(1, min(int(os.environ.get("FETCH_WORKERS", "8")), len(urls)))
+    if workers == 1:
+        return [_fetch_source(url, retries) for url in urls]
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        return list(pool.map(lambda url: _fetch_source(url, retries), urls))
+
+
 # ── Shared collectors ─────────────────────────────────────────────────────────
 
 
@@ -252,12 +277,8 @@ def collect_domains(urls: list, label: str) -> list:
     domains: list = []
     if not urls:
         raise ValueError(f"no source URLs configured for {label}")
-    for url in urls:
+    for url, content in zip(urls, fetch_many(urls)):
         print(f"  [{label}] {url}")
-        try:
-            content = fetch(url)
-        except Exception as exc:
-            raise RuntimeError(f"failed source {url}: {exc}") from exc
         source_rules = load_payload(content)
         parsed_count = 0
         for rule in source_rules:
@@ -285,12 +306,8 @@ def collect_cidrs(urls: list, label: str) -> list:
         raise ValueError(f"no source URLs configured for {label}")
     seen: set = set()
     cidrs: list = []
-    for url in urls:
+    for url, content in zip(urls, fetch_many(urls)):
         print(f"  [{label}] {url}")
-        try:
-            content = fetch(url)
-        except Exception as exc:
-            raise RuntimeError(f"failed source {url}: {exc}") from exc
         source_rules = load_payload(content)
         parsed_count = 0
         for rule in source_rules:

@@ -8,6 +8,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import yaml
@@ -41,6 +42,30 @@ def fetch(url: str, retries: int = 3) -> bytes:
                 raise
             time.sleep(attempt + 1)
     raise RuntimeError(f"failed to fetch {url}")
+
+
+def _fetch_source(url: str, retries: int = 3) -> bytes:
+    """fetch() variant that reports which source failed."""
+    try:
+        return fetch(url, retries)
+    except Exception as exc:
+        raise RuntimeError(f"failed source {url}: {exc}") from exc
+
+
+def fetch_many(urls: list[str], retries: int = 3) -> list[bytes]:
+    """Download sources in bounded parallel while preserving URL order.
+
+    First-seen-wins deduplication requires a stable order, so results are
+    re-assembled in the configured order; only the network waits overlap.
+    Override the concurrency with FETCH_WORKERS (default 8).
+    """
+    if not urls:
+        return []
+    workers = max(1, min(int(os.environ.get("FETCH_WORKERS", "8")), len(urls)))
+    if workers == 1:
+        return [_fetch_source(url, retries) for url in urls]
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        return list(pool.map(lambda url: _fetch_source(url, retries), urls))
 
 
 def load_rules(content: bytes, url: str) -> list[str]:
@@ -100,10 +125,9 @@ def build_one(path: Path, audit_sources: list[dict]) -> tuple[Path, int]:
     urls = read_urls(path)
     if not urls:
         raise ValueError(f"no source URLs configured in {path}")
-    for url in urls:
+    for url, content in zip(urls, fetch_many(urls)):
         default_type = "IP-CIDR" if "/geoip/" in url else "DOMAIN-SUFFIX"
         print(f"  [{path.stem}] {url}")
-        content = fetch(url)
         source_rules = load_rules(content, url)
         parsed = [normalized for rule in source_rules
                   if (normalized := normalize_rule(rule, default_type)) is not None]

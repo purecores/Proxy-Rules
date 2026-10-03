@@ -22,11 +22,11 @@ tests/                       Offline parser/encoder/output regression tests
 
 The `build-and-publish` workflow runs daily at 02:00 China Standard Time, on relevant pushes, or manually. It runs offline tests, builds all three output families, validates build outputs, and commits only changed generated files. Build failures stop publication. The workflow combines formerly separate jobs to avoid competing commits and publishes all outputs from one consistent source snapshot.
 
-Tool versions are pinned in the workflow (`mihomo v1.19.32`, `yq v4.54.1`, Python 3.12, PyYAML 6.0.2). Update these versions deliberately and validate the workflow before merging.
+Tool versions are pinned in the workflow (`mihomo v1.19.32`, `yq v4.54.1`, Python 3.12, PyYAML 6.0.3). Update these versions deliberately and validate the workflow before merging. GitHub Actions versions are tracked by Dependabot, and `ci.yml` runs the offline tests plus actionlint and shell syntax checks on every push and pull request.
 
 ## Inputs
 
-- `config/sources/mihomo/*.txt`: one URL per line; blank lines and lines starting with `#` are ignored.
+- `config/sources/mihomo/*.txt`: one URL per line; blank lines and lines starting with `#` are ignored. Sources download in parallel (`FETCH_WORKERS`, default 8) while merge order stays stable.
 - `config/sources/mihomo/extra.yaml`: additional named GeoSite/GeoIP groups. Repeated group names are merged.
 - `config/sources/shadowrocket/*.txt`: Shadowrocket-specific source URL lists.
 - `config/personal/*.yaml`: personal rules, also referenced by URL lists where appropriate.

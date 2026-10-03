@@ -1,6 +1,8 @@
 import importlib.util
 import ipaddress
+import time
 import unittest
+from unittest import mock
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "scripts" / "build_dat.py"
@@ -47,6 +49,31 @@ class RuleParserTests(unittest.TestCase):
         geoip = build_dat.encode_geoip_list([("TEST", [(ipaddress.ip_address("192.0.2.0").packed, 24)])])
         self.assertTrue(site.startswith(b"\x0a"))
         self.assertTrue(geoip.startswith(b"\x0a"))
+
+
+class FetchManyTests(unittest.TestCase):
+    def test_preserves_configured_order(self):
+        urls = ["https://a/x.yaml", "https://b/x.yaml", "https://c/x.yaml"]
+        with mock.patch.object(
+                build_dat, "fetch",
+                side_effect=lambda url, retries=3: f"body:{url}"):
+            self.assertEqual(build_dat.fetch_many(urls), [f"body:{u}" for u in urls])
+
+    def test_downloads_concurrently(self):
+        def slow(url, retries=3):
+            time.sleep(0.2)
+            return url
+
+        with mock.patch.object(build_dat, "fetch", side_effect=slow):
+            started = time.monotonic()
+            build_dat.fetch_many([f"https://example.test/{i}" for i in range(4)])
+            elapsed = time.monotonic() - started
+        self.assertLess(elapsed, 0.7, "fetch_many should overlap downloads")
+
+    def test_single_url_skips_the_pool(self):
+        with mock.patch.object(build_dat, "fetch", return_value="body") as patched:
+            self.assertEqual(build_dat.fetch_many(["https://example.test/a"]), ["body"])
+        patched.assert_called_once()
 
 
 if __name__ == "__main__":

@@ -1,4 +1,8 @@
+import time
 import unittest
+from unittest import mock
+
+from scripts import build_shadowrocket
 from scripts.build_shadowrocket import check_source_drift, normalize_rule
 
 
@@ -29,6 +33,29 @@ class ShadowrocketRuleTests(unittest.TestCase):
     def test_invalid_ip_fails(self):
         with self.assertRaises(ValueError):
             normalize_rule("invalid-cidr", "IP-CIDR")
+
+
+class FetchManyTests(unittest.TestCase):
+    def test_preserves_configured_order(self):
+        urls = ["https://a/x.yaml", "https://b/x.yaml", "https://c/x.yaml"]
+        with mock.patch.object(
+                build_shadowrocket, "fetch",
+                side_effect=lambda url, retries=3: f"body:{url}".encode()):
+            self.assertEqual(
+                build_shadowrocket.fetch_many(urls),
+                [f"body:{u}".encode() for u in urls],
+            )
+
+    def test_downloads_concurrently(self):
+        def slow(url, retries=3):
+            time.sleep(0.2)
+            return url.encode()
+
+        with mock.patch.object(build_shadowrocket, "fetch", side_effect=slow):
+            started = time.monotonic()
+            build_shadowrocket.fetch_many([f"https://example.test/{i}" for i in range(4)])
+            elapsed = time.monotonic() - started
+        self.assertLess(elapsed, 0.7, "fetch_many should overlap downloads")
 
 
 if __name__ == "__main__":
