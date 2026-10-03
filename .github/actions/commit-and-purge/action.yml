@@ -30,11 +30,14 @@ runs:
 
         msg="${{ inputs.message }}"
         [[ -n "$msg" ]] || msg="$(date '+%Y-%m-%d %H:%M:%S')"
+        paths="${{ inputs.paths }}"
+        purge_path="${{ inputs.purge-path }}"
 
         git config user.name  "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
-        git add ${{ inputs.paths }}
+        read -r -a pathspecs <<< "$paths"
+        git add -- "${pathspecs[@]}"
 
         if git diff --cached --quiet; then
           echo "No changes to commit."
@@ -49,13 +52,19 @@ runs:
         pushed=0
         attempts=8
         for attempt in $(seq 1 "$attempts"); do
-          if git push origin HEAD:main; then
-            pushed=1
-            break
+          git fetch origin main
+          if git rebase origin/main; then
+            if git push origin HEAD:main; then
+              pushed=1
+              break
+            fi
+          else
+            git rebase --abort
+            echo "ERROR: rebase conflict; refusing to overwrite generated or user changes." >&2
+            exit 1
           fi
-          echo "Push rejected (attempt ${attempt}/${attempts}); rebasing onto origin/main…"
+          echo "Push rejected (attempt ${attempt}/${attempts}); retrying with latest main."
           sleep "$(( (RANDOM % 5) + 1 ))"
-          git pull --rebase -X ours origin main
         done
 
         if [[ "$pushed" -ne 1 ]]; then
@@ -63,6 +72,6 @@ runs:
           exit 1
         fi
 
-        url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/${{ inputs.purge-path }}"
+        url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/${purge_path}"
         echo "Purging jsDelivr: $url"
         curl -fsS "$url" || true

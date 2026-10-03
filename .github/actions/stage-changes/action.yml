@@ -1,12 +1,11 @@
 name: stage-changes
-description: >
-  Stage the given pathspecs and report whether there is anything to commit.
-  Lets the caller gate the commit step with `if:` so it shows as skipped (not a
-  green no-op) when nothing changed.
+description: >-
+  Stage the given pathspecs and report whether there is anything to commit, so
+  callers can gate the commit step with `if:`.
 
 inputs:
   paths:
-    description: "Space-separated git pathspecs to stage (e.g. 'compilation/mihomo')"
+    description: "Space-separated git pathspecs to stage (e.g. 'config.yaml')"
     required: true
 
 outputs:
@@ -21,7 +20,8 @@ runs:
       shell: bash
       run: |
         set -euo pipefail
-        git add ${{ inputs.paths }}
+        read -r -a pathspecs <<< "${{ inputs.paths }}"
+        git add -- "${pathspecs[@]}"
         if git diff --cached --quiet; then
           echo "changed=false" >> "$GITHUB_OUTPUT"
           echo "No changes to commit."

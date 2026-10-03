@@ -9,10 +9,10 @@ if [[ -n "${GITHUB_WORKSPACE:-}" && -d "${GITHUB_WORKSPACE}" ]]; then
 elif command -v git >/dev/null 2>&1 && git rev-parse --show-toplevel >/dev/null 2>&1; then
   ROOT_DIR="$(git rev-parse --show-toplevel)"
 else
-  ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+  ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 fi
 
-TXT_DIR="${ROOT_DIR}/txt/mihomo"
+TXT_DIR="${ROOT_DIR}/config/sources/mihomo"
 OUT_DIR="${ROOT_DIR}/compilation/mihomo"
 mkdir -p "${OUT_DIR}"
 
@@ -26,6 +26,7 @@ require_cmd() {
 require_cmd curl
 require_cmd jq
 require_cmd yq
+require_cmd python3
 
 # Check mihomo
 if ! command -v "${MIHOMO_BIN}" >/dev/null 2>&1; then
@@ -51,6 +52,7 @@ CURL_COMMON_ARGS=(
 read_urls() {
   local file="$1"
   awk '
+    { gsub(/\r$/, "", $0) }
     NF == 0 { next }
     $1 ~ /^#/ { next }
     { print $0 }
@@ -60,7 +62,11 @@ read_urls() {
 # Extract payload/rules to JSON array
 extract_payload_json_array() {
   local yaml_file="$1"
-  yq -o=json '.payload // .rules // []' "${yaml_file}" 2>/dev/null || echo "[]"
+  yq -e '(.payload // .rules) | (type == "!!seq" and length > 0)' "${yaml_file}" >/dev/null || {
+    echo "ERROR: invalid or empty rules YAML: ${yaml_file}" >&2
+    return 1
+  }
+  yq -o=json '.payload // .rules' "${yaml_file}"
 }
 
 # Detect behavior for mrs compile
@@ -98,43 +104,64 @@ merge_one_group() {
 
   local idx=0
   while IFS= read -r url || [[ -n "${url}" ]]; do
+    [[ -n "${url}" ]] || continue
     idx=$((idx + 1))
     local dl="${tmp_dir}/${name}_${idx}.yaml"
     echo "  - Download[${idx}]: ${url}"
-    curl "${CURL_COMMON_ARGS[@]}" "${url}" -o "${dl}"
+    if [[ "${url}" == local://personal/* ]]; then
+      cp "${ROOT_DIR}/config/personal/${url#local://personal/}" "${dl}"
+    else
+      curl "${CURL_COMMON_ARGS[@]}" "${url}" -o "${dl}"
+    fi
     extract_payload_json_array "${dl}" >> "${payload_arrays_file}"
   done < <(read_urls "${txt_file}")
+  if [[ "$idx" -eq 0 ]]; then
+    echo "ERROR: no source URLs configured in ${txt_file}" >&2
+    return 1
+  fi
 
   echo "==> Dedup & Write ${name} (awk keep-order)"
   # 1) flatten jsonl arrays to one rule per line
   # 2) awk stable dedup (keep first occurrence)
   # 3) rebuild as {payload:[...]} and output YAML (overwrite)
+  local tmp_yaml="${out_yaml}.tmp"
+  local tmp_mrs="${out_mrs}.tmp"
+  rm -f "${tmp_yaml}" "${tmp_mrs}"
   jq -r '.[]' "${payload_arrays_file}" \
-    | awk '!seen[$0]++' \
+    | awk 'NF && !seen[$0]++' \
     | jq -Rn '{payload: [inputs]}' \
-    | yq -P -o=yaml '.' - > "${out_yaml}"
+    | yq -P -o=yaml '.' - > "${tmp_yaml}"
 
   # post-process: only for Direct.yaml
   # remove exact micu.hk in DOMAIN-SUFFIX rules (do NOT match tv.micu.hk)
   if [[ "${name}" == "Direct" ]]; then
     yq -i '
       .payload |= map(select((.|tostring|sub("^\\s+";"")|sub("\\s+$";"")) != "+.micu.hk"))
-    ' "${out_yaml}"
+    ' "${tmp_yaml}"
   fi
-
+  yq -e '.payload | (type == "!!seq" and length > 0)' "${tmp_yaml}" >/dev/null || {
+    echo "ERROR: generated ${name} payload is empty" >&2
+    rm -f "${tmp_yaml}" "${tmp_mrs}"
+    return 1
+  }
   echo "==> Compile ${name}"
   local behavior
-  behavior="$(detect_behavior "${out_yaml}")"
+  behavior="$(detect_behavior "${tmp_yaml}")"
   echo "    behavior=${behavior}"
   echo "    mrs: ${out_mrs}"
-  "${MIHOMO_BIN}" convert-ruleset "${behavior}" yaml "${out_yaml}" "${out_mrs}"
+  "${MIHOMO_BIN}" convert-ruleset "${behavior}" yaml "${tmp_yaml}" "${tmp_mrs}"
+  [[ -s "${tmp_mrs}" ]] || { echo "ERROR: compiler produced an empty ${name}.mrs" >&2; rm -f "${tmp_yaml}" "${tmp_mrs}"; return 1; }
+  mv "${tmp_yaml}" "${out_yaml}"
+  mv "${tmp_mrs}" "${out_mrs}"
 
   echo "    outputs:"
-  ls -lh "${out_yaml}" "${out_mrs}" || true
+  ls -lh "${out_yaml}" "${out_mrs}"
 }
 
-merge_one_group "AIGC"
+merge_one_group "Github"
 merge_one_group "Community"
+merge_one_group "Gemini"
+merge_one_group "AI"
 merge_one_group "Direct"
 merge_one_group "Proxy"
 

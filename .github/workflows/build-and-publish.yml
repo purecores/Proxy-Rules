@@ -1,0 +1,87 @@
+name: build-and-publish
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 02:00 China Standard Time (18:00 UTC).
+    - cron: "0 18 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/actions/**"
+      - ".github/workflows/build-and-publish.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-and-publish-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Setup yq
+        uses: ./.github/actions/setup-binary
+        with:
+          tool: yq
+          version: v4.54.1
+
+      - name: Setup mihomo
+        uses: ./.github/actions/setup-binary
+        with:
+          tool: mihomo
+          version: v1.19.32
+
+      - name: Build all rule formats
+        run: |
+          bash scripts/build_mihomo.sh
+          python scripts/build_dat.py
+          python scripts/build_shadowrocket.py
+          python scripts/validate_outputs.py
+
+      - name: Upload build outputs for inspection
+        if: success()
+        uses: actions/upload-artifact@v6
+        with:
+          name: proxy-rules-${{ github.run_id }}
+          path: compilation/
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Check for changes
+        id: diff
+        if: github.ref == 'refs/heads/main'
+        uses: ./.github/actions/stage-changes
+        with:
+          paths: compilation
+
+      - name: Commit & publish (only if changed)
+        if: steps.diff.outputs.changed == 'true'
+        uses: ./.github/actions/commit-and-purge
+        with:
+          paths: compilation
+          purge-path: compilation/

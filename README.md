@@ -1,52 +1,60 @@
-## For private use only. Unauthorized use or distribution is strictly prohibited.
-[本地托管代码添加到GitHub](https://docs.github.com/zh/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+# Personal Proxy Rules
 
-初始化仓库
-```bash
-git init
-````
+A GitHub Actions pipeline that collects curated Mihomo-compatible rule sources and publishes merged rules for Mihomo, Shadowrocket, and custom V2Ray-compatible GeoSite/GeoIP databases.
 
-添加所有文件
-```bash
-git add .
+## Repository layout
+
+```text
+config/
+  personal/                 Private/custom rules maintained in this repository
+  sources/
+    mihomo/                  URL lists and GeoSite/GeoIP category configuration
+    shadowrocket/            Shadowrocket-specific source lists
+scripts/                     Build and validation scripts
+compilation/                 Generated files and source audit, committed for static hosting
+.github/
+  actions/                   Reusable setup, staging, and publish actions
+  workflows/                 One daily build-and-publish pipeline
+tests/                       Offline parser/encoder/output regression tests
 ```
 
-修改分支名称
+## Build flow
+
+The `build-and-publish` workflow runs daily at 02:00 China Standard Time, on relevant pushes, or manually. It runs offline tests, builds all three output families, validates build outputs, and commits only changed generated files. Build failures stop publication. The workflow combines formerly separate jobs to avoid competing commits and publishes all outputs from one consistent source snapshot.
+
+Tool versions are pinned in the workflow (`mihomo v1.19.32`, `yq v4.54.1`, Python 3.12, PyYAML 6.0.2). Update these versions deliberately and validate the workflow before merging.
+
+## Inputs
+
+- `config/sources/mihomo/*.txt`: one URL per line; blank lines and lines starting with `#` are ignored.
+- `config/sources/mihomo/extra.yaml`: additional named GeoSite/GeoIP groups. Repeated group names are merged.
+- `config/sources/shadowrocket/*.txt`: Shadowrocket-specific source URL lists.
+- `config/personal/*.yaml`: personal rules, also referenced by URL lists where appropriate.
+
+Remote inputs must expose a YAML `payload` or `rules` sequence. Failed downloads, malformed YAML, missing sources, and empty generated categories fail the build rather than silently replacing a good artifact.
+
+## Outputs
+
+- `compilation/mihomo/*.yaml` and `*.mrs`
+- `compilation/shadowrocket/*.list`
+- `compilation/GeoSite.dat` and `GeoIP.dat`
+
+Artifacts remain available in the repository for static hosting. The existing repository URL layout stays unchanged for generated artifacts. Personal source entries use repository-local `local://personal/<file>` references, so scheduled Actions builds do not depend on the repository already being published remotely.
+
+## Local checks
+
 ```bash
-git branch -m "main"
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
 ```
 
-使用 rebase 策略合并代码
+Mihomo generation additionally requires Bash, curl, jq, mikefarah/yq v4, and the pinned Mihomo binary on `PATH`. Shadowrocket lists are built with Python/PyYAML; source and output SHA-256/count audit metadata is written to `compilation/source-audit.json`. Large source-count changes (over 50% versus the last successful build) fail closed for review. Personal rules are read from this repository using `local://personal/<file>` references:
+
 ```bash
-git pull --rebase origin main
+bash scripts/build_mihomo.sh
+python scripts/build_dat.py
+python scripts/build_shadowrocket.py
+python scripts/validate_outputs.py
 ```
 
-提交 commit 信息
-```bash
-git commit -m "Update"
-```
-
-推送至远程仓库
-```bash
-git push origin main
-```
-
-强制推送
-```bash
-git push origin main --force
-```
-
-添加远程地址
-```bash
-git remote add origin https://github.com/purecores/Proxy-Rules.git
-```
-
-首次推送
-```bash
-git push -u origin main
-```
-
-首次拉取
-```bash
-git branch --set-upstream-to=origin/main main
-```
+This repository contains personal rules. Do not publish or redistribute it without authorization.

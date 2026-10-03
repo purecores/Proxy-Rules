@@ -1,15 +1,15 @@
 name: setup-binary
 description: >
   Download a release binary (mihomo / sing-box / yq) for linux-amd64 onto PATH.
-  Resolves the latest release tag (or a pinned one), then caches by the resolved
-  version so unchanged versions are not re-downloaded.
+  Uses a pinned default release tag unless an explicit version is supplied,
+  then caches the binary by version; the installed version is checked.
 
 inputs:
   tool:
     description: "Which binary to install: mihomo | sing-box | yq"
     required: true
   version:
-    description: "Release tag to install, or 'latest' to resolve the newest release"
+    description: "Release tag to install; 'latest' maps to the pinned default"
     required: false
     default: latest
 
@@ -27,17 +27,14 @@ runs:
       run: |
         set -euo pipefail
         case "${{ inputs.tool }}" in
-          mihomo)   repo="MetaCubeX/mihomo" ;;
-          sing-box) repo="SagerNet/sing-box" ;;
-          yq)       repo="mikefarah/yq" ;;
+          mihomo)   repo="MetaCubeX/mihomo"; default_version="v1.19.32" ;;
+          sing-box) repo="SagerNet/sing-box"; default_version="v1.14.2" ;;
+          yq)       repo="mikefarah/yq"; default_version="v4.54.1" ;;
           *) echo "ERROR: unknown tool '${{ inputs.tool }}'" >&2; exit 1 ;;
         esac
 
         ver="${{ inputs.version }}"
-        if [[ "$ver" == "latest" ]]; then
-          ver="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/latest" | jq -r .tag_name)"
-          [[ -n "$ver" && "$ver" != "null" ]] || { echo "ERROR: cannot resolve latest tag for $repo" >&2; exit 1; }
-        fi
+        [[ "$ver" != "latest" ]] || ver="$default_version"
 
         echo "repo=$repo"   >> "$GITHUB_OUTPUT"
         echo "version=$ver" >> "$GITHUB_OUTPUT"
@@ -69,6 +66,8 @@ runs:
             curl -fsSL --retry 3 --retry-delay 2 \
               "https://github.com/${repo}/releases/download/${ver}/yq_linux_amd64" \
               -o "${dest}/yq"
+            chmod +x "${dest}/yq"
+            "${dest}/yq" --version | grep -F "${ver}" >/dev/null
             ;;
 
           sing-box)
@@ -80,18 +79,22 @@ runs:
             bin="$(find "${work}" -type f -name sing-box -print -quit)"
             [[ -n "$bin" ]] || { echo "ERROR: sing-box binary not found in tarball" >&2; exit 1; }
             cp "$bin" "${dest}/sing-box"
+            "${dest}/sing-box" version | grep -F "${ver_bare}" >/dev/null
             ;;
 
           mihomo)
             # Use the "compatible" build: runs on any x86-64 microarchitecture.
-            url="$(curl -fsSL "https://api.github.com/repos/${repo}/releases/tags/${ver}" \
-              | jq -r '.assets[].browser_download_url
-                       | select(test("mihomo-linux-amd64-compatible-.*\\.gz$"))' \
-              | head -n1)"
-            [[ -n "$url" && "$url" != "null" ]] || { echo "ERROR: no mihomo compatible .gz asset for ${ver}" >&2; exit 1; }
-            curl -fsSL --retry 3 --retry-delay 2 "$url" -o "${work}/mihomo.gz"
+            # Build the asset URL directly so we do not depend on the GitHub
+            # API (rate limits) or on jq being installed.
+            url="https://github.com/${repo}/releases/download/${ver}/mihomo-linux-amd64-compatible-${ver}.gz"
+            echo "Downloading mihomo: $url"
+            if ! curl -fsSL --retry 3 --retry-delay 2 "$url" -o "${work}/mihomo.gz"; then
+              echo "ERROR: failed to download ${url}" >&2
+              exit 1
+            fi
             gzip -df "${work}/mihomo.gz"
             cp "${work}/mihomo" "${dest}/mihomo"
+            "${dest}/mihomo" -v || true
             ;;
         esac
 
