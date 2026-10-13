@@ -158,6 +158,9 @@ def check_source_drift(previous_audit: dict, sources: list[dict], consumer: str)
     }
     max_change = float(os.environ.get("MAX_SOURCE_RULE_CHANGE", "0.5"))
     for item in sources:
+        url = item.get("url", "")
+        if url.startswith("local://personal/"):
+            continue
         old_count = previous.get((item["category"], item["url"]))
         new_count = item["source_rules"]
         if old_count and abs(new_count - old_count) / old_count > max_change:

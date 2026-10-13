@@ -30,6 +30,11 @@ class ShadowrocketRuleTests(unittest.TestCase):
         current = [{"category": "Test", "url": "https://example.test/rules", "source_rules": 110}]
         check_source_drift(previous, current, "shadowrocket")
 
+    def test_local_personal_source_drift_is_allowed(self):
+        previous = {"sources": [{"category": "Test", "url": "local://personal/rules.yaml", "source_rules": 10}]}
+        current = [{"category": "Test", "url": "local://personal/rules.yaml", "source_rules": 50}]
+        check_source_drift(previous, current, "shadowrocket")
+
     def test_invalid_ip_fails(self):
         with self.assertRaises(ValueError):
             normalize_rule("invalid-cidr", "IP-CIDR")
