@@ -60,10 +60,18 @@ payload:
   - +.gcdn.co
   - +.gcore.com
   - +.gcore.pro
-  - +.cdn77.com
-  - +.cdn77.org
+  - +.fastly-edge.com
+  - +.fastly-terrarium.com
+  - +.fastly.com
+  - +.fastly.io
+  - +.fastly.net
+  - +.fastlylabs.com
+  - +.fastlylb.net
   - +.imgix.com
   - +.imgix.net
+  - +.esm.run
+  - +.jsdelivr.com
+  - +.jsdelivr.net
   - +.delvenetworks.com
   - +.limelight.com
   - +.lldns.net
@@ -72,14 +80,7 @@ payload:
   - +.llnw.net
   - +.llnwd.net
   - +.llnwi.net
-  - +.pagecdn.com
-  - +.pagecdn.io
   - +.quantil.com
-  - +.stackpath.com
-  - +.stackpath.dev
-  - +.vrcdn.cloud
-  - +.vrcdn.live
-  - +.vrcdn.video
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -149,6 +150,8 @@ payload:
   - +.iamakamai.net
   - +.soasta-dswb.com
   - +.srtcdn.net
+  - +.cdn77.com
+  - +.cdn77.org
   - +.browser.run
   - +.cfargotunnel.com
   - +.cfdata.org
@@ -204,16 +207,13 @@ payload:
   - +.workers.dev
   - +.cf-ipfs.com
   - +.cloudflare-ipfs.com
-  - +.fastly-edge.com
-  - +.fastly-terrarium.com
-  - +.fastly.com
-  - +.fastly.io
-  - +.fastly.net
-  - +.fastlylabs.com
-  - +.fastlylb.net
-  - +.esm.run
-  - +.jsdelivr.com
-  - +.jsdelivr.net
+  - +.pagecdn.com
+  - +.pagecdn.io
+  - +.stackpath.com
+  - +.stackpath.dev
+  - +.vrcdn.cloud
+  - +.vrcdn.live
+  - +.vrcdn.video
   - +.akamai.co.kr
   - +.one.one.one
   - +.accdn.com.cn
@@ -595,28 +595,8 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
-  - az764295.vo.msecnd.net
-  - bingsettingssearch.trafficmanager.net
-  - default.exp-tas.com
-  - developer.microsoft.com
-  - dtlgalleryint.cloudapp.net
-  - packages.microsoft.com
-  - poshtestgallery.cloudapp.net
-  - psg-int-centralus.cloudapp.net
-  - psg-int-eastus.cloudapp.net
-  - rink.hockeyapp.net
-  - vscode-sync-insiders.trafficmanager.net
-  - vscode-sync.trafficmanager.net
-  - vscode.blob.core.windows.net
-  - vscode.search.windows.net
-  - vsmarketplacebadge.apphb.com
-  - crl.microsoft.com
-  - mscrl.microsoft.com
-  - ocsp.microsoft.com
-  - oneocsp.microsoft.com
-  - www.microsoft.com
-  - flightsimulator.azureedge.net
   - prodforza.blob.core.windows.net
+  - flightsimulator.azureedge.net
   - azure.microsoft.com
   - azuremarketplace.microsoft.com
   - location.microsoft.com
@@ -650,6 +630,26 @@ payload:
   - copilot-proxy.githubusercontent.com
   - copilot-workspace.githubnext.com
   - copilotprodattachments.blob.core.windows.net
+  - az764295.vo.msecnd.net
+  - bingsettingssearch.trafficmanager.net
+  - default.exp-tas.com
+  - developer.microsoft.com
+  - dtlgalleryint.cloudapp.net
+  - packages.microsoft.com
+  - poshtestgallery.cloudapp.net
+  - psg-int-centralus.cloudapp.net
+  - psg-int-eastus.cloudapp.net
+  - rink.hockeyapp.net
+  - vscode-sync-insiders.trafficmanager.net
+  - vscode-sync.trafficmanager.net
+  - vscode.blob.core.windows.net
+  - vscode.search.windows.net
+  - vsmarketplacebadge.apphb.com
+  - crl.microsoft.com
+  - mscrl.microsoft.com
+  - ocsp.microsoft.com
+  - oneocsp.microsoft.com
+  - www.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
@@ -660,11 +660,11 @@ payload:
   - +.xbox
   - +.onedriveupdater
   - +.onedrive
-  - +.appcenter.ms
-  - +.githubsupport.com
+  - +.microsoftapp.net
+  - +.microsoftnewsforkids.net
   - +.microsoft.com
   - +.microsoft.cz
-  - +.gamesstack.com
+  - +.sharepoint.com
   - +.microsoft.dk
   - +.microsoft.ee
   - +.microsoft.es
@@ -754,6 +754,7 @@ payload:
   - +.l-msedge.net
   - +.latampartneruniversity.com
   - +.live.com
+  - +.start.com
   - +.live.eu
   - +.live.net
   - +.livingyourambition.com
@@ -773,7 +774,7 @@ payload:
   - +.microsoftadvertising.com
   - +.microsoftadvertisingregionalawards.com
   - +.microsoftaffiliates.com
-  - +.microsoftapp.net
+  - +.microsoft.ch
   - +.microsoftcloud.com
   - +.microsoftcloudworkshop.com
   - +.microsoftcommunitytraining.com
@@ -790,6 +791,7 @@ payload:
   - +.microsoftready.com
   - +.microsoftsiteselection.com
   - +.microsoftstore.com
+  - +.microsoftstart.com
   - +.microsoftstream.com
   - +.microsoftteams.com
   - +.microsofttradein.com
@@ -838,9 +840,9 @@ payload:
   - +.pixapp.net
   - +.powerappscdn.net
   - +.powerautomate.com
-  - +.powerbi.com
+  - +.msnkids.com
   - +.powershellgallery.com
-  - +.insiderdevtour.com
+  - +.projectmurphy.net
   - +.projectsangam.com
   - +.pxt.io
   - +.s-dc-msedge.net
@@ -851,7 +853,6 @@ payload:
   - +.sfbassets.com
   - +.sfbassets.net
   - +.sfx.ms
-  - +.sharepoint.com
   - +.sharepointonline.com
   - +.signalr.net
   - +.skype.com
@@ -893,96 +894,22 @@ payload:
   - +.winhec.com
   - +.winhec.net
   - +.yammer.com
-  - +.adaptivecards.io
-  - +.api-extractor.com
-  - +.npmjs.org
-  - +.npmjs.com
-  - +.apisof.net
-  - +.microsoft.ch
-  - +.blazor.net
-  - +.botframework.com
-  - +.codethemicrobit.com
-  - +.devopsassessment.net
-  - +.dot.net
-  - +.microsoft.de
-  - +.microsoft.cl
-  - +.projectmurphy.net
-  - +.jwt.ms
-  - +.microbit.org
-  - +.microsoftadc.com
-  - +.microsoftgamestack.com
-  - +.microsoftiotinsiderlabs.com
-  - +.microsoftreactor.info
-  - +.microsoftreactor.net
-  - +.microsoftreactor.org
-  - +.microsoftsilverlight.com
-  - +.microsoftsilverlight.net
-  - +.microsoftsilverlight.org
-  - +.microsoftsqlserver.com
-  - +.mmdnn.com
-  - +.mono-project.com
-  - +.msdn.com
-  - +.msinnovationchallenge.com
-  - +.mspairlift.com
-  - +.msropendata.com
-  - +.nuget.org
-  - +.nugettest.org
-  - +.opentranslatorstothings.org
-  - +.poshtestgallery.com
-  - +.pwabuilder.com
-  - +.sankie.net
-  - +.sqlserveronlinux.com
-  - +.timelinestoryteller.com
-  - +.uwpcommunitytoolkit.com
-  - +.vfsforgit.com
-  - +.vfsforgit.org
-  - +.visualstudio-staging.com
-  - +.visualstudio.co
-  - +.visualstudio.com
-  - +.visualstudio.eu
-  - +.visualstudio.net
-  - +.vsassets.io
-  - +.vscode-cdn.net
-  - +.vscode-unpkg.net
-  - +.vscode-webview.net
-  - +.vscode.dev
-  - +.vscodeedu.app
-  - +.vscodeedu.com
-  - +.xamarin.com
-  - +.npm.community
-  - +.githubcopilot.com
-  - +.thegithubshop.com
-  - +.msocsp.com
-  - +.microsoftnews.cc
-  - +.microsoftnews.com
-  - +.microsoftnews.net
-  - +.microsoftnews.org
-  - +.microsoftnewsforkids.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.org
-  - +.microsoftnewskids.com
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.org
-  - +.msn.com
-  - +.msnewskids.com
-  - +.msnewskids.net
   - +.msnewskids.org
-  - +.msnkids.com
-  - +.microsoftstart.com
-  - +.start.com
+  - +.msnewskids.net
   - +.microsoft.cat
   - +.microsoft.ca
   - +.onedrive.com
   - +.sharepoint.cn
   - +.livefilestore.com
-  - +.1drv.com
-  - +.repo.new
-  - +.opensource.guide
-  - +.octocaptcha.com
-  - +.myoctocat.com
-  - +.githubusercontent.com
-  - +.githubuniverse.com
-  - +.graphengine.io
+  - +.microsoft.de
+  - +.microsoft.cl
+  - +.powerbi.com
+  - +.msnewskids.com
+  - +.msn.com
+  - +.microsoftnewskids.org
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.com
+  - +.microsoftnewsforkids.org
   - +.microsoft.by
   - +.gamepass.com
   - +.orithegame.com
@@ -1007,14 +934,6 @@ payload:
   - +.xboxservices.com
   - +.xboxstudios.com
   - +.xbx.lv
-  - +.asobostudio.com
-  - +.flightsimulator.com
-  - +.beth.games
-  - +.bethesda.net
-  - +.bethesdagamestudios.com
-  - +.bethsoft.com
-  - +.doom.com
-  - +.elderscrolls.com
   - +.forza.net
   - +.forzamotorsport.net
   - +.forzaracingchampionship.com
@@ -1025,6 +944,14 @@ payload:
   - +.minecraftservices.com
   - +.minecraftshop.com
   - +.mojang.com
+  - +.asobostudio.com
+  - +.flightsimulator.com
+  - +.beth.games
+  - +.bethesda.net
+  - +.bethesdagamestudios.com
+  - +.bethsoft.com
+  - +.doom.com
+  - +.elderscrolls.com
   - +.microsoft.be
   - +.aadrm.com
   - +.azure-api.net
@@ -1063,6 +990,7 @@ payload:
   - +.azurestackvalidation.com
   - +.azurestaticapps.net
   - +.azurewebsites.net
+  - +.botframework.com
   - +.cosmosdb.info
   - +.cosmosdb.net
   - +.devopsms.com
@@ -1112,8 +1040,8 @@ payload:
   - +.sprinklesapp.com
   - +.copilot-stg.com
   - +.copilot.com
-  - +.githubstatus.com
-  - +.githubpreview.dev
+  - +.1drv.com
+  - +.microsoftnewsforkids.com
   - +.atom.io
   - +.dependabot.com
   - +.gh.io
@@ -1131,9 +1059,81 @@ payload:
   - +.githubassets.com
   - +.githubhackathon.com
   - +.githubnext.com
-  - +.visualstudio.co.uk
+  - +.githubpreview.dev
+  - +.githubstatus.com
+  - +.githubsupport.com
+  - +.githubuniverse.com
+  - +.githubusercontent.com
+  - +.myoctocat.com
+  - +.octocaptcha.com
+  - +.opensource.guide
+  - +.repo.new
+  - +.thegithubshop.com
+  - +.githubcopilot.com
+  - +.npm.community
+  - +.npmjs.com
+  - +.npmjs.org
+  - +.adaptivecards.io
+  - +.api-extractor.com
+  - +.apisof.net
+  - +.appcenter.ms
+  - +.blazor.net
+  - +.codethemicrobit.com
+  - +.devopsassessment.net
+  - +.dot.net
+  - +.gamesstack.com
+  - +.graphengine.io
+  - +.insiderdevtour.com
+  - +.jwt.ms
+  - +.microbit.org
+  - +.microsoftadc.com
+  - +.microsoftgamestack.com
+  - +.microsoftiotinsiderlabs.com
+  - +.microsoftreactor.info
+  - +.microsoftreactor.net
+  - +.microsoftreactor.org
+  - +.microsoftsilverlight.com
+  - +.microsoftsilverlight.net
+  - +.microsoftsilverlight.org
+  - +.microsoftsqlserver.com
+  - +.mmdnn.com
+  - +.mono-project.com
+  - +.msdn.com
+  - +.msinnovationchallenge.com
+  - +.mspairlift.com
+  - +.msropendata.com
+  - +.nuget.org
+  - +.nugettest.org
+  - +.opentranslatorstothings.org
+  - +.poshtestgallery.com
+  - +.pwabuilder.com
+  - +.sankie.net
+  - +.sqlserveronlinux.com
+  - +.timelinestoryteller.com
+  - +.uwpcommunitytoolkit.com
+  - +.vfsforgit.com
+  - +.vfsforgit.org
+  - +.visualstudio-staging.com
+  - +.visualstudio.co
+  - +.visualstudio.com
+  - +.visualstudio.eu
+  - +.visualstudio.net
+  - +.vsassets.io
+  - +.vscode-cdn.net
+  - +.vscode-unpkg.net
+  - +.vscode-webview.net
+  - +.vscode.dev
+  - +.vscodeedu.app
+  - +.vscodeedu.com
+  - +.xamarin.com
+  - +.microsoftnews.org
+  - +.msocsp.com
+  - +.microsoftnews.cc
+  - +.microsoftnews.com
+  - +.microsoftnews.net
   - +.microsoftstore.com.hk
   - +.live.com.au
+  - +.visualstudio.co.uk
   - +.spoprod-a.akamaihd.net
   - +.skypedata.akadns.net
   - +.skype-edf.akadns.net
@@ -1224,14 +1224,6 @@ payload:
   - vscode.download.prss.microsoft.com
   - vz.download.prss.microsoft.com
   - windbg.download.prss.microsoft.com
-  - +.microsoftreactor.cn
-  - +.microsoftreactor.com.cn
-  - +.reactorms.com.cn
-  - download.visualstudio.microsoft.com
-  - +.microsoftnews.cn
-  - +.msn.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
   - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
@@ -1335,12 +1327,38 @@ payload:
   - +.collector.github.com
   - copilot-telemetry-service.githubusercontent.com
   - copilot-telemetry.githubusercontent.com
+  - +.microsoftreactor.cn
+  - +.microsoftreactor.com.cn
+  - +.reactorms.com.cn
+  - download.visualstudio.microsoft.com
+  - +.microsoftnews.cn
+  - +.msn.cn
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
   - google-ohttp-relay-safebrowsing.fastly-edge.com
+  - android.googlesource.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebaseappdistribution.googleapis.com
+  - firebaseapptesters.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaselogging-pa.googleapis.com
+  - firebaselogging.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
   - alt7-mtalk.google.com
   - alt8-mtalk.google.com
   - mtalk-dev.google.com
   - mtalk-staging.google.com
   - mtalk4.google.com
+  - publicca.googleapis.com
+  - preprod-publicca.googleapis.com
+  - clients1.google.com
+  - pki.google.com
   - ai.google.dev
   - alkalicore-pa.clients6.google.com
   - alkalimakersuite-pa.clients6.google.com
@@ -1430,24 +1448,6 @@ payload:
   - scholar.google.sk
   - scholar.googleusercontent.com
   - scholar.l.google.com
-  - publicca.googleapis.com
-  - preprod-publicca.googleapis.com
-  - clients1.google.com
-  - pki.google.com
-  - firebase.googleapis.com
-  - firebaseappcheck.googleapis.com
-  - firebaseappdistribution.googleapis.com
-  - firebaseapptesters.googleapis.com
-  - firebasedynamiclinks-ipv4.googleapis.com
-  - firebasedynamiclinks-ipv6.googleapis.com
-  - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
-  - firebaseinstallations.googleapis.com
-  - firebaselogging-pa.googleapis.com
-  - firebaselogging.googleapis.com
-  - firebaseperusertopics-pa.googleapis.com
-  - firebaseremoteconfig.googleapis.com
-  - android.googlesource.com
   - +.chrome
   - +.dclk
   - +.gbiz
@@ -1462,6 +1462,7 @@ payload:
   - +.xn--qcka1pmc
   - +.android
   - +.run.app
+  - +.kaggle.net
   - +.google.as
   - +.google.at
   - +.google.az
@@ -1489,83 +1490,28 @@ payload:
   - +.google.cz
   - +.google.de
   - +.google.dj
+  - +.v8project.org
+  - +.v8.dev
   - +.polymerproject.org
   - +.polymer-project.org
-  - +.kaggleusercontent.com
-  - +.kaggle.net
-  - +.kaggle.io
-  - +.kaggle.com
-  - +.xn--ngstr-lra8j.com
-  - +.googleplay.com
+  - +.deepmind.com
+  - +.ai.studio
+  - +.golang.org
+  - +.golang.net
+  - +.golang.com
+  - +.godoc.org
+  - +.go.dev
+  - +.go-lang.org
+  - +.go-lang.net
+  - +.go-lang.com
   - +.pub.dev
   - +.flutterapp.com
   - +.flutter.dev
-  - +.androidify.com
-  - +.android.com
-  - +.google.ad
-  - +.v8project.org
-  - +.v8.dev
-  - +.firebaseio.com
-  - +.firebaseapp.com
-  - +.firebase.io
-  - +.firebase.dev
-  - +.firebase.com
-  - +.crashlytics.com
-  - +.blogspot.mk
-  - +.blogspot.md
-  - +.blogspot.fi
-  - +.blogspot.lt
-  - +.blogspot.li
-  - +.blogspot.kr
-  - +.blogspot.jp
-  - +.blogspot.dk
-  - +.blogspot.is
-  - +.blogspot.in
-  - +.blogspot.ie
-  - +.blogspot.hu
-  - +.blogspot.hr
-  - +.blogspot.hk
-  - +.blogspot.gr
-  - +.blogspot.fr
-  - +.blogspot.lu
-  - +.blogspot.it
-  - +.blogspot.cl
-  - +.blogspot.cz
-  - +.blogspot.cv
-  - +.blogblog.com
-  - +.blogspot.my
-  - +.blogger.com
-  - +.blogspot.no
-  - +.blogspot.pe
-  - +.blogspot.pt
-  - +.blogspot.qa
-  - +.blogspot.re
-  - +.blogspot.ro
-  - +.blogspot.rs
-  - +.blogspot.ru
-  - +.blogspot.se
-  - +.blogspot.sg
-  - +.blogspot.com
-  - +.blogspot.si
-  - +.blogspot.sk
-  - +.blogspot.sn
-  - +.blogspot.td
-  - +.blogspot.tw
-  - +.blogspot.ug
-  - +.blogspot.vn
-  - +.blogspot.de
-  - +.blogspot.ch
-  - +.blogspot.cf
-  - +.blogspot.ca
-  - +.blogspot.bj
-  - +.blogspot.bg
-  - +.blogspot.be
-  - +.blogspot.ba
-  - +.blogspot.am
-  - +.blogspot.al
-  - +.blogspot.ae
-  - +.blogspot.mx
-  - +.blogspot.nl
+  - +.dartpad.dev
+  - +.dartlang.org
+  - +.dart.dev
+  - +.slides.new
+  - +.sheets.new
   - +.google.dk
   - +.google.dm
   - +.google.dz
@@ -1755,10 +1701,6 @@ payload:
   - +.googlecert.net
   - +.googlecode.com
   - +.googlecommerce.com
-  - +.opensourceinsights.dev
-  - +.opensourceinsight.dev
-  - +.deps.info
-  - +.deps.dev
   - +.googledanmark.com
   - +.googledomains.com
   - +.googledrive.com
@@ -1796,7 +1738,6 @@ payload:
   - +.haplorrhini.com
   - +.hdrplusdata.org
   - +.hindiweb.com
-  - +.slides.new
   - +.html5rocks.com
   - +.hwgo.com
   - +.iamremarkable.org
@@ -1861,8 +1802,6 @@ payload:
   - +.schemer.com
   - +.screenwisetrends.com
   - +.screenwisetrendspanel.com
-  - +.ai.studio
-  - +.deepmind.com
   - +.google.am
   - +.solveforx.com
   - +.stadia.dev
@@ -1921,16 +1860,78 @@ payload:
   - +.xn--gogl-1nd42e.com
   - +.xplr.co
   - +.zukunftswerkstatt.de
+  - +.google.ae
+  - +.android.com
+  - +.androidify.com
+  - +.blogspot.nl
+  - +.blogspot.mx
+  - +.blogspot.ae
+  - +.blogspot.al
+  - +.blogspot.am
+  - +.blogspot.ba
+  - +.blogspot.be
+  - +.blogspot.bg
+  - +.blogspot.bj
+  - +.blogspot.ca
+  - +.blogspot.cf
+  - +.blogspot.ch
+  - +.blogspot.de
+  - +.blogspot.vn
+  - +.blogspot.ug
+  - +.blogspot.tw
+  - +.blogspot.td
+  - +.blogspot.sn
+  - +.blogspot.sk
+  - +.blogspot.si
+  - +.blogspot.com
+  - +.blogspot.sg
+  - +.blogspot.se
+  - +.blogspot.ru
+  - +.blogspot.rs
+  - +.blogspot.ro
+  - +.blogspot.re
+  - +.blogspot.qa
+  - +.blogspot.pt
+  - +.blogspot.pe
+  - +.blogspot.no
+  - +.blogger.com
+  - +.blogspot.my
+  - +.blogblog.com
+  - +.blogspot.cv
+  - +.blogspot.cz
+  - +.blogspot.cl
+  - +.blogspot.it
+  - +.blogspot.lu
+  - +.blogspot.fr
+  - +.blogspot.gr
+  - +.blogspot.hk
+  - +.blogspot.hr
+  - +.blogspot.hu
+  - +.blogspot.ie
+  - +.blogspot.in
+  - +.blogspot.is
+  - +.blogspot.dk
+  - +.blogspot.jp
+  - +.blogspot.kr
+  - +.blogspot.li
+  - +.blogspot.lt
+  - +.blogspot.fi
+  - +.blogspot.md
+  - +.blogspot.mk
+  - +.kaggle.com
+  - +.kaggle.io
+  - +.snapseed.com
+  - +.kaggleusercontent.com
   - +.fastlane.ci
   - +.fastlane.tools
-  - +.go-lang.com
-  - +.go-lang.net
-  - +.go-lang.org
-  - +.go.dev
-  - +.godoc.org
-  - +.golang.com
-  - +.golang.net
-  - +.golang.org
+  - +.crashlytics.com
+  - +.firebase.com
+  - +.firebase.dev
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
+  - +.googleplay.com
+  - +.xn--ngstr-lra8j.com
   - +.charlestonroadregistry.com
   - +.crr.com
   - +.get.app
@@ -1943,31 +1944,47 @@ payload:
   - +.iam.soy
   - +.new.day
   - +.xn--p8j9a0d9c9a.xn--q9jyb4c
-  - +.google.ae
-  - +.snapseed.com
-  - +.sheets.new
-  - +.dartpad.dev
-  - +.dartlang.org
-  - +.dart.dev
-  - +.google.co.uk
-  - +.google.com.sa
-  - +.google.co.ao
-  - +.google.co.bw
+  - +.deps.dev
+  - +.deps.info
+  - +.opensourceinsight.dev
+  - +.opensourceinsights.dev
+  - +.google.ad
+  - +.google.com.sg
+  - +.blogspot.co.at
+  - +.blogspot.co.id
+  - +.blogspot.co.il
+  - +.blogspot.co.ke
+  - +.blogspot.co.nz
+  - +.blogspot.co.uk
+  - +.blogspot.co.za
+  - +.blogspot.com.by
+  - +.blogspot.com.ar
+  - +.blogspot.com.tr
+  - +.blogspot.com.uy
+  - +.blogspot.com.au
+  - +.blogspot.com.cy
+  - +.blogspot.com.ee
+  - +.blogspot.com.eg
+  - +.blogspot.com.es
+  - +.blogspot.com.mt
+  - +.blogspot.com.ng
+  - +.blogspot.com.co
+  - +.blogspot.com.br
   - +.womenwill.com.br
   - +.thinkquarterly.co.uk
-  - +.google.com.tr
   - +.howtogetmo.co.uk
-  - +.google.co.ck
   - +.googlecompare.co.uk
   - +.google.com.vn
   - +.google.com.vc
-  - +.google.com.cy
+  - +.google.com.uy
+  - +.google.com.ua
+  - +.google.com.tw
+  - +.google.com.tr
   - +.google.com.tj
   - +.google.com.sv
   - +.google.com.sl
-  - +.google.com.sg
   - +.google.com.sb
-  - +.google.com.tw
+  - +.google.com.sa
   - +.google.com.qa
   - +.google.com.py
   - +.google.com.pr
@@ -1999,12 +2016,14 @@ payload:
   - +.google.com.eg
   - +.google.com.ec
   - +.google.com.do
-  - +.google.com.uy
+  - +.google.com.cy
   - +.google.com.cu
   - +.google.com.co
   - +.google.com.bz
   - +.google.com.br
   - +.google.com.bo
+  - +.google.co.ao
+  - +.google.co.bw
   - +.google.com.bn
   - +.google.com.bh
   - +.google.com.bd
@@ -2015,31 +2034,11 @@ payload:
   - +.google.com.af
   - +.google.co.zw
   - +.google.co.zm
-  - +.blogspot.com.br
-  - +.blogspot.com.co
-  - +.blogspot.com.ng
-  - +.blogspot.com.mt
-  - +.blogspot.com.es
-  - +.blogspot.com.eg
-  - +.blogspot.com.ee
-  - +.blogspot.com.cy
-  - +.blogspot.com.au
-  - +.blogspot.com.uy
-  - +.blogspot.com.tr
-  - +.blogspot.com.ar
-  - +.blogspot.com.by
-  - +.blogspot.co.za
-  - +.blogspot.co.uk
-  - +.blogspot.co.nz
-  - +.blogspot.co.ke
-  - +.blogspot.co.il
-  - +.blogspot.co.id
-  - +.blogspot.co.at
   - +.google.co.za
   - +.google.co.vi
   - +.google.co.ve
   - +.google.co.uz
-  - +.google.com.ua
+  - +.google.co.uk
   - +.google.co.ug
   - +.google.co.tz
   - +.google.co.th
@@ -2053,6 +2052,7 @@ payload:
   - +.google.co.in
   - +.google.co.il
   - +.google.co.id
+  - +.google.co.ck
   - +.google.co.cr
   - +.google.cn
   - +.g.cn
@@ -2219,6 +2219,10 @@ payload:
   - www.destinationurl.com
   - www.gstatic.com
   - www.pxcc.com
+  - crashlyticsreports-pa.googleapis.com
+  - firebase-settings.crashlytics.com
+  - update.crashlytics.com
+  - redirector.c.play.google.com
   - alt1-mtalk.google.com
   - alt2-mtalk.google.com
   - alt3-mtalk.google.com
@@ -2233,10 +2237,6 @@ payload:
   - crl.pki.goog
   - crls.pki.goog
   - ocsp.pki.goog
-  - crashlyticsreports-pa.googleapis.com
-  - firebase-settings.crashlytics.com
-  - update.crashlytics.com
-  - redirector.c.play.google.com
   - +.play-fe.googleapis.com
   - +.play-games.googleusercontent.com
   - +.play-lh.googleusercontent.com
@@ -6841,8 +6841,7 @@ payload:
   - +.aws
   - +.apple
   - +.amazon
-  - +.jhzyw.xyz
-  - +.mantochichi.com
+  - +.jiaochuanba25.buzz
   - +.12diasderegalosdeitunes.pe
   - +.12joursdecadeauxdeitunes.com
   - +.1337x.gd
@@ -10498,7 +10497,7 @@ payload:
   - +.bridgestonenationalfleet.com
   - +.bridgestoneperformance.com
   - +.bridgestoneperformancemedia.net
-  - +.jizzboom.com
+  - +.bridgestonerapiddelivery.com
   - +.bridgestonerewards.com
   - +.bridgestonesyb.com
   - +.bridgestonetire.ca
@@ -12135,7 +12134,7 @@ payload:
   - +.dev-my.com
   - +.dev-my.games
   - +.dev-theguardian.com
-  - +.dev.to
+  - +.jizzhut.com
   - +.devcon.org
   - +.developer-advisor.com
   - +.yahoo.ch
@@ -17421,7 +17420,7 @@ payload:
   - +.jfrog.org
   - +.jgg18.xyz
   - +.jhxl.org
-  - +.jiaochuanba25.buzz
+  - +.jhzyw.xyz
   - +.jiaochuanba26.buzz
   - +.jiayoulu.com
   - +.jieav.com
@@ -17440,11 +17439,11 @@ payload:
   - +.jiuse823.com
   - +.jivara.global
   - +.jiyou520.com
-  - +.bridgestonerapiddelivery.com
+  - +.jizzboom.com
+  - +.jizzbunker.com
+  - +.dev.to
   - +.12diasderegalosdeitunes.hn
-  - +.pearsonassessment.nl
-  - +.jizzle.com
-  - +.jizzonline.com
+  - +.video01.org
   - +.jjgirls.com
   - +.jjsuo.sbs
   - +.jkbeats.com
@@ -18472,7 +18471,7 @@ payload:
   - +.mansionglobal.com
   - +.mansurfer.com
   - +.mantan-web.jp
-  - +.jizzbunker.com
+  - +.mantochichi.com
   - +.manurefetish.com
   - +.manuscdn.com
   - +.manytoon.com
@@ -21182,7 +21181,7 @@ payload:
   - +.pearsonassessment.de
   - +.pearsonassessment.dk
   - +.pearsonassessment.fr
-  - +.jizzhut.com
+  - +.pearsonassessment.nl
   - +.pearsonassessment.no
   - +.pearsonassessment.se
   - +.pearsonassessments.com
@@ -21425,6 +21424,7 @@ payload:
   - +.110xnxx.com
   - +.playstation.com
   - +.playstation.net
+  - +.playstationnetwork.com
   - +.playvalorant.com
   - +.playvids.com
   - +.playwarcraft3.com
@@ -22880,6 +22880,7 @@ payload:
   - +.scatville.com
   - +.scb.ru
   - +.scdn.co
+  - +.scea.com
   - +.scene7.com
   - +.scenesource.me
   - +.scharferporno.com
@@ -23687,6 +23688,7 @@ payload:
   - +.wanokokorosoh.com
   - +.wankzvr.com
   - +.wankz.com
+  - +.wankoz.com
   - +.sony.cz
   - +.sony.de
   - +.sony.dk
@@ -23717,7 +23719,7 @@ payload:
   - +.sony.sk
   - +.sony.ua
   - +.sonybank.jp
-  - +.wankoz.com
+  - +.wankizer.com
   - +.sonybsc.com
   - +.sonybuilding.jp
   - +.sonyclassics.com
@@ -23725,9 +23727,10 @@ payload:
   - +.sonydna.com
   - +.sonyentertainmentnetwork.com
   - +.sonyglobalsolutions.jp
+  - +.sonyinteractive.com
   - +.sonykigyo.jp
   - +.sonylatvija.com
-  - +.wankizer.com
+  - +.wankgames.com
   - +.sonypcl.jp
   - +.sonypictures.com
   - +.sonypicturesanimation.com
@@ -23735,7 +23738,7 @@ payload:
   - +.sonypicturesstudios.com
   - +.sonypicturestelevision.com
   - +.sonypicturestelevisiongames.com
-  - +.wankgames.com
+  - +.wanduww.buzz
   - +.soolakhi.com
   - +.soooyinfor.lol
   - +.soporn.com
@@ -23755,17 +23758,17 @@ payload:
   - +.sourcingforebay.net
   - +.sourcingforebay.tv
   - +.southfloridamini.com
-  - +.wanduww.buzz
+  - +.wandan-dh.buzz
   - +.sovcombank.ru
   - +.sovec.net
+  - +.wancctv.asia
   - +.soyinyj.top
   - +.soyjak.party
   - +.soyjak.st
   - +.sp.cool
   - +.spaceexplored.com
-  - +.wandan-dh.buzz
+  - +.wana-tv.sbs
   - +.spacemail.com
-  - +.wancctv.asia
   - +.spaceship.com
   - +.spaindisney.com
   - +.spankandbang.com
@@ -23792,7 +23795,6 @@ payload:
   - +.speedhunters.com
   - +.speedracegear.com
   - +.speedrun.com
-  - +.wana-tv.sbs
   - +.speedxtra.com
   - +.spektral.cc
   - +.spermyporn.com
@@ -23809,12 +23811,14 @@ payload:
   - +.spizoo.com
   - +.splatoon2tournament.com
   - +.splunk.com
+  - +.waltdisneystudios.com
   - +.spore.com
   - +.sportmail.ru
+  - +.walmartimages.com
   - +.sportsfacebook.com
   - +.sportstream.com
-  - +.waltdisneystudios.com
-  - +.walmartimages.com
+  - +.walmart.pharmacy
+  - +.walmart.com
   - +.spoti.fi
   - +.spotify-everywhere.com
   - +.spotify.design
@@ -23846,7 +23850,7 @@ payload:
   - +.squarecapital.com
   - +.squarecdn.com
   - +.squarecloudservices.com
-  - +.walmart.pharmacy
+  - +.walmart-content.com
   - +.squareup.com
   - +.squidplatform.com
   - +.squirrelgroup.net
@@ -23857,7 +23861,7 @@ payload:
   - +.ss-inf.net
   - +.ss2.us
   - +.ss7.app
-  - +.walmart.com
+  - +.101boyvideos.com
   - +.ssdevrd.com
   - +.sshs.club
   - +.sshs.pw
@@ -23865,7 +23869,6 @@ payload:
   - +.ssl-certificate.ch
   - +.ssl-images-amazon.com
   - +.ssl.com
-  - +.walmart-content.com
   - +.sslpaypal.org
   - +.ssplive.pw
   - +.ssrpass.pw
@@ -23896,7 +23899,6 @@ payload:
   - +.stackoverflowteams.com
   - +.stacksnippets.net
   - +.stacyvandenbergboobs.com
-  - +.101boyvideos.com
   - +.standardchartered.com
   - +.standardsuniversity.org
   - +.star-brasil.com
@@ -23920,6 +23922,8 @@ payload:
   - +.waildberies.ru
   - +.waccas.com
   - +.waa.tw
+  - +.wa.me
+  - +.w6un.com
   - +.starbucks.de
   - +.starbucks.dk
   - +.starbucks.es
@@ -23988,20 +23992,20 @@ payload:
   - +.static-storage.net
   - +.static-verizon.com
   - +.static.fun
-  - +.wa.me
+  - +.w3schools.com
   - +.staticmy.com
   - +.statsmakemecry.com
   - +.statuspage.io
   - +.staxus.com
   - +.stc-server.com
-  - +.w6un.com
   - +.stealthex.io
-  - +.w3schools.com
   - +.w3.org
   - +.w0512.com
   - +.w.wiki
   - +.w.org
   - +.w-mt.co
+  - +.vzw.com
+  - +.vv1865.com
   - +.steamdb.info
   - +.steaminventoryhelper.com
   - +.steamofporn.com
@@ -24047,14 +24051,14 @@ payload:
   - +.streetmeatasia.com
   - +.strepsils.at
   - +.strepsils.ch
-  - +.vzw.com
-  - +.vv1865.com
   - +.vuvuzela.io
   - +.vultr.com
   - +.vulgarx.com
   - +.vtvan.com
   - +.vtsociety.org
   - +.vtrahe.page
+  - +.vtbglobalperspectives.com
+  - +.vtbbo.ru
   - +.strepsils.es
   - +.strepsils.fi
   - +.strepsils.fr
@@ -24104,7 +24108,7 @@ payload:
   - +.submittal-log.com
   - +.submityourflicks.com
   - +.subscene.com
-  - +.vtbglobalperspectives.com
+  - +.vtb.ru
   - +.sucksex.com
   - +.sukafeti.jp
   - +.sukebelinks.com
@@ -24113,11 +24117,11 @@ payload:
   - +.summitceo.ru
   - +.sumomo-ch.com
   - +.sun.com
-  - +.vtbbo.ru
+  - +.vtb.com
   - +.sundanceignite2016.com
   - +.sundayready.com
   - +.sunglassessale2014.com
-  - +.vtb.ru
+  - +.vtb-direct.com
   - +.supanimegames.com
   - +.superadultgames.com
   - +.supercell.com
@@ -24126,7 +24130,7 @@ payload:
   - +.supercellgames.com
   - +.supercellid.com
   - +.supercellstore.com
-  - +.vtb.com
+  - +.vsphere.net
   - +.superearsenjoy.com
   - +.supergratisporno.com
   - +.superhqporn.com
@@ -24138,7 +24142,7 @@ payload:
   - +.superpapermario.com
   - +.supersexeamateur.com
   - +.supersrv.de
-  - +.vtb-direct.com
+  - +.vsphere.com
   - +.supertop.co
   - +.superuser.com
   - +.supplybestjerseys.com
@@ -24148,12 +24152,12 @@ payload:
   - +.supremacy.com
   - +.supremacy.net
   - +.sureporn.com
-  - +.vsphere.net
+  - +.vsezoo.com
   - +.surflite.co
   - +.surflite.net
   - +.suruga-ya.com
   - +.suruga-ya.jp
-  - +.vsphere.com
+  - +.vsex.in
   - +.sushi.ski
   - +.susiewildin.com
   - +.sustainablebuildingstudio.com
@@ -24180,7 +24184,7 @@ payload:
   - +.swapsmut.com
   - +.sweb.ru
   - +.sweetadult-tube.com
-  - +.vsezoo.com
+  - +.vsemrabota.ru
   - +.sweetsext.com
   - +.sweetsinner.com
   - +.swegold.com
@@ -24196,7 +24200,6 @@ payload:
   - +.swingerpornfun.com
   - +.swingerporntube.com
   - +.swingers-homemade-videos.com
-  - +.vsex.in
   - +.swingersexorgy.com
   - +.swingexpert.nl
   - +.swiss-machining.com
@@ -24224,7 +24227,6 @@ payload:
   - +.swoo.sh
   - +.swoosh.com
   - +.swoosh.tv
-  - +.vsemrabota.ru
   - +.swtor.com
   - +.swtor.net
   - +.sxarab.top
@@ -24292,6 +24294,8 @@ payload:
   - +.taiolongdh.sbs
   - +.taiwanadultexpo.com
   - +.taiwansex.tw
+  - +.vscale.ru
+  - +.vscale.io
   - +.take2games.com
   - +.takegoto.com
   - +.takens.tw
@@ -24308,7 +24312,7 @@ payload:
   - +.tamtam.chat
   - +.tandberg-china.com
   - +.tandberg.com
-  - +.vscale.ru
+  - +.vscale.blog
   - +.tandfonline.com
   - +.tanflix.com
   - +.tantaly.com
@@ -24324,10 +24328,8 @@ payload:
   - +.target.com
   - +.targetimg1.com
   - +.tarkov.com
-  - +.vscale.io
   - +.tasexy.com
   - +.tasexy.top
-  - +.vscale.blog
   - +.tasteofpremium.jp
   - +.tastyblacks.com
   - +.tati-log.com
@@ -24345,7 +24347,9 @@ payload:
   - +.tb.pro
   - +.tbank-online.com
   - +.tbank.ru
+  - +.jizzle.com
   - +.tbib.org
+  - +.vrv.co
   - +.tconf.ru
   - +.tcsbank.ru
   - +.tdev.by
@@ -24368,6 +24372,7 @@ payload:
   - +.technogym.bg
   - +.technogym.ch
   - +.technogym.com
+  - +.vrsumo.com
   - +.technogym.ru
   - +.technogym.su
   - +.technologyandsociety.org
@@ -24376,7 +24381,6 @@ payload:
   - +.techstreet.com
   - +.techtimes.com
   - +.techtudo.com
-  - +.vrv.co
   - +.ted.com
   - +.tedcdn.com
   - +.teen-girl.net
@@ -24403,7 +24407,7 @@ payload:
   - +.teenwebcamtube.com
   - +.teeztube.com
   - +.tegrazone.co
-  - +.vrsumo.com
+  - +.vrsexgames.biz
   - +.tegrazone.com
   - +.tegrazone.jp
   - +.tegrazone.kr
@@ -24433,6 +24437,7 @@ payload:
   - +.terapeack.com
   - +.terapeak.ca
   - +.terapeak.com
+  - +.vrpornranked.com
   - +.terapeak.hk
   - +.terapeak.info
   - +.teraperk.com
@@ -24450,24 +24455,23 @@ payload:
   - +.teslaenergy.services
   - +.teslamotors.com
   - +.teslazta.net
-  - +.vrsexgames.biz
-  - +.vrpornranked.com
   - +.vrpornmania.com
   - +.vrpornjack.com
+  - +.vrporncat.com
   - +.test-ipv6.cl
   - +.test-ipv6.com
-  - +.vrporncat.com
-  - +.test-ipv6.cz
   - +.vrnastran.com
   - +.vrfun18.com
+  - +.test-ipv6.cz
   - +.vredprofessional.com
   - +.vredessentials.com
-  - +.test-ipv6.hu
-  - +.test-ipv6.is
   - +.vred-essentials.com
   - +.vrchat.net
+  - +.test-ipv6.hu
+  - +.test-ipv6.is
   - +.vrchat.cloud
   - +.test-ipv6.se
+  - +.vrcams.io
   - +.testipv6.de
   - +.testonfox.com
   - +.tetrika-school.ru
@@ -24476,9 +24480,9 @@ payload:
   - +.texttobuy.org
   - +.texture.com
   - +.tfbnw.net
-  - +.vrcams.io
-  - +.tferwq.com
   - +.vrbgay.com
+  - +.tferwq.com
+  - +.vps.hosting
   - +.tgirlcentral.com
   - +.tgirlpostop.com
   - +.tgp6.com
@@ -24500,9 +24504,10 @@ payload:
   - +.the-japan-news.com
   - +.the-m-festival.com
   - +.the-monster-beats.com
+  - +.vpro.net
   - +.the123d.com
   - +.theaffairs.com
-  - +.vps.hosting
+  - +.vpro.com
   - +.theav.cc
   - +.theav.xyz
   - +.thebanker.com
@@ -24517,10 +24522,8 @@ payload:
   - +.thecamdude.com
   - +.thecandidbay.com
   - +.thecandidforum-voyeur.ru
-  - +.vpro.net
-  - +.vpro.com
-  - +.theclasshroom.com
   - +.vpornvideos.com
+  - +.theclasshroom.com
   - +.theclubprive.com
   - +.thecompaqstore.com
   - +.thecuckold.com
@@ -24596,6 +24599,7 @@ payload:
   - +.thesimssocial.com
   - +.thestationbymaker.com
   - +.thesun.ie
+  - +.vpnrouter.homes
   - +.thethothub.com
   - +.thetimes.ie
   - +.thetrackernetwork.com
@@ -24615,7 +24619,6 @@ payload:
   - +.thinkboxsoftware.com
   - +.thinkdifferent.us
   - +.thinkofliving.com
-  - +.vpnrouter.homes
   - +.thirdns.de
   - +.thirdweb.com
   - +.thisisgame.com
@@ -24719,9 +24722,11 @@ payload:
   - +.tochka-tech.com
   - +.tochka.com
   - +.voyeurweb.com
+  - +.voyeurstyle.com
+  - +.voyeurporntapes.com
   - +.tok.media
   - +.tokyo-hot.com
-  - +.voyeurstyle.com
+  - +.voyeurpapa.com
   - +.tokyo-tosho.net
   - +.tokyodisneyresort.jp
   - +.tokyomotion.com
@@ -24731,7 +24736,7 @@ payload:
   - +.tokyotosho.info
   - +.tokyotosho.se
   - +.tomatespodres.com
-  - +.voyeurporntapes.com
+  - +.voyeurmonkey.com
   - +.tomonews.net
   - +.tomsguide.com
   - +.tonec.com
@@ -24789,12 +24794,12 @@ payload:
   - +.toritonssl.com
   - +.toroporno.com
   - +.torrindex.net
-  - +.voyeurpapa.com
+  - +.voyeurhouse.com
   - +.tospo-keiba.jp
   - +.tospotify.com
   - +.totalmateria.com
   - +.totoleak.com
-  - +.voyeurmonkey.com
+  - +.voyeurhit.com
   - +.touchid.tv
   - +.touchid.wang
   - +.touchsmartpc.com
@@ -24805,17 +24810,17 @@ payload:
   - +.toutapp.com
   - +.towerauction.com
   - +.townofsins.com
-  - +.voyeurhouse.com
+  - +.voyeureye.com
   - +.townwifi.jp
   - +.toxin-up.sbs
   - +.toxinzoo.sbs
   - +.toy-cadcam.com
   - +.toy-people.com
   - +.toycadcam.com
-  - +.voyeurhit.com
+  - +.voxops.net
   - +.toyota-bank.ru
   - +.tpension.ru
-  - +.voyeureye.com
+  - +.voxmedia.com
   - +.tpornstars.com
   - +.tr.com
   - +.tracker.gg
@@ -24841,13 +24846,12 @@ payload:
   - +.travelex.be
   - +.travelex.bh
   - +.travelex.ca
-  - +.voxops.net
-  - +.voxmedia.com
   - +.voxfieldguide.com
-  - +.travelex.com
   - +.voxcreative.com
+  - +.travelex.com
   - +.vox-cdn.com
   - +.votolia.com
+  - +.vortexmachining.com
   - +.travelex.de
   - +.travelex.fr
   - +.travelex.it
@@ -24857,6 +24861,7 @@ payload:
   - +.travelexmoneycard.com
   - +.travelgirls.com
   - +.trbcdn.net
+  - +.vomitkings.com
   - +.trello.com
   - +.trellocdn.com
   - +.trendmicro.com
@@ -24876,7 +24881,7 @@ payload:
   - +.troisrivieresmini.com
   - +.tropictube.com
   - +.trpger.us
-  - +.vortexmachining.com
+  - +.volvotrucks.uy
   - +.trueamateurmodels.com
   - +.trueamateurs.com
   - +.trueanal.com
@@ -24926,7 +24931,7 @@ payload:
   - +.ts.la
   - +.ts.net
   - +.tsbnk.ru
-  - +.vomitkings.com
+  - +.volvotrucks.tn
   - +.tsescortsdirectory.com
   - +.tsi.ai
   - +.tsmodelstube.com
@@ -24935,14 +24940,14 @@ payload:
   - +.tsquare.tv
   - +.tssp.best
   - +.tsthai.com
-  - +.volvotrucks.uy
+  - +.volvotrucks.tm
   - +.tsumino.com
   - +.tsundora.com
-  - +.volvotrucks.tn
+  - +.volvotrucks.sk
   - +.tsyum.com
   - +.tteshop.com
-  - +.volvotrucks.tm
-  - +.volvotrucks.sk
+  - +.volvotrucks.si
+  - +.volvotrucks.sg
   - +.tube-pornomovs.com
   - +.tube-sex-videos.com
   - +.tube.bz
@@ -24990,18 +24995,18 @@ payload:
   - +.tubsexer.com
   - +.tubxporn.com
   - +.tubxporn.xxx
-  - +.volvotrucks.si
+  - +.volvotrucks.se
   - +.tug.org
   - +.tukif.com
   - +.tuncommercialbank.com
-  - +.volvotrucks.sg
+  - +.volvotrucks.ru
   - +.turbo.com
   - +.turbogvideos.com
   - +.turbopages.org
   - +.turborepo.org
   - +.turbotax.com
   - +.turkeyblocks.org
-  - +.volvotrucks.se
+  - +.volvotrucks.rs
   - +.tusco.ru
   - +.tushy.com
   - +.tushyraw.com
@@ -25010,33 +25015,33 @@ payload:
   - +.tutamail.com
   - +.tutanota.com
   - +.tutanota.de
-  - +.volvotrucks.ru
+  - +.volvotrucks.ro
   - +.tvappstore.net
   - +.tvb.com
-  - +.volvotrucks.rs
-  - +.volvotrucks.ro
   - +.volvotrucks.qa
   - +.volvotrucks.ps
+  - +.volvotrucks.pl
+  - +.volvotrucks.pk
   - +.tvbusa.com
   - +.tvbweekly.com
-  - +.volvotrucks.pl
+  - +.volvotrucks.ph
   - +.tver.jp
   - +.tvigle.ru
-  - +.volvotrucks.pk
-  - +.volvotrucks.ph
+  - +.volvotrucks.pe
+  - +.volvotrucks.no
   - +.tvnaviweb.jp
   - +.tvoyodbo.online
   - +.tvpromise.com
-  - +.volvotrucks.pe
+  - +.volvotrucks.nl
   - +.tw985.com
   - +.twavking.com
-  - +.volvotrucks.no
+  - +.volvotrucks.net
   - +.twcomix.com
   - +.twcstorage.ru
   - +.tweakadmin.com
   - +.tweakfilms.com
   - +.tweaksoftware.com
-  - +.volvotrucks.nl
+  - +.volvotrucks.my
   - +.twgreatnews.com
   - +.twhentai.com
   - +.twi-videos.net
@@ -25051,7 +25056,7 @@ payload:
   - +.twinmotion.com
   - +.twinprime.com
   - +.twistedlinks.net
-  - +.volvotrucks.net
+  - +.volvotrucks.mn
   - +.twistys.com
   - +.twitchcon.com
   - +.twitchsvc.net
@@ -25076,7 +25081,7 @@ payload:
   - +.txvlog.com
   - +.txxx.com
   - +.txxx1.com
-  - +.volvotrucks.my
+  - +.volvotrucks.mk
   - +.tyler-brown.com
   - +.tyms2022.com
   - +.typeisbeautiful.com
@@ -25095,7 +25100,7 @@ payload:
   - +.u9a9.cc
   - +.u9a9.com
   - +.uaa.com
-  - +.volvotrucks.mn
+  - +.volvotrucks.md
   - +.uber-assets.com
   - +.uber.com
   - +.ubereats.com
@@ -25116,11 +25121,11 @@ payload:
   - +.ucoz.ae
   - +.ucoz.club
   - +.ucoz.co
-  - +.volvotrucks.mk
-  - +.volvotrucks.md
-  - +.ucoz.com
   - +.volvotrucks.ma
   - +.volvotrucks.lv
+  - +.ucoz.com
+  - +.volvotrucks.lt
+  - +.volvotrucks.kz
   - +.ucoz.de
   - +.ucoz.es
   - +.ucoz.fr
@@ -25142,13 +25147,13 @@ payload:
   - +.udemy.com
   - +.udemycdn.com
   - +.udfs.com
-  - +.volvotrucks.lt
+  - +.volvotrucks.kr
   - +.udndata.com
   - +.udnfunlife.com
   - +.udtrucksmeena.com
   - +.ueberamazon.de
   - +.uflash.tv
-  - +.volvotrucks.kz
+  - +.volvotrucks.kg
   - +.uguide.ru
   - +.uguide.su
   - +.uguisupapa.net
@@ -25171,30 +25176,30 @@ payload:
   - +.ukoz.ru
   - +.ukraina.ru
   - +.ukwhoswho.com
-  - +.volvotrucks.kr
+  - +.volvotrucks.jp
   - +.ulol.com
   - +.ultimaforever.com
   - +.ultimaonline.com
   - +.ultradonkey.com
   - +.ultrasrv.de
   - +.uma.media
-  - +.volvotrucks.kg
-  - +.volvotrucks.jp
+  - +.volvotrucks.it
+  - +.volvotrucks.in
   - +.umass.edu
   - +.umbank.ru
   - +.umbrella.com
   - +.umschool.net
   - +.umsoplaneta.com
-  - +.volvotrucks.it
+  - +.volvotrucks.id
   - +.un.org
-  - +.volvotrucks.in
+  - +.volvotrucks.hu
   - +.unbrandedproducts.com
   - +.uncams.com
   - +.uncensoredhentai.xxx
   - +.uncensoredsexparties.com
   - +.underhentai.net
   - +.unext-info.jp
-  - +.volvotrucks.id
+  - +.volvotrucks.hr
   - +.unext.jp
   - +.unicredit.ru
   - +.unicreditbank.ru
@@ -25255,7 +25260,7 @@ payload:
   - +.userdrive.org
   - +.usersdrive.com
   - +.usertrust.com
-  - +.volvotrucks.hu
+  - +.volvotrucks.hk
   - +.usocial.pro
   - +.utdstc.com
   - +.uug22.com
@@ -25287,12 +25292,12 @@ payload:
   - +.uweb.ru
   - +.uxthemes.com
   - +.uxzw.club
-  - +.volvotrucks.hr
+  - +.volvotrucks.gr
   - +.v-av.com
   - +.v-has.com
   - +.v.gd
   - +.v.ps
-  - +.volvotrucks.hk
+  - +.volvotrucks.ge
   - +.v2ph.com
   - +.v2ray.cool
   - +.v7hds.com
@@ -25304,10 +25309,10 @@ payload:
   - +.vaginapics.pro
   - +.vagrantcloud.com
   - +.vagrantup.com
-  - +.volvotrucks.gr
-  - +.volvotrucks.ge
-  - +.valorinveste.com
   - +.volvotrucks.fr
+  - +.volvotrucks.fi
+  - +.valorinveste.com
+  - +.volvotrucks.es
   - +.valoryirene.com
   - +.value-domain.com
   - +.value-server.com
@@ -25320,8 +25325,6 @@ payload:
   - +.vanish.be
   - +.vanish.ch
   - +.vanish.cl
-  - +.volvotrucks.fi
-  - +.volvotrucks.es
   - +.volvotrucks.ee
   - +.volvotrucks.dk
   - +.volvotrucks.de
@@ -25335,6 +25338,8 @@ payload:
   - +.volvotrucks.ba
   - +.volvotrucks.az
   - +.volvotrucks.at
+  - +.volvotrucks.am
+  - +.volvotrucks.al
   - +.vanish.de
   - +.vanish.dk
   - +.vanish.es
@@ -25353,11 +25358,11 @@ payload:
   - +.vanish.si
   - +.vanish.sk
   - +.vanisharabia.com
-  - +.volvotrucks.am
+  - +.volvotrucks.ae
   - +.vanishcentroamerica.com
   - +.vanishinfo.cz
   - +.vanishstains.com
-  - +.volvotrucks.al
+  - +.volvotruckrental.be
   - +.vanitaonline.com
   - +.vanitha.in
   - +.vanithaveedu.com
@@ -25384,15 +25389,13 @@ payload:
   - +.veet.ca
   - +.veet.ch
   - +.veet.cl
-  - +.volvotrucks.ae
-  - +.volvotruckrental.be
   - +.volvotruckcenter.se
   - +.volvotruckcenter.no
   - +.volvotruckcenter.nl
   - +.volvotruckcenter.kz
-  - +.veet.com
   - +.volvotruckcenter.kr
   - +.volvotruckcenter.it
+  - +.veet.com
   - +.volvotruckcenter.fi
   - +.volvotruckcenter.es
   - +.volvotruckcenter.dk
@@ -25403,6 +25406,8 @@ payload:
   - +.volvopenta.se
   - +.volvopenta.nl
   - +.volvopenta.it
+  - +.volvopenta.fr
+  - +.volvopenta.es
   - +.veet.de
   - +.veet.dk
   - +.veet.es
@@ -25422,7 +25427,7 @@ payload:
   - +.veetbangladesh.com
   - +.veetcentroamerica.com
   - +.veetclub.it
-  - +.volvopenta.fr
+  - +.volvopenta.de
   - +.velaserver.com
   - +.velastaging.com
   - +.velasync.com
@@ -25458,16 +25463,16 @@ payload:
   - +.verisign.asia
   - +.verisign.biz
   - +.verisign.ch
-  - +.volvopenta.es
-  - +.volvopenta.de
-  - +.verisign.com
   - +.volvopenta.com
   - +.volvomerchandise.com
+  - +.verisign.com
   - +.volvogrouptruckcenter.nl
   - +.volvogroup.se
   - +.volvogroup.ru
   - +.volvogroup.pl
   - +.volvogroup.pe
+  - +.volvogroup.nl
+  - +.volvogroup.mx
   - +.verisign.de
   - +.verisign.dk
   - +.verisign.es
@@ -25510,12 +25515,12 @@ payload:
   - +.vfsco.ca
   - +.vfsco.ch
   - +.vfsco.cl
-  - +.volvogroup.nl
-  - +.volvogroup.mx
-  - +.vfsco.com
   - +.volvogroup.kr
   - +.volvogroup.jp
+  - +.vfsco.com
   - +.volvogroup.fr
+  - +.volvogroup.de
+  - +.volvogroup.com
   - +.vfsco.cz
   - +.vfsco.de
   - +.vfsco.dk
@@ -25558,9 +25563,9 @@ payload:
   - +.viber.me
   - +.video-jav.net
   - +.video-one.com
-  - +.volvogroup.de
-  - +.volvogroup.com
-  - +.video01.org
+  - +.volvogroup.be
+  - +.volvodefense.com
+  - +.jizzonline.com
   - +.videochampion.com
   - +.videodesexo.blog
   - +.videojs.com
@@ -25569,14 +25574,14 @@ payload:
   - +.videos4sale.com
   - +.videosamadoresreais.com
   - +.videosdemadurasx.com
-  - +.volvogroup.be
-  - +.volvodefense.com
   - +.volvoce.com
+  - +.volvobuses.us
+  - +.volvobuses.tn
   - +.videosection.com
   - +.videoshorny.com
   - +.videoskaseros.com
   - +.videosmadeathome.com
-  - +.volvobuses.us
+  - +.volvobuses.sg
   - +.videosporno.life
   - +.videostravestis.xxx
   - +.videoxxxporn.biz
@@ -25646,8 +25651,6 @@ payload:
   - +.visa.be
   - +.visa.ca
   - +.visa.cl
-  - +.volvobuses.tn
-  - +.volvobuses.sg
   - +.volvobuses.se
   - +.volvobuses.ru
   - +.volvobuses.pl
@@ -25659,9 +25662,9 @@ payload:
   - +.volvobuses.mx
   - +.volvobuses.ma
   - +.volvobuses.kr
-  - +.visa.com
   - +.volvobuses.jo
   - +.volvobuses.it
+  - +.visa.com
   - +.volvobuses.in
   - +.volvobuses.hu
   - +.volvobuses.hk
@@ -25700,6 +25703,8 @@ payload:
   - +.voanouvel.com
   - +.voanoticias.com
   - +.voanews.eu
+  - +.voandebele.com
+  - +.voalingala.com
   - +.visa.cz
   - +.visa.de
   - +.visa.dk
@@ -25756,15 +25761,15 @@ payload:
   - +.visaitalia.com
   - +.visakorea.com
   - +.visaluxuryhotelcollection.com
-  - +.voandebele.com
-  - +.voalingala.com
-  - +.visaluxuryhotels.com
   - +.voakorea.com
+  - +.visaluxuryhotels.com
+  - +.voahausa.com
   - +.visamiddleeast.com
   - +.visanet.net
   - +.visapcsdirect.com
   - +.visaplus.com
   - +.visasavingsedge.ca
+  - +.voadeewaradio.com
   - +.visasignaturehotels.com
   - +.visasoutheasteurope.com
   - +.visb.org
@@ -25776,14 +25781,12 @@ payload:
   - +.visiontimes.net
   - +.visiontimesjp.com
   - +.visual-arts.jp
-  - +.voahausa.com
-  - +.voadeewaradio.com
+  - +.voadeewanews.com
   - +.vitukali.com
   - +.vivaxnxx.com
   - +.vixen.com
   - +.vixengroup.com
   - +.vixvids.to
-  - +.voadeewanews.com
   - +.vk-apps.com
   - +.vk-apps.ru
   - +.vk-cdn.me
@@ -25881,8 +25884,7 @@ payload:
   - +.voaafrique.com
   - +.voabambara.com
   - +.voabangla.com
-  - +.whereilive.com.au
-  - +.ebc.net.tw
+  - +.mcdonalds.co.uk
   - +.visualarts.gr.jp
   - +.visasignature.co.kr
   - +.visaluxuryhotels.com.ar
@@ -25905,12 +25907,12 @@ payload:
   - +.visa.com.pe
   - +.visa.com.pa
   - +.visa.com.ng
-  - +.vodafone.co.uk
   - +.visa.com.my
+  - +.visa.com.mx
+  - +.vodafone.co.uk
+  - +.visa.com.ms
   - +.vodafone.com.au
   - +.vodafone.com.tr
-  - +.visa.com.mx
-  - +.visa.com.ms
   - +.visa.com.lk
   - +.visa.com.lc
   - +.visa.com.kz
@@ -25926,18 +25928,18 @@ payload:
   - +.visa.com.ec
   - +.visa.com.do
   - +.visa.com.dm
+  - +.visa.com.cy
+  - +.visa.com.co
   - +.volvobuses.co.nz
   - +.volvobuses.co.uk
   - +.volvobuses.co.za
-  - +.visa.com.cy
+  - +.visa.com.bz
   - +.volvobuses.com.ar
   - +.volvobuses.com.au
   - +.volvobuses.com.br
   - +.volvobuses.com.kw
   - +.volvobuses.com.pt
   - +.volvobuses.com.tw
-  - +.visa.com.co
-  - +.visa.com.bz
   - +.visa.com.bs
   - +.visa.com.br
   - +.visa.com.bo
@@ -25964,8 +25966,8 @@ payload:
   - +.videosdesexo.br.com
   - +.videosdepornografia.blog.br
   - +.video.fc2.com
-  - +.volvogroup.com.br
   - +.vfsco.com.tr
+  - +.volvogroup.com.br
   - +.vfsco.com.br
   - +.vfsco.com.au
   - +.vfsco.co.za
@@ -25977,9 +25979,9 @@ payload:
   - +.verisign.com.es
   - +.verisign.com.br
   - +.verisign.com.au
-  - +.volvopenta.com.br
   - +.verisign.co.uk
   - +.verisign.co.in
+  - +.volvopenta.com.br
   - +.veet.com.tr
   - +.veet.com.sg
   - +.veet.com.pk
@@ -26008,6 +26010,8 @@ payload:
   - +.vanish.com.hr
   - +.vanish.com.co
   - +.vanish.com.br
+  - +.vanish.com.ar
+  - +.vanish.co.za
   - +.volvotrucks.co.ao
   - +.volvotrucks.co.bw
   - +.volvotrucks.co.il
@@ -26018,7 +26022,7 @@ payload:
   - +.volvotrucks.co.za
   - +.volvotrucks.co.zm
   - +.volvotrucks.co.zw
-  - +.vanish.com.ar
+  - +.vanish.co.uk
   - +.volvotrucks.com.ar
   - +.volvotrucks.com.au
   - +.volvotrucks.com.bn
@@ -26029,8 +26033,6 @@ payload:
   - +.volvotrucks.com.tr
   - +.volvotrucks.com.tw
   - +.volvotrucks.com.ua
-  - +.vanish.co.za
-  - +.vanish.co.uk
   - +.vanish.co.nz
   - +.vanish.co.in
   - +.vanish.co.il
@@ -26045,7 +26047,7 @@ payload:
   - +.ucoz.com.ro
   - +.ucoz.com.br
   - +.ucoz.co.uk
-  - +.ucoz.co.il
+  - +.hsbc.com.eg
   - +.uab.com.mm
   - +.twca.com.tw
   - +.tvmost.com.hk
@@ -26133,9 +26135,9 @@ payload:
   - +.sweetandmaxwell.co.uk
   - +.surugabank.co.jp
   - +.superstation.com.tw
-  - +.vtb-grants.fut.ru
   - +.supercoach.com.au
   - +.supadou.blogism.jp
+  - +.vtb-grants.fut.ru
   - +.sunbingo.co.uk
   - +.strepsils.com.tw
   - +.strepsils.com.ph
@@ -26158,9 +26160,9 @@ payload:
   - +.static9.net.au
   - +.starbucks.com.uy
   - +.starbucks.com.tr
-  - +.wadax.ne.jp
   - +.starbucks.com.sg
   - +.starbucks.com.pe
+  - +.wadax.ne.jp
   - +.starbucks.com.my
   - +.starbucks.com.mx
   - +.starbucks.com.kz
@@ -26188,12 +26190,14 @@ payload:
   - +.sonystoragemedia.co.jp
   - +.sonyprotechnosupport.co.jp
   - +.sonynetwork.co.jp
+  - +.sonymusic.com.hk
   - +.sonybo.co.jp
   - +.sony.com.vn
   - +.sony.com.tw
   - +.sony.com.tr
   - +.sony.com.sv
   - +.sony.com.sg
+  - +.sony.com.py
   - +.sony.com.ph
   - +.sony.com.pe
   - +.sony.com.pa
@@ -26373,7 +26377,7 @@ payload:
   - +.pearsonclinical.co.uk
   - +.pearson.com.uy
   - +.pearson.com.hk
-  - +.hsbc.com.bh
+  - +.pearson.com.au
   - +.pearson.com.ar
   - +.pearson.co.jp
   - +.pearson.co.in
@@ -26381,7 +26385,7 @@ payload:
   - +.pcmarket.com.hk
   - +.pchomepay.com.tw
   - +.pchomeonline.com.tw
-  - +.hsbc.com.br
+  - +.whereilive.com.au
   - +.pchome.com.tw
   - +.paypay-bank.co.jp
   - +.paypal.com.sg
@@ -26478,7 +26482,7 @@ payload:
   - +.nikkei-cnbc.co.jp
   - +.nikestore.com.au
   - +.nike.com.hk
-  - +.nike.com.br
+  - +.hsbc.com.br
   - +.nii.ac.jp
   - +.night.livedoor.biz
   - +.wildberries.co.il
@@ -26575,7 +26579,7 @@ payload:
   - +.miniso.com.pl
   - +.miniso.com.mx
   - +.miniso.com.gr
-  - +.miniso.com.es
+  - +.vjmedia.com.hk
   - +.miniso.co.tz
   - +.miniso.co.id
   - +.mini.com.uy
@@ -26627,13 +26631,13 @@ payload:
   - +.meadjohnson.com.tw
   - +.meadjohnson.com.hk
   - +.mcdonaldsparties.co.nz
-  - +.mcdonalds.com.tw
+  - +.hsbc.com.mo
   - +.mcdonalds.com.ph
   - +.mcdonalds.com.my
   - +.mcdonalds.com.lb
   - +.mcdonalds.com.hk
   - +.mcdonalds.com.au
-  - +.mcdonalds.co.uk
+  - +.hsbc.com.hk
   - +.mcdonalds.co.nz
   - +.mcdonalds.co.kr
   - +.mcdonalds.co.jp
@@ -26691,7 +26695,7 @@ payload:
   - +.macos.com.au
   - +.machosaonatural.com.br
   - +.macbookpro.com.au
-  - +.vjmedia.com.hk
+  - +.www.destinationurl.com
   - +.adidas.com.ph
   - +.adidas.com.qa
   - +.www.pxcc.com
@@ -26724,7 +26728,7 @@ payload:
   - +.konachan.wjcodes.com
   - +.knowswho.co.jp
   - +.kktv.com.tw
-  - +.hsbc.com.eg
+  - +.kkbox.com.tw
   - +.kiyobank.co.jp
   - +.kitakyushubank.co.jp
   - +.kinki.co.jp
@@ -26814,7 +26818,7 @@ payload:
   - +.intel.com.py
   - +.intel.com.pr
   - +.intel.com.ph
-  - +.hsbc.com.bd
+  - +.intel.com.pe
   - +.intel.com.my
   - +.intel.com.mx
   - +.intel.com.jm
@@ -26908,11 +26912,11 @@ payload:
   - +.hsbc.com.my
   - +.hsbc.com.mx
   - +.hsbc.com.mt
-  - +.hsbc.com.mo
-  - +.hsbc.com.hk
-  - +.kkbox.com.tw
-  - +.www.destinationurl.com
-  - +.intel.com.pe
+  - +.mcdonalds.com.tw
+  - +.miniso.com.es
+  - +.nike.com.br
+  - +.hsbc.com.bh
+  - +.hsbc.com.bd
   - +.hsbc.com.au
   - +.hsbc.com.ar
   - +.hsbc.co.uk
@@ -27109,7 +27113,7 @@ payload:
   - +.egmontbooks.co.uk
   - +.ecert.gov.hk
   - +.adult.toonsearch.net
-  - +.pearson.com.au
+  - +.ebc.net.tw
   - +.ebaycbt.co.kr
   - +.ebay.com.sg
   - +.ebay.com.ph
@@ -27363,6 +27367,7 @@ payload:
   - +.chugokubank.co.jp
   - +.chtf.org.tw
   - +.yango.co.il
+  - +.ucoz.co.il
   - +.chinatimes.com.tw
   - +.chinasex.com.es
   - +.chikubank.co.jp
