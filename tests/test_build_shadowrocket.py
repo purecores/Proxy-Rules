@@ -30,6 +30,17 @@ class ShadowrocketRuleTests(unittest.TestCase):
         current = [{"category": "Test", "url": "https://example.test/rules", "source_rules": 110}]
         check_source_drift(previous, current, "shadowrocket")
 
+    def test_small_absolute_drift_is_allowed_even_when_percentage_is_large(self):
+        previous = {"sources": [{"category": "Test", "url": "https://example.test/rules", "source_rules": 9}]}
+        current = [{"category": "Test", "url": "https://example.test/rules", "source_rules": 21}]
+        check_source_drift(previous, current, "shadowrocket")
+
+    def test_large_absolute_drift_still_fails_closed(self):
+        previous = {"sources": [{"category": "Test", "url": "https://example.test/rules", "source_rules": 100}]}
+        current = [{"category": "Test", "url": "https://example.test/rules", "source_rules": 40}]
+        with self.assertRaises(ValueError):
+            check_source_drift(previous, current, "shadowrocket")
+
     def test_local_personal_source_drift_is_allowed(self):
         previous = {"sources": [{"category": "Test", "url": "local://personal/rules.yaml", "source_rules": 10}]}
         current = [{"category": "Test", "url": "local://personal/rules.yaml", "source_rules": 50}]

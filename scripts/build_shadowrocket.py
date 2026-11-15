@@ -157,15 +157,18 @@ def check_source_drift(previous_audit: dict, sources: list[dict], consumer: str)
         if item.get("consumer", "shadowrocket") == consumer
     }
     max_change = float(os.environ.get("MAX_SOURCE_RULE_CHANGE", "0.5"))
+    min_delta = int(os.environ.get("MIN_SOURCE_RULE_DELTA", "20"))
     for item in sources:
         url = item.get("url", "")
         if url.startswith("local://personal/"):
             continue
         old_count = previous.get((item["category"], item["url"]))
         new_count = item["source_rules"]
-        if old_count and abs(new_count - old_count) / old_count > max_change:
+        delta = abs(new_count - old_count) if old_count else 0
+        if old_count and delta >= min_delta and delta / old_count > max_change:
             raise ValueError(
-                f"source size changed by more than {max_change:.0%}: {item['url']} "
+                f"source size changed by more than {max_change:.0%} "
+                f"and at least {min_delta:,} rules: {item['url']} "
                 f"({old_count:,} -> {new_count:,}); inspect upstream change before publishing"
             )
 

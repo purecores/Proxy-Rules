@@ -101,7 +101,7 @@ python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 ```
 
-Mihomo generation additionally requires Bash, curl, jq, mikefarah/yq v4, and the pinned Mihomo binary on `PATH`. Shadowrocket lists are built with Python/PyYAML; source and output SHA-256/count audit metadata is written to `compilation/source-audit.json`. Large source-count changes (over 50% versus the last successful build) fail closed for review. Personal rules are read from this repository using `local://personal/<file>` references:
+Mihomo generation additionally requires Bash, curl, jq, mikefarah/yq v4, and the pinned Mihomo binary on `PATH`. Shadowrocket lists are built with Python/PyYAML; source and output SHA-256/count audit metadata is written to `compilation/source-audit.json`. Large source-count changes (over 50% and at least 20 rules versus the last successful build) fail closed for review; `MAX_SOURCE_RULE_CHANGE` and `MIN_SOURCE_RULE_DELTA` override those thresholds. Personal rules are read from this repository using `local://personal/<file>` references:
 
 ```bash
 bash scripts/build_mihomo.sh
