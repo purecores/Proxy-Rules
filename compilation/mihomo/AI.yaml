@@ -70,6 +70,10 @@ payload:
   - +.perplexity.ai
   - +.perplexity.com
   - +.pplx.ai
+  - copilot-proxy.githubusercontent.com
+  - copilot-workspace.githubnext.com
+  - production-copilot-host-westus.webpubsub.azure.com
+  - copilotprodattachments.blob.core.windows.net
   - ai.google.dev
   - alkalicore-pa.clients6.google.com
   - alkalimakersuite-pa.clients6.google.com
@@ -86,18 +90,11 @@ payload:
   - notebooklm.googleapis.com
   - antigravity-pa.googleapis.com
   - antigravity.googleapis.com
-  - copilot-proxy.githubusercontent.com
-  - copilot-workspace.githubnext.com
-  - production-copilot-host-westus.webpubsub.azure.com
-  - copilotprodattachments.blob.core.windows.net
-  - +.elevenlabs.com
-  - +.meta.ai
-  - +.poecdn.net
-  - +.cohere.com
+  - +.cursor.com
+  - +.muse.ai
+  - +.coderabbit.ai
   - +.copilot-stg.com
-  - +.poe.com
   - +.copilot.com
-  - +.lpsnmedia.net
   - +.deepwiki.com
   - +.deepwiki.org
   - +.clipdrop.co
@@ -105,26 +102,27 @@ payload:
   - +.typesafe.ai
   - +.kimi.ai
   - +.moonshot.ai
-  - +.liveperson.net
+  - +.meta.ai
   - +.metaaivm.com
   - +.metaaiusercontent.com
-  - +.muse.ai
+  - +.cursor.sh
   - +.agentclientprotocol.com
   - +.anythingllm.com
   - +.chutes.ai
   - +.clawhub.ai
   - +.cline.bot
-  - +.huggingface.co
   - +.context7.com
   - +.crewai.com
-  - +.devin.ai
+  - +.cursorapi.com
   - +.diabrowser.com
   - +.diabrowser.engineering
   - +.dify.ai
   - +.dreamgen.com
   - +.duck.ai
-  - +.hf.space
   - +.h2o.ai
+  - +.elevenlabs.io
+  - +.elevenlabs.com
+  - +.cerebras.ai
   - +.kiro.dev
   - +.langchain.com
   - +.lmstudio.ai
@@ -150,15 +148,32 @@ payload:
   - +.talkai.info
   - +.tapnow.ai
   - +.tripo3d.ai
-  - +.grok.com
-  - +.grokbot.com
-  - +.grokipedia.com
-  - +.x.ai
-  - +.hf.co
   - +.envato-static.com
   - +.envato.com
   - +.envatousercontent.com
   - +.themeforest.net
+  - +.manus.im
+  - +.manuscdn.com
+  - +.poe.com
+  - +.poecdn.net
+  - +.codeium.com
+  - +.codeiumdata.com
+  - +.windsurf.build
+  - +.windsurf.com
+  - +.grok.com
+  - +.grokbot.com
+  - +.grokipedia.com
+  - +.x.ai
+  - +.youmind.site
+  - +.hf.co
+  - +.hf.space
+  - +.huggingface.co
+  - +.cursor-cdn.com
+  - +.cohere.com
+  - +.cohere.ai
+  - +.devin.ai
+  - +.cursorvm.com
+  - +.githubcopilot.com
   - +.notebook.google
   - +.deepmind.google
   - +.antigravity-unleash.goog
@@ -172,36 +187,21 @@ payload:
   - +.notebooklm.google
   - +.gemini.google
   - +.deepmind.com
+  - +.youmind.com
+  - +.youmind.ai
+  - +.lpsnmedia.net
+  - +.liveperson.net
+  - +.jetbrains.ai
+  - +.grazie.ai
   - +.groq.com
-  - +.cohere.ai
   - +.oystermercury.top
   - +.comfyregistry.org
   - +.comfyci.org
   - +.comfy.org
-  - +.grazie.ai
-  - +.jetbrains.ai
-  - +.codeium.com
-  - +.codeiumdata.com
-  - +.windsurf.build
-  - +.windsurf.com
-  - +.coderabbit.ai
-  - +.elevenlabs.io
-  - +.youmind.ai
-  - +.youmind.com
-  - +.youmind.site
-  - +.cerebras.ai
-  - +.cursor-cdn.com
-  - +.cursor.com
-  - +.cursor.sh
-  - +.cursorapi.com
-  - +.cursorvm.com
-  - +.githubcopilot.com
-  - +.manus.im
-  - +.manuscdn.com
   - +.stitch.withgoogle.com
   - +.bard.google.com
-  - +.labs.google.com
   - +.copilot.cloud.microsoft
+  - +.copilot.microsoft.com
   - +.geller-pa.googleapis.com
   - +.generativelanguage.googleapis.com
   - +.opal.google.com
@@ -209,21 +209,23 @@ payload:
   - +.aida.googleapis.com
   - +.aicode.googleapis.com
   - +.aisandbox-pa.googleapis.com
-  - +.copilot.microsoft.com
+  - +.grok.x.com
   - +.flow.google.com
-  - +.notebook.google.com
+  - +.gemini.google.com
   - +.robinfrontend-pa.googleapis.com
   - +.aistudio.google.com
   - +.notebooklm.google.com
   - +.jules.google.com
-  - +.gemini.gstatic.com
+  - +.notebook.google.com
   - +.makersuite.google.com
-  - +.grok.x.com
-  - +.gemini.google.com
-  - +.gateway.ai.cloudflare.com
-  - +.coderabbit.gallery.vsassets.io
-  - +.labstailwind.pa.googleapis.com
+  - +.gemini.gstatic.com
+  - +.labs.google.com
   - +.grazie.aws.intellij.net
+  - +.coderabbit.gallery.vsassets.io
+  - +.gateway.ai.cloudflare.com
+  - +.labstailwind.pa.googleapis.com
+  - copilot-telemetry-service.githubusercontent.com
+  - copilot-telemetry.githubusercontent.com
   - +.coze.com
   - +.marscode.com
   - +.trae.ai
@@ -231,5 +233,3 @@ payload:
   - +.ciciai.com
   - +.ciciaicdn.com
   - +.dola.com
-  - copilot-telemetry-service.githubusercontent.com
-  - copilot-telemetry.githubusercontent.com
