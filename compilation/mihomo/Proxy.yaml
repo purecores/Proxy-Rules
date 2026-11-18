@@ -60,30 +60,6 @@ payload:
   - +.gcdn.co
   - +.gcore.com
   - +.gcore.pro
-  - +.quantil.com
-  - +.fastly-edge.com
-  - +.fastly-terrarium.com
-  - +.fastly.com
-  - +.fastly.io
-  - +.fastly.net
-  - +.fastlylabs.com
-  - +.fastlylb.net
-  - +.esm.run
-  - +.jsdelivr.com
-  - +.jsdelivr.net
-  - +.delvenetworks.com
-  - +.limelight.com
-  - +.lldns.net
-  - +.llnw-trials.com
-  - +.llnw.com
-  - +.llnw.net
-  - +.llnwd.net
-  - +.llnwi.net
-  - +.stackpath.com
-  - +.stackpath.dev
-  - +.vrcdn.cloud
-  - +.vrcdn.live
-  - +.vrcdn.video
   - +.ak1.net
   - +.aka-ai.com
   - +.aka-ai.net
@@ -208,10 +184,34 @@ payload:
   - +.workers.dev
   - +.cf-ipfs.com
   - +.cloudflare-ipfs.com
+  - +.fastly-edge.com
+  - +.fastly-terrarium.com
+  - +.fastly.com
+  - +.fastly.io
+  - +.fastly.net
+  - +.fastlylabs.com
+  - +.fastlylb.net
   - +.imgix.com
   - +.imgix.net
   - +.pagecdn.com
   - +.pagecdn.io
+  - +.quantil.com
+  - +.esm.run
+  - +.jsdelivr.com
+  - +.jsdelivr.net
+  - +.delvenetworks.com
+  - +.limelight.com
+  - +.lldns.net
+  - +.llnw-trials.com
+  - +.llnw.com
+  - +.llnw.net
+  - +.llnwd.net
+  - +.llnwi.net
+  - +.stackpath.com
+  - +.stackpath.dev
+  - +.vrcdn.cloud
+  - +.vrcdn.live
+  - +.vrcdn.video
   - +.akamai.co.kr
   - +.one.one.one
   - +.accdn.com.cn
@@ -258,6 +258,13 @@ payload:
   - bytedance.map.fastly.net
   - +.capcut.com
   - +.capcutcdn-us.com
+  - +.coze.com
+  - +.marscode.com
+  - +.trae.ai
+  - +.cici.com
+  - +.ciciai.com
+  - +.ciciaicdn.com
+  - +.dola.com
   - +.bytedapm.com
   - +.muscdn.com
   - +.musical.ly
@@ -297,13 +304,6 @@ payload:
   - roovza.inapps.appsflyersdk.com
   - roovza.launches.appsflyersdk.com
   - roovza.skadsdk.appsflyersdk.com
-  - +.coze.com
-  - +.marscode.com
-  - +.trae.ai
-  - +.cici.com
-  - +.ciciai.com
-  - +.ciciaicdn.com
-  - +.dola.com
   - yt3.googleusercontent.com
   - +.youtube
   - +.youtube.ru
@@ -599,10 +599,6 @@ payload:
   - statics-marketingsites-eas-ms-com.akamaized.net
   - statics-marketingsites-eus-ms-com.akamaized.net
   - statics-marketingsites-wcus-ms-com.akamaized.net
-  - prodforza.blob.core.windows.net
-  - azure.microsoft.com
-  - azuremarketplace.microsoft.com
-  - location.microsoft.com
   - github-api.arkoselabs.com
   - github-cloud.s3.amazonaws.com
   - github-production-release-asset-2e65be.s3.amazonaws.com
@@ -657,20 +653,22 @@ payload:
   - ocsp.microsoft.com
   - oneocsp.microsoft.com
   - www.microsoft.com
+  - prodforza.blob.core.windows.net
+  - azure.microsoft.com
+  - azuremarketplace.microsoft.com
+  - location.microsoft.com
   - +.microsoft
   - +.hotmail
   - +.office
   - +.skype
   - +.windows
-  - +.onedrive
-  - +.onedriveupdater
   - +.bing
   - +.azure
   - +.xbox
-  - +.sharepoint.cn
-  - +.msgamesresearch.com
-  - +.microsoft.ch
-  - +.microsoft.cl
+  - +.onedriveupdater
+  - +.onedrive
+  - +.git.io
+  - +.mshome.net
   - +.microsoft.com
   - +.microsoft.cz
   - +.microsoft.de
@@ -819,9 +817,9 @@ payload:
   - +.msftncsi.com
   - +.msftnet.org
   - +.msftstatic.com
-  - +.start.com
+  - +.msgamesresearch.com
   - +.msgamestudios.com
-  - +.mshome.net
+  - +.github.community
   - +.msidentity.com
   - +.msocdn.com
   - +.msturing.org
@@ -834,9 +832,9 @@ payload:
   - +.o365weve.com
   - +.office.com
   - +.office.net
-  - +.microsoftstart.com
+  - +.office365.com
   - +.onenote.com
-  - +.onenote.net
+  - +.github.com
   - +.onestore.ms
   - +.opticsforthecloud.net
   - +.outingsapp.com
@@ -900,167 +898,23 @@ payload:
   - +.winhec.com
   - +.winhec.net
   - +.yammer.com
-  - +.msnkids.com
-  - +.msnewskids.org
-  - +.onedrive.com
-  - +.microsoft.ca
-  - +.livefilestore.com
-  - +.1drv.com
-  - +.office365.com
-  - +.microsoft.cat
-  - +.msnewskids.net
-  - +.msnewskids.com
-  - +.msn.com
-  - +.microsoftnewskids.org
-  - +.microsoftnewskids.net
-  - +.microsoftnewskids.com
-  - +.microsoftnewsforkids.org
-  - +.microsoft.by
-  - +.gamepass.com
-  - +.orithegame.com
-  - +.renovacionxboxlive.com
-  - +.tellmewhygame.com
-  - +.xbox.co
-  - +.xbox.com
-  - +.xbox.eu
-  - +.xbox.org
-  - +.xbox360.co
-  - +.xbox360.com
-  - +.xbox360.eu
-  - +.xbox360.org
-  - +.xboxab.com
-  - +.xboxgamepass.com
-  - +.xboxgamestudios.com
-  - +.xboxlive.com
-  - +.xboxone.co
-  - +.xboxone.com
-  - +.xboxone.eu
-  - +.xboxplayanywhere.com
-  - +.xboxservices.com
-  - +.xboxstudios.com
-  - +.xbx.lv
-  - +.beth.games
-  - +.bethesda.net
-  - +.bethesdagamestudios.com
-  - +.bethsoft.com
-  - +.doom.com
-  - +.elderscrolls.com
-  - +.forza.net
-  - +.forzamotorsport.net
-  - +.forzaracingchampionship.com
-  - +.forzarc.com
-  - +.callersbane.com
-  - +.minecraft-services.net
-  - +.minecraft.net
-  - +.minecraftservices.com
-  - +.minecraftshop.com
-  - +.mojang.com
-  - +.microsoft.be
-  - +.aadrm.com
-  - +.azure-api.net
-  - +.azure-devices-int.net
-  - +.azure-devices.net
-  - +.azure-mobile.net
-  - +.azure-sphere.com
-  - +.azure-test.net
-  - +.azure.com
-  - +.azure.net
-  - +.azurecomcdn.net
-  - +.azurecomm.net
-  - +.azurecontainer.io
-  - +.azurecosmos.net
-  - +.azurecosmosdb.com
-  - +.azurecosmosdb.info
-  - +.azurecosmosdb.net
-  - +.azuredatabricks.net
-  - +.azuredevopslaunch.com
-  - +.azuredigitaltwin.com
-  - +.azuredigitaltwins.com
-  - +.azuredigitaltwins.net
-  - +.azuredns-prd.info
-  - +.azuredns-prd.org
-  - +.azureedge-test.net
-  - +.azureedge.net
-  - +.azureedge.us
-  - +.azurefd.net
-  - +.azureiotcentral.com
-  - +.azureiotsolutions.com
-  - +.azureiotsuite.com
-  - +.azureplanetscale.info
-  - +.azureplanetscale.net
-  - +.azureserviceprofiler.com
-  - +.azuresmartspaces.net
-  - +.azurestackvalidation.com
-  - +.azurestaticapps.net
-  - +.azurewebsites.net
-  - +.botframework.com
-  - +.cosmosdb.info
-  - +.cosmosdb.net
-  - +.devopsms.com
-  - +.gotcosmos.com
-  - +.management-azure-devices-int.net
-  - +.management-azure-devices.net
-  - +.microsoftazuread-sso.com
-  - +.microsoftazuresponsorships.com
-  - +.microsofteca.com
-  - +.microsoftiotcentral.com
-  - +.msn.net
-  - +.playfab.com
-  - +.playfabapi.com
-  - +.serverlesslibrary.net
-  - +.trafficmanager.net
-  - +.tryfunctions.com
-  - +.windowsazure.com
-  - +.azure-dns.com
-  - +.azure-dns.info
-  - +.azure-dns.net
-  - +.azure-dns.org
-  - +.microsoft.az
-  - +.flipwithsurface.com
-  - +.microsoftpartnersolutions.com
-  - +.bing123.com
-  - +.bingagencyawards.com
-  - +.bingapis.com
-  - +.bingapistatistics.com
-  - +.bingparachute.com
-  - +.bingsandbox.com
-  - +.bingstatic.com
-  - +.bingvisualsearch.com
-  - +.bingworld.com
-  - +.bluehatnights.com
-  - +.dictate.ms
-  - +.bing.com
-  - +.bing.net
-  - +.masalladeloslimites.com
-  - +.office365love.com
-  - +.microsoftdiplomados.com
-  - +.microsoftlatamholiday.com
-  - +.microsoftmxfilantropia.com
-  - +.microsoft-give.com
-  - +.msunlimitedcloudsummit.com
-  - +.microsoftcloudsummit.com
-  - +.office365tw.com
-  - +.renovacionoffice.com
-  - +.sprinklesapp.com
-  - +.copilot-stg.com
-  - +.copilot.com
-  - +.microsoftnewsforkids.net
-  - +.microsoftnewsforkids.com
   - +.atom.io
   - +.dependabot.com
+  - +.copilot.com
+  - +.copilot-stg.com
   - +.gh.io
   - +.ghcr.io
   - +.ghe.com
-  - +.git.io
+  - +.microsoft.ch
   - +.github.ai
   - +.github.blog
   - +.github.career
-  - +.github.com
-  - +.github.community
-  - +.github.dev
+  - +.onenote.net
+  - +.microsoft.cl
+  - +.githubassets.com
   - +.github.io
   - +.githubapp.com
-  - +.githubassets.com
+  - +.github.dev
   - +.githubhackathon.com
   - +.githubnext.com
   - +.githubpreview.dev
@@ -1082,6 +936,7 @@ payload:
   - +.apisof.net
   - +.appcenter.ms
   - +.blazor.net
+  - +.botframework.com
   - +.codethemicrobit.com
   - +.devopsassessment.net
   - +.dot.net
@@ -1130,17 +985,162 @@ payload:
   - +.vscodeedu.app
   - +.vscodeedu.com
   - +.xamarin.com
-  - +.microsoftnews.org
+  - +.sprinklesapp.com
+  - +.renovacionoffice.com
+  - +.office365tw.com
   - +.msocsp.com
   - +.microsoftnews.cc
   - +.microsoftnews.com
   - +.microsoftnews.net
+  - +.microsoftnews.org
+  - +.microsoftnewsforkids.com
+  - +.microsoftnewsforkids.net
+  - +.microsoftnewsforkids.org
+  - +.microsoftnewskids.com
+  - +.microsoftnewskids.net
+  - +.microsoftnewskids.org
+  - +.msn.com
+  - +.msnewskids.com
+  - +.msnewskids.net
+  - +.msnewskids.org
+  - +.msnkids.com
+  - +.microsoftstart.com
+  - +.start.com
+  - +.microsoft.cat
+  - +.microsoft.ca
+  - +.onedrive.com
+  - +.sharepoint.cn
+  - +.livefilestore.com
+  - +.1drv.com
+  - +.microsoftcloudsummit.com
+  - +.msunlimitedcloudsummit.com
+  - +.microsoft-give.com
+  - +.microsoftmxfilantropia.com
+  - +.microsoftlatamholiday.com
+  - +.microsoftdiplomados.com
+  - +.office365love.com
+  - +.microsoft.by
+  - +.gamepass.com
+  - +.orithegame.com
+  - +.renovacionxboxlive.com
+  - +.tellmewhygame.com
+  - +.xbox.co
+  - +.xbox.com
+  - +.xbox.eu
+  - +.xbox.org
+  - +.xbox360.co
+  - +.xbox360.com
+  - +.xbox360.eu
+  - +.xbox360.org
+  - +.xboxab.com
+  - +.xboxgamepass.com
+  - +.xboxgamestudios.com
+  - +.xboxlive.com
+  - +.xboxone.co
+  - +.xboxone.com
+  - +.xboxone.eu
+  - +.xboxplayanywhere.com
+  - +.xboxservices.com
+  - +.xboxstudios.com
+  - +.xbx.lv
+  - +.forza.net
+  - +.forzamotorsport.net
+  - +.forzaracingchampionship.com
+  - +.forzarc.com
+  - +.callersbane.com
+  - +.minecraft-services.net
+  - +.minecraft.net
+  - +.minecraftservices.com
+  - +.minecraftshop.com
+  - +.mojang.com
+  - +.beth.games
+  - +.bethesda.net
+  - +.bethesdagamestudios.com
+  - +.bethsoft.com
+  - +.doom.com
+  - +.elderscrolls.com
+  - +.microsoft.be
+  - +.aadrm.com
+  - +.azure-api.net
+  - +.azure-devices-int.net
+  - +.azure-devices.net
+  - +.azure-mobile.net
+  - +.azure-sphere.com
+  - +.azure-test.net
+  - +.azure.com
+  - +.azure.net
+  - +.azurecomcdn.net
+  - +.azurecomm.net
+  - +.azurecontainer.io
+  - +.azurecosmos.net
+  - +.azurecosmosdb.com
+  - +.azurecosmosdb.info
+  - +.azurecosmosdb.net
+  - +.azuredatabricks.net
+  - +.azuredevopslaunch.com
+  - +.azuredigitaltwin.com
+  - +.azuredigitaltwins.com
+  - +.azuredigitaltwins.net
+  - +.azuredns-prd.info
+  - +.azuredns-prd.org
+  - +.azureedge-test.net
+  - +.azureedge.net
+  - +.azureedge.us
+  - +.azurefd.net
+  - +.azureiotcentral.com
+  - +.azureiotsolutions.com
+  - +.azureiotsuite.com
+  - +.azureplanetscale.info
+  - +.azureplanetscale.net
+  - +.azureserviceprofiler.com
+  - +.azuresmartspaces.net
+  - +.azurestackvalidation.com
+  - +.azurestaticapps.net
+  - +.azurewebsites.net
+  - +.cosmosdb.info
+  - +.cosmosdb.net
+  - +.devopsms.com
+  - +.gotcosmos.com
+  - +.management-azure-devices-int.net
+  - +.management-azure-devices.net
+  - +.microsoftazuread-sso.com
+  - +.microsoftazuresponsorships.com
+  - +.microsofteca.com
+  - +.microsoftiotcentral.com
+  - +.msn.net
+  - +.playfab.com
+  - +.playfabapi.com
+  - +.serverlesslibrary.net
+  - +.trafficmanager.net
+  - +.tryfunctions.com
+  - +.windowsazure.com
+  - +.azure-dns.com
+  - +.azure-dns.info
+  - +.azure-dns.net
+  - +.azure-dns.org
+  - +.microsoft.az
+  - +.flipwithsurface.com
+  - +.microsoftpartnersolutions.com
+  - +.bing123.com
+  - +.bingagencyawards.com
+  - +.bingapis.com
+  - +.bingapistatistics.com
+  - +.bingparachute.com
+  - +.bingsandbox.com
+  - +.bingstatic.com
+  - +.bingvisualsearch.com
+  - +.bingworld.com
+  - +.bluehatnights.com
+  - +.dictate.ms
+  - +.bing.com
+  - +.bing.net
+  - +.masalladeloslimites.com
   - +.skype-edf.akadns.net
   - +.skypedata.akadns.net
   - +.visualstudio.co.uk
-  - +.spoprod-a.akamaihd.net
   - +.microsoftstore.com.hk
   - +.live.com.au
+  - +.spoprod-a.akamaihd.net
   - +.applicationinsights.io
   - +.applicationinsights.net
   - +.aria.ms
@@ -1232,6 +1232,21 @@ payload:
   - volic.download.prss.microsoft.com
   - vz.download.prss.microsoft.com
   - windbg.download.prss.microsoft.com
+  - +.cafe.github.com
+  - +.collector.github.com
+  - copilot-telemetry-service.githubusercontent.com
+  - copilot-telemetry.githubusercontent.com
+  - +.microsoftreactor.cn
+  - +.microsoftreactor.com.cn
+  - +.reactorms.com.cn
+  - dc.services.visualstudio.com
+  - download.visualstudio.microsoft.com
+  - rt.services.visualstudio.com
+  - vscode.download.prss.microsoft.com
+  - +.microsoftnews.cn
+  - +.msn.cn
+  - +.browser.events.data.msn.cn
+  - +.browser.events.data.msn.com
   - +.xboxlive.cn
   - +.21vbc.com
   - +.21vbluecloud.com
@@ -1334,22 +1349,23 @@ payload:
   - +.r.bing.com
   - +.th.bing.com
   - bj1.api.bing.com
-  - +.cafe.github.com
-  - +.collector.github.com
-  - copilot-telemetry-service.githubusercontent.com
-  - copilot-telemetry.githubusercontent.com
-  - +.microsoftreactor.cn
-  - +.microsoftreactor.com.cn
-  - +.reactorms.com.cn
-  - dc.services.visualstudio.com
-  - download.visualstudio.microsoft.com
-  - rt.services.visualstudio.com
-  - vscode.download.prss.microsoft.com
-  - +.microsoftnews.cn
-  - +.msn.cn
-  - +.browser.events.data.msn.cn
-  - +.browser.events.data.msn.com
   - google-ohttp-relay-safebrowsing.fastly-edge.com
+  - firebase.googleapis.com
+  - firebaseappcheck.googleapis.com
+  - firebaseappdistribution.googleapis.com
+  - firebaseapptesters.googleapis.com
+  - firebasedynamiclinks-ipv4.googleapis.com
+  - firebasedynamiclinks-ipv6.googleapis.com
+  - firebasedynamiclinks.googleapis.com
+  - firebaseinappmessaging.googleapis.com
+  - firebaseinstallations.googleapis.com
+  - firebaseperusertopics-pa.googleapis.com
+  - firebaseremoteconfig.googleapis.com
+  - alt7-mtalk.google.com
+  - alt8-mtalk.google.com
+  - mtalk-dev.google.com
+  - mtalk-staging.google.com
+  - mtalk4.google.com
   - ai.google.dev
   - alkalicore-pa.clients6.google.com
   - alkalimakersuite-pa.clients6.google.com
@@ -1366,6 +1382,7 @@ payload:
   - notebooklm.googleapis.com
   - antigravity-pa.googleapis.com
   - antigravity.googleapis.com
+  - android.googlesource.com
   - scholar.google.ae
   - scholar.google.at
   - scholar.google.be
@@ -1442,23 +1459,6 @@ payload:
   - scholar.google.sk
   - scholar.googleusercontent.com
   - scholar.l.google.com
-  - alt7-mtalk.google.com
-  - alt8-mtalk.google.com
-  - mtalk-dev.google.com
-  - mtalk-staging.google.com
-  - mtalk4.google.com
-  - android.googlesource.com
-  - firebase.googleapis.com
-  - firebaseappcheck.googleapis.com
-  - firebaseappdistribution.googleapis.com
-  - firebaseapptesters.googleapis.com
-  - firebasedynamiclinks-ipv4.googleapis.com
-  - firebasedynamiclinks-ipv6.googleapis.com
-  - firebasedynamiclinks.googleapis.com
-  - firebaseinappmessaging.googleapis.com
-  - firebaseinstallations.googleapis.com
-  - firebaseperusertopics-pa.googleapis.com
-  - firebaseremoteconfig.googleapis.com
   - publicca.googleapis.com
   - preprod-publicca.googleapis.com
   - clients1.google.com
@@ -1504,82 +1504,8 @@ payload:
   - +.google.cz
   - +.google.de
   - +.google.dj
-  - +.polymerproject.org
-  - +.polymer-project.org
-  - +.xn--ngstr-lra8j.com
-  - +.googleplay.com
-  - +.dartpad.dev
-  - +.dartlang.org
-  - +.dart.dev
-  - +.firebaseio.com
-  - +.firebaseapp.com
-  - +.firebase.io
-  - +.firebase.dev
-  - +.firebase.com
-  - +.crashlytics.com
-  - +.androidify.com
-  - +.android.com
-  - +.google.ad
-  - +.v8project.org
-  - +.v8.dev
-  - +.fastlane.tools
-  - +.fastlane.ci
-  - +.blogspot.mk
-  - +.blogspot.md
-  - +.blogspot.fi
-  - +.blogspot.lt
-  - +.blogspot.li
-  - +.blogspot.kr
-  - +.blogspot.jp
-  - +.blogspot.dk
-  - +.blogspot.is
-  - +.blogspot.in
-  - +.blogspot.ie
-  - +.blogspot.hu
-  - +.blogspot.hr
-  - +.blogspot.hk
-  - +.blogspot.gr
-  - +.blogspot.fr
-  - +.blogspot.lu
-  - +.blogspot.it
-  - +.blogspot.cl
-  - +.blogspot.cz
-  - +.blogspot.cv
-  - +.blogblog.com
-  - +.blogspot.my
-  - +.blogger.com
-  - +.blogspot.no
-  - +.blogspot.pe
-  - +.blogspot.pt
-  - +.blogspot.qa
-  - +.blogspot.re
-  - +.blogspot.ro
-  - +.blogspot.rs
-  - +.blogspot.ru
-  - +.blogspot.se
-  - +.blogspot.sg
-  - +.blogspot.com
-  - +.blogspot.si
-  - +.blogspot.sk
-  - +.blogspot.sn
-  - +.blogspot.td
-  - +.blogspot.tw
-  - +.blogspot.ug
-  - +.blogspot.vn
-  - +.blogspot.de
-  - +.blogspot.ch
-  - +.blogspot.cf
-  - +.blogspot.ca
-  - +.blogspot.bj
-  - +.blogspot.bg
-  - +.blogspot.be
-  - +.blogspot.ba
-  - +.blogspot.am
-  - +.blogspot.al
-  - +.blogspot.ae
-  - +.blogspot.mx
-  - +.blogspot.nl
   - +.slides.new
+  - +.sheets.new
   - +.google.dk
   - +.google.dm
   - +.google.dz
@@ -1769,7 +1695,6 @@ payload:
   - +.googlecert.net
   - +.googlecode.com
   - +.googlecommerce.com
-  - +.sheets.new
   - +.googledanmark.com
   - +.googledomains.com
   - +.googledrive.com
@@ -1871,6 +1796,8 @@ payload:
   - +.schemer.com
   - +.screenwisetrends.com
   - +.screenwisetrendspanel.com
+  - +.google.am
+  - +.blogspot.ch
   - +.solveforx.com
   - +.stadia.dev
   - +.stcroixmosquito.com
@@ -1928,9 +1855,12 @@ payload:
   - +.xn--gogl-1nd42e.com
   - +.xplr.co
   - +.zukunftswerkstatt.de
-  - +.flutter.dev
-  - +.flutterapp.com
-  - +.pub.dev
+  - +.crashlytics.com
+  - +.firebase.com
+  - +.firebase.dev
+  - +.firebase.io
+  - +.firebaseapp.com
+  - +.firebaseio.com
   - +.go-lang.com
   - +.go-lang.net
   - +.go-lang.org
@@ -1941,19 +1871,20 @@ payload:
   - +.golang.org
   - +.ai.studio
   - +.deepmind.com
-  - +.google.am
-  - +.charlestonroadregistry.com
-  - +.crr.com
-  - +.get.app
-  - +.get.dev
-  - +.get.how
-  - +.get.new
-  - +.get.page
-  - +.get.rsvp
-  - +.hey.boo
-  - +.iam.soy
-  - +.new.day
+  - +.google.ad
   - +.xn--p8j9a0d9c9a.xn--q9jyb4c
+  - +.new.day
+  - +.iam.soy
+  - +.hey.boo
+  - +.get.rsvp
+  - +.get.page
+  - +.get.new
+  - +.googleplay.com
+  - +.xn--ngstr-lra8j.com
+  - +.get.how
+  - +.get.dev
+  - +.get.app
+  - +.crr.com
   - +.kaggle.com
   - +.kaggle.io
   - +.kaggle.net
@@ -1962,10 +1893,96 @@ payload:
   - +.deps.info
   - +.opensourceinsight.dev
   - +.opensourceinsights.dev
+  - +.polymer-project.org
+  - +.polymerproject.org
+  - +.v8.dev
+  - +.v8project.org
   - +.google.ae
+  - +.android.com
+  - +.androidify.com
+  - +.blogspot.nl
+  - +.blogspot.mx
+  - +.blogspot.ae
+  - +.blogspot.al
+  - +.blogspot.am
+  - +.blogspot.ba
+  - +.blogspot.be
+  - +.blogspot.bg
+  - +.blogspot.bj
+  - +.blogspot.ca
+  - +.blogspot.cf
   - +.snapseed.com
-  - +.google.co.uk
-  - +.google.co.ao
+  - +.blogspot.de
+  - +.blogspot.vn
+  - +.blogspot.ug
+  - +.blogspot.tw
+  - +.blogspot.td
+  - +.blogspot.sn
+  - +.blogspot.sk
+  - +.blogspot.si
+  - +.blogspot.com
+  - +.blogspot.sg
+  - +.blogspot.se
+  - +.blogspot.ru
+  - +.blogspot.rs
+  - +.blogspot.ro
+  - +.blogspot.re
+  - +.blogspot.qa
+  - +.blogspot.pt
+  - +.blogspot.pe
+  - +.blogspot.no
+  - +.blogger.com
+  - +.blogspot.my
+  - +.blogblog.com
+  - +.blogspot.cv
+  - +.blogspot.cz
+  - +.blogspot.cl
+  - +.blogspot.it
+  - +.blogspot.lu
+  - +.blogspot.fr
+  - +.blogspot.gr
+  - +.blogspot.hk
+  - +.blogspot.hr
+  - +.blogspot.hu
+  - +.blogspot.ie
+  - +.blogspot.in
+  - +.blogspot.is
+  - +.blogspot.dk
+  - +.blogspot.jp
+  - +.blogspot.kr
+  - +.blogspot.li
+  - +.blogspot.lt
+  - +.blogspot.fi
+  - +.blogspot.md
+  - +.blogspot.mk
+  - +.charlestonroadregistry.com
+  - +.pub.dev
+  - +.flutterapp.com
+  - +.flutter.dev
+  - +.dartpad.dev
+  - +.dartlang.org
+  - +.dart.dev
+  - +.fastlane.tools
+  - +.fastlane.ci
+  - +.blogspot.com.uy
+  - +.blogspot.com.by
+  - +.blogspot.co.za
+  - +.blogspot.co.uk
+  - +.blogspot.co.nz
+  - +.blogspot.co.ke
+  - +.blogspot.co.il
+  - +.blogspot.co.id
+  - +.blogspot.co.at
+  - +.blogspot.com.au
+  - +.blogspot.com.cy
+  - +.blogspot.com.ee
+  - +.blogspot.com.eg
+  - +.blogspot.com.es
+  - +.blogspot.com.mt
+  - +.blogspot.com.ng
+  - +.blogspot.com.co
+  - +.blogspot.com.br
+  - +.google.co.ve
   - +.womenwill.com.br
   - +.thinkquarterly.co.uk
   - +.howtogetmo.co.uk
@@ -1973,17 +1990,15 @@ payload:
   - +.google.com.vn
   - +.google.com.vc
   - +.google.com.uy
-  - +.google.com.sa
   - +.google.com.ua
-  - +.google.com.tr
   - +.google.com.tw
-  - +.google.com.cy
+  - +.google.com.tr
   - +.google.com.tj
   - +.google.com.sv
   - +.google.com.sl
   - +.google.com.sg
   - +.google.com.sb
-  - +.google.co.bw
+  - +.google.com.sa
   - +.google.com.qa
   - +.google.com.py
   - +.google.com.pr
@@ -2011,10 +2026,11 @@ payload:
   - +.google.com.gi
   - +.google.com.gh
   - +.google.com.fj
-  - +.google.com.et
+  - +.google.com.ag
   - +.google.com.eg
   - +.google.com.ec
   - +.google.com.do
+  - +.google.com.cy
   - +.google.com.cu
   - +.google.com.co
   - +.google.com.bz
@@ -2023,38 +2039,17 @@ payload:
   - +.google.com.bn
   - +.google.com.bh
   - +.google.com.bd
-  - +.google.com.au
-  - +.google.com.ar
-  - +.google.com.ai
-  - +.google.com.ag
+  - +.blogspot.com.ar
+  - +.blogspot.com.tr
+  - +.google.com.et
   - +.google.com.af
   - +.google.co.zw
   - +.google.co.zm
   - +.google.co.za
-  - +.blogspot.com.br
-  - +.blogspot.com.co
-  - +.blogspot.com.ng
-  - +.blogspot.com.mt
-  - +.blogspot.com.es
-  - +.blogspot.com.eg
-  - +.blogspot.com.ee
-  - +.blogspot.com.cy
-  - +.blogspot.com.au
-  - +.blogspot.com.uy
-  - +.blogspot.com.tr
-  - +.blogspot.com.ar
-  - +.blogspot.com.by
-  - +.blogspot.co.za
-  - +.blogspot.co.uk
-  - +.blogspot.co.nz
-  - +.blogspot.co.ke
-  - +.blogspot.co.il
-  - +.blogspot.co.id
-  - +.blogspot.co.at
   - +.google.co.vi
-  - +.google.co.ve
+  - +.google.com.ai
   - +.google.co.uz
-  - +.google.co.ck
+  - +.google.co.uk
   - +.google.co.ug
   - +.google.co.tz
   - +.google.co.th
@@ -2069,6 +2064,11 @@ payload:
   - +.google.co.il
   - +.google.co.id
   - +.google.co.cr
+  - +.google.co.ck
+  - +.google.co.bw
+  - +.google.co.ao
+  - +.google.com.au
+  - +.google.com.ar
   - +.google.cn
   - +.g.cn
   - +.gkecnapps.cn
@@ -2234,6 +2234,11 @@ payload:
   - www.destinationurl.com
   - www.gstatic.com
   - www.pxcc.com
+  - crashlyticsreports-pa.googleapis.com
+  - firebase-settings.crashlytics.com
+  - firebaselogging-pa.googleapis.com
+  - firebaselogging.googleapis.com
+  - update.crashlytics.com
   - alt1-mtalk.google.com
   - alt2-mtalk.google.com
   - alt3-mtalk.google.com
@@ -2241,11 +2246,6 @@ payload:
   - alt5-mtalk.google.com
   - alt6-mtalk.google.com
   - mtalk.google.com
-  - crashlyticsreports-pa.googleapis.com
-  - firebase-settings.crashlytics.com
-  - firebaselogging-pa.googleapis.com
-  - firebaselogging.googleapis.com
-  - update.crashlytics.com
   - redirector.c.play.google.com
   - pki-goog.l.google.com
   - c.pki.goog
